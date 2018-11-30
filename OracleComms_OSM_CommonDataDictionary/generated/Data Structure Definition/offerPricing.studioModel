@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmn="http://xmlns.oracle.com/communications/studio/model/common" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
+  <metadata version="1.0.0" release="7.3.0"/>
+  <entity xsi:type="cmn:DataStructureDefinition" id="dsd=offerPricing" type="dsd" typeName="Data Structure Definition" name="offerPricing" resource="/OracleComms_OSM_CommonDataDictionary/model/offerPricing.dataStructDef">
+    <displayName lang="default">offerPricing</displayName>
+    <note lang="default"/>
+    <project>
+      <relation ref="mprj=OracleComms_OSM_CommonDataDictionary" type="Model Project" name="Dependency">
+        <target name="OracleComms_OSM_CommonDataDictionary" typeName="Model Project"/>
+      </relation>
+    </project>
+    <dataElements>
+      <element id="dsd=offerPricing+dataElement=zDt6qOcXTzONA9JPQKTBsw" type="dataElement" typeName="Data Element" kind="Element" name="priceType" path="/offerPricing/priceType">
+        <displayName lang="default">Price Type</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <enum literal="RECURRING" default="false" inherited="true" excluded="false">
+          <name lang="default">Recurring</name>
+        </enum>
+        <enum literal="ONE-TIME" default="false" inherited="true" excluded="false">
+          <name lang="default">One-Time</name>
+        </enum>
+        <enum literal="USAGE" default="false" inherited="true" excluded="false">
+          <name lang="default">Usage</name>
+        </enum>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=priceType" type="Schema Element" name="Type" kind="Element">
+            <target name="priceType" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="dsd=offerPricing+dataElement=xhbwytaCTlCcktu8lSJ94w" type="dataElement" typeName="Data Element" kind="Element" name="originalPrice" path="/offerPricing/originalPrice">
+        <displayName lang="default">Original Price</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=originalPrice" type="Schema Element" name="Type" kind="Element">
+            <target name="originalPrice" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="dsd=offerPricing+dataElement=c2IEfkibRPmA25JvQkJhpg" type="dataElement" typeName="Data Element" kind="Element" name="chargeStartDate" path="/offerPricing/chargeStartDate">
+        <displayName lang="default">Charge Start Date</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=chargeStartDate" type="Schema Element" name="Type" kind="Element">
+            <target name="chargeStartDate" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>dateTime</primitiveType>
+      </element>
+      <element id="dsd=offerPricing+dataElement=bu7aMyjYTG2gKmsumQAo4A" type="dataElement" typeName="Data Element" kind="Element" name="chargeEndDate" path="/offerPricing/chargeEndDate">
+        <displayName lang="default">Charge End Date</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=chargeEndDate" type="Schema Element" name="Type" kind="Element">
+            <target name="chargeEndDate" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>dateTime</primitiveType>
+      </element>
+      <element id="dsd=offerPricing+dataElement=u+IPE+66S8u0dhpY1v-hbQ" type="dataElement" typeName="Data Element" kind="Element" name="overridePrice" path="/offerPricing/overridePrice">
+        <displayName lang="default">Override Price</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=overridePrice" type="Schema Element" name="Type" kind="Element">
+            <target name="overridePrice" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="dsd=offerPricing+dataElement=2oSD51-7TGixdeTZHSWlAA" type="dataElement" typeName="Data Element" kind="Element" name="discountPercentage" path="/offerPricing/discountPercentage">
+        <displayName lang="default">Discount Percentage</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=discountPercentage" type="Schema Element" name="Type" kind="Element">
+            <target name="discountPercentage" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>float</primitiveType>
+      </element>
+      <element id="dsd=offerPricing+dataElement=DdRw8SkFSU6cN4klZ-XUmw" type="dataElement" typeName="Data Element" kind="Element" name="discountType" path="/offerPricing/discountType">
+        <displayName lang="default">Discount Type</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <enum literal="AMOUNT" default="false" inherited="true" excluded="false">
+          <name lang="default">Amount</name>
+        </enum>
+        <enum literal="PERCENT" default="false" inherited="true" excluded="false">
+          <name lang="default">Percent</name>
+        </enum>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=discountType" type="Schema Element" name="Type" kind="Element">
+            <target name="discountType" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="dsd=offerPricing+dataElement=aG+186NVSTiStskIhw4RMw" type="dataElement" typeName="Data Element" kind="Element" name="discountPeriod" path="/offerPricing/discountPeriod">
+        <displayName lang="default">Discount Period</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <enum literal="DAY" default="false" inherited="true" excluded="false">
+          <name lang="default">Day</name>
+        </enum>
+        <enum literal="WEEKS" default="false" inherited="true" excluded="false">
+          <name lang="default">Weeks</name>
+        </enum>
+        <enum literal="MONTH" default="false" inherited="true" excluded="false">
+          <name lang="default">Month</name>
+        </enum>
+        <enum literal="YEARS" default="false" inherited="true" excluded="false">
+          <name lang="default">Years</name>
+        </enum>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=discountPeriod" type="Schema Element" name="Type" kind="Element">
+            <target name="discountPeriod" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="dsd=offerPricing+dataElement=u8HtsWblT4OamkLxBWMo9A" type="dataElement" typeName="Data Element" kind="Element" name="discountStartDate" path="/offerPricing/discountStartDate">
+        <displayName lang="default">Discount Start Date</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=discountStartDate" type="Schema Element" name="Type" kind="Element">
+            <target name="discountStartDate" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>dateTime</primitiveType>
+      </element>
+      <element id="dsd=offerPricing+dataElement=lBARIbSKTDu6EfYnZxnxoQ" type="dataElement" typeName="Data Element" kind="Element" name="discountEndDate" path="/offerPricing/discountEndDate">
+        <displayName lang="default">Discount End Date</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=discountEndDate" type="Schema Element" name="Type" kind="Element">
+            <target name="discountEndDate" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>dateTime</primitiveType>
+      </element>
+      <element id="dsd=offerPricing+dataElement=ynidLHoKRAGPZGtoSpUU0g" type="dataElement" typeName="Data Element" kind="Element" name="currencyCode" path="/offerPricing/currencyCode">
+        <displayName lang="default">Currency Code</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">5</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=currencyCode" type="Schema Element" name="Type" kind="Element">
+            <target name="currencyCode" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="dsd=offerPricing+dataElement=UEbcWrf9RV2zP0NizDcKnA" type="dataElement" typeName="Data Element" kind="Element" name="usageStartDate" path="/offerPricing/usageStartDate">
+        <displayName lang="default">Usage Start Date</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=usageStartDate" type="Schema Element" name="Type" kind="Element">
+            <target name="usageStartDate" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>dateTime</primitiveType>
+      </element>
+      <element id="dsd=offerPricing+dataElement=8HUzrIOwTlaaAGeI4bdxJQ" type="dataElement" typeName="Data Element" kind="Element" name="usageEndDate" path="/offerPricing/usageEndDate">
+        <displayName lang="default">Usage End Date</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=usageEndDate" type="Schema Element" name="Type" kind="Element">
+            <target name="usageEndDate" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>dateTime</primitiveType>
+      </element>
+      <element id="dsd=offerPricing+dataElement=Cz2UiPLNRDK9WwIrGd03bQ" type="dataElement" typeName="Data Element" kind="Element" name="purchaseStartDate" path="/offerPricing/purchaseStartDate">
+        <displayName lang="default">Purchase Start Date</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=purchaseStartDate" type="Schema Element" name="Type" kind="Element">
+            <target name="purchaseStartDate" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>dateTime</primitiveType>
+      </element>
+      <element id="dsd=offerPricing+dataElement=ZFbBzK8WTNuGojs-hajn5Q" type="dataElement" typeName="Data Element" kind="Element" name="purchaseEndDate" path="/offerPricing/purchaseEndDate">
+        <displayName lang="default">Purchase End Date</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=purchaseEndDate" type="Schema Element" name="Type" kind="Element">
+            <target name="purchaseEndDate" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>dateTime</primitiveType>
+      </element>
+      <element id="dsd=offerPricing+dataElement=bWJXW5c2TgOwDP0dnFIiuw" type="dataElement" typeName="Data Element" kind="Element" name="serviceStartDate" path="/offerPricing/serviceStartDate">
+        <displayName lang="default">Service Start Date</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=serviceStartDate" type="Schema Element" name="Type" kind="Element">
+            <target name="serviceStartDate" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>dateTime</primitiveType>
+      </element>
+      <element id="dsd=offerPricing+dataElement=XIcJjsAMTPelhjQwGCavKA" type="dataElement" typeName="Data Element" kind="Element" name="serviceEndDate" path="/offerPricing/serviceEndDate">
+        <displayName lang="default">Service End Date</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=serviceEndDate" type="Schema Element" name="Type" kind="Element">
+            <target name="serviceEndDate" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>dateTime</primitiveType>
+      </element>
+      <element id="dsd=offerPricing+dataElement=phIUOkxgSBaFaMz28c-8vQ" type="dataElement" typeName="Data Element" kind="Element" name="discountAmount" path="/offerPricing/discountAmount">
+        <displayName lang="default">Discount Amount</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=discountAmount" type="Schema Element" name="Type" kind="Element">
+            <target name="discountAmount" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>float</primitiveType>
+      </element>
+    </dataElements>
+    <details>
+      <element id="dsd=offerPricing+dsd.dsdd=5y366awpTI+QU0H1m-WLHQ" type="dsd.dsdd" typeName="Data Structure Definition Details" kind="Element" name="offerPricing Data Structure Definition Details" path="offerPricing Data Structure Definition Details">
+        <keyPath>
+          <relation ref="dsd=offerPricing+dataElement=zDt6qOcXTzONA9JPQKTBsw" type="Data Element" name="Key Path" kind="Element">
+            <target name="priceType" typeName="Data Element"/>
+            <inEntity name="offerPricing" typeName="Data Structure Definition"/>
+          </relation>
+        </keyPath>
+      </element>
+    </details>
+  </entity>
+</model:Model>

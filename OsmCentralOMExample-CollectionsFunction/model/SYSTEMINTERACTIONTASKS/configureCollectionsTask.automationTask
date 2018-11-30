@@ -547,10 +547,15 @@
     <com:relationship>com.mslv.studio.provisioning.task.rolePermission</com:relationship>
     <task:executionModes>do redo undo</task:executionModes>
   </task:workgroupPermission>
+  <task:compensationStrategy/>
+  <task:inProgressCompensation>
+    <task:waitForStrategy/>
+    <task:considerCompensation/>
+  </task:inProgressCompensation>
   <task:automationComponent xsi:type="task:externalAutomationPlugin">
     <prov:name>receiver</prov:name>
     <prov:type>xQueryAutomator</prov:type>
-    <prov:ejbName>icsTask.receiver</prov:ejbName>
+    <prov:ejbName>configureCollectionsTask.automatedtask.osmcentralomexample-collectionsfunction.receiver</prov:ejbName>
     <prov:runAs>omsadmin</prov:runAs>
     <prov:implementation xsi:type="aut:XqueryAutomator">
       <aut:script>

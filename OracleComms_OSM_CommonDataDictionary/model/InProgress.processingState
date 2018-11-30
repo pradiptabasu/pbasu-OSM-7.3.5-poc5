@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.mslv.com/studio/core/model/common" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:data="http://www.oracle.com/communications/studio/core/model/common/data" xmlns:dom="http://xmlns.oracle.com/communications/studio/osm/model" xsi:type="dom:ProcessingStateType" name="InProgress">
+  <displayName lang="[default]">In Progress</displayName>
+  <saveVersion>3</saveVersion>
+  <id>OUS0O40rR7a4IbERcdTt9Q</id>
+</modelEntity>

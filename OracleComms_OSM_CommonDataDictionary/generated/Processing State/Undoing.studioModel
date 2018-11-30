@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmn="http://xmlns.oracle.com/communications/studio/model/common" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
+  <metadata version="1.0.0" release="7.3.0"/>
+  <entity xsi:type="cmn:ProcessingState" id="ps=Undoing" type="ps" typeName="Processing State" name="Undoing" resource="/OracleComms_OSM_CommonDataDictionary/model/Undoing.processingState">
+    <displayName lang="default">Undoing</displayName>
+    <note lang="default"/>
+    <project>
+      <relation ref="mprj=OracleComms_OSM_CommonDataDictionary" type="Model Project" name="Dependency">
+        <target name="OracleComms_OSM_CommonDataDictionary" typeName="Model Project"/>
+      </relation>
+    </project>
+  </entity>
+</model:Model>

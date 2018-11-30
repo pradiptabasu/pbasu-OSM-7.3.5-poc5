@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmn="http://xmlns.oracle.com/communications/studio/model/common" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
+  <metadata version="1.0.0" release="7.3.0"/>
+  <entity xsi:type="cmn:DataStructureDefinition" id="dsd=partnerDetails" type="dsd" typeName="Data Structure Definition" name="partnerDetails" resource="/OracleComms_OSM_CommonDataDictionary/model/partnerDetails.dataStructDef">
+    <displayName lang="default">partnerDetails</displayName>
+    <note lang="default"/>
+    <project>
+      <relation ref="mprj=OracleComms_OSM_CommonDataDictionary" type="Model Project" name="Dependency">
+        <target name="OracleComms_OSM_CommonDataDictionary" typeName="Model Project"/>
+      </relation>
+    </project>
+    <dataElements>
+      <element id="dsd=partnerDetails+dataElement=EGrEly3rTC2JtzHXX7tEgQ" type="dataElement" typeName="Data Element" kind="Element" name="partnerSystem" path="/partnerDetails/partnerSystem">
+        <displayName lang="default">Partner</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">256</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=partner" type="Schema Element" name="Type" kind="Element">
+            <target name="partner" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="dsd=partnerDetails+dataElement=d-BpfTXnSjqoVoQvuO5-zg" type="dataElement" typeName="Data Element" kind="Element" name="accountSystem" path="/partnerDetails/accountSystem">
+        <displayName lang="default">Account System</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">256</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=accountSystem" type="Schema Element" name="Type" kind="Element">
+            <target name="accountSystem" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+    </dataElements>
+    <details>
+      <element id="dsd=partnerDetails+dsd.dsdd=pKZvDj2PQG2wRHYzCebM7w" type="dsd.dsdd" typeName="Data Structure Definition Details" kind="Element" name="partnerDetails Data Structure Definition Details" path="partnerDetails Data Structure Definition Details"/>
+    </details>
+  </entity>
+</model:Model>

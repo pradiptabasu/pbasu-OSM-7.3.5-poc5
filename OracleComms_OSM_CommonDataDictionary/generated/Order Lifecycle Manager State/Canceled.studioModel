@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmn="http://xmlns.oracle.com/communications/studio/model/common" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
+  <metadata version="1.0.0" release="7.3.0"/>
+  <entity xsi:type="cmn:OrderLifecycleManagerState" id="olms=Canceled" type="olms" typeName="Order Lifecycle Manager State" name="Canceled" resource="/OracleComms_OSM_CommonDataDictionary/model/Canceled.orderLifecycleManagerState">
+    <displayName lang="default">Canceled</displayName>
+    <note lang="default"/>
+    <project>
+      <relation ref="mprj=OracleComms_OSM_CommonDataDictionary" type="Model Project" name="Dependency">
+        <target name="OracleComms_OSM_CommonDataDictionary" typeName="Model Project"/>
+      </relation>
+    </project>
+    <mappingProxy>
+      <element id="olms=Canceled+olms.mp=N1RR0YawQt+9mqXsXX2qGw" type="olms.mp" typeName="Mapping Proxy" kind="Element" name="Canceled" path="/Canceled" entityDisplayNameProxy="entityDisplayNameProxy"/>
+    </mappingProxy>
+  </entity>
+</model:Model>

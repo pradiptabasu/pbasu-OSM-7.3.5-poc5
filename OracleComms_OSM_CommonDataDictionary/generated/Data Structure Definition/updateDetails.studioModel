@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmn="http://xmlns.oracle.com/communications/studio/model/common" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
+  <metadata version="1.0.0" release="7.3.0"/>
+  <entity xsi:type="cmn:DataStructureDefinition" id="dsd=updateDetails" type="dsd" typeName="Data Structure Definition" name="updateDetails" resource="/OracleComms_OSM_CommonDataDictionary/model/updateDetails.dataStructDef">
+    <displayName lang="default">updateDetails</displayName>
+    <note lang="default"/>
+    <project>
+      <relation ref="mprj=OracleComms_OSM_CommonDataDictionary" type="Model Project" name="Dependency">
+        <target name="OracleComms_OSM_CommonDataDictionary" typeName="Model Project"/>
+      </relation>
+    </project>
+    <dataElements>
+      <element id="dsd=updateDetails+dataElement=unFUSizTT4K--zt0pPFOVA" type="dataElement" typeName="Data Element" kind="Element" name="orderId" path="/updateDetails/orderId">
+        <displayName lang="default">Order Id</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">256</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=orderId" type="Schema Element" name="Type" kind="Element">
+            <target name="orderId" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="dsd=updateDetails+dataElement=q4dFDHrqTieuAvaz3B4y4w" type="dataElement" typeName="Data Element" kind="Element" name="orderNumber" path="/updateDetails/orderNumber">
+        <displayName lang="default">Order Number</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="false">1000</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=orderNumber" type="Schema Element" name="Type" kind="Element">
+            <target name="orderNumber" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="dsd=updateDetails+dataElement=gbG5DGdpTOacgbhbwNV4Eg" type="dataElement" typeName="Data Element" kind="Element" name="quoteId" path="/updateDetails/quoteId">
+        <displayName lang="default">Quote Id</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">256</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=quoteId" type="Schema Element" name="Type" kind="Element">
+            <target name="quoteId" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="dsd=updateDetails+dataElement=njc8bY5XTwao8cVgrGXC9Q" type="dataElement" typeName="Data Element" kind="Element" name="quoteNumber" path="/updateDetails/quoteNumber">
+        <displayName lang="default">Quote Number</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="false">1000</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=quoteNumber" type="Schema Element" name="Type" kind="Element">
+            <target name="quoteNumber" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="dsd=updateDetails+dataElement=FNg4Gu5kRh6Jc2Qx4xKS9g" type="dataElement" typeName="Data Element" kind="Element" name="agreementId" path="/updateDetails/agreementId">
+        <displayName lang="default">Agreement Id</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">256</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=agreementId" type="Schema Element" name="Type" kind="Element">
+            <target name="agreementId" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="dsd=updateDetails+dataElement=h2D-WX+8SZi6tiuHQsW7kQ" type="dataElement" typeName="Data Element" kind="Element" name="agreementNumber" path="/updateDetails/agreementNumber">
+        <displayName lang="default">Agreement Number</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="false">1000</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=agreementNumber" type="Schema Element" name="Type" kind="Element">
+            <target name="agreementNumber" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="dsd=updateDetails+dataElement=dyxNwEpEQFq0bfBJlx68Cw" type="dataElement" typeName="Data Element" kind="Element" name="updatedBy" path="/updateDetails/updatedBy">
+        <displayName lang="default">Updated By</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">256</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=updatedBy" type="Schema Element" name="Type" kind="Element">
+            <target name="updatedBy" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="dsd=updateDetails+dataElement=7209XkoBRUKCtXreKzScwA" type="dataElement" typeName="Data Element" kind="Element" name="updatedBySystem" path="/updateDetails/updatedBySystem">
+        <displayName lang="default">Updated By System</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="false">256</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=updatedBySystem" type="Schema Element" name="Type" kind="Element">
+            <target name="updatedBySystem" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="dsd=updateDetails+dataElement=0hEjJq5RRL6U0tJUBm8zmw" type="dataElement" typeName="Data Element" kind="Element" name="updateMode" path="/updateDetails/updateMode">
+        <displayName lang="default">Update Mode Type</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <enum literal="MANUAL" default="false" inherited="true" excluded="false">
+          <name lang="default">Manual</name>
+        </enum>
+        <enum literal="ORDER" default="false" inherited="true" excluded="false">
+          <name lang="default">Order</name>
+        </enum>
+        <enum literal="QUOTE" default="false" inherited="true" excluded="false">
+          <name lang="default">Quote</name>
+        </enum>
+        <enum literal="AGREEMENT" default="false" inherited="true" excluded="false">
+          <name lang="default">Agreement</name>
+        </enum>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=updateMode" type="Schema Element" name="Type" kind="Element">
+            <target name="updateMode" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="dsd=updateDetails+dataElement=i4oU7wjoRq61wFWClYfk-Q" type="dataElement" typeName="Data Element" kind="Element" name="updateReasonCode" path="/updateDetails/updateReasonCode">
+        <displayName lang="default">Update Reason Code</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="false"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <enum literal="NORMAL" default="false" inherited="false" excluded="false">
+          <name lang="default">Normal</name>
+        </enum>
+        <enum literal="UPGRADED" default="false" inherited="false" excluded="false">
+          <name lang="default">Upgraded</name>
+        </enum>
+        <enum literal="DOWNGRADED" default="false" inherited="false" excluded="false">
+          <name lang="default">Downgraded</name>
+        </enum>
+        <enum literal="MOVED" default="false" inherited="false" excluded="false">
+          <name lang="default">Moved</name>
+        </enum>
+        <enum literal="FORCED" default="false" inherited="false" excluded="false">
+          <name lang="default">Forced</name>
+        </enum>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=updateReasonCode" type="Schema Element" name="Type" kind="Element">
+            <target name="updateReasonCode" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+    </dataElements>
+    <details>
+      <element id="dsd=updateDetails+dsd.dsdd=PRTwpSsqQWOY9pMy06cVfg" type="dsd.dsdd" typeName="Data Structure Definition Details" kind="Element" name="updateDetails Data Structure Definition Details" path="updateDetails Data Structure Definition Details"/>
+    </details>
+  </entity>
+</model:Model>

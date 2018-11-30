@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.mslv.com/studio/core/model/common" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:data="http://www.oracle.com/communications/studio/core/model/common/data" xmlns:dom="http://xmlns.oracle.com/communications/sce/model/common/entity" xmlns:layout="http://xmlns.oracle.com/communications/sce/poms/model/layout" xmlns:ordermanagement="http://xmlns.oracle.com/communications/studio/osm/model" xmlns:poms="http://xmlns.oracle.com/communications/sce/poms/model/poms" xmlns:specification="http://www.mslv.com/studio/inventory/model/specification" xmlns:viewrule="http://xmlns.oracle.com/communications/sce/osm/model/viewrule" xsi:type="dom:DataStructureDefinitionType" name="assetKeyDates">
+  <displayName lang="[default]">assetKeyDates</displayName>
+  <saveVersion>11</saveVersion>
+  <id>advzif5OQkmjM+pCo+izYw</id>
+  <data:dataElementNode virtual="true">
+    <id>advzif5OQkmjM+pCo+izYw</id>
+    <elementType>oracle.communications.studio.model.data.StudioModelDataElement</elementType>
+    <data:name>assetKeyDates</data:name>
+    <data:displayName lang="[default]">assetKeyDates</data:displayName>
+    <data:dataElement virtual="false">
+      <id>o7vrvTHARQux+gTGgnZv8w</id>
+      <elementType>oracle.communications.studio.model.data.StudioModelDataElement</elementType>
+      <data:name>startDateOfAssetVersion</data:name>
+      <data:displayName lang="[default]">Start Date Of Asset Version</data:displayName>
+      <data:displayName lang="en"></data:displayName>
+      <data:baseElement>
+        <entity>OracleComms_OSM_CommonDataDictionary</entity>
+        <entityType>xsd</entityType>
+        <relationship>oracle.communications.studio.model.data.baseType</relationship>
+        <element>startDateOfAssetVersion</element>
+        <elementType>com.mslv.studio.core.data.dictionary.node</elementType>
+        <elementName>startDateOfAssetVersion</elementName>
+      </data:baseElement>
+      <data:primitiveType>dateTime</data:primitiveType>
+    </data:dataElement>
+    <data:dataElement virtual="false">
+      <id>1T6wfphyS+qRSB2DBLvONw</id>
+      <elementType>oracle.communications.studio.model.data.StudioModelDataElement</elementType>
+      <data:name>endDateOfAssetVersion</data:name>
+      <data:displayName lang="[default]">End Date Of Asset Version</data:displayName>
+      <data:displayName lang="en"></data:displayName>
+      <data:baseElement>
+        <entity>OracleComms_OSM_CommonDataDictionary</entity>
+        <entityType>xsd</entityType>
+        <relationship>oracle.communications.studio.model.data.baseType</relationship>
+        <element>endDateOfAssetVersion</element>
+        <elementType>com.mslv.studio.core.data.dictionary.node</elementType>
+        <elementName>endDateOfAssetVersion</elementName>
+      </data:baseElement>
+      <data:primitiveType>dateTime</data:primitiveType>
+    </data:dataElement>
+    <data:dataElement virtual="false">
+      <id>kCE0o+MiRnGUFnAS9d9t1Q</id>
+      <elementType>oracle.communications.studio.model.data.StudioModelDataElement</elementType>
+      <data:name>lastUpdateDateOfAsset</data:name>
+      <data:displayName lang="[default]">Last Update Date Of Asset</data:displayName>
+      <data:displayName lang="en"></data:displayName>
+      <data:baseElement>
+        <entity>OracleComms_OSM_CommonDataDictionary</entity>
+        <entityType>xsd</entityType>
+        <relationship>oracle.communications.studio.model.data.baseType</relationship>
+        <element>lastUpdateDateOfAsset</element>
+        <elementType>com.mslv.studio.core.data.dictionary.node</elementType>
+        <elementName>lastUpdateDateOfAsset</elementName>
+      </data:baseElement>
+      <data:primitiveType>dateTime</data:primitiveType>
+    </data:dataElement>
+    <data:dataElement virtual="false">
+      <id>+vEt0LtdSbatFhCn3mUsfA</id>
+      <elementType>oracle.communications.studio.model.data.StudioModelDataElement</elementType>
+      <data:name>requestedDeliveryDate</data:name>
+      <data:displayName lang="[default]">Requested Termination Date</data:displayName>
+      <data:displayName lang="en"></data:displayName>
+      <data:baseElement>
+        <entity>OracleComms_OSM_CommonDataDictionary</entity>
+        <entityType>xsd</entityType>
+        <relationship>oracle.communications.studio.model.data.baseType</relationship>
+        <element>requestedDeliveryDate</element>
+        <elementType>com.mslv.studio.core.data.dictionary.node</elementType>
+        <elementName>requestedDeliveryDate</elementName>
+      </data:baseElement>
+      <data:primitiveType>dateTime</data:primitiveType>
+    </data:dataElement>
+    <data:dataElement virtual="false">
+      <id>pUNVrM85SjqjFHlKWeZJqw</id>
+      <elementType>oracle.communications.studio.model.data.StudioModelDataElement</elementType>
+      <data:name>actualResumptionDate</data:name>
+      <data:displayName lang="[default]">Actual Resumption Date</data:displayName>
+      <data:displayName lang="en"></data:displayName>
+      <data:baseElement>
+        <entity>OracleComms_OSM_CommonDataDictionary</entity>
+        <entityType>xsd</entityType>
+        <relationship>oracle.communications.studio.model.data.baseType</relationship>
+        <element>actualResumptionDate</element>
+        <elementType>com.mslv.studio.core.data.dictionary.node</elementType>
+        <elementName>actualResumptionDate</elementName>
+      </data:baseElement>
+      <data:primitiveType>dateTime</data:primitiveType>
+    </data:dataElement>
+    <data:dataElement virtual="false">
+      <id>ZLx0hv4bT8igYFJ9tIPIfA</id>
+      <elementType>oracle.communications.studio.model.data.StudioModelDataElement</elementType>
+      <data:name>actualSuspensionDate</data:name>
+      <data:displayName lang="[default]">Actual Suspension Date</data:displayName>
+      <data:displayName lang="en"></data:displayName>
+      <data:baseElement>
+        <entity>OracleComms_OSM_CommonDataDictionary</entity>
+        <entityType>xsd</entityType>
+        <relationship>oracle.communications.studio.model.data.baseType</relationship>
+        <element>actualSuspensionDate</element>
+        <elementType>com.mslv.studio.core.data.dictionary.node</elementType>
+        <elementName>actualSuspensionDate</elementName>
+      </data:baseElement>
+      <data:primitiveType>dateTime</data:primitiveType>
+    </data:dataElement>
+    <data:primitiveType>none</data:primitiveType>
+  </data:dataElementNode>
+  <data:dataElementDetails xsi:type="data:dataElementCommonDetail">
+    <id>BdDXuSCdQTWCZBMy4CTHdQ</id>
+    <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
+    <data:dataElementId>advzif5OQkmjM+pCo+izYw</data:dataElementId>
+    <data:defaultValue></data:defaultValue>
+    <data:key></data:key>
+    <data:deprecated>false</data:deprecated>
+    <data:sensitive>false</data:sensitive>
+    <data:minLength>0</data:minLength>
+    <data:maxLength>40</data:maxLength>
+    <data:minMultiplicity>0</data:minMultiplicity>
+    <data:maxMultiplicity>-1</data:maxMultiplicity>
+  </data:dataElementDetails>
+  <data:dataElementDetails xsi:type="data:dataElementCommonDetail">
+    <id>jHLCvbFUSmqrWCOu1N6EjQ</id>
+    <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
+    <data:dataElementId>o7vrvTHARQux+gTGgnZv8w</data:dataElementId>
+    <data:key></data:key>
+    <data:deprecated>false</data:deprecated>
+    <data:internal>false</data:internal>
+  </data:dataElementDetails>
+  <data:dataElementDetails xsi:type="data:dataElementCommonDetail">
+    <id>Nc-05naJRLyXTtPVt-so3g</id>
+    <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
+    <data:dataElementId>1T6wfphyS+qRSB2DBLvONw</data:dataElementId>
+    <data:key></data:key>
+    <data:deprecated>false</data:deprecated>
+    <data:internal>false</data:internal>
+  </data:dataElementDetails>
+  <data:dataElementDetails xsi:type="ordermanagement:OsmElementDetailsElementType">
+    <id>kBVYgpGGR++x6dU3jTH0Uw</id>
+    <elementType>oracle.communications.studio.osm.common.data.details.osmelementdetails</elementType>
+    <data:dataElementId>1T6wfphyS+qRSB2DBLvONw</data:dataElementId>
+    <ordermanagement:readOnly>false</ordermanagement:readOnly>
+    <ordermanagement:maxDigits></ordermanagement:maxDigits>
+    <ordermanagement:significant>true</ordermanagement:significant>
+    <ordermanagement:xmlType>false</ordermanagement:xmlType>
+    <ordermanagement:mask xsi:nil="true"/>
+  </data:dataElementDetails>
+  <data:dataElementDetails xsi:type="data:dataElementInformationDetails">
+    <id>WjBoiRrOSbK-DWUjpIDIIQ</id>
+    <elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</elementType>
+    <data:dataElementId>1T6wfphyS+qRSB2DBLvONw</data:dataElementId>
+  </data:dataElementDetails>
+  <data:dataElementDetails xsi:type="viewrule:viewRuleElementDetails">
+    <id>t3sw1x+IT161G36HjaMjaw</id>
+    <elementType>oracle.communications.studio.osm.common.data.details.viewruledetails</elementType>
+    <data:dataElementId>1T6wfphyS+qRSB2DBLvONw</data:dataElementId>
+  </data:dataElementDetails>
+  <data:dataElementDetails xsi:type="data:dataElementCommonDetail">
+    <id>Bk2swELhShC1kPvAeFsmVw</id>
+    <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
+    <data:dataElementId>kCE0o+MiRnGUFnAS9d9t1Q</data:dataElementId>
+    <data:key></data:key>
+    <data:deprecated>false</data:deprecated>
+    <data:internal>false</data:internal>
+  </data:dataElementDetails>
+  <data:dataElementDetails xsi:type="ordermanagement:OsmElementDetailsElementType">
+    <id>XOrdLcXMRzOPxvWfoj4lgw</id>
+    <elementType>oracle.communications.studio.osm.common.data.details.osmelementdetails</elementType>
+    <data:dataElementId>kCE0o+MiRnGUFnAS9d9t1Q</data:dataElementId>
+    <ordermanagement:readOnly>false</ordermanagement:readOnly>
+    <ordermanagement:maxDigits></ordermanagement:maxDigits>
+    <ordermanagement:significant>true</ordermanagement:significant>
+    <ordermanagement:xmlType>false</ordermanagement:xmlType>
+    <ordermanagement:mask xsi:nil="true"/>
+  </data:dataElementDetails>
+  <data:dataElementDetails xsi:type="data:dataElementInformationDetails">
+    <id>pq0XF6MGTKuOzczyEQGLnA</id>
+    <elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</elementType>
+    <data:dataElementId>kCE0o+MiRnGUFnAS9d9t1Q</data:dataElementId>
+  </data:dataElementDetails>
+  <data:dataElementDetails xsi:type="viewrule:viewRuleElementDetails">
+    <id>eMwwZzQaRf2FAvQRho+Cwg</id>
+    <elementType>oracle.communications.studio.osm.common.data.details.viewruledetails</elementType>
+    <data:dataElementId>kCE0o+MiRnGUFnAS9d9t1Q</data:dataElementId>
+  </data:dataElementDetails>
+  <data:dataElementDetails xsi:type="data:dataElementCommonDetail">
+    <id>ySrBOjzjQs+YyRbZTeIZmw</id>
+    <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
+    <data:dataElementId>+vEt0LtdSbatFhCn3mUsfA</data:dataElementId>
+    <data:key></data:key>
+    <data:deprecated>false</data:deprecated>
+    <data:internal>false</data:internal>
+  </data:dataElementDetails>
+  <data:dataElementDetails xsi:type="layout:hintDetail">
+    <id>FTixjyuaTxCtgO6QuYy9hQ</id>
+    <elementType>oracle.communications.sce.poms.model.data.UIHintsDetail</elementType>
+    <data:dataElementId>+vEt0LtdSbatFhCn3mUsfA</data:dataElementId>
+    <layout:hints/>
+  </data:dataElementDetails>
+  <data:dataElementDetails xsi:type="data:dataElementInformationDetails">
+    <id>uGWJvPvhSfygICpoWAn2Zw</id>
+    <elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</elementType>
+    <data:dataElementId>+vEt0LtdSbatFhCn3mUsfA</data:dataElementId>
+  </data:dataElementDetails>
+  <data:dataElementDetails xsi:type="poms:valueComplexType" linkEnabled="false" overrideDictionaryValues="false" query="" queryEnabled="false" valueEnabled="false">
+    <id>ZXxZzf-CSNu0ncMvdXlJVw</id>
+    <elementType>oracle.communications.sce.poms.model.data.ValueElementDetail</elementType>
+    <data:dataElementId>+vEt0LtdSbatFhCn3mUsfA</data:dataElementId>
+  </data:dataElementDetails>
+  <data:dataElementDetails xsi:type="specification:CharElementDetailType">
+    <id>V52HmCvWQNKud2i1QImRpA</id>
+    <elementType>oracle.communications.studio.inventory.model.data.StudioModelDataElementCharDetailType</elementType>
+    <data:dataElementId>+vEt0LtdSbatFhCn3mUsfA</data:dataElementId>
+    <specification:startTimestamp>0</specification:startTimestamp>
+    <specification:endTimestamp>0</specification:endTimestamp>
+  </data:dataElementDetails>
+  <data:dataElementDetails xsi:type="data:dataElementInformationDetails">
+    <id>7-nbz3vTTZen6I-XthsMWw</id>
+    <elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</elementType>
+    <data:dataElementId>pUNVrM85SjqjFHlKWeZJqw</data:dataElementId>
+  </data:dataElementDetails>
+  <data:dataElementDetails xsi:type="data:dataElementCommonDetail">
+    <id>T8FKeZTaRxeyvi1iwbVVbw</id>
+    <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
+    <data:dataElementId>pUNVrM85SjqjFHlKWeZJqw</data:dataElementId>
+    <data:key></data:key>
+    <data:deprecated>false</data:deprecated>
+    <data:internal>false</data:internal>
+  </data:dataElementDetails>
+  <data:dataElementDetails xsi:type="layout:hintDetail">
+    <id>Pk3gosEDRt6Bs8hYBOCNWQ</id>
+    <elementType>oracle.communications.sce.poms.model.data.UIHintsDetail</elementType>
+    <data:dataElementId>pUNVrM85SjqjFHlKWeZJqw</data:dataElementId>
+    <layout:hints/>
+  </data:dataElementDetails>
+  <data:dataElementDetails xsi:type="data:dataElementInformationDetails">
+    <id>P4lvfQ4tSQ+3V+02oLHwqg</id>
+    <elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</elementType>
+    <data:dataElementId>ZLx0hv4bT8igYFJ9tIPIfA</data:dataElementId>
+  </data:dataElementDetails>
+  <data:dataElementDetails xsi:type="data:dataElementCommonDetail">
+    <id>h6XNCNASR8CRSWvFyYXyzg</id>
+    <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
+    <data:dataElementId>ZLx0hv4bT8igYFJ9tIPIfA</data:dataElementId>
+    <data:key></data:key>
+    <data:deprecated>false</data:deprecated>
+    <data:internal>false</data:internal>
+  </data:dataElementDetails>
+  <data:dataElementDetails xsi:type="layout:hintDetail">
+    <id>hyyIJUWvTW6XtUJ2m0GWWQ</id>
+    <elementType>oracle.communications.sce.poms.model.data.UIHintsDetail</elementType>
+    <data:dataElementId>ZLx0hv4bT8igYFJ9tIPIfA</data:dataElementId>
+    <layout:hints/>
+  </data:dataElementDetails>
+  <dom:details>
+    <id>xdaXDZqgRIagzuw3h-sXIQ</id>
+    <elementType>oracle.communications.sce.common.entity.entities.datastructuredefinition.datastructuredefinitiondetails</elementType>
+  </dom:details>
+</modelEntity>

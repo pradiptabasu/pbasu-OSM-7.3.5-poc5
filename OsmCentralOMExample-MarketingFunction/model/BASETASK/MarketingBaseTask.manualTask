@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aut="http://xmlns.oracle.com/communications/sce/osm/model/process/task/automation" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:prov="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xmlns:task="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xmlns="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xsi:type="task:manualTaskType" name="MarketingBaseTask">
   <com:displayName>MarketingBaseTask</com:displayName>
-  <com:saveVersion>5</com:saveVersion>
+  <com:saveVersion>6</com:saveVersion>
   <com:id>--+1-d4Y--+3yScn---9eA</com:id>
   <task:orderType>
     <com:entity>OsmCentralOMExampleOrder</com:entity>
@@ -165,6 +165,20 @@
             <com:element>/ControlData/Functions/MarketingFunction/Status/ErrorStatus</com:element>
             <com:elementType>com.mslv.studio.provisioning.order.node</com:elementType>
           </task:childNode>
+        </task:childNode>
+        <task:childNode>
+          <com:entity>OsmCentralOMExampleOrder</com:entity>
+          <com:entityType>order</com:entityType>
+          <com:relationship>ora.task.orderTemplateRef</com:relationship>
+          <com:element>/ControlData/Functions/MarketingFunction/calculatedStartDate</com:element>
+          <com:elementType>com.mslv.studio.provisioning.order.node</com:elementType>
+        </task:childNode>
+        <task:childNode>
+          <com:entity>OsmCentralOMExampleOrder</com:entity>
+          <com:entityType>order</com:entityType>
+          <com:relationship>ora.task.orderTemplateRef</com:relationship>
+          <com:element>/ControlData/Functions/MarketingFunction/duration</com:element>
+          <com:elementType>com.mslv.studio.provisioning.order.node</com:elementType>
         </task:childNode>
       </task:childNode>
     </task:childNode>
@@ -344,6 +358,16 @@
     <task:editable>true</task:editable>
     <task:defaultValue></task:defaultValue>
   </task:viewNodeExtension>
+  <task:viewNodeExtension>
+    <task:path>/ControlData/Functions/MarketingFunction/calculatedStartDate</task:path>
+    <task:editable>true</task:editable>
+    <task:defaultValue></task:defaultValue>
+  </task:viewNodeExtension>
+  <task:viewNodeExtension>
+    <task:path>/ControlData/Functions/MarketingFunction/duration</task:path>
+    <task:editable>true</task:editable>
+    <task:defaultValue></task:defaultValue>
+  </task:viewNodeExtension>
   <task:state name="accepted">
     <task:displayName>Accepted</task:displayName>
   </task:state>
@@ -383,4 +407,9 @@
     <com:relationship>com.mslv.studio.provisioning.task.rolePermission</com:relationship>
     <task:executionModes>do redo undo</task:executionModes>
   </task:workgroupPermission>
+  <task:compensationStrategy/>
+  <task:inProgressCompensation>
+    <task:waitForStrategy/>
+    <task:considerCompensation/>
+  </task:inProgressCompensation>
 </com:modelEntity>

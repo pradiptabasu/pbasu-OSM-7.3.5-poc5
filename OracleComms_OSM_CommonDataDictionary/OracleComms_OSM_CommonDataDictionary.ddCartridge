@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com="http://www.mslv.com/studio/core/model/common" xsi:type="com:abstractCartridgeType" name="OracleComms_OSM_CommonDataDictionary">
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:data="http://www.oracle.com/communications/studio/core/model/common/data" xsi:type="com:abstractCartridgeType" name="OracleComms_OSM_CommonDataDictionary">
   <com:displayName>OracleComms_OSM_CommonDataDictionary</com:displayName>
-  <com:saveVersion>5</com:saveVersion>
+  <com:saveVersion>40</com:saveVersion>
   <com:id>+ugo---m--+Y---Q---uqg</com:id>
   <com:provider>Studio Data Dictionary Provider</com:provider>
   <com:version>
-    <com:major>1</com:major>
+    <com:major>4</com:major>
     <com:minor>0</com:minor>
     <com:build>0</com:build>
   </com:version>
   <com:targetApplicationVersion>
     <com:major>1</com:major>
     <com:minor>0</com:minor>
-    <com:servicePack>0</com:servicePack>
+    <com:maintenance>0</com:maintenance>
   </com:targetApplicationVersion>
-  <com:sealed>false</com:sealed>
-  <com:copyright>Copyright © 2005-2012 Oracle. All rights reserved.&#xD;
+  <com:sealed>true</com:sealed>
+  <com:copyright>Copyright © 2005-2015 Oracle. All rights reserved.&#xD;
 &#xD;
 The Programs (which include both the software and documentation)&#xD;
 contain proprietary information; they are provided under a license &#xD;
@@ -82,8 +82,20 @@ inconsistent with such software license agreement would&#xD;
 be considered a violation of the agreement.  Also, use of &#xD;
 this Software by unauthorized persons is a violation of &#xD;
 applicable copyright laws.</com:license>
+  <com:unsealMessage>This is a productized cartridge provided by Oracle Corporation.  Unsealing and modifying the contents of this cartridge will void support and maintenance agreements.  If you experience any issues with this cartridge, please contact via My Oracle Support.  Do not unseal this cartridge unless you have obtained approval from Oracle.&#xD;
+&#xD;
+Do you want to unseal the cartridge?</com:unsealMessage>
   <com:catridgeElement>
-    <com:id>PYSMwIGmRbSOYyYJTbhiAw</com:id>
+    <com:id>REY+FPfqTm2-G-2-JZ4lLg</com:id>
     <com:elementType>oracle.communications.studio.model.StudioCartridgeElement</com:elementType>
+    <com:detail xsi:type="data:dataElementTagDetails">
+      <com:id>hSdgHo1zSmyixCurMzOmGQ</com:id>
+      <com:elementType>oracle.communications.studio.model.tag.StudioModelTagDetails</com:elementType>
+      <data:dataElementId>REY+FPfqTm2-G-2-JZ4lLg</data:dataElementId>
+      <data:tags>
+        <data:id>oracle.communications.studio.core.base.project.tag</data:id>
+        <data:name>Base Project</data:name>
+      </data:tags>
+    </com:detail>
   </com:catridgeElement>
 </com:modelEntity>

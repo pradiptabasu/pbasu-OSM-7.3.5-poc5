@@ -1,0 +1,322 @@
+
+[Info] (14-Sep-2016 11:28:46 AM) Start to upgrade project OracleComms_OSM_CommonDataDictionary
+[Info] (14-Sep-2016 11:28:46 AM) Update to file /Users/sju/SVN/main/QA/Provisioning/unittests/testcases/asset-rest-api/workspace/OracleComms_OSM_CommonDataDictionary/dataDictionary/OracleComms_OSM_CommonDataDictionary_companion.xsdc
+[Info] (14-Sep-2016 11:28:46 AM) Update element names from descriptiont to description
+[Info] (14-Sep-2016 11:28:46 AM) Start to upgrade with participant oracle.communications.studio.model.project.upgrade.dataDictionary.DataDictionaryProjectUpgradeParticipant
+[Info] (14-Sep-2016 11:28:46 AM) Update to file /Users/sju/SVN/main/QA/Provisioning/unittests/testcases/asset-rest-api/workspace/OracleComms_OSM_CommonDataDictionary/dataDictionary/OracleComms_OSM_CommonDataDictionary_companion.xsdc
+[Info] (14-Sep-2016 11:28:46 AM) Update element names from descriptiont to description
+[Info] (14-Sep-2016 11:28:46 AM) Update to file /Users/sju/SVN/main/QA/Provisioning/unittests/testcases/asset-rest-api/workspace/OracleComms_OSM_CommonDataDictionary/dataDictionary/OracleComms_OSM_CommonDataDictionary_companion.xsdc
+[Info] (14-Sep-2016 11:28:46 AM) Update element names from descriptiont to description
+[Info] (14-Sep-2016 11:28:46 AM) Start to upgrade with participant oracle.communications.sce.integrity.project.upgrade.datadictionary.upgradeParticipant
+[Info] (14-Sep-2016 11:28:46 AM) Starting to upgrade (pre-open) Data Dictionary for: OracleComms_OSM_CommonDataDictionary
+[Info] (14-Sep-2016 11:28:46 AM) Update to file /Users/sju/SVN/main/QA/Provisioning/unittests/testcases/asset-rest-api/workspace/OracleComms_OSM_CommonDataDictionary/dataDictionary/OracleComms_OSM_CommonDataDictionary_companion.xsdc
+[Info] (14-Sep-2016 11:28:46 AM) Retrieve POMS extension information...
+[Info] (14-Sep-2016 11:28:46 AM) POMS extension information is retrieved.
+[Info] (14-Sep-2016 11:28:46 AM) No POMS extension information found.
+[Info] (14-Sep-2016 11:28:46 AM) POMS extension information is saved.
+[Info] (14-Sep-2016 11:28:46 AM) Upgrade (pre-open) to Data Dictionary for: OracleComms_OSM_CommonDataDictionary is completed.
+[Info] (14-Sep-2016 11:28:47 AM) Start to upgrade with participant oracle.communications.studio.model.datadictionary.entity.upgradeParticipant
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Element Reference Name for  OracleComms_OSM_CommonDataDictionary.ddCartridge
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  OracleComms_OSM_CommonDataDictionary.ddCartridge
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Element Reference Name for  OracleComms_OSM_CommonDataDictionary_companion.xsdc
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  OracleComms_OSM_CommonDataDictionary_companion.xsdc
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Element Reference Name for  Account.account
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  Account.account
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Element Reference Name for  AccountExtensions.dataStructDef
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  AccountExtensions.dataStructDef
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Element Reference Name for  AddressGeneric.dataStructDef
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  AddressGeneric.dataStructDef
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Element Reference Name for  Asset.asset
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  Asset.asset
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Element Reference Name for  BaseAbstractParameterSpecification.dataStructDef
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  BaseAbstractParameterSpecification.dataStructDef
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Element Reference Name for  BillingProfileExtensions.dataStructDef
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  BillingProfileExtensions.dataStructDef
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Element Reference Name for  CanadaAddress.dataStructDef
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  CanadaAddress.dataStructDef
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Element Reference Name for  Canceled.orderLifecycleManagerState
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  Canceled.orderLifecycleManagerState
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Element Reference Name for  Completed.orderLifecycleManagerState
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  Completed.orderLifecycleManagerState
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Element Reference Name for  Completed.processingState
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  Completed.processingState
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Element Reference Name for  ContactExtensions.dataStructDef
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  ContactExtensions.dataStructDef
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Element Reference Name for  DownstreamCorrectionRequired.processingState
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  DownstreamCorrectionRequired.processingState
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Element Reference Name for  Failed.orderLifecycleManagerState
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  Failed.orderLifecycleManagerState
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Element Reference Name for  Failed.processingState
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  Failed.processingState
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Element Reference Name for  FailedContinue.processingState
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  FailedContinue.processingState
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Element Reference Name for  InProgress.processingState
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  InProgress.processingState
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Element Reference Name for  In_Progress.orderLifecycleManagerState
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  In_Progress.orderLifecycleManagerState
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Element Reference Name for  NotStarted.processingState
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  NotStarted.processingState
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Element Reference Name for  PaymentMethodExtensions.dataStructDef
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  PaymentMethodExtensions.dataStructDef
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Element Reference Name for  USAddress.dataStructDef
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  USAddress.dataStructDef
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Element Reference Name for  UndoCompleted.processingState
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  UndoCompleted.processingState
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Element Reference Name for  UndoFailed.processingState
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  UndoFailed.processingState
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Element Reference Name for  UndoFailedContinue.processingState
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  UndoFailedContinue.processingState
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Element Reference Name for  Undoing.processingState
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  Undoing.processingState
+[Info] (14-Sep-2016 11:28:47 AM) [Entity ID Upgrade] Updated the Element Reference Name for  accountAndBillingDetails.dataStructDef
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  accountAndBillingDetails.dataStructDef
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Element Reference Name for  assetKeyDates.dataStructDef
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  assetKeyDates.dataStructDef
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Element Reference Name for  assetProperties.dataStructDef
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  assetProperties.dataStructDef
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Element Reference Name for  closed.aborted.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  closed.aborted.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Element Reference Name for  closed.completed.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  closed.completed.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Element Reference Name for  closed.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  closed.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Element Reference Name for  offerDetails.dataStructDef
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  offerDetails.dataStructDef
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Element Reference Name for  offerPricing.dataStructDef
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  offerPricing.dataStructDef
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Element Reference Name for  open.not_running.canceled.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  open.not_running.canceled.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Element Reference Name for  open.not_running.failed.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  open.not_running.failed.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Element Reference Name for  open.not_running.not_started.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  open.not_running.not_started.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Element Reference Name for  open.not_running.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  open.not_running.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Element Reference Name for  open.not_running.suspended.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  open.not_running.suspended.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Element Reference Name for  open.not_running.waiting.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  open.not_running.waiting.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Element Reference Name for  open.not_running.waiting_for_revision.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  open.not_running.waiting_for_revision.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Element Reference Name for  open.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  open.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Element Reference Name for  open.running.compensating.amending.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  open.running.compensating.amending.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Element Reference Name for  open.running.compensating.canceling.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  open.running.compensating.canceling.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Element Reference Name for  open.running.compensating.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  open.running.compensating.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Element Reference Name for  open.running.in_progress.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  open.running.in_progress.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Element Reference Name for  open.running.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  open.running.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Element Reference Name for  partnerDetails.dataStructDef
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  partnerDetails.dataStructDef
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Element Reference Name for  shippingAndInstallDetails.dataStructDef
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  shippingAndInstallDetails.dataStructDef
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Element Reference Name for  updateDetails.dataStructDef
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Updated the Virtual Root Node ID for  updateDetails.dataStructDef
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Saved Entity Failed.orderLifecycleManagerState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Saved Entity USAddress.dataStructDef
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Saved Entity Asset.asset
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Saved Entity open.not_running.waiting.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Saved Entity open.not_running.waiting_for_revision.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Saved Entity open.not_running.canceled.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Saved Entity CanadaAddress.dataStructDef
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Saved Entity open.not_running.failed.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Saved Entity shippingAndInstallDetails.dataStructDef
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Saved Entity AccountExtensions.dataStructDef
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Saved Entity closed.aborted.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Saved Entity Failed.processingState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Saved Entity Completed.processingState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Saved Entity updateDetails.dataStructDef
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Saved Entity ContactExtensions.dataStructDef
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Saved Entity FailedContinue.processingState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Saved Entity InProgress.processingState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Saved Entity AddressGeneric.dataStructDef
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Saved Entity open.running.compensating.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Saved Entity UndoFailedContinue.processingState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Saved Entity open.not_running.not_started.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Saved Entity open.running.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Saved Entity Asset.order
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Saved Entity UndoCompleted.processingState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Saved Entity OracleComms_OSM_CommonDataDictionary_companion.xsdc
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Saved Entity open.running.compensating.amending.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Saved Entity closed.completed.orderState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Saved Entity Account.account
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Saved Entity NotStarted.processingState
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Saved Entity PaymentMethodExtensions.dataStructDef
+[Info] (14-Sep-2016 11:28:48 AM) [Entity ID Upgrade] Saved Entity DownstreamCorrectionRequired.processingState
+[Info] (14-Sep-2016 11:28:49 AM) [Entity ID Upgrade] Saved Entity BillingProfileExtensions.dataStructDef
+[Info] (14-Sep-2016 11:28:49 AM) [Entity ID Upgrade] Saved Entity accountAndBillingDetails.dataStructDef
+[Info] (14-Sep-2016 11:28:49 AM) [Entity ID Upgrade] Saved Entity partnerDetails.dataStructDef
+[Info] (14-Sep-2016 11:28:49 AM) [Entity ID Upgrade] Saved Entity offerPricing.dataStructDef
+[Info] (14-Sep-2016 11:28:49 AM) [Entity ID Upgrade] Saved Entity open.not_running.orderState
+[Info] (14-Sep-2016 11:28:49 AM) [Entity ID Upgrade] Saved Entity closed.orderState
+[Info] (14-Sep-2016 11:28:49 AM) [Entity ID Upgrade] Saved Entity Completed.orderLifecycleManagerState
+[Info] (14-Sep-2016 11:28:49 AM) [Entity ID Upgrade] Saved Entity BaseAbstractParameterSpecification.dataStructDef
+[Info] (14-Sep-2016 11:28:49 AM) [Entity ID Upgrade] Saved Entity assetKeyDates.dataStructDef
+[Info] (14-Sep-2016 11:28:49 AM) [Entity ID Upgrade] Saved Entity Undoing.processingState
+[Info] (14-Sep-2016 11:28:49 AM) [Entity ID Upgrade] Saved Entity Canceled.orderLifecycleManagerState
+[Info] (14-Sep-2016 11:28:49 AM) [Entity ID Upgrade] Saved Entity OracleComms_OSM_CommonDataDictionary.ddCartridge
+[Info] (14-Sep-2016 11:28:49 AM) [Entity ID Upgrade] Saved Entity assetProperties.dataStructDef
+[Info] (14-Sep-2016 11:28:49 AM) [Entity ID Upgrade] Saved Entity open.running.compensating.canceling.orderState
+[Info] (14-Sep-2016 11:28:49 AM) [Entity ID Upgrade] Saved Entity offerDetails.dataStructDef
+[Info] (14-Sep-2016 11:28:49 AM) [Entity ID Upgrade] Saved Entity open.running.in_progress.orderState
+[Info] (14-Sep-2016 11:28:49 AM) [Entity ID Upgrade] Saved Entity open.orderState
+[Info] (14-Sep-2016 11:28:49 AM) [Entity ID Upgrade] Saved Entity In_Progress.orderLifecycleManagerState
+[Info] (14-Sep-2016 11:28:49 AM) [Entity ID Upgrade] Saved Entity open.not_running.suspended.orderState
+[Info] (14-Sep-2016 11:28:49 AM) [Entity ID Upgrade] Saved Entity UndoFailed.processingState
+[Info] (14-Sep-2016 11:28:49 AM) Start to upgrade with participant oracle.communications.studio.model.datadictionary.project.upgradeParticipant
+[Info] (14-Sep-2016 11:28:49 AM) Start to upgrade with participant oracle.communications.sce.integrity.project.upgrade.datadictionary.postUpgradeParticipant
+[Info] (14-Sep-2016 11:28:49 AM) Starting to upgrade Data Dictionary for: OracleComms_OSM_CommonDataDictionary
+[Info] (14-Sep-2016 11:28:49 AM) Upgrade Data Dictionary for: OracleComms_OSM_CommonDataDictionary is completed.
+
+[Info] (16-Jan-2017 5:01:55 PM) Start to upgrade project OracleComms_OSM_CommonDataDictionary
+[Info] (16-Jan-2017 5:01:55 PM) Start to upgrade with participant oracle.communications.sce.common.entity.entities.action.upgrade.PreProjectOpenActionUpgradeParticipant
+[Info] (16-Jan-2017 5:01:55 PM) Upgrade of Service and Technical Action Started 
+[Info] (16-Jan-2017 5:01:55 PM) Removing Fulfillment Pattern and Fulfillment Function 
+[Info] (16-Jan-2017 5:01:55 PM) Upgrade of Service and Technical Action Completed
+[Info] (16-Jan-2017 5:01:59 PM) Start to upgrade with participant oracle.communications.studio.osm.provisioning.project.upgrade.AssetAccountTagRemovalUpgradeParticipant
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Account System Id
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Customer Account
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Billing Account
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Service Account
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Site
+[Info] (16-Jan-2017 5:01:59 PM) Unsealing Cartridge OracleComms_OSM_CommonDataDictionary
+[Info] (16-Jan-2017 5:01:59 PM) Sealing Cartridge OracleComms_OSM_CommonDataDictionary
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element entityName
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element entityName
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element State
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element State
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element entityVersion
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element entityVersion
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Id
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Id
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element IdNodeType
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element id
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Account System
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Account System Id
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Actual Resumption Date
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Actual Suspension Date
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Agreement Id
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Agreement Number
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Billing Account
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Billing Profile
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Charge End Date
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Charge Start Date
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Currency Code
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Customer Account
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Description
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Discount End Date
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Discount Percentage
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Discount Period
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Discount Start Date
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Discount Type
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element endDateOfAssetVersion
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Id
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Id
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Installed Date
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element lastUpdateDateOfAsset
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Network Reference Id
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Offer Quantity
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Offer Version
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Order Id
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Order Number
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Original Price
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Override Price
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Partner
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Product Catalog Name
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Product Catalog Version
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Product Spec Name
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Product Spec Version
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Quote Id
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Quote Number
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Reason Code
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Recurring Type
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Requested Termination Date
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Return Date
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Service Account
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Service Id
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Shipping Date
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Site
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element startDateOfAssetVersion
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Updated By
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Updated By System
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Update Mode Type
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Warranty End Date
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Warranty Start Date
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Description Type
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Discount Type
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Order Number Type
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Percentage Type
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element PeriodType
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Price Type
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element RecurringType
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Version Type
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element accountClass
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Account Hierarchy
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element accountNumber
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element accountType
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element altitude
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element billDayOfMonth
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element billFrequency
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element billingProfileType
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element billMedia
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element billType
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element cellPhone
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element city
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element collections
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element collectionsExempt
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Company Name
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element country
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element county
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element currency
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element customerStanding
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element customerValue
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element email
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element firstName
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element homePhone
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element isPremise
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element jobTitle
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element language
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element lastName
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element latitude
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element lineFour
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element lineOne
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element lineThree
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element lineTwo
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element longitude
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element middleName
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element organization
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element paymentMethod
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element postalCode
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element priceList
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element province
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element salutation
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element secondaryCurrency
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element state
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element utmEasting
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element utmNorthing
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element workPhone
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element account
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element address
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Billing Address
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element contact
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element parentAccount
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element paymentMethods
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element primaryAddress
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element primaryBillingProfile
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element primaryContact
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element primaryPaymentMethod
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Root Account
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Service Address
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Shipping Address
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Account IDNode Type
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Id
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Any Billing Profile
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Usage Start Date
+[Info] (16-Jan-2017 5:01:59 PM) Removing Asset/Account Tag from Element Payee Billing Profile
+[Info] (16-Jan-2017 5:01:59 PM) Unsealing Cartridge OracleComms_OSM_CommonDataDictionary
+[Info] (16-Jan-2017 5:01:59 PM) Sealing Cartridge OracleComms_OSM_CommonDataDictionary
+[Info] (16-Jan-2017 5:01:59 PM) Start to upgrade with participant oracle.communications.sce.common.entity.entities.action.upgrade.ActionCodesUpgradeParticipant

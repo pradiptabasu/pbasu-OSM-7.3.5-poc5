@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmn="http://xmlns.oracle.com/communications/studio/model/common" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
+  <metadata version="1.0.0" release="7.3.0"/>
+  <entity xsi:type="cmn:DataStructureDefinition" id="dsd=offerDetails" type="dsd" typeName="Data Structure Definition" name="offerDetails" resource="/OracleComms_OSM_CommonDataDictionary/model/offerDetails.dataStructDef">
+    <displayName lang="default">offerDetails</displayName>
+    <note lang="default"/>
+    <project>
+      <relation ref="mprj=OracleComms_OSM_CommonDataDictionary" type="Model Project" name="Dependency">
+        <target name="OracleComms_OSM_CommonDataDictionary" typeName="Model Project"/>
+      </relation>
+    </project>
+    <dataElements>
+      <element id="dsd=offerDetails+dataElement=wnRkgLmIREGbNVK+zMmDvA" type="dataElement" typeName="Data Element" kind="Element" name="offerVersion" path="/offerDetails/offerVersion">
+        <displayName lang="default">Offer Version</displayName>
+        <minOccurs inherited="false">0</minOccurs>
+        <maxOccurs inherited="false">-1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="false">0</minLength>
+        <maxLength inherited="false">40</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=offerVersion" type="Schema Element" name="Type" kind="Element">
+            <target name="offerVersion" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="dsd=offerDetails+dataElement=slx6BncxT065OXw9W4EDeA" type="dataElement" typeName="Data Element" kind="Element" name="productSpecName" path="/offerDetails/productSpecName">
+        <displayName lang="default">Product Spec Name</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">200</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=productSpecName" type="Schema Element" name="Type" kind="Element">
+            <target name="productSpecName" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="dsd=offerDetails+dataElement=WEy2x1G6Q0GIDjzhr2GNsw" type="dataElement" typeName="Data Element" kind="Element" name="productSpecVersion" path="/offerDetails/productSpecVersion">
+        <displayName lang="default">Product Spec Version</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">20</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=productSpecVersion" type="Schema Element" name="Type" kind="Element">
+            <target name="productSpecVersion" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="dsd=offerDetails+dataElement=temKm8n2S+ufatzf90wGKw" type="dataElement" typeName="Data Element" kind="Element" name="productCatalogName" path="/offerDetails/productCatalogName">
+        <displayName lang="default">Product Catalog Name</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">200</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=productCatalogName" type="Schema Element" name="Type" kind="Element">
+            <target name="productCatalogName" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="dsd=offerDetails+dataElement=UjNKyGDESYGwHtjY7vmXJQ" type="dataElement" typeName="Data Element" kind="Element" name="productCatalogVersion" path="/offerDetails/productCatalogVersion">
+        <displayName lang="default">Product Catalog Version</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">20</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=productCatalogVersion" type="Schema Element" name="Type" kind="Element">
+            <target name="productCatalogVersion" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="dsd=offerDetails+dataElement=B5mTIGiWSlOkqrDYl2fgPA" type="dataElement" typeName="Data Element" kind="Element" name="offerQuantity" path="/offerDetails/offerQuantity">
+        <displayName lang="default">Offer Quantity</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=offerQuantity" type="Schema Element" name="Type" kind="Element">
+            <target name="offerQuantity" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>integer</primitiveType>
+      </element>
+    </dataElements>
+    <details>
+      <element id="dsd=offerDetails+dsd.dsdd=VWbl6p4-SzWQ-Z8Rh8ftkg" type="dsd.dsdd" typeName="Data Structure Definition Details" kind="Element" name="offerDetails Data Structure Definition Details" path="offerDetails Data Structure Definition Details"/>
+    </details>
+  </entity>
+</model:Model>

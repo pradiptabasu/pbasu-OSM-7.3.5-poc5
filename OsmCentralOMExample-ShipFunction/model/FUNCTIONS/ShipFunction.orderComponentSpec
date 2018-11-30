@@ -11,6 +11,7 @@
   </extends>
   <minDuration/>
   <defaultDuration/>
+  <maxDuration/>
   <executedByTask>
     <com:entity>ShippingSI</com:entity>
     <com:entityType>process</com:entityType>
@@ -188,6 +189,15 @@
     <ord:nodeExtension>
       <ord:path>/Status/ShippingStatus/ErrorStatus</ord:path>
     </ord:nodeExtension>
+    <ord:nodeExtension>
+      <ord:path>/ControlData/Functions/ShipFunction/calculatedStartDate</ord:path>
+    </ord:nodeExtension>
+    <ord:nodeExtension>
+      <ord:path>/ControlData/Functions/ShipFunction/duration</ord:path>
+    </ord:nodeExtension>
+    <ord:nodeExtension>
+      <ord:path>/ControlData/Functions/ShipFunction/transformedOrderItem</ord:path>
+    </ord:nodeExtension>
     <ord:orderData>
       <com:entity>OracleComms_OSM_CommonDataDictionary</com:entity>
       <com:entityType>xsd</com:entityType>
@@ -234,7 +244,7 @@
             <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
             <com:element>ShipFunction/componentKey</com:element>
             <com:elementType>com.mslv.studio.core.data.dictionary.node</com:elementType>
-            <com:elementName>componentKey</com:elementName>
+            <com:elementName>ShipFunction/componentKey</com:elementName>
             <com:namespace>http://xmlns.oracle.com/communications/sce/dictionary/OracleComms_OSM_CommonDataDictionary/OracleComms_OSM_CommonDataDictionary</com:namespace>
             <com:baseElement>string</com:baseElement>
             <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
@@ -269,6 +279,39 @@
               <ord:name>orderItemRef</ord:name>
             </ord:childRefNode>
           </ord:childNode>
+          <ord:childNode>
+            <com:entity>OsmCentralOMExample-ShipFunction</com:entity>
+            <com:entityType>xsd</com:entityType>
+            <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
+            <com:element>ShipFunction/calculatedStartDate</com:element>
+            <com:elementType>com.mslv.studio.core.data.dictionary.node</com:elementType>
+            <com:elementName>calculatedStartDate</com:elementName>
+            <com:namespace>http://xmlns.oracle.com/communications/sce/dictionary/OracleComms_OSM_CommonDataDictionary/OracleComms_OSM_CommonDataDictionary</com:namespace>
+            <com:baseElement>calculatedStartDate</com:baseElement>
+            <com:baseNamespace>http://xmlns.oracle.com/communications/sce/dictionary/OracleComms_OSM_CommonDataDictionary/OracleComms_OSM_CommonDataDictionary</com:baseNamespace>
+          </ord:childNode>
+          <ord:childNode>
+            <com:entity>OsmCentralOMExample-ShipFunction</com:entity>
+            <com:entityType>xsd</com:entityType>
+            <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
+            <com:element>ShipFunction/duration</com:element>
+            <com:elementType>com.mslv.studio.core.data.dictionary.node</com:elementType>
+            <com:elementName>duration</com:elementName>
+            <com:namespace>http://xmlns.oracle.com/communications/sce/dictionary/OracleComms_OSM_CommonDataDictionary/OracleComms_OSM_CommonDataDictionary</com:namespace>
+            <com:baseElement>duration</com:baseElement>
+            <com:baseNamespace>http://xmlns.oracle.com/communications/sce/dictionary/OracleComms_OSM_CommonDataDictionary/OracleComms_OSM_CommonDataDictionary</com:baseNamespace>
+          </ord:childNode>
+          <ord:childNode>
+            <com:entity>OsmCentralOMExample-ShipFunction</com:entity>
+            <com:entityType>xsd</com:entityType>
+            <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
+            <com:element>ShipFunction/transformedOrderItem</com:element>
+            <com:elementType>com.mslv.studio.core.data.dictionary.node</com:elementType>
+            <com:elementName>transformedOrderItem</com:elementName>
+            <com:namespace>http://xmlns.oracle.com/communications/sce/dictionary/OracleComms_OSM_CommonDataDictionary/OracleComms_OSM_CommonDataDictionary</com:namespace>
+            <com:baseElement>transformedOrderItem</com:baseElement>
+            <com:baseNamespace>http://xmlns.oracle.com/communications/sce/dictionary/OracleComms_OSM_CommonDataDictionary/OracleComms_OSM_CommonDataDictionary</com:baseNamespace>
+          </ord:childNode>
         </ord:childNode>
       </ord:childNode>
     </ord:orderData>
@@ -288,7 +331,7 @@
         <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
         <com:element>ShippingProfile/ShippingAddress</com:element>
         <com:elementType>com.mslv.studio.core.data.dictionary.node</com:elementType>
-        <com:elementName>ShippingProfile/ShippingAddress</com:elementName>
+        <com:elementName>ShippingAddress</com:elementName>
         <com:namespace>http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample-ShipFunction/OsmCentralOMExample-ShipFunction</com:namespace>
         <com:baseElement>ShippingAddress</com:baseElement>
         <com:baseNamespace>http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample-ShipFunction/OsmCentralOMExample-ShipFunction</com:baseNamespace>
@@ -298,7 +341,7 @@
           <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
           <com:element>ShippingProfile/ShippingAddress/locationType</com:element>
           <com:elementType>com.mslv.studio.core.data.dictionary.node</com:elementType>
-          <com:elementName>locationType</com:elementName>
+          <com:elementName>ShippingProfile/ShippingAddress/locationType</com:elementName>
           <com:namespace>http://xmlns.oracle.com/InputMessage</com:namespace>
           <com:baseElement>string</com:baseElement>
           <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>

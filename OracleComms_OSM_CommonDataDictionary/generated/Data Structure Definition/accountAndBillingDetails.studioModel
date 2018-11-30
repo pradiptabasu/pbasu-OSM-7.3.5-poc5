@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmn="http://xmlns.oracle.com/communications/studio/model/common" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
+  <metadata version="1.0.0" release="7.3.0"/>
+  <entity xsi:type="cmn:DataStructureDefinition" id="dsd=accountAndBillingDetails" type="dsd" typeName="Data Structure Definition" name="accountAndBillingDetails" resource="/OracleComms_OSM_CommonDataDictionary/model/accountAndBillingDetails.dataStructDef">
+    <displayName lang="default">accountAndBillingDetails</displayName>
+    <note lang="default"/>
+    <project>
+      <relation ref="mprj=OracleComms_OSM_CommonDataDictionary" type="Model Project" name="Dependency">
+        <target name="OracleComms_OSM_CommonDataDictionary" typeName="Model Project"/>
+      </relation>
+    </project>
+    <dataElements>
+      <element id="dsd=accountAndBillingDetails+dataElement=aCfG1mWLS-WhG2EBEyZTHw" type="dataElement" typeName="Data Element" kind="Element" name="accountSystemId" path="/accountAndBillingDetails/accountSystemId">
+        <displayName lang="default">Account System Id</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">256</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=accountSystemId" type="Schema Element" name="Type" kind="Element">
+            <target name="accountSystemId" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <tag>
+          <name>Asset</name>
+          <description>Asset</description>
+        </tag>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="dsd=accountAndBillingDetails+dataElement=zoC7+o99RG2BJDFDSsH-gA" type="dataElement" typeName="Data Element" kind="Element" name="customerAccount" path="/accountAndBillingDetails/customerAccount">
+        <displayName lang="default">Customer Account</displayName>
+        <minOccurs inherited="true">1</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=customerAccount" type="Schema Element" name="Type" kind="Element">
+            <target name="customerAccount" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements>
+          <element id="dsd=accountAndBillingDetails+dataElement=kZDwnR5zRt2Q-bTqPFSSiw" type="dataElement" typeName="Data Element" kind="Element" name="id" path="/accountAndBillingDetails/customerAccount/id">
+            <displayName lang="default">Id</displayName>
+            <minOccurs inherited="true">1</minOccurs>
+            <maxOccurs inherited="true">1</maxOccurs>
+            <defaultValue inherited="true"></defaultValue>
+            <key inherited="false"></key>
+            <abstract inherited="false">false</abstract>
+            <deprecated inherited="false">false</deprecated>
+            <internal inherited="false">false</internal>
+            <sensitive inherited="true">false</sensitive>
+            <minLength inherited="true">0</minLength>
+            <maxLength inherited="true">256</maxLength>
+            <base>
+              <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=customerAccount/id" type="Schema Element" name="Type" kind="Element">
+                <target name="id" typeName="Schema Element"/>
+                <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+              </relation>
+            </base>
+            <dataElements/>
+            <primitiveType>string</primitiveType>
+          </element>
+        </dataElements>
+        <tag>
+          <name>Asset</name>
+          <description>Asset</description>
+        </tag>
+        <primitiveType>structure</primitiveType>
+      </element>
+      <element id="dsd=accountAndBillingDetails+dataElement=wu+6ElP6QImC7n8TwwG+RA" type="dataElement" typeName="Data Element" kind="Element" name="billingAccount" path="/accountAndBillingDetails/billingAccount">
+        <displayName lang="default">Billing Account</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=billingAccount" type="Schema Element" name="Type" kind="Element">
+            <target name="billingAccount" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements>
+          <element id="dsd=accountAndBillingDetails+dataElement=7ZbhLNDTTHm1LulwYzV5dg" type="dataElement" typeName="Data Element" kind="Element" name="id" path="/accountAndBillingDetails/billingAccount/id">
+            <displayName lang="default">Id</displayName>
+            <minOccurs inherited="true">1</minOccurs>
+            <maxOccurs inherited="true">1</maxOccurs>
+            <defaultValue inherited="true"></defaultValue>
+            <key inherited="false"></key>
+            <abstract inherited="false">false</abstract>
+            <deprecated inherited="false">false</deprecated>
+            <internal inherited="false">false</internal>
+            <sensitive inherited="true">false</sensitive>
+            <minLength inherited="true">0</minLength>
+            <maxLength inherited="true">256</maxLength>
+            <base>
+              <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=billingAccount/id" type="Schema Element" name="Type" kind="Element">
+                <target name="id" typeName="Schema Element"/>
+                <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+              </relation>
+            </base>
+            <dataElements/>
+            <primitiveType>string</primitiveType>
+          </element>
+        </dataElements>
+        <tag>
+          <name>Asset</name>
+          <description>Asset</description>
+        </tag>
+        <primitiveType>structure</primitiveType>
+      </element>
+      <element id="dsd=accountAndBillingDetails+dataElement=WmYEt57mSoS6xJJ0oW5xkA" type="dataElement" typeName="Data Element" kind="Element" name="serviceAccount" path="/accountAndBillingDetails/serviceAccount">
+        <displayName lang="default">Service Account</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=serviceAccount" type="Schema Element" name="Type" kind="Element">
+            <target name="serviceAccount" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements>
+          <element id="dsd=accountAndBillingDetails+dataElement=vaHlJ07ISXe6TR0GbH0oUw" type="dataElement" typeName="Data Element" kind="Element" name="id" path="/accountAndBillingDetails/serviceAccount/id">
+            <displayName lang="default">Id</displayName>
+            <minOccurs inherited="true">1</minOccurs>
+            <maxOccurs inherited="true">1</maxOccurs>
+            <defaultValue inherited="true"></defaultValue>
+            <key inherited="false"></key>
+            <abstract inherited="false">false</abstract>
+            <deprecated inherited="false">false</deprecated>
+            <internal inherited="false">false</internal>
+            <sensitive inherited="true">false</sensitive>
+            <minLength inherited="true">0</minLength>
+            <maxLength inherited="true">256</maxLength>
+            <base>
+              <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=serviceAccount/id" type="Schema Element" name="Type" kind="Element">
+                <target name="id" typeName="Schema Element"/>
+                <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+              </relation>
+            </base>
+            <dataElements/>
+            <primitiveType>string</primitiveType>
+          </element>
+        </dataElements>
+        <tag>
+          <name>Asset</name>
+          <description>Asset</description>
+        </tag>
+        <primitiveType>structure</primitiveType>
+      </element>
+      <element id="dsd=accountAndBillingDetails+dataElement=HnBef7mkRqu0f9jB6-gy+g" type="dataElement" typeName="Data Element" kind="Element" name="site" path="/accountAndBillingDetails/site">
+        <displayName lang="default">Site</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=site" type="Schema Element" name="Type" kind="Element">
+            <target name="site" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements>
+          <element id="dsd=accountAndBillingDetails+dataElement=w7xt1H2WQla0Wgk1i66jPQ" type="dataElement" typeName="Data Element" kind="Element" name="id" path="/accountAndBillingDetails/site/id">
+            <displayName lang="default">Id</displayName>
+            <minOccurs inherited="true">1</minOccurs>
+            <maxOccurs inherited="true">1</maxOccurs>
+            <defaultValue inherited="true"></defaultValue>
+            <key inherited="false"></key>
+            <abstract inherited="false">false</abstract>
+            <deprecated inherited="false">false</deprecated>
+            <internal inherited="false">false</internal>
+            <sensitive inherited="true">false</sensitive>
+            <minLength inherited="true">0</minLength>
+            <maxLength inherited="true">256</maxLength>
+            <base>
+              <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=site/id" type="Schema Element" name="Type" kind="Element">
+                <target name="id" typeName="Schema Element"/>
+                <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+              </relation>
+            </base>
+            <dataElements/>
+            <primitiveType>string</primitiveType>
+          </element>
+        </dataElements>
+        <tag>
+          <name>Asset</name>
+          <description>Asset</description>
+        </tag>
+        <primitiveType>structure</primitiveType>
+      </element>
+      <element id="dsd=accountAndBillingDetails+dataElement=1C4KEa3ITdSDAPsmHrlSeA" type="dataElement" typeName="Data Element" kind="Element" name="accountBillingProfile" path="/accountAndBillingDetails/accountBillingProfile">
+        <displayName lang="default">Any Billing Profile</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=accountBillingProfile" type="Schema Element" name="Type" kind="Element">
+            <target name="accountBillingProfile" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements>
+          <element id="dsd=accountAndBillingDetails+dataElement=elnewgbNQJCf4chZhCXNKA" type="dataElement" typeName="Data Element" kind="Element" name="id" path="/accountAndBillingDetails/accountBillingProfile/id">
+            <displayName lang="default">Id</displayName>
+            <minOccurs inherited="true">1</minOccurs>
+            <maxOccurs inherited="true">1</maxOccurs>
+            <defaultValue inherited="true"></defaultValue>
+            <key inherited="false"></key>
+            <abstract inherited="false">false</abstract>
+            <deprecated inherited="false">false</deprecated>
+            <internal inherited="false">false</internal>
+            <sensitive inherited="true">false</sensitive>
+            <minLength inherited="true">0</minLength>
+            <maxLength inherited="true">256</maxLength>
+            <base>
+              <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=accountBillingProfile/id" type="Schema Element" name="Type" kind="Element">
+                <target name="id" typeName="Schema Element"/>
+                <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+              </relation>
+            </base>
+            <dataElements/>
+            <primitiveType>string</primitiveType>
+          </element>
+        </dataElements>
+        <primitiveType>structure</primitiveType>
+      </element>
+    </dataElements>
+    <details>
+      <element id="dsd=accountAndBillingDetails+dsd.dsdd=rjis6+i8SvezArB+lV5wRQ" type="dsd.dsdd" typeName="Data Structure Definition Details" kind="Element" name="accountAndBillingDetails Data Structure Definition Details" path="accountAndBillingDetails Data Structure Definition Details"/>
+    </details>
+  </entity>
+</model:Model>

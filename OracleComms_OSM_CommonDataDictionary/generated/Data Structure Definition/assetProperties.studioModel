@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmn="http://xmlns.oracle.com/communications/studio/model/common" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
+  <metadata version="1.0.0" release="7.3.0"/>
+  <entity xsi:type="cmn:DataStructureDefinition" id="dsd=assetProperties" type="dsd" typeName="Data Structure Definition" name="assetProperties" resource="/OracleComms_OSM_CommonDataDictionary/model/assetProperties.dataStructDef">
+    <displayName lang="default">assetProperties</displayName>
+    <note lang="default"/>
+    <project>
+      <relation ref="mprj=OracleComms_OSM_CommonDataDictionary" type="Model Project" name="Dependency">
+        <target name="OracleComms_OSM_CommonDataDictionary" typeName="Model Project"/>
+      </relation>
+    </project>
+    <dataElements>
+      <element id="dsd=assetProperties+dataElement=SrzqjBJ5TtqdjV5gtpx-ow" type="dataElement" typeName="Data Element" kind="Element" name="shippingAndInstallDetails" path="/assetProperties/shippingAndInstallDetails">
+        <displayName lang="default">shippingAndInstallDetails</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">-1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <base>
+          <relation ref="dsd=shippingAndInstallDetails+dataElement=CUc9566zRkuZjt9jKK6z6w" type="Data Element" name="Type" kind="Element">
+            <target name="shippingAndInstallDetails" typeName="Data Element"/>
+            <inEntity name="shippingAndInstallDetails" typeName="Data Structure Definition"/>
+          </relation>
+        </base>
+        <dataElements>
+          <element id="dsd=assetProperties+dataElement=a1c4I+BGRXuWwZfuBLNlgg" type="dataElement" typeName="Data Element" kind="Element" name="shippingDate" path="/assetProperties/shippingAndInstallDetails/shippingDate">
+            <displayName lang="default">Shipping Date</displayName>
+            <minOccurs inherited="true">0</minOccurs>
+            <maxOccurs inherited="true">1</maxOccurs>
+            <defaultValue inherited="true"></defaultValue>
+            <key inherited="false"></key>
+            <abstract inherited="false">false</abstract>
+            <deprecated inherited="false">false</deprecated>
+            <internal inherited="false">false</internal>
+            <sensitive inherited="true">false</sensitive>
+            <minLength inherited="true">0</minLength>
+            <maxLength inherited="true">40</maxLength>
+            <base>
+              <relation ref="dsd=shippingAndInstallDetails+dataElement=NWTJ7PD-Q6SAXe8IzAKaEw" type="Data Element" name="Type" kind="Element">
+                <target name="shippingDate" typeName="Data Element"/>
+                <inEntity name="shippingAndInstallDetails" typeName="Data Structure Definition"/>
+              </relation>
+            </base>
+            <dataElements/>
+            <primitiveType>dateTime</primitiveType>
+          </element>
+          <element id="dsd=assetProperties+dataElement=eDR81zfgThexR8-910mkoA" type="dataElement" typeName="Data Element" kind="Element" name="installedDate" path="/assetProperties/shippingAndInstallDetails/installedDate">
+            <displayName lang="default">Installed Date</displayName>
+            <minOccurs inherited="true">0</minOccurs>
+            <maxOccurs inherited="true">1</maxOccurs>
+            <defaultValue inherited="true"></defaultValue>
+            <key inherited="false"></key>
+            <abstract inherited="false">false</abstract>
+            <deprecated inherited="false">false</deprecated>
+            <internal inherited="false">false</internal>
+            <sensitive inherited="true">false</sensitive>
+            <minLength inherited="true">0</minLength>
+            <maxLength inherited="true">40</maxLength>
+            <base>
+              <relation ref="dsd=shippingAndInstallDetails+dataElement=AE0DejadT7O4IP1ZKEOJyw" type="Data Element" name="Type" kind="Element">
+                <target name="installedDate" typeName="Data Element"/>
+                <inEntity name="shippingAndInstallDetails" typeName="Data Structure Definition"/>
+              </relation>
+            </base>
+            <dataElements/>
+            <primitiveType>dateTime</primitiveType>
+          </element>
+          <element id="dsd=assetProperties+dataElement=89vfDAhESzSw+fVf2+MI5g" type="dataElement" typeName="Data Element" kind="Element" name="returnDate" path="/assetProperties/shippingAndInstallDetails/returnDate">
+            <displayName lang="default">Return Date</displayName>
+            <minOccurs inherited="true">0</minOccurs>
+            <maxOccurs inherited="true">1</maxOccurs>
+            <defaultValue inherited="true"></defaultValue>
+            <key inherited="false"></key>
+            <abstract inherited="false">false</abstract>
+            <deprecated inherited="false">false</deprecated>
+            <internal inherited="false">false</internal>
+            <sensitive inherited="true">false</sensitive>
+            <minLength inherited="true">0</minLength>
+            <maxLength inherited="true">40</maxLength>
+            <base>
+              <relation ref="dsd=shippingAndInstallDetails+dataElement=FNGosh6iRyWdAYhx4HcMDQ" type="Data Element" name="Type" kind="Element">
+                <target name="returnDate" typeName="Data Element"/>
+                <inEntity name="shippingAndInstallDetails" typeName="Data Structure Definition"/>
+              </relation>
+            </base>
+            <dataElements/>
+            <primitiveType>dateTime</primitiveType>
+          </element>
+        </dataElements>
+        <primitiveType>structure</primitiveType>
+      </element>
+      <element id="dsd=assetProperties+dataElement=Gs1DZKdSRF+l2411PB95IQ" type="dataElement" typeName="Data Element" kind="Element" name="partnerDetails" path="/assetProperties/partnerDetails">
+        <displayName lang="default">partnerDetails</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">-1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <base>
+          <relation ref="dsd=partnerDetails+dataElement=XbGRi8tERwSSM+8YF7WvRg" type="Data Element" name="Type" kind="Element">
+            <target name="partnerDetails" typeName="Data Element"/>
+            <inEntity name="partnerDetails" typeName="Data Structure Definition"/>
+          </relation>
+        </base>
+        <dataElements>
+          <element id="dsd=assetProperties+dataElement=9DgEg5+fTDGt2+XLvaZSTQ" type="dataElement" typeName="Data Element" kind="Element" name="partnerSystem" path="/assetProperties/partnerDetails/partnerSystem">
+            <displayName lang="default">Partner</displayName>
+            <minOccurs inherited="true">0</minOccurs>
+            <maxOccurs inherited="true">1</maxOccurs>
+            <defaultValue inherited="true"></defaultValue>
+            <key inherited="false"></key>
+            <abstract inherited="false">false</abstract>
+            <deprecated inherited="false">false</deprecated>
+            <internal inherited="false">false</internal>
+            <sensitive inherited="true">false</sensitive>
+            <minLength inherited="true">0</minLength>
+            <maxLength inherited="true">256</maxLength>
+            <base>
+              <relation ref="dsd=partnerDetails+dataElement=EGrEly3rTC2JtzHXX7tEgQ" type="Data Element" name="Type" kind="Element">
+                <target name="partnerSystem" typeName="Data Element"/>
+                <inEntity name="partnerDetails" typeName="Data Structure Definition"/>
+              </relation>
+            </base>
+            <dataElements/>
+            <primitiveType>string</primitiveType>
+          </element>
+          <element id="dsd=assetProperties+dataElement=WvRLLuQpSzGHbcsXoOSqWQ" type="dataElement" typeName="Data Element" kind="Element" name="accountSystem" path="/assetProperties/partnerDetails/accountSystem">
+            <displayName lang="default">Account System</displayName>
+            <minOccurs inherited="true">0</minOccurs>
+            <maxOccurs inherited="true">1</maxOccurs>
+            <defaultValue inherited="true"></defaultValue>
+            <key inherited="false"></key>
+            <abstract inherited="false">false</abstract>
+            <deprecated inherited="false">false</deprecated>
+            <internal inherited="false">false</internal>
+            <sensitive inherited="true">false</sensitive>
+            <minLength inherited="true">0</minLength>
+            <maxLength inherited="true">256</maxLength>
+            <base>
+              <relation ref="dsd=partnerDetails+dataElement=d-BpfTXnSjqoVoQvuO5-zg" type="Data Element" name="Type" kind="Element">
+                <target name="accountSystem" typeName="Data Element"/>
+                <inEntity name="partnerDetails" typeName="Data Structure Definition"/>
+              </relation>
+            </base>
+            <dataElements/>
+            <primitiveType>string</primitiveType>
+          </element>
+        </dataElements>
+        <primitiveType>structure</primitiveType>
+      </element>
+    </dataElements>
+    <details>
+      <element id="dsd=assetProperties+dsd.dsdd=Jyl7Q-k-T9GkiNM+BN8z3g" type="dsd.dsdd" typeName="Data Structure Definition Details" kind="Element" name="assetProperties Data Structure Definition Details" path="assetProperties Data Structure Definition Details"/>
+    </details>
+  </entity>
+</model:Model>

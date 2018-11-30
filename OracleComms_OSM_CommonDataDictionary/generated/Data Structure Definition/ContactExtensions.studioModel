@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmn="http://xmlns.oracle.com/communications/studio/model/common" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
+  <metadata version="1.0.0" release="7.3.0"/>
+  <entity xsi:type="cmn:DataStructureDefinition" id="dsd=ContactExtensions" type="dsd" typeName="Data Structure Definition" name="ContactExtensions" resource="/OracleComms_OSM_CommonDataDictionary/model/ContactExtensions.dataStructDef">
+    <displayName lang="default">ContactExtensions</displayName>
+    <note lang="default"/>
+    <project>
+      <relation ref="mprj=OracleComms_OSM_CommonDataDictionary" type="Model Project" name="Dependency">
+        <target name="OracleComms_OSM_CommonDataDictionary" typeName="Model Project"/>
+      </relation>
+    </project>
+    <dataElements>
+      <element id="dsd=ContactExtensions+dataElement=LOcc+SbVShSy-bqeRHhzOw" type="dataElement" typeName="Data Element" kind="Element" name="salutation" path="/ContactExtensions/salutation">
+        <displayName lang="default">Salutation</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">20</maxLength>
+        <enum literal="Mr" default="false" inherited="true" excluded="false">
+          <name lang="default">Mr</name>
+        </enum>
+        <enum literal="Mrs" default="false" inherited="true" excluded="false">
+          <name lang="default">Mrs</name>
+        </enum>
+        <enum literal="Dr" default="false" inherited="true" excluded="false">
+          <name lang="default">Dr</name>
+        </enum>
+        <enum literal="Ms" default="false" inherited="true" excluded="false">
+          <name lang="default">Ms</name>
+        </enum>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=salutation" type="Schema Element" name="Type" kind="Element">
+            <target name="salutation" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="dsd=ContactExtensions+dataElement=PpsiJNOURgm18wxCLCuUDg" type="dataElement" typeName="Data Element" kind="Element" name="entityState" path="/ContactExtensions/entityState">
+        <displayName lang="default">accountStatus</displayName>
+        <minOccurs inherited="false">0</minOccurs>
+        <maxOccurs inherited="false">-1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="false">0</minLength>
+        <maxLength inherited="false">40</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=entityState" type="Schema Element" name="Type" kind="Element">
+            <target name="entityState" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+    </dataElements>
+    <details>
+      <element id="dsd=ContactExtensions+dsd.dsdd=HxSosM18Q1u-eMHwC2PSqw" type="dsd.dsdd" typeName="Data Structure Definition Details" kind="Element" name="ContactExtensions Data Structure Definition Details" path="ContactExtensions Data Structure Definition Details"/>
+    </details>
+  </entity>
+</model:Model>

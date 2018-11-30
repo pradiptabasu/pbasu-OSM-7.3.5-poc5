@@ -4,7 +4,7 @@
   <com:information>The CollectionsFunction order component specification is a function that represents any request that needs to be sent to the collections system. A collection request notifies the collections system that payments are owing by a customer.&#xD;
 &#xD;
 This order component specification is used in the determine fulfillment function decomposition stage. Order items are targeted to this order component specification through the product specification. In this sample cartridge, Service.Mobile, Service.Fixed and Service.Broadband specify that the CollectionsFunction is a required component for any order items that are categorized as part of these product specifications. Also note that a CollectionsSI process has been assigned to this order component, meaning that the CollectionsSI process will be executed for every order component that is derived from this order component.</com:information>
-  <com:saveVersion>19</com:saveVersion>
+  <com:saveVersion>20</com:saveVersion>
   <com:id>uSk6Re9g--+0--+j--+yQg</com:id>
   <namespace>http://oracle.communications.ordermanagement.unsupported.centralom</namespace>
   <extends>
@@ -14,6 +14,7 @@ This order component specification is used in the determine fulfillment function
   </extends>
   <minDuration/>
   <defaultDuration/>
+  <maxDuration/>
   <executedByTask>
     <com:entity>CollectionsSI</com:entity>
     <com:entityType>process</com:entityType>
@@ -178,6 +179,12 @@ This order component specification is used in the determine fulfillment function
     <ord:nodeExtension>
       <ord:path>/ControlData/Functions/CollectionsFunction/orderItem/ExternalFulfillmentState</ord:path>
     </ord:nodeExtension>
+    <ord:nodeExtension>
+      <ord:path>/ControlData/Functions/CollectionsFunction/calculatedStartDate</ord:path>
+    </ord:nodeExtension>
+    <ord:nodeExtension>
+      <ord:path>/ControlData/Functions/CollectionsFunction/duration</ord:path>
+    </ord:nodeExtension>
     <ord:orderData>
       <com:entity>OracleComms_OSM_CommonDataDictionary</com:entity>
       <com:entityType>xsd</com:entityType>
@@ -265,7 +272,7 @@ This order component specification is used in the determine fulfillment function
               <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
               <com:element>CollectionsFunction/Status/ErrorCode</com:element>
               <com:elementType>com.mslv.studio.core.data.dictionary.node</com:elementType>
-              <com:elementName>ErrorCode</com:elementName>
+              <com:elementName>CollectionsFunction/Status/ErrorCode</com:elementName>
               <com:namespace>http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample-Orchestration/OsmCentralOMExample-Orchestration</com:namespace>
               <com:baseElement>string</com:baseElement>
               <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
@@ -292,6 +299,28 @@ This order component specification is used in the determine fulfillment function
               <com:baseElement>string</com:baseElement>
               <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
             </ord:childNode>
+          </ord:childNode>
+          <ord:childNode>
+            <com:entity>OracleComms_OSM_CommonDataDictionary</com:entity>
+            <com:entityType>xsd</com:entityType>
+            <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
+            <com:element>calculatedStartDate</com:element>
+            <com:elementType>com.mslv.studio.core.data.dictionary.node</com:elementType>
+            <com:elementName>calculatedStartDate</com:elementName>
+            <com:namespace>http://xmlns.oracle.com/communications/sce/dictionary/OracleComms_OSM_CommonDataDictionary/OracleComms_OSM_CommonDataDictionary</com:namespace>
+            <com:baseElement>dateTime</com:baseElement>
+            <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
+          </ord:childNode>
+          <ord:childNode>
+            <com:entity>OracleComms_OSM_CommonDataDictionary</com:entity>
+            <com:entityType>xsd</com:entityType>
+            <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
+            <com:element>duration</com:element>
+            <com:elementType>com.mslv.studio.core.data.dictionary.node</com:elementType>
+            <com:elementName>duration</com:elementName>
+            <com:namespace>http://xmlns.oracle.com/communications/sce/dictionary/OracleComms_OSM_CommonDataDictionary/OracleComms_OSM_CommonDataDictionary</com:namespace>
+            <com:baseElement>string</com:baseElement>
+            <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
           </ord:childNode>
         </ord:childNode>
       </ord:childNode>
@@ -322,7 +351,7 @@ This order component specification is used in the determine fulfillment function
           <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
           <com:element>CollectionsStatus/ErrorCode</com:element>
           <com:elementType>com.mslv.studio.core.data.dictionary.node</com:elementType>
-          <com:elementName>ErrorCode</com:elementName>
+          <com:elementName>CollectionsStatus/ErrorCode</com:elementName>
           <com:namespace>http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample-Orchestration/OsmCentralOMExample-Orchestration</com:namespace>
           <com:baseElement>string</com:baseElement>
           <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>

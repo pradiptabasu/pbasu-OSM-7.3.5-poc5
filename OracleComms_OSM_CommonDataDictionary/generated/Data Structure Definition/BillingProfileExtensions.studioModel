@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmn="http://xmlns.oracle.com/communications/studio/model/common" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
+  <metadata version="1.0.0" release="7.3.0"/>
+  <entity xsi:type="cmn:DataStructureDefinition" id="dsd=BillingProfileExtensions" type="dsd" typeName="Data Structure Definition" name="BillingProfileExtensions" resource="/OracleComms_OSM_CommonDataDictionary/model/BillingProfileExtensions.dataStructDef">
+    <displayName lang="default">BillingProfileExtensions</displayName>
+    <note lang="default"/>
+    <project>
+      <relation ref="mprj=OracleComms_OSM_CommonDataDictionary" type="Model Project" name="Dependency">
+        <target name="OracleComms_OSM_CommonDataDictionary" typeName="Model Project"/>
+      </relation>
+    </project>
+    <dataElements>
+      <element id="dsd=BillingProfileExtensions+dataElement=h+0GJhmrQhexWGZTK-tHWw" type="dataElement" typeName="Data Element" kind="Element" name="billFrequency" path="/BillingProfileExtensions/billFrequency">
+        <displayName lang="default">Bill Frequency</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <enum literal="Monthly" default="false" inherited="true" excluded="false">
+          <name lang="default">Monthly</name>
+        </enum>
+        <enum literal="Quarterly" default="false" inherited="true" excluded="false">
+          <name lang="default">Quarterly</name>
+        </enum>
+        <enum literal="Annually" default="false" inherited="true" excluded="false">
+          <name lang="default">Annually</name>
+        </enum>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=billFrequency" type="Schema Element" name="Type" kind="Element">
+            <target name="billFrequency" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="dsd=BillingProfileExtensions+dataElement=-iYAyr22QQmFE+qnKyIOCg" type="dataElement" typeName="Data Element" kind="Element" name="billMedia" path="/BillingProfileExtensions/billMedia">
+        <displayName lang="default">Bill Media</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <enum literal="Email" default="false" inherited="true" excluded="false">
+          <name lang="default">Email</name>
+        </enum>
+        <enum literal="CD" default="false" inherited="true" excluded="false">
+          <name lang="default">CD</name>
+        </enum>
+        <enum literal="Paper" default="false" inherited="true" excluded="false">
+          <name lang="default">Paper</name>
+        </enum>
+        <enum literal="INVOICE" default="false" inherited="true" excluded="false">
+          <name lang="default">Invoice</name>
+        </enum>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=billMedia" type="Schema Element" name="Type" kind="Element">
+            <target name="billMedia" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="dsd=BillingProfileExtensions+dataElement=cCWC1XesSuqKDL8t8ECUfg" type="dataElement" typeName="Data Element" kind="Element" name="billType" path="/BillingProfileExtensions/billType">
+        <displayName lang="default">Bill Type</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <enum literal="Detail" default="false" inherited="true" excluded="false">
+          <name lang="default">Detail</name>
+        </enum>
+        <enum literal="Summary" default="false" inherited="true" excluded="false">
+          <name lang="default">Summary</name>
+        </enum>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=billType" type="Schema Element" name="Type" kind="Element">
+            <target name="billType" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="dsd=BillingProfileExtensions+dataElement=XLRYMj2lQ3yMxdhk5Q2mGw" type="dataElement" typeName="Data Element" kind="Element" name="currency" path="/BillingProfileExtensions/currency">
+        <displayName lang="default">Currency</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">50</maxLength>
+        <enum literal="AED" default="false" inherited="true" excluded="false">
+          <name lang="default">United Arab Emirates Dirham </name>
+        </enum>
+        <enum literal="AFN" default="false" inherited="true" excluded="false">
+          <name lang="default">Afghanistan Afghani </name>
+        </enum>
+        <enum literal="ALL" default="false" inherited="true" excluded="false">
+          <name lang="default">Albania Lek </name>
+        </enum>
+        <enum literal="AMD" default="false" inherited="true" excluded="false">
+          <name lang="default">Armenia Dram </name>
+        </enum>
+        <enum literal="ANG" default="false" inherited="true" excluded="false">
+          <name lang="default">Netherlands Antilles Guilder </name>
+        </enum>
+        <enum literal="AOA" default="false" inherited="true" excluded="false">
+          <name lang="default">Angola Kwanza </name>
+        </enum>
+        <enum literal="ARS" default="false" inherited="true" excluded="false">
+          <name lang="default">Argentina Peso </name>
+        </enum>
+        <enum literal="AUD" default="false" inherited="true" excluded="false">
+          <name lang="default">Australia Dollar </name>
+        </enum>
+        <enum literal="AWG" default="false" inherited="true" excluded="false">
+          <name lang="default">Aruba Guilder </name>
+        </enum>
+        <enum literal="AZN" default="false" inherited="true" excluded="false">
+          <name lang="default">Azerbaijan New Manat </name>
+        </enum>
+        <enum literal="BAM" default="false" inherited="true" excluded="false">
+          <name lang="default">Bosnia and Herzegovina Convertible Marka </name>
+        </enum>
+        <enum literal="BBD" default="false" inherited="true" excluded="false">
+          <name lang="default">Barbados Dollar </name>
+        </enum>
+        <enum literal="BDT" default="false" inherited="true" excluded="false">
+          <name lang="default">Bangladesh Taka </name>
+        </enum>
+        <enum literal="BGN" default="false" inherited="true" excluded="false">
+          <name lang="default">Bulgaria Lev </name>
+        </enum>
+        <enum literal="BHD" default="false" inherited="true" excluded="false">
+          <name lang="default">Bahrain Dinar </name>
+        </enum>
+        <enum literal="BIF" default="false" inherited="true" excluded="false">
+          <name lang="default">Burundi Franc </name>
+        </enum>
+        <enum literal="BMD" default="false" inherited="true" excluded="false">
+          <name lang="default">Bermuda Dollar </name>
+        </enum>
+        <enum literal="BND" default="false" inherited="true" excluded="false">
+          <name lang="default">Brunei Darussalam Dollar </name>
+        </enum>
+        <enum literal="BOB" default="false" inherited="true" excluded="false">
+          <name lang="default">Bolivia Boliviano </name>
+        </enum>
+        <enum literal="BRL" default="false" inherited="true" excluded="false">
+          <name lang="default">Brazil Real </name>
+        </enum>
+        <enum literal="BSD" default="false" inherited="true" excluded="false">
+          <name lang="default">Bahamas Dollar </name>
+        </enum>
+        <enum literal="BTN" default="false" inherited="true" excluded="false">
+          <name lang="default">Bhutan Ngultrum </name>
+        </enum>
+        <enum literal="BWP" default="false" inherited="true" excluded="false">
+          <name lang="default">Botswana Pula </name>
+        </enum>
+        <enum literal="BYR" default="false" inherited="true" excluded="false">
+          <name lang="default">Belarus Ruble </name>
+        </enum>
+        <enum literal="BZD" default="false" inherited="true" excluded="false">
+          <name lang="default">Belize Dollar </name>
+        </enum>
+        <enum literal="CAD" default="false" inherited="true" excluded="false">
+          <name lang="default">Canada Dollar </name>
+        </enum>
+        <enum literal="CDF" default="false" inherited="true" excluded="false">
+          <name lang="default">Congo/Kinshasa Franc </name>
+        </enum>
+        <enum literal="CHF" default="false" inherited="true" excluded="false">
+          <name lang="default">Switzerland Franc </name>
+        </enum>
+        <enum literal="CLP" default="false" inherited="true" excluded="false">
+          <name lang="default">Chile Peso </name>
+        </enum>
+        <enum literal="CNY" default="false" inherited="true" excluded="false">
+          <name lang="default">China Yuan Renminbi </name>
+        </enum>
+        <enum literal="COP" default="false" inherited="true" excluded="false">
+          <name lang="default">Colombia Peso </name>
+        </enum>
+        <enum literal="CRC" default="false" inherited="true" excluded="false">
+          <name lang="default">Costa Rica Colon </name>
+        </enum>
+        <enum literal="CUC" default="false" inherited="true" excluded="false">
+          <name lang="default">Cuba Convertible Peso </name>
+        </enum>
+        <enum literal="CUP" default="false" inherited="true" excluded="false">
+          <name lang="default">Cuba Peso </name>
+        </enum>
+        <enum literal="CVE" default="false" inherited="true" excluded="false">
+          <name lang="default">Cape Verde Escudo </name>
+        </enum>
+        <enum literal="CZK" default="false" inherited="true" excluded="false">
+          <name lang="default">Czech Republic Koruna </name>
+        </enum>
+        <enum literal="DJF" default="false" inherited="true" excluded="false">
+          <name lang="default">Djibouti Franc </name>
+        </enum>
+        <enum literal="DKK" default="false" inherited="true" excluded="false">
+          <name lang="default">Denmark Krone </name>
+        </enum>
+        <enum literal="DOP" default="false" inherited="true" excluded="false">
+          <name lang="default">Dominican Republic Peso </name>
+        </enum>
+        <enum literal="DZD" default="false" inherited="true" excluded="false">
+          <name lang="default">Algeria Dinar </name>
+        </enum>
+        <enum literal="EGP" default="false" inherited="true" excluded="false">
+          <name lang="default">Egypt Pound </name>
+        </enum>
+        <enum literal="ERN" default="false" inherited="true" excluded="false">
+          <name lang="default">Eritrea Nakfa </name>
+        </enum>
+        <enum literal="ETB" default="false" inherited="true" excluded="false">
+          <name lang="default">Ethiopia Birr </name>
+        </enum>
+        <enum literal="EUR" default="false" inherited="true" excluded="false">
+          <name lang="default">Euro Member Countries </name>
+        </enum>
+        <enum literal="FJD" default="false" inherited="true" excluded="false">
+          <name lang="default">Fiji Dollar </name>
+        </enum>
+        <enum literal="FKP" default="false" inherited="true" excluded="false">
+          <name lang="default">Falkland Islands (Malvinas) Pound </name>
+        </enum>
+        <enum literal="GBP" default="false" inherited="true" excluded="false">
+          <name lang="default">United Kingdom Pound </name>
+        </enum>
+        <enum literal="GEL" default="false" inherited="true" excluded="false">
+          <name lang="default">Georgia Lari </name>
+        </enum>
+        <enum literal="GGP" default="false" inherited="true" excluded="false">
+          <name lang="default">Guernsey Pound </name>
+        </enum>
+        <enum literal="GHS" default="false" inherited="true" excluded="false">
+          <name lang="default">Ghana Cedi </name>
+        </enum>
+        <enum literal="GIP" default="false" inherited="true" excluded="false">
+          <name lang="default">Gibraltar Pound </name>
+        </enum>
+        <enum literal="GMD" default="false" inherited="true" excluded="false">
+          <name lang="default">Gambia Dalasi </name>
+        </enum>
+        <enum literal="GNF" default="false" inherited="true" excluded="false">
+          <name lang="default">Guinea Franc </name>
+        </enum>
+        <enum literal="GTQ" default="false" inherited="true" excluded="false">
+          <name lang="default">Guatemala Quetzal </name>
+        </enum>
+        <enum literal="GYD" default="false" inherited="true" excluded="false">
+          <name lang="default">Guyana Dollar </name>
+        </enum>
+        <enum literal="HKD" default="false" inherited="true" excluded="false">
+          <name lang="default">Hong Kong Dollar </name>
+        </enum>
+        <enum literal="HNL" default="false" inherited="true" excluded="false">
+          <name lang="default">Honduras Lempira </name>
+        </enum>
+        <enum literal="HRK" default="false" inherited="true" excluded="false">
+          <name lang="default">Croatia Kuna </name>
+        </enum>
+        <enum literal="HTG" default="false" inherited="true" excluded="false">
+          <name lang="default">Haiti Gourde </name>
+        </enum>
+        <enum literal="HUF" default="false" inherited="true" excluded="false">
+          <name lang="default">Hungary Forint </name>
+        </enum>
+        <enum literal="IDR" default="false" inherited="true" excluded="false">
+          <name lang="default">Indonesia Rupiah </name>
+        </enum>
+        <enum literal="ILS" default="false" inherited="true" excluded="false">
+          <name lang="default">Israel Shekel </name>
+        </enum>
+        <enum literal="IMP" default="false" inherited="true" excluded="false">
+          <name lang="default">Isle of Man Pound </name>
+        </enum>
+        <enum literal="INR" default="false" inherited="true" excluded="false">
+          <name lang="default">India Rupee </name>
+        </enum>
+        <enum literal="IQD" default="false" inherited="true" excluded="false">
+          <name lang="default">Iraq Dinar </name>
+        </enum>
+        <enum literal="IRR" default="false" inherited="true" excluded="false">
+          <name lang="default">Iran Rial </name>
+        </enum>
+        <enum literal="ISK" default="false" inherited="true" excluded="false">
+          <name lang="default">Iceland Krona </name>
+        </enum>
+        <enum literal="JEP" default="false" inherited="true" excluded="false">
+          <name lang="default">Jersey Pound </name>
+        </enum>
+        <enum literal="JMD" default="false" inherited="true" excluded="false">
+          <name lang="default">Jamaica Dollar </name>
+        </enum>
+        <enum literal="JOD" default="false" inherited="true" excluded="false">
+          <name lang="default">Jordan Dinar </name>
+        </enum>
+        <enum literal="JPY" default="false" inherited="true" excluded="false">
+          <name lang="default">Japan Yen </name>
+        </enum>
+        <enum literal="KES" default="false" inherited="true" excluded="false">
+          <name lang="default">Kenya Shilling </name>
+        </enum>
+        <enum literal="KGS" default="false" inherited="true" excluded="false">
+          <name lang="default">Kyrgyzstan Som </name>
+        </enum>
+        <enum literal="KHR" default="false" inherited="true" excluded="false">
+          <name lang="default">Cambodia Riel </name>
+        </enum>
+        <enum literal="KMF" default="false" inherited="true" excluded="false">
+          <name lang="default">Comoros Franc </name>
+        </enum>
+        <enum literal="KPW" default="false" inherited="true" excluded="false">
+          <name lang="default">Korea (North) Won </name>
+        </enum>
+        <enum literal="KRW" default="false" inherited="true" excluded="false">
+          <name lang="default">Korea (South) Won </name>
+        </enum>
+        <enum literal="KWD" default="false" inherited="true" excluded="false">
+          <name lang="default">Kuwait Dinar </name>
+        </enum>
+        <enum literal="KYD" default="false" inherited="true" excluded="false">
+          <name lang="default">Cayman Islands Dollar </name>
+        </enum>
+        <enum literal="KZT" default="false" inherited="true" excluded="false">
+          <name lang="default">Kazakhstan Tenge </name>
+        </enum>
+        <enum literal="LAK" default="false" inherited="true" excluded="false">
+          <name lang="default">Laos Kip </name>
+        </enum>
+        <enum literal="LBP" default="false" inherited="true" excluded="false">
+          <name lang="default">Lebanon Pound </name>
+        </enum>
+        <enum literal="LKR" default="false" inherited="true" excluded="false">
+          <name lang="default">Sri Lanka Rupee </name>
+        </enum>
+        <enum literal="LRD" default="false" inherited="true" excluded="false">
+          <name lang="default">Liberia Dollar </name>
+        </enum>
+        <enum literal="LSL" default="false" inherited="true" excluded="false">
+          <name lang="default">Lesotho Loti </name>
+        </enum>
+        <enum literal="LYD" default="false" inherited="true" excluded="false">
+          <name lang="default">Libya Dinar </name>
+        </enum>
+        <enum literal="MAD" default="false" inherited="true" excluded="false">
+          <name lang="default">Morocco Dirham </name>
+        </enum>
+        <enum literal="MDL" default="false" inherited="true" excluded="false">
+          <name lang="default">Moldova Leu </name>
+        </enum>
+        <enum literal="MGA" default="false" inherited="true" excluded="false">
+          <name lang="default">Madagascar Ariary </name>
+        </enum>
+        <enum literal="MKD" default="false" inherited="true" excluded="false">
+          <name lang="default">Macedonia Denar </name>
+        </enum>
+        <enum literal="MMK" default="false" inherited="true" excluded="false">
+          <name lang="default">Myanmar (Burma) Kyat </name>
+        </enum>
+        <enum literal="MNT" default="false" inherited="true" excluded="false">
+          <name lang="default">Mongolia Tughrik </name>
+        </enum>
+        <enum literal="MOP" default="false" inherited="true" excluded="false">
+          <name lang="default">Macau Pataca </name>
+        </enum>
+        <enum literal="MRO" default="false" inherited="true" excluded="false">
+          <name lang="default">Mauritania Ouguiya </name>
+        </enum>
+        <enum literal="MUR" default="false" inherited="true" excluded="false">
+          <name lang="default">Mauritius Rupee </name>
+        </enum>
+        <enum literal="MVR" default="false" inherited="true" excluded="false">
+          <name lang="default">Maldives (Maldive Islands) Rufiyaa </name>
+        </enum>
+        <enum literal="MWK" default="false" inherited="true" excluded="false">
+          <name lang="default">Malawi Kwacha </name>
+        </enum>
+        <enum literal="MXN" default="false" inherited="true" excluded="false">
+          <name lang="default">Mexico Peso </name>
+        </enum>
+        <enum literal="MYR" default="false" inherited="true" excluded="false">
+          <name lang="default">Malaysia Ringgit </name>
+        </enum>
+        <enum literal="MZN" default="false" inherited="true" excluded="false">
+          <name lang="default">Mozambique Metical </name>
+        </enum>
+        <enum literal="NAD" default="false" inherited="true" excluded="false">
+          <name lang="default">Namibia Dollar </name>
+        </enum>
+        <enum literal="NGN" default="false" inherited="true" excluded="false">
+          <name lang="default">Nigeria Naira </name>
+        </enum>
+        <enum literal="NIO" default="false" inherited="true" excluded="false">
+          <name lang="default">Nicaragua Cordoba </name>
+        </enum>
+        <enum literal="NOK" default="false" inherited="true" excluded="false">
+          <name lang="default">Norway Krone </name>
+        </enum>
+        <enum literal="NPR" default="false" inherited="true" excluded="false">
+          <name lang="default">Nepal Rupee </name>
+        </enum>
+        <enum literal="NZD" default="false" inherited="true" excluded="false">
+          <name lang="default">New Zealand Dollar </name>
+        </enum>
+        <enum literal="OMR" default="false" inherited="true" excluded="false">
+          <name lang="default">Oman Rial </name>
+        </enum>
+        <enum literal="PAB" default="false" inherited="true" excluded="false">
+          <name lang="default">Panama Balboa </name>
+        </enum>
+        <enum literal="PEN" default="false" inherited="true" excluded="false">
+          <name lang="default">Peru Nuevo Sol </name>
+        </enum>
+        <enum literal="PGK" default="false" inherited="true" excluded="false">
+          <name lang="default">Papua New Guinea Kina </name>
+        </enum>
+        <enum literal="PHP" default="false" inherited="true" excluded="false">
+          <name lang="default">Philippines Peso </name>
+        </enum>
+        <enum literal="PKR" default="false" inherited="true" excluded="false">
+          <name lang="default">Pakistan Rupee </name>
+        </enum>
+        <enum literal="PLN" default="false" inherited="true" excluded="false">
+          <name lang="default">Poland Zloty </name>
+        </enum>
+        <enum literal="PYG" default="false" inherited="true" excluded="false">
+          <name lang="default">Paraguay Guarani </name>
+        </enum>
+        <enum literal="QAR" default="false" inherited="true" excluded="false">
+          <name lang="default">Qatar Riyal </name>
+        </enum>
+        <enum literal="RON" default="false" inherited="true" excluded="false">
+          <name lang="default">Romania New Leu </name>
+        </enum>
+        <enum literal="RSD" default="false" inherited="true" excluded="false">
+          <name lang="default">Serbia Dinar </name>
+        </enum>
+        <enum literal="RUB" default="false" inherited="true" excluded="false">
+          <name lang="default">Russia Ruble </name>
+        </enum>
+        <enum literal="RWF" default="false" inherited="true" excluded="false">
+          <name lang="default">Rwanda Franc </name>
+        </enum>
+        <enum literal="SAR" default="false" inherited="true" excluded="false">
+          <name lang="default">Saudi Arabia Riyal </name>
+        </enum>
+        <enum literal="SBD" default="false" inherited="true" excluded="false">
+          <name lang="default">Solomon Islands Dollar </name>
+        </enum>
+        <enum literal="SCR" default="false" inherited="true" excluded="false">
+          <name lang="default">Seychelles Rupee </name>
+        </enum>
+        <enum literal="SDG" default="false" inherited="true" excluded="false">
+          <name lang="default">Sudan Pound </name>
+        </enum>
+        <enum literal="SEK" default="false" inherited="true" excluded="false">
+          <name lang="default">Sweden Krona </name>
+        </enum>
+        <enum literal="SGD" default="false" inherited="true" excluded="false">
+          <name lang="default">Singapore Dollar </name>
+        </enum>
+        <enum literal="SHP" default="false" inherited="true" excluded="false">
+          <name lang="default">Saint Helena Pound </name>
+        </enum>
+        <enum literal="SLL" default="false" inherited="true" excluded="false">
+          <name lang="default">Sierra Leone Leone </name>
+        </enum>
+        <enum literal="SOS" default="false" inherited="true" excluded="false">
+          <name lang="default">Somalia Shilling </name>
+        </enum>
+        <enum literal="SPL" default="false" inherited="true" excluded="false">
+          <name lang="default">Seborga Luigino</name>
+        </enum>
+        <enum literal="SRD" default="false" inherited="true" excluded="false">
+          <name lang="default">Suriname Dollar </name>
+        </enum>
+        <enum literal="STD" default="false" inherited="true" excluded="false">
+          <name lang="default">São Tomé and Príncipe Dobra </name>
+        </enum>
+        <enum literal="SVC" default="false" inherited="true" excluded="false">
+          <name lang="default">El Salvador Colon </name>
+        </enum>
+        <enum literal="SYP" default="false" inherited="true" excluded="false">
+          <name lang="default">Syria Pound </name>
+        </enum>
+        <enum literal="SZL" default="false" inherited="true" excluded="false">
+          <name lang="default">Swaziland Lilangeni </name>
+        </enum>
+        <enum literal="THB" default="false" inherited="true" excluded="false">
+          <name lang="default">Thailand Baht </name>
+        </enum>
+        <enum literal="TJS" default="false" inherited="true" excluded="false">
+          <name lang="default">Tajikistan Somoni </name>
+        </enum>
+        <enum literal="TMT" default="false" inherited="true" excluded="false">
+          <name lang="default">Turkmenistan Manat </name>
+        </enum>
+        <enum literal="TND" default="false" inherited="true" excluded="false">
+          <name lang="default">Tunisia Dinar </name>
+        </enum>
+        <enum literal="TOP" default="false" inherited="true" excluded="false">
+          <name lang="default">Tonga Pa'anga </name>
+        </enum>
+        <enum literal="TRY" default="false" inherited="true" excluded="false">
+          <name lang="default">Turkey Lira </name>
+        </enum>
+        <enum literal="TTD" default="false" inherited="true" excluded="false">
+          <name lang="default">Trinidad and Tobago Dollar </name>
+        </enum>
+        <enum literal="TVD" default="false" inherited="true" excluded="false">
+          <name lang="default">Tuvalu Dollar </name>
+        </enum>
+        <enum literal="TWD" default="false" inherited="true" excluded="false">
+          <name lang="default">Taiwan New Dollar </name>
+        </enum>
+        <enum literal="TZS" default="false" inherited="true" excluded="false">
+          <name lang="default">Tanzania Shilling </name>
+        </enum>
+        <enum literal="UAH" default="false" inherited="true" excluded="false">
+          <name lang="default">Ukraine Hryvnia </name>
+        </enum>
+        <enum literal="UGX" default="false" inherited="true" excluded="false">
+          <name lang="default">Uganda Shilling </name>
+        </enum>
+        <enum literal="USD" default="false" inherited="true" excluded="false">
+          <name lang="default">United States Dollar </name>
+        </enum>
+        <enum literal="UYU" default="false" inherited="true" excluded="false">
+          <name lang="default">Uruguay Peso </name>
+        </enum>
+        <enum literal="UZS" default="false" inherited="true" excluded="false">
+          <name lang="default">Uzbekistan Som </name>
+        </enum>
+        <enum literal="VEF" default="false" inherited="true" excluded="false">
+          <name lang="default">Venezuela Bolivar </name>
+        </enum>
+        <enum literal="VND" default="false" inherited="true" excluded="false">
+          <name lang="default">Viet Nam Dong </name>
+        </enum>
+        <enum literal="VUV" default="false" inherited="true" excluded="false">
+          <name lang="default">Vanuatu Vatu </name>
+        </enum>
+        <enum literal="WST" default="false" inherited="true" excluded="false">
+          <name lang="default">Samoa Tala </name>
+        </enum>
+        <enum literal="YER" default="false" inherited="true" excluded="false">
+          <name lang="default">Yemen Rial </name>
+        </enum>
+        <enum literal="ZAR" default="false" inherited="true" excluded="false">
+          <name lang="default">South Africa Rand </name>
+        </enum>
+        <enum literal="ZMW" default="false" inherited="true" excluded="false">
+          <name lang="default">Zambia Kwacha </name>
+        </enum>
+        <enum literal="ZWD" default="false" inherited="true" excluded="false">
+          <name lang="default">Zimbabwe Dollar</name>
+        </enum>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=currency" type="Schema Element" name="Type" kind="Element">
+            <target name="currency" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="dsd=BillingProfileExtensions+dataElement=hsbAODepQ6CX-vz1hgWkQw" type="dataElement" typeName="Data Element" kind="Element" name="language" path="/BillingProfileExtensions/language">
+        <displayName lang="default">Language</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">50</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=language" type="Schema Element" name="Type" kind="Element">
+            <target name="language" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+    </dataElements>
+    <details>
+      <element id="dsd=BillingProfileExtensions+dsd.dsdd=77hglh2bQk6r76Ilofc1Kg" type="dsd.dsdd" typeName="Data Structure Definition Details" kind="Element" name="BillingProfileExtensions Data Structure Definition Details" path="BillingProfileExtensions Data Structure Definition Details"/>
+    </details>
+  </entity>
+</model:Model>

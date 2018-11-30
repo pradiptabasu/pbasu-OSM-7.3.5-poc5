@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<xs:schema xmlns:Q1="http://xmlns.oracle.com/communications/sce/dictionary/OSMCommonDataDictionary/OSMCommonDataDictionary" xmlns:tns="http://xmlns.oracle.com/communications/sce/dictionary/OracleComms_OSM_CommonDataDictionary/OracleComms_OSM_CommonDataDictionary" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/communications/sce/dictionary/OracleComms_OSM_CommonDataDictionary/OracleComms_OSM_CommonDataDictionary">
-                        <xs:simpleType name="ExternalFulfillmentState">
+<xs:schema xmlns:Q1="http://xmlns.oracle.com/communications/sce/dictionary/OSMCommonDataDictionary/OSMCommonDataDictionary" xmlns:Q2="http://xmlns.oracle.com/communications/sce/dictionary/OracleComms_OSM_Entity_Asset_Common_DataDictionary/OracleComms_OSM_Entity_Asset_Common_DataTypes" xmlns:Q3="http://xmlns.oracle.com/communications/sce/dictionary/account_DD/account_DD" xmlns:tns="http://xmlns.oracle.com/communications/sce/dictionary/OracleComms_OSM_CommonDataDictionary/OracleComms_OSM_CommonDataDictionary" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/communications/sce/dictionary/OracleComms_OSM_CommonDataDictionary/OracleComms_OSM_CommonDataDictionary">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <xs:simpleType name="ExternalFulfillmentState">
     <xs:annotation>
       <xs:documentation/>
     </xs:annotation>
@@ -43,7 +43,7 @@
       <xs:documentation/>
     </xs:annotation>
     <xs:sequence>
-      <xs:element maxOccurs="1" minOccurs="1" name="componentKey">
+                                                                                            <xs:element maxOccurs="1" minOccurs="1" name="componentKey">
         <xs:annotation>
           <xs:documentation/>
         </xs:annotation>
@@ -54,7 +54,17 @@
                     </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element maxOccurs="unbounded" minOccurs="0" name="orderItem">
+            <xs:element maxOccurs="1" minOccurs="0" name="calculatedStartDate">
+        <xs:simpleType>
+          <xs:restriction base="tns:calculatedStartDate"/>
+        </xs:simpleType>
+      </xs:element>
+            <xs:element maxOccurs="1" minOccurs="0" name="duration">
+                              <xs:simpleType>
+          <xs:restriction base="tns:duration"/>
+        </xs:simpleType>
+            </xs:element>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="orderItem">
         <xs:annotation>
           <xs:documentation/>
         </xs:annotation>
@@ -68,10 +78,22 @@
                 <xs:restriction base="tns:ExternalFulfillmentState"/>
               </xs:simpleType>
             </xs:element>
-          </xs:sequence>
+                                  <xs:element maxOccurs="1" minOccurs="0" name="FunctionProcessingState">
+              <xs:simpleType>
+                <xs:restriction base="tns:OrderComponentOrderItemProcessingState"/>
+              </xs:simpleType>
+            </xs:element>
+                    </xs:sequence>
         </xs:complexType>
       </xs:element>
-    </xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="transformedOrderItem">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="tns:transformedOrderItem"/>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+        </xs:sequence>
   </xs:complexType>
     <xs:complexType name="ControlData">
     <xs:annotation>
@@ -94,7 +116,16 @@
                     <xs:restriction base="tns:PointOfNoReturn"/>
                   </xs:simpleType>
                 </xs:element>
-                                              <xs:element maxOccurs="1" minOccurs="0" name="OrderItemFulfillmentState" type="tns:OrderItemFulfillmentState"/>
+                                              <xs:element maxOccurs="1" minOccurs="0" name="OrderItemFulfillmentState">
+                  <xs:simpleType>
+                    <xs:restriction base="tns:OrderItemFulfillmentState"/>
+                  </xs:simpleType>
+                </xs:element>
+                                                            <xs:element maxOccurs="1" minOccurs="0" name="OrderItemProcessingState">
+                  <xs:simpleType>
+                    <xs:restriction base="tns:OrderItemProcessingState"/>
+                  </xs:simpleType>
+                </xs:element>
                             </xs:sequence>
             </xs:extension>
           </xs:complexContent>
@@ -122,6 +153,1321 @@
     <xs:restriction base="xs:string">
       <xs:minLength value="0"/>
       <xs:maxLength value="128"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="calculatedStartDate">
+    <xs:restriction base="xs:dateTime"/>
+  </xs:simpleType>
+    <xs:simpleType name="duration">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="40"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="MappingContext">
+    <xs:sequence>
+                                                                                                                                                                                                                                                                                                                                          <xs:element maxOccurs="unbounded" minOccurs="1" name="ProviderFunction">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="xs:anyType">
+              <xs:sequence>
+                <xs:element maxOccurs="1" minOccurs="1" name="namespace">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:minLength value="1"/>
+                                                                <xs:maxLength value="200"/>
+                                        </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element maxOccurs="1" minOccurs="1" name="name">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:minLength value="1"/>
+                                                                <xs:maxLength value="200"/>
+                                        </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element maxOccurs="unbounded" minOccurs="1" name="TargetMapping">
+                  <xs:complexType>
+                    <xs:complexContent>
+                      <xs:restriction base="xs:anyType">
+                        <xs:sequence>
+                          <xs:element maxOccurs="1" minOccurs="1" name="target">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:minLength value="1"/>
+                                                                                              <xs:maxLength value="200"/>
+                                                            </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element maxOccurs="unbounded" minOccurs="1" name="SourceMapping">
+                            <xs:complexType>
+                              <xs:complexContent>
+                                <xs:restriction base="xs:anyType">
+                                  <xs:sequence>
+                                    <xs:element maxOccurs="1" minOccurs="1" name="source">
+                                      <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                          <xs:minLength value="1"/>
+                                                                                                                            <xs:maxLength value="200"/>
+                                                                                </xs:restriction>
+                                      </xs:simpleType>
+                                    </xs:element>
+                                                                                                                                                                                  <xs:element maxOccurs="1" minOccurs="0" name="InstantiatingMappingRule">
+                                      <xs:complexType>
+                                        <xs:complexContent>
+                                          <xs:extension base="tns:MappingRuleType"/>
+                                        </xs:complexContent>
+                                      </xs:complexType>
+                                    </xs:element>
+                                                                        <xs:element maxOccurs="unbounded" minOccurs="0" name="MappingRule">
+                                      <xs:complexType>
+                                        <xs:complexContent>
+                                          <xs:extension base="tns:MappingRuleType"/>
+                                        </xs:complexContent>
+                                      </xs:complexType>
+                                    </xs:element>
+                                                                    </xs:sequence>
+                                </xs:restriction>
+                              </xs:complexContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:restriction>
+                    </xs:complexContent>
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+        </xs:sequence>
+  </xs:complexType>
+   <xs:complexType name="TransformedOrderItem">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="MappingRuleType">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="namespace">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+                                  <xs:maxLength value="200"/>
+                    </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element maxOccurs="1" minOccurs="1" name="name">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+                                  <xs:maxLength value="200"/>
+                    </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="AttributeMapping">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="xs:anyType">
+              <xs:sequence>
+                <xs:element maxOccurs="1" minOccurs="1" name="Source">
+                  <xs:complexType>
+                    <xs:complexContent>
+                      <xs:extension base="tns:AttributeMappingPropertyType">
+                        <xs:sequence>
+                                                                            </xs:sequence>
+                      </xs:extension>
+                    </xs:complexContent>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element maxOccurs="1" minOccurs="1" name="Target">
+                  <xs:complexType>
+                    <xs:complexContent>
+                      <xs:extension base="tns:AttributeMappingPropertyType">
+                        <xs:sequence>
+                          <xs:element maxOccurs="1" minOccurs="0" name="instanceKeyPath">
+                            <xs:simpleType>
+                              <xs:restriction base="tns:instanceKeyPath"/>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:element maxOccurs="1" minOccurs="0" name="instanceKey">
+                            <xs:simpleType>
+                              <xs:restriction base="tns:instanceKey"/>
+                            </xs:simpleType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:extension>
+                    </xs:complexContent>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element maxOccurs="1" minOccurs="1" name="mappingRuleItem">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:minLength value="1"/>
+                                                                <xs:maxLength value="100"/>
+                                        </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AttributeMappingPropertyType">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="name">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+                                  <xs:maxLength value="200"/>
+                    </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element maxOccurs="1" minOccurs="1" name="path">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+                                  <xs:maxLength value="200"/>
+                    </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+ <xs:simpleType name="Recognition">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="100"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:complexType name="dynamicParams">
+    <xs:sequence/>
+  </xs:complexType>
+    <xs:simpleType name="providerFunction">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="40"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="Action">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="40"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:complexType name="transformedOrderItem">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="ExternalFulfillmentState">
+        <xs:simpleType>
+          <xs:restriction base="tns:ExternalFulfillmentState"/>
+        </xs:simpleType>
+      </xs:element>
+                                    <xs:element maxOccurs="1" minOccurs="0" name="FunctionProcessingState">
+        <xs:simpleType>
+          <xs:restriction base="tns:OrderComponentOrderItemProcessingState"/>
+        </xs:simpleType>
+      </xs:element>
+        </xs:sequence>
+  </xs:complexType>
+    <xs:simpleType name="instanceKeyPath">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="40"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="instanceKey">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="200"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="LineID">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="100"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="RequestedDeliveryDate">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="100"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="LineName">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="200"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="FulfillmentPattern">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="100"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="OrderItemProcessingState">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="40"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="OrderComponentOrderItemProcessingState">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="40"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="entityName">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="256"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="entityState">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="20"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="entityVersion">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+    <xs:simpleType name="Id">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:long"/>
+  </xs:simpleType>
+    <xs:complexType name="IdNodeType">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="id">
+        <xs:annotation>
+          <xs:documentation/>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="tns:Id"/>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+    <xs:simpleType name="accountSystem">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="256"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="accountSystemId">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="256"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="actualResumptionDate">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:dateTime"/>
+  </xs:simpleType>
+    <xs:simpleType name="actualSuspensionDate">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:dateTime"/>
+  </xs:simpleType>
+    <xs:simpleType name="agreementId">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="256"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="agreementNumber">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="tns:OrderNumberType"/>
+  </xs:simpleType>
+    <xs:complexType name="billingAccount">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:complexContent>
+                  <xs:extension base="tns:AccountIDNodeType"/>
+    </xs:complexContent>
+  </xs:complexType>
+    <xs:complexType name="billingProfile">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="tns:IdNodeType">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+    <xs:simpleType name="chargeEndDate">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:dateTime"/>
+  </xs:simpleType>
+    <xs:simpleType name="chargeStartDate">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:dateTime"/>
+  </xs:simpleType>
+        <xs:simpleType name="currencyCode">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="5"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:complexType name="customerAccount">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="tns:AccountIDNodeType">
+                    
+                        
+                  
+                        
+                
+                        
+                      
+                    
+                <xs:sequence/>
+            </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+    <xs:simpleType name="description">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="tns:DescriptionType"/>
+  </xs:simpleType>
+    <xs:simpleType name="discountEndDate">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:dateTime"/>
+  </xs:simpleType>
+    <xs:simpleType name="discountPercentage">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="tns:PercentageType"/>
+  </xs:simpleType>
+    <xs:simpleType name="discountPeriod">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="tns:PeriodType"/>
+  </xs:simpleType>
+    <xs:simpleType name="discountStartDate">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:dateTime"/>
+  </xs:simpleType>
+    <xs:simpleType name="discountType">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="tns:DiscountType"/>
+  </xs:simpleType>
+    <xs:simpleType name="endDateOfAssetVersion">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:dateTime"/>
+  </xs:simpleType>
+    <xs:simpleType name="id">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="tns:Id"/>
+  </xs:simpleType>
+    <xs:simpleType name="installedDate">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:dateTime"/>
+  </xs:simpleType>
+    <xs:simpleType name="lastUpdateDateOfAsset">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:dateTime"/>
+  </xs:simpleType>
+    <xs:simpleType name="networkReferenceId">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="80"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="offerQuantity">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+    <xs:simpleType name="offerVersion">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="tns:VersionType"/>
+  </xs:simpleType>
+    <xs:simpleType name="orderId">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="256"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="orderNumber">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="tns:OrderNumberType"/>
+  </xs:simpleType>
+    <xs:simpleType name="originalPrice">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="tns:PriceType"/>
+  </xs:simpleType>
+    <xs:simpleType name="overridePrice">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="tns:PriceType"/>
+  </xs:simpleType>
+    <xs:simpleType name="partner">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="256"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="productCatalogName">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="200"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="productCatalogVersion">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="tns:VersionType"/>
+  </xs:simpleType>
+    <xs:simpleType name="productSpecName">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="200"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="productSpecVersion">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="tns:VersionType"/>
+  </xs:simpleType>
+    <xs:simpleType name="quoteId">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="256"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="quoteNumber">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="tns:OrderNumberType"/>
+  </xs:simpleType>
+    <xs:simpleType name="reasonCode">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="255"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="recurringType">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="tns:RecurringType"/>
+  </xs:simpleType>
+    <xs:simpleType name="requestedDeliveryDate">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:dateTime"/>
+  </xs:simpleType>
+    <xs:simpleType name="returnDate">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:dateTime"/>
+  </xs:simpleType>
+    <xs:complexType name="serviceAccount">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:complexContent>
+                  <xs:extension base="tns:AccountIDNodeType"/>
+    </xs:complexContent>
+  </xs:complexType>
+    <xs:simpleType name="serviceId">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="256"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="shippingDate">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:dateTime"/>
+  </xs:simpleType>
+    <xs:complexType name="site">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:complexContent>
+                  <xs:extension base="tns:AccountIDNodeType"/>
+    </xs:complexContent>
+  </xs:complexType>
+        <xs:simpleType name="startDateOfAssetVersion">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:dateTime"/>
+  </xs:simpleType>
+    <xs:simpleType name="updatedBy">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="256"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="updatedBySystem">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="256"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="updateMode">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="40"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="warrantyEndDate">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:dateTime"/>
+  </xs:simpleType>
+    <xs:simpleType name="warrantyStartDate">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:dateTime"/>
+  </xs:simpleType>
+    <xs:simpleType name="DescriptionType">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="200"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="DiscountType">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="40"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="OrderNumberType">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="1000"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="PercentageType">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:float"/>
+  </xs:simpleType>
+    <xs:simpleType name="PeriodType">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="40"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="PriceType">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="40"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="RecurringType">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="40"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="VersionType">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="20"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="accountClass">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="40"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="accountHierarchy">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="accountNumber">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="40"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="accountType">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="40"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="altitude">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="40"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="billDayOfMonth">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+    <xs:simpleType name="billFrequency">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="40"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="billingProfileType">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="billMedia">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="40"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="billType">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="40"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="cellPhone">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="city">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="150"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="collections">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="collectionsExempt">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="companyName">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="40"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="country">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="150"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="county">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="100"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="currency">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="customerStanding">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="40"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="customerValue">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="email">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="firstName">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="250"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="homePhone">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="isPremise">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="jobTitle">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="language">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="lastName">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="250"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="latitude">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="40"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="lineFour">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="150"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="lineOne">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="150"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="lineThree">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="150"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="lineTwo">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="150"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="longitude">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="40"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="middleName">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="250"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="organization">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="paymentMethod">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="40"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="postalCode">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="150"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="priceList">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="province">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="40"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="salutation">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="20"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="secondaryCurrency">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="state">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="150"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="utmEasting">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="40"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="utmNorthing">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="40"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:simpleType name="workPhone">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+    <xs:complexType name="account">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="tns:IdNodeType"/>
+    </xs:complexContent>
+  </xs:complexType>
+    <xs:complexType name="address">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="tns:IdNodeType"/>
+    </xs:complexContent>
+  </xs:complexType>
+    <xs:complexType name="billingAddress">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="tns:address"/>
+    </xs:complexContent>
+  </xs:complexType>
+    <xs:complexType name="contact">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="tns:IdNodeType"/>
+    </xs:complexContent>
+  </xs:complexType>
+    <xs:complexType name="parentAccount">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="tns:IdNodeType"/>
+    </xs:complexContent>
+  </xs:complexType>
+    <xs:complexType name="paymentMethods">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="tns:IdNodeType"/>
+    </xs:complexContent>
+  </xs:complexType>
+    <xs:complexType name="primaryAddress">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="tns:IdNodeType"/>
+    </xs:complexContent>
+  </xs:complexType>
+    <xs:complexType name="primaryBillingProfile">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="tns:IdNodeType"/>
+    </xs:complexContent>
+  </xs:complexType>
+    <xs:complexType name="primaryContact">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="tns:IdNodeType"/>
+    </xs:complexContent>
+  </xs:complexType>
+    <xs:complexType name="primaryPaymentMethod">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="tns:IdNodeType"/>
+    </xs:complexContent>
+  </xs:complexType>
+    <xs:complexType name="rootAccount">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="tns:IdNodeType"/>
+    </xs:complexContent>
+  </xs:complexType>
+    <xs:complexType name="serviceAddress">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="tns:address"/>
+    </xs:complexContent>
+  </xs:complexType>
+    <xs:complexType name="shippingAddress">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="tns:address"/>
+    </xs:complexContent>
+  </xs:complexType>
+    <xs:complexType name="AccountIDNodeType">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" name="id">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="0"/>
+            <xs:maxLength value="256"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+    <xs:complexType name="accountBillingProfile">
+    <xs:complexContent>
+      <xs:extension base="tns:AccountIDNodeType"/>
+    </xs:complexContent>
+  </xs:complexType>
+    <xs:simpleType name="PriceValueType">
+    <xs:restriction base="xs:float"/>
+  </xs:simpleType>
+    <xs:simpleType name="discountAmount">
+    <xs:restriction base="tns:PriceValueType"/>
+  </xs:simpleType>
+    <xs:simpleType name="priceType">
+    <xs:restriction base="tns:PriceType"/>
+  </xs:simpleType>
+    <xs:simpleType name="purchaseEndDate">
+    <xs:restriction base="xs:dateTime"/>
+  </xs:simpleType>
+    <xs:simpleType name="purchaseStartDate">
+    <xs:restriction base="xs:dateTime"/>
+  </xs:simpleType>
+    <xs:simpleType name="serviceEndDate">
+    <xs:restriction base="xs:dateTime"/>
+  </xs:simpleType>
+    <xs:simpleType name="serviceStartDate">
+    <xs:restriction base="xs:dateTime"/>
+  </xs:simpleType>
+    <xs:complexType name="shippingAccount">
+    <xs:complexContent>
+      <xs:extension base="tns:AccountIDNodeType"/>
+    </xs:complexContent>
+  </xs:complexType>
+    <xs:simpleType name="usageStartDate">
+    <xs:restriction base="xs:dateTime"/>
+  </xs:simpleType>
+    <xs:simpleType name="usageEndDate">
+    <xs:restriction base="xs:dateTime"/>
+  </xs:simpleType>
+    <xs:complexType name="payeeBillingProfile">
+    <xs:complexContent>
+      <xs:extension base="tns:IdNodeType"/>
+    </xs:complexContent>
+  </xs:complexType>
+    <xs:simpleType name="updateReasonCode">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="40"/>
     </xs:restriction>
   </xs:simpleType>
 </xs:schema>

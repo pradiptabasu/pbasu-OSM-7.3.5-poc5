@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmn="http://xmlns.oracle.com/communications/studio/model/common" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
+  <metadata version="1.0.0" release="7.3.0"/>
+  <entity xsi:type="cmn:DataStructureDefinition" id="dsd=assetKeyDates" type="dsd" typeName="Data Structure Definition" name="assetKeyDates" resource="/OracleComms_OSM_CommonDataDictionary/model/assetKeyDates.dataStructDef">
+    <displayName lang="default">assetKeyDates</displayName>
+    <note lang="default"/>
+    <project>
+      <relation ref="mprj=OracleComms_OSM_CommonDataDictionary" type="Model Project" name="Dependency">
+        <target name="OracleComms_OSM_CommonDataDictionary" typeName="Model Project"/>
+      </relation>
+    </project>
+    <dataElements>
+      <element id="dsd=assetKeyDates+dataElement=o7vrvTHARQux+gTGgnZv8w" type="dataElement" typeName="Data Element" kind="Element" name="startDateOfAssetVersion" path="/assetKeyDates/startDateOfAssetVersion">
+        <displayName lang="default">Start Date Of Asset Version</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=startDateOfAssetVersion" type="Schema Element" name="Type" kind="Element">
+            <target name="startDateOfAssetVersion" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>dateTime</primitiveType>
+      </element>
+      <element id="dsd=assetKeyDates+dataElement=1T6wfphyS+qRSB2DBLvONw" type="dataElement" typeName="Data Element" kind="Element" name="endDateOfAssetVersion" path="/assetKeyDates/endDateOfAssetVersion">
+        <displayName lang="default">End Date Of Asset Version</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=endDateOfAssetVersion" type="Schema Element" name="Type" kind="Element">
+            <target name="endDateOfAssetVersion" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>dateTime</primitiveType>
+      </element>
+      <element id="dsd=assetKeyDates+dataElement=kCE0o+MiRnGUFnAS9d9t1Q" type="dataElement" typeName="Data Element" kind="Element" name="lastUpdateDateOfAsset" path="/assetKeyDates/lastUpdateDateOfAsset">
+        <displayName lang="default">Last Update Date Of Asset</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=lastUpdateDateOfAsset" type="Schema Element" name="Type" kind="Element">
+            <target name="lastUpdateDateOfAsset" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>dateTime</primitiveType>
+      </element>
+      <element id="dsd=assetKeyDates+dataElement=+vEt0LtdSbatFhCn3mUsfA" type="dataElement" typeName="Data Element" kind="Element" name="requestedDeliveryDate" path="/assetKeyDates/requestedDeliveryDate">
+        <displayName lang="default">Requested Termination Date</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=requestedDeliveryDate" type="Schema Element" name="Type" kind="Element">
+            <target name="requestedDeliveryDate" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>dateTime</primitiveType>
+      </element>
+      <element id="dsd=assetKeyDates+dataElement=pUNVrM85SjqjFHlKWeZJqw" type="dataElement" typeName="Data Element" kind="Element" name="actualResumptionDate" path="/assetKeyDates/actualResumptionDate">
+        <displayName lang="default">Actual Resumption Date</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=actualResumptionDate" type="Schema Element" name="Type" kind="Element">
+            <target name="actualResumptionDate" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>dateTime</primitiveType>
+      </element>
+      <element id="dsd=assetKeyDates+dataElement=ZLx0hv4bT8igYFJ9tIPIfA" type="dataElement" typeName="Data Element" kind="Element" name="actualSuspensionDate" path="/assetKeyDates/actualSuspensionDate">
+        <displayName lang="default">Actual Suspension Date</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=actualSuspensionDate" type="Schema Element" name="Type" kind="Element">
+            <target name="actualSuspensionDate" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>dateTime</primitiveType>
+      </element>
+    </dataElements>
+    <details>
+      <element id="dsd=assetKeyDates+dsd.dsdd=xdaXDZqgRIagzuw3h-sXIQ" type="dsd.dsdd" typeName="Data Structure Definition Details" kind="Element" name="assetKeyDates Data Structure Definition Details" path="assetKeyDates Data Structure Definition Details"/>
+    </details>
+  </entity>
+</model:Model>

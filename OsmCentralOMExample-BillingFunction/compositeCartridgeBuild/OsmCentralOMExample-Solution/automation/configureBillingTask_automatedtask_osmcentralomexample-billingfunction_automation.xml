@@ -1,0 +1,96 @@
+<taskAutomator>
+	<pluginJndiName>configureBillingTask.sender</pluginJndiName>
+	<ejbName>configureBillingTask.sender</ejbName>
+	<className>oracle.communications.ordermanagement.automation.plugin.XQuerySender</className>
+	<runAs>omsadmin</runAs>
+	          
+	<cartridgeNamespace>@cartridgeNamespace@</cartridgeNamespace>
+    <cartridgeVersion>@cartridgeVersion@</cartridgeVersion>    
+
+	<receive xsi:type="am:InternalReceiver">
+		<mnemonic>configureBillingTask</mnemonic>
+ 		<executionModes>do redo</executionModes>
+	</receive>		
+    
+	<implement xsi:type="am:XquerySender">
+		<to>
+			<jndiName>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_Billing_Request_Queue</jndiName>
+			<destinationType>javax.jms.Queue</destinationType>
+		</to>
+		<replyTo>
+			<jndiName>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_Billing_Response_Queue</jndiName>
+			<destinationType>javax.jms.Queue</destinationType>
+		</replyTo>
+		<am:sendNullMessage>true</am:sendNullMessage>
+		<am:script>
+			<am:url>http://oracle.communications.ordermanagement.unsupported.centralom/billing/xquery/billing_request.xqy</am:url>
+			<am:cache>
+				<am:maxSize>50</am:maxSize>
+				<am:timeout>15000</am:timeout>
+			</am:cache>
+		</am:script>
+	</implement>
+</taskAutomator><taskAutomator>
+	<pluginJndiName>configureBillingTask.receiver</pluginJndiName>
+	<ejbName>configureBillingTask.receiver</ejbName>
+	<className>oracle.communications.ordermanagement.automation.plugin.XQueryReceiver</className>
+	<runAs>omsadmin</runAs>
+	          
+	<cartridgeNamespace>@cartridgeNamespace@</cartridgeNamespace>
+    <cartridgeVersion>@cartridgeVersion@</cartridgeVersion>    
+
+	<receive xsi:type="am:ExternalReceiver">
+		<jmsSource>
+			<from>
+				<jndiName>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_Billing_Response_Queue</jndiName>
+				<destinationType>javax.jms.Queue</destinationType>				
+			</from>			
+		</jmsSource>	
+		<correlation xsi:type="MessagePropertyCorrelation">
+			<property>JMSCorrelationID</property>
+		</correlation>	
+	</receive>	
+    
+	<implement xsi:type="am:XqueryAutomator">
+		<am:script>
+			<am:url>http://oracle.communications.ordermanagement.unsupported.centralom/billing/xquery/billing_response.xqy</am:url>
+			<am:cache>
+				<am:maxSize>50</am:maxSize>
+				<am:timeout>15000</am:timeout>
+			</am:cache>
+		</am:script>
+		<am:updateOrder>true</am:updateOrder>
+	</implement>
+</taskAutomator><taskAutomator>
+	<pluginJndiName>configureBillingTask.cancel</pluginJndiName>
+	<ejbName>configureBillingTask.cancel</ejbName>
+	<className>oracle.communications.ordermanagement.automation.plugin.XQuerySender</className>
+	<runAs>omsadmin</runAs>
+	          
+	<cartridgeNamespace>@cartridgeNamespace@</cartridgeNamespace>
+    <cartridgeVersion>@cartridgeVersion@</cartridgeVersion>    
+
+	<receive xsi:type="am:InternalReceiver">
+		<mnemonic>configureBillingTask</mnemonic>
+ 		<executionModes>undo</executionModes>
+	</receive>		
+    
+	<implement xsi:type="am:XquerySender">
+		<to>
+			<jndiName>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_Billing_Request_Queue</jndiName>
+			<destinationType>javax.jms.Queue</destinationType>
+		</to>
+		<replyTo>
+			<jndiName>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_Billing_Response_Queue</jndiName>
+			<destinationType>javax.jms.Queue</destinationType>
+		</replyTo>
+		<am:sendNullMessage>true</am:sendNullMessage>
+		<am:script>
+			<am:url>http://oracle.communications.ordermanagement.unsupported.centralom/billing/xquery/billing_cancel_request.xqy</am:url>
+			<am:cache>
+				<am:maxSize>50</am:maxSize>
+				<am:timeout>15000</am:timeout>
+			</am:cache>
+		</am:script>
+	</implement>
+</taskAutomator>

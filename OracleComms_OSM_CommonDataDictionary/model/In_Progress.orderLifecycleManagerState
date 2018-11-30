@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.mslv.com/studio/core/model/common" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:data="http://www.oracle.com/communications/studio/core/model/common/data" xmlns:dom="http://xmlns.oracle.com/communications/studio/osm/model" xsi:type="dom:OrderLifecycleManagerStateType" name="In_Progress">
+  <displayName lang="[default]">In Progress</displayName>
+  <saveVersion>3</saveVersion>
+  <id>YLAlXUZTSq6uF8UeLdGGuA</id>
+  <dom:namespace>http://xmlns.oracle.com/communications/ordermanagement/olm</dom:namespace>
+  <dom:mappingProxy>
+    <id>GLbJcdUASCaUvB2ZMjAoqg</id>
+    <elementType>oracle.communications.studio.osm.entities.olm.state.mappingproxy</elementType>
+    <dom:entityDisplayNameProxy>entityDisplayNameProxy</dom:entityDisplayNameProxy>
+  </dom:mappingProxy>
+</modelEntity>

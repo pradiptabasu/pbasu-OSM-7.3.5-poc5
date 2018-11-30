@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmn="http://xmlns.oracle.com/communications/studio/model/common" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
+  <metadata version="1.0.0" release="7.3.0"/>
+  <entity xsi:type="cmn:DataStructureDefinition" id="dsd=PaymentMethodExtensions" type="dsd" typeName="Data Structure Definition" name="PaymentMethodExtensions" resource="/OracleComms_OSM_CommonDataDictionary/model/PaymentMethodExtensions.dataStructDef">
+    <displayName lang="default">PaymentMethodExtensions</displayName>
+    <note lang="default"/>
+    <project>
+      <relation ref="mprj=OracleComms_OSM_CommonDataDictionary" type="Model Project" name="Dependency">
+        <target name="OracleComms_OSM_CommonDataDictionary" typeName="Model Project"/>
+      </relation>
+    </project>
+    <dataElements>
+      <element id="dsd=PaymentMethodExtensions+dataElement=oVo1hfhqRlODLhNZAW1qAA" type="dataElement" typeName="Data Element" kind="Element" name="paymentMethod" path="/PaymentMethodExtensions/paymentMethod">
+        <displayName lang="default">Payment Method</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">40</maxLength>
+        <enum literal="Credit Card" default="false" inherited="true" excluded="false">
+          <name lang="default">Credit Card</name>
+        </enum>
+        <enum literal="Debit Card" default="false" inherited="true" excluded="false">
+          <name lang="default">Debit Card</name>
+        </enum>
+        <enum literal="Bill Me" default="false" inherited="true" excluded="false">
+          <name lang="default">Bill Me</name>
+        </enum>
+        <enum literal="ACH" default="false" inherited="true" excluded="false">
+          <name lang="default">ACH</name>
+        </enum>
+        <enum literal="SEPA" default="false" inherited="true" excluded="false">
+          <name lang="default">SEPA</name>
+        </enum>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=paymentMethod" type="Schema Element" name="Type" kind="Element">
+            <target name="paymentMethod" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+    </dataElements>
+    <details>
+      <element id="dsd=PaymentMethodExtensions+dsd.dsdd=T3efEMVgRVmFRVDlRVBAEg" type="dsd.dsdd" typeName="Data Structure Definition Details" kind="Element" name="PaymentMethodExtensions Data Structure Definition Details" path="PaymentMethodExtensions Data Structure Definition Details"/>
+    </details>
+  </entity>
+</model:Model>

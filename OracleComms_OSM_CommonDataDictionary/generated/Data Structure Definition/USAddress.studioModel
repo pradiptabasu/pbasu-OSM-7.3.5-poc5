@@ -1,0 +1,954 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmn="http://xmlns.oracle.com/communications/studio/model/common" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
+  <metadata version="1.0.0" release="7.3.0"/>
+  <entity xsi:type="cmn:DataStructureDefinition" id="dsd=USAddress" type="dsd" typeName="Data Structure Definition" name="USAddress" resource="/OracleComms_OSM_CommonDataDictionary/model/USAddress.dataStructDef">
+    <displayName lang="default">USAddress</displayName>
+    <note lang="default"/>
+    <extends>
+      <relation ref="dsd=AddressGeneric" type="Data Structure Definition" name="Dependency" kind="Entity">
+        <target name="AddressGeneric" typeName="Data Structure Definition"/>
+      </relation>
+    </extends>
+    <project>
+      <relation ref="mprj=OracleComms_OSM_CommonDataDictionary" type="Model Project" name="Dependency">
+        <target name="OracleComms_OSM_CommonDataDictionary" typeName="Model Project"/>
+      </relation>
+    </project>
+    <dataElements>
+      <element id="dsd=USAddress+dataElement=qnlixIjHSUatWakHn0hP6Q~b0onlAbTRiekP3XA1+jbxg" type="dataElement" typeName="Data Element" kind="Element" name="city" path="/city" inherited="true">
+        <displayName lang="default">City</displayName>
+        <note lang="default">City</note>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">150</maxLength>
+        <base>
+          <relation ref="dsd=AddressGeneric+dataElement=b0onlAbTRiekP3XA1+jbxg" type="Data Element" name="Type" kind="Element">
+            <target name="city" typeName="Data Element"/>
+            <inEntity name="AddressGeneric" typeName="Data Structure Definition"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="dsd=USAddress+dataElement=qnlixIjHSUatWakHn0hP6Q~+rJnfpZHRO+hO6WI8WQDwQ" type="dataElement" typeName="Data Element" kind="Element" name="country" path="/country" inherited="true">
+        <displayName lang="default">Country</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">150</maxLength>
+        <enum literal="AFG" default="false" inherited="true" excluded="false">
+          <name lang="default">Afghanistan</name>
+        </enum>
+        <enum literal="ALA" default="false" inherited="true" excluded="false">
+          <name lang="default">Aland Islands</name>
+        </enum>
+        <enum literal="ALB" default="false" inherited="true" excluded="false">
+          <name lang="default">Albania</name>
+        </enum>
+        <enum literal="DZA" default="false" inherited="true" excluded="false">
+          <name lang="default">Algeria</name>
+        </enum>
+        <enum literal="ASM" default="false" inherited="true" excluded="false">
+          <name lang="default">American Samoa</name>
+        </enum>
+        <enum literal="AND" default="false" inherited="true" excluded="false">
+          <name lang="default">Andorra</name>
+        </enum>
+        <enum literal="AGO" default="false" inherited="true" excluded="false">
+          <name lang="default">Angola</name>
+        </enum>
+        <enum literal="AIA" default="false" inherited="true" excluded="false">
+          <name lang="default">Anguilla</name>
+        </enum>
+        <enum literal="ATA" default="false" inherited="true" excluded="false">
+          <name lang="default">Antarctica</name>
+        </enum>
+        <enum literal="ATG" default="false" inherited="true" excluded="false">
+          <name lang="default">Antigua and Barbuda</name>
+        </enum>
+        <enum literal="ARG" default="false" inherited="true" excluded="false">
+          <name lang="default">Argentina</name>
+        </enum>
+        <enum literal="ARM" default="false" inherited="true" excluded="false">
+          <name lang="default">Armenia</name>
+        </enum>
+        <enum literal="ABW" default="false" inherited="true" excluded="false">
+          <name lang="default">Aruba</name>
+        </enum>
+        <enum literal="AUS" default="false" inherited="true" excluded="false">
+          <name lang="default">Australia</name>
+        </enum>
+        <enum literal="AUT" default="false" inherited="true" excluded="false">
+          <name lang="default">Austria</name>
+        </enum>
+        <enum literal="AZE" default="false" inherited="true" excluded="false">
+          <name lang="default">Azerbaijan</name>
+        </enum>
+        <enum literal="BHS" default="false" inherited="true" excluded="false">
+          <name lang="default">Bahamas</name>
+        </enum>
+        <enum literal="BHR" default="false" inherited="true" excluded="false">
+          <name lang="default">Bahrain</name>
+        </enum>
+        <enum literal="BGD" default="false" inherited="true" excluded="false">
+          <name lang="default">Bangladesh</name>
+        </enum>
+        <enum literal="BRB" default="false" inherited="true" excluded="false">
+          <name lang="default">Barbados</name>
+        </enum>
+        <enum literal="BLR" default="false" inherited="true" excluded="false">
+          <name lang="default">Belarus</name>
+        </enum>
+        <enum literal="BEL" default="false" inherited="true" excluded="false">
+          <name lang="default">Belgium</name>
+        </enum>
+        <enum literal="BLZ" default="false" inherited="true" excluded="false">
+          <name lang="default">Belize</name>
+        </enum>
+        <enum literal="BEN" default="false" inherited="true" excluded="false">
+          <name lang="default">Benin</name>
+        </enum>
+        <enum literal="BMU" default="false" inherited="true" excluded="false">
+          <name lang="default">Bermuda</name>
+        </enum>
+        <enum literal="BTN" default="false" inherited="true" excluded="false">
+          <name lang="default">Bhutan</name>
+        </enum>
+        <enum literal="BOL" default="false" inherited="true" excluded="false">
+          <name lang="default">Bolivia</name>
+        </enum>
+        <enum literal="BIH" default="false" inherited="true" excluded="false">
+          <name lang="default">Bosnia and Herzegovina</name>
+        </enum>
+        <enum literal="BWA" default="false" inherited="true" excluded="false">
+          <name lang="default">Botswana</name>
+        </enum>
+        <enum literal="BVT" default="false" inherited="true" excluded="false">
+          <name lang="default">Bouvet Island</name>
+        </enum>
+        <enum literal="BRA" default="false" inherited="true" excluded="false">
+          <name lang="default">Brazil</name>
+        </enum>
+        <enum literal="VGB" default="false" inherited="true" excluded="false">
+          <name lang="default">British Virgin Islands</name>
+        </enum>
+        <enum literal="IOT" default="false" inherited="true" excluded="false">
+          <name lang="default">British Indian Ocean Territory</name>
+        </enum>
+        <enum literal="BRN" default="false" inherited="true" excluded="false">
+          <name lang="default">Brunei Darussalam</name>
+        </enum>
+        <enum literal="BGR" default="false" inherited="true" excluded="false">
+          <name lang="default">Bulgaria</name>
+        </enum>
+        <enum literal="BFA" default="false" inherited="true" excluded="false">
+          <name lang="default">Burkina Faso</name>
+        </enum>
+        <enum literal="BDI" default="false" inherited="true" excluded="false">
+          <name lang="default">Burundi</name>
+        </enum>
+        <enum literal="KHM" default="false" inherited="true" excluded="false">
+          <name lang="default">Cambodia</name>
+        </enum>
+        <enum literal="CMR" default="false" inherited="true" excluded="false">
+          <name lang="default">Cameroon</name>
+        </enum>
+        <enum literal="CAN" default="false" inherited="true" excluded="false">
+          <name lang="default">Canada</name>
+        </enum>
+        <enum literal="CPV" default="false" inherited="true" excluded="false">
+          <name lang="default">Cape Verde</name>
+        </enum>
+        <enum literal="CYM" default="false" inherited="true" excluded="false">
+          <name lang="default">Cayman Islands</name>
+        </enum>
+        <enum literal="CAF" default="false" inherited="true" excluded="false">
+          <name lang="default">Central African Republic</name>
+        </enum>
+        <enum literal="TCD" default="false" inherited="true" excluded="false">
+          <name lang="default">Chad</name>
+        </enum>
+        <enum literal="CHL" default="false" inherited="true" excluded="false">
+          <name lang="default">Chile</name>
+        </enum>
+        <enum literal="CHN" default="false" inherited="true" excluded="false">
+          <name lang="default">China</name>
+        </enum>
+        <enum literal="HKG" default="false" inherited="true" excluded="false">
+          <name lang="default">Hong Kong, Special Administrative Region of China</name>
+        </enum>
+        <enum literal="MAC" default="false" inherited="true" excluded="false">
+          <name lang="default">Macao, Special Administrative Region of China</name>
+        </enum>
+        <enum literal="CXR" default="false" inherited="true" excluded="false">
+          <name lang="default">Christmas Island</name>
+        </enum>
+        <enum literal="CCK" default="false" inherited="true" excluded="false">
+          <name lang="default">Cocos (Keeling) Islands</name>
+        </enum>
+        <enum literal="COL" default="false" inherited="true" excluded="false">
+          <name lang="default">Colombia</name>
+        </enum>
+        <enum literal="COM" default="false" inherited="true" excluded="false">
+          <name lang="default">Comoros</name>
+        </enum>
+        <enum literal="COG" default="false" inherited="true" excluded="false">
+          <name lang="default">Congo (Brazzaville)</name>
+        </enum>
+        <enum literal="COD" default="false" inherited="true" excluded="false">
+          <name lang="default">Congo, Democratic Republic of the</name>
+        </enum>
+        <enum literal="COK" default="false" inherited="true" excluded="false">
+          <name lang="default">Cook Islands</name>
+        </enum>
+        <enum literal="CRI" default="false" inherited="true" excluded="false">
+          <name lang="default">Costa Rica</name>
+        </enum>
+        <enum literal="CIV" default="false" inherited="true" excluded="false">
+          <name lang="default">Cote d'Ivoire</name>
+        </enum>
+        <enum literal="HRV" default="false" inherited="true" excluded="false">
+          <name lang="default">Croatia</name>
+        </enum>
+        <enum literal="CUB" default="false" inherited="true" excluded="false">
+          <name lang="default">Cuba</name>
+        </enum>
+        <enum literal="CYP" default="false" inherited="true" excluded="false">
+          <name lang="default">Cyprus</name>
+        </enum>
+        <enum literal="CZE" default="false" inherited="true" excluded="false">
+          <name lang="default">Czech Republic</name>
+        </enum>
+        <enum literal="DNK" default="false" inherited="true" excluded="false">
+          <name lang="default">Denmark</name>
+        </enum>
+        <enum literal="DJI" default="false" inherited="true" excluded="false">
+          <name lang="default">Djibouti</name>
+        </enum>
+        <enum literal="DMA" default="false" inherited="true" excluded="false">
+          <name lang="default">Dominica</name>
+        </enum>
+        <enum literal="DOM" default="false" inherited="true" excluded="false">
+          <name lang="default">Dominican Republic</name>
+        </enum>
+        <enum literal="ECU" default="false" inherited="true" excluded="false">
+          <name lang="default">Ecuador</name>
+        </enum>
+        <enum literal="EGY" default="false" inherited="true" excluded="false">
+          <name lang="default">Egypt</name>
+        </enum>
+        <enum literal="SLV" default="false" inherited="true" excluded="false">
+          <name lang="default">El Salvador</name>
+        </enum>
+        <enum literal="GNQ" default="false" inherited="true" excluded="false">
+          <name lang="default">Equatorial Guinea</name>
+        </enum>
+        <enum literal="ERI" default="false" inherited="true" excluded="false">
+          <name lang="default">Eritrea</name>
+        </enum>
+        <enum literal="EST" default="false" inherited="true" excluded="false">
+          <name lang="default">Estonia</name>
+        </enum>
+        <enum literal="ETH" default="false" inherited="true" excluded="false">
+          <name lang="default">Ethiopia</name>
+        </enum>
+        <enum literal="FLK" default="false" inherited="true" excluded="false">
+          <name lang="default">Falkland Islands (Malvinas)</name>
+        </enum>
+        <enum literal="FRO" default="false" inherited="true" excluded="false">
+          <name lang="default">Faroe Islands</name>
+        </enum>
+        <enum literal="FJI" default="false" inherited="true" excluded="false">
+          <name lang="default">Fiji</name>
+        </enum>
+        <enum literal="FIN" default="false" inherited="true" excluded="false">
+          <name lang="default">Finland</name>
+        </enum>
+        <enum literal="FRA" default="false" inherited="true" excluded="false">
+          <name lang="default">France</name>
+        </enum>
+        <enum literal="GUF" default="false" inherited="true" excluded="false">
+          <name lang="default">French Guiana</name>
+        </enum>
+        <enum literal="PYF" default="false" inherited="true" excluded="false">
+          <name lang="default">French Polynesia</name>
+        </enum>
+        <enum literal="ATF" default="false" inherited="true" excluded="false">
+          <name lang="default">French Southern Territories</name>
+        </enum>
+        <enum literal="GAB" default="false" inherited="true" excluded="false">
+          <name lang="default">Gabon</name>
+        </enum>
+        <enum literal="GMB" default="false" inherited="true" excluded="false">
+          <name lang="default">Gambia</name>
+        </enum>
+        <enum literal="GEO" default="false" inherited="true" excluded="false">
+          <name lang="default">Georgia</name>
+        </enum>
+        <enum literal="DEU" default="false" inherited="true" excluded="false">
+          <name lang="default">Germany</name>
+        </enum>
+        <enum literal="GHA" default="false" inherited="true" excluded="false">
+          <name lang="default">Ghana</name>
+        </enum>
+        <enum literal="GIB" default="false" inherited="true" excluded="false">
+          <name lang="default">Gibraltar</name>
+        </enum>
+        <enum literal="GRC" default="false" inherited="true" excluded="false">
+          <name lang="default">Greece</name>
+        </enum>
+        <enum literal="GRL" default="false" inherited="true" excluded="false">
+          <name lang="default">Greenland</name>
+        </enum>
+        <enum literal="GRD" default="false" inherited="true" excluded="false">
+          <name lang="default">Grenada</name>
+        </enum>
+        <enum literal="GLP" default="false" inherited="true" excluded="false">
+          <name lang="default">Guadeloupe</name>
+        </enum>
+        <enum literal="GUM" default="false" inherited="true" excluded="false">
+          <name lang="default">Guam</name>
+        </enum>
+        <enum literal="GTM" default="false" inherited="true" excluded="false">
+          <name lang="default">Guatemala</name>
+        </enum>
+        <enum literal="GGY" default="false" inherited="true" excluded="false">
+          <name lang="default">Guernsey</name>
+        </enum>
+        <enum literal="GIN" default="false" inherited="true" excluded="false">
+          <name lang="default">Guinea</name>
+        </enum>
+        <enum literal="GNB" default="false" inherited="true" excluded="false">
+          <name lang="default">Guinea-Bissau</name>
+        </enum>
+        <enum literal="GUY" default="false" inherited="true" excluded="false">
+          <name lang="default">Guyana</name>
+        </enum>
+        <enum literal="HTI" default="false" inherited="true" excluded="false">
+          <name lang="default">Haiti</name>
+        </enum>
+        <enum literal="HMD" default="false" inherited="true" excluded="false">
+          <name lang="default">Heard Island and Mcdonald Islands</name>
+        </enum>
+        <enum literal="VAT" default="false" inherited="true" excluded="false">
+          <name lang="default">Holy See (Vatican City State)</name>
+        </enum>
+        <enum literal="HND" default="false" inherited="true" excluded="false">
+          <name lang="default">Honduras</name>
+        </enum>
+        <enum literal="HUN" default="false" inherited="true" excluded="false">
+          <name lang="default">Hungary</name>
+        </enum>
+        <enum literal="ISL" default="false" inherited="true" excluded="false">
+          <name lang="default">Iceland</name>
+        </enum>
+        <enum literal="IND" default="false" inherited="true" excluded="false">
+          <name lang="default">India</name>
+        </enum>
+        <enum literal="IDN" default="false" inherited="true" excluded="false">
+          <name lang="default">Indonesia</name>
+        </enum>
+        <enum literal="IRN" default="false" inherited="true" excluded="false">
+          <name lang="default">Iran, Islamic Republic of</name>
+        </enum>
+        <enum literal="IRQ" default="false" inherited="true" excluded="false">
+          <name lang="default">Iraq</name>
+        </enum>
+        <enum literal="IRL" default="false" inherited="true" excluded="false">
+          <name lang="default">Ireland</name>
+        </enum>
+        <enum literal="IMN" default="false" inherited="true" excluded="false">
+          <name lang="default">Isle of Man</name>
+        </enum>
+        <enum literal="ISR" default="false" inherited="true" excluded="false">
+          <name lang="default">Israel</name>
+        </enum>
+        <enum literal="ITA" default="false" inherited="true" excluded="false">
+          <name lang="default">Italy</name>
+        </enum>
+        <enum literal="JAM" default="false" inherited="true" excluded="false">
+          <name lang="default">Jamaica</name>
+        </enum>
+        <enum literal="JPN" default="false" inherited="true" excluded="false">
+          <name lang="default">Japan</name>
+        </enum>
+        <enum literal="JEY" default="false" inherited="true" excluded="false">
+          <name lang="default">Jersey</name>
+        </enum>
+        <enum literal="JOR" default="false" inherited="true" excluded="false">
+          <name lang="default">Jordan</name>
+        </enum>
+        <enum literal="KAZ" default="false" inherited="true" excluded="false">
+          <name lang="default">Kazakhstan</name>
+        </enum>
+        <enum literal="KEN" default="false" inherited="true" excluded="false">
+          <name lang="default">Kenya</name>
+        </enum>
+        <enum literal="KIR" default="false" inherited="true" excluded="false">
+          <name lang="default">Kiribati</name>
+        </enum>
+        <enum literal="PRK" default="false" inherited="true" excluded="false">
+          <name lang="default">Korea, Democratic People's Republic of</name>
+        </enum>
+        <enum literal="KOR" default="false" inherited="true" excluded="false">
+          <name lang="default">Korea, Republic of</name>
+        </enum>
+        <enum literal="KWT" default="false" inherited="true" excluded="false">
+          <name lang="default">Kuwait</name>
+        </enum>
+        <enum literal="KGZ" default="false" inherited="true" excluded="false">
+          <name lang="default">Kyrgyzstan</name>
+        </enum>
+        <enum literal="LAO" default="false" inherited="true" excluded="false">
+          <name lang="default">Lao PDR</name>
+        </enum>
+        <enum literal="LVA" default="false" inherited="true" excluded="false">
+          <name lang="default">Latvia</name>
+        </enum>
+        <enum literal="LBN" default="false" inherited="true" excluded="false">
+          <name lang="default">Lebanon</name>
+        </enum>
+        <enum literal="LSO" default="false" inherited="true" excluded="false">
+          <name lang="default">Lesotho</name>
+        </enum>
+        <enum literal="LBR" default="false" inherited="true" excluded="false">
+          <name lang="default">Liberia</name>
+        </enum>
+        <enum literal="LBY" default="false" inherited="true" excluded="false">
+          <name lang="default">Libya</name>
+        </enum>
+        <enum literal="LIE" default="false" inherited="true" excluded="false">
+          <name lang="default">Liechtenstein</name>
+        </enum>
+        <enum literal="LTU" default="false" inherited="true" excluded="false">
+          <name lang="default">Lithuania</name>
+        </enum>
+        <enum literal="LUX" default="false" inherited="true" excluded="false">
+          <name lang="default">Luxembourg</name>
+        </enum>
+        <enum literal="MKD" default="false" inherited="true" excluded="false">
+          <name lang="default">Macedonia, Republic of</name>
+        </enum>
+        <enum literal="MDG" default="false" inherited="true" excluded="false">
+          <name lang="default">Madagascar</name>
+        </enum>
+        <enum literal="MWI" default="false" inherited="true" excluded="false">
+          <name lang="default">Malawi</name>
+        </enum>
+        <enum literal="MYS" default="false" inherited="true" excluded="false">
+          <name lang="default">Malaysia</name>
+        </enum>
+        <enum literal="MDV" default="false" inherited="true" excluded="false">
+          <name lang="default">Maldives</name>
+        </enum>
+        <enum literal="MLI" default="false" inherited="true" excluded="false">
+          <name lang="default">Mali</name>
+        </enum>
+        <enum literal="MLT" default="false" inherited="true" excluded="false">
+          <name lang="default">Malta</name>
+        </enum>
+        <enum literal="MHL" default="false" inherited="true" excluded="false">
+          <name lang="default">Marshall Islands</name>
+        </enum>
+        <enum literal="MTQ" default="false" inherited="true" excluded="false">
+          <name lang="default">Martinique</name>
+        </enum>
+        <enum literal="MRT" default="false" inherited="true" excluded="false">
+          <name lang="default">Mauritania</name>
+        </enum>
+        <enum literal="MUS" default="false" inherited="true" excluded="false">
+          <name lang="default">Mauritius</name>
+        </enum>
+        <enum literal="MYT" default="false" inherited="true" excluded="false">
+          <name lang="default">Mayotte</name>
+        </enum>
+        <enum literal="MEX" default="false" inherited="true" excluded="false">
+          <name lang="default">Mexico</name>
+        </enum>
+        <enum literal="FSM" default="false" inherited="true" excluded="false">
+          <name lang="default">Micronesia, Federated States of</name>
+        </enum>
+        <enum literal="MDA" default="false" inherited="true" excluded="false">
+          <name lang="default">Moldova</name>
+        </enum>
+        <enum literal="MCO" default="false" inherited="true" excluded="false">
+          <name lang="default">Monaco</name>
+        </enum>
+        <enum literal="MNG" default="false" inherited="true" excluded="false">
+          <name lang="default">Mongolia</name>
+        </enum>
+        <enum literal="MNE" default="false" inherited="true" excluded="false">
+          <name lang="default">Montenegro</name>
+        </enum>
+        <enum literal="MSR" default="false" inherited="true" excluded="false">
+          <name lang="default">Montserrat</name>
+        </enum>
+        <enum literal="MAR" default="false" inherited="true" excluded="false">
+          <name lang="default">Morocco</name>
+        </enum>
+        <enum literal="MOZ" default="false" inherited="true" excluded="false">
+          <name lang="default">Mozambique</name>
+        </enum>
+        <enum literal="MMR" default="false" inherited="true" excluded="false">
+          <name lang="default">Myanmar</name>
+        </enum>
+        <enum literal="NAM" default="false" inherited="true" excluded="false">
+          <name lang="default">Namibia</name>
+        </enum>
+        <enum literal="NRU" default="false" inherited="true" excluded="false">
+          <name lang="default">Nauru</name>
+        </enum>
+        <enum literal="NPL" default="false" inherited="true" excluded="false">
+          <name lang="default">Nepal</name>
+        </enum>
+        <enum literal="NLD" default="false" inherited="true" excluded="false">
+          <name lang="default">Netherlands</name>
+        </enum>
+        <enum literal="ANT" default="false" inherited="true" excluded="false">
+          <name lang="default">Netherlands Antilles</name>
+        </enum>
+        <enum literal="NCL" default="false" inherited="true" excluded="false">
+          <name lang="default">New Caledonia</name>
+        </enum>
+        <enum literal="NZL" default="false" inherited="true" excluded="false">
+          <name lang="default">New Zealand</name>
+        </enum>
+        <enum literal="NIC" default="false" inherited="true" excluded="false">
+          <name lang="default">Nicaragua</name>
+        </enum>
+        <enum literal="NER" default="false" inherited="true" excluded="false">
+          <name lang="default">Niger</name>
+        </enum>
+        <enum literal="NGA" default="false" inherited="true" excluded="false">
+          <name lang="default">Nigeria</name>
+        </enum>
+        <enum literal="NIU" default="false" inherited="true" excluded="false">
+          <name lang="default">Niue</name>
+        </enum>
+        <enum literal="NFK" default="false" inherited="true" excluded="false">
+          <name lang="default">Norfolk Island</name>
+        </enum>
+        <enum literal="MNP" default="false" inherited="true" excluded="false">
+          <name lang="default">Northern Mariana Islands</name>
+        </enum>
+        <enum literal="NOR" default="false" inherited="true" excluded="false">
+          <name lang="default">Norway</name>
+        </enum>
+        <enum literal="OMN" default="false" inherited="true" excluded="false">
+          <name lang="default">Oman</name>
+        </enum>
+        <enum literal="PAK" default="false" inherited="true" excluded="false">
+          <name lang="default">Pakistan</name>
+        </enum>
+        <enum literal="PLW" default="false" inherited="true" excluded="false">
+          <name lang="default">Palau</name>
+        </enum>
+        <enum literal="PSE" default="false" inherited="true" excluded="false">
+          <name lang="default">Palestinian Territory, Occupied</name>
+        </enum>
+        <enum literal="PAN" default="false" inherited="true" excluded="false">
+          <name lang="default">Panama</name>
+        </enum>
+        <enum literal="PNG" default="false" inherited="true" excluded="false">
+          <name lang="default">Papua New Guinea</name>
+        </enum>
+        <enum literal="PRY" default="false" inherited="true" excluded="false">
+          <name lang="default">Paraguay</name>
+        </enum>
+        <enum literal="PER" default="false" inherited="true" excluded="false">
+          <name lang="default">Peru</name>
+        </enum>
+        <enum literal="PHL" default="false" inherited="true" excluded="false">
+          <name lang="default">Philippines</name>
+        </enum>
+        <enum literal="PCN" default="false" inherited="true" excluded="false">
+          <name lang="default">Pitcairn</name>
+        </enum>
+        <enum literal="POL" default="false" inherited="true" excluded="false">
+          <name lang="default">Poland</name>
+        </enum>
+        <enum literal="PRT" default="false" inherited="true" excluded="false">
+          <name lang="default">Portugal</name>
+        </enum>
+        <enum literal="PRI" default="false" inherited="true" excluded="false">
+          <name lang="default">Puerto Rico</name>
+        </enum>
+        <enum literal="QAT" default="false" inherited="true" excluded="false">
+          <name lang="default">Qatar</name>
+        </enum>
+        <enum literal="REU" default="false" inherited="true" excluded="false">
+          <name lang="default">Reunion</name>
+        </enum>
+        <enum literal="ROU" default="false" inherited="true" excluded="false">
+          <name lang="default">Romania</name>
+        </enum>
+        <enum literal="RUS" default="false" inherited="true" excluded="false">
+          <name lang="default">Russian Federation</name>
+        </enum>
+        <enum literal="RWA" default="false" inherited="true" excluded="false">
+          <name lang="default">Rwanda</name>
+        </enum>
+        <enum literal="BLM" default="false" inherited="true" excluded="false">
+          <name lang="default">Saint-Barthelemy</name>
+        </enum>
+        <enum literal="SHN" default="false" inherited="true" excluded="false">
+          <name lang="default">Saint Helena</name>
+        </enum>
+        <enum literal="KNA" default="false" inherited="true" excluded="false">
+          <name lang="default">Saint Kitts and Nevis</name>
+        </enum>
+        <enum literal="LCA" default="false" inherited="true" excluded="false">
+          <name lang="default">Saint Lucia</name>
+        </enum>
+        <enum literal="MAF" default="false" inherited="true" excluded="false">
+          <name lang="default">Saint-Martin (French part)</name>
+        </enum>
+        <enum literal="SPM" default="false" inherited="true" excluded="false">
+          <name lang="default">Saint Pierre and Miquelon</name>
+        </enum>
+        <enum literal="VCT" default="false" inherited="true" excluded="false">
+          <name lang="default">Saint Vincent and Grenadines</name>
+        </enum>
+        <enum literal="WSM" default="false" inherited="true" excluded="false">
+          <name lang="default">Samoa</name>
+        </enum>
+        <enum literal="SMR" default="false" inherited="true" excluded="false">
+          <name lang="default">San Marino</name>
+        </enum>
+        <enum literal="STP" default="false" inherited="true" excluded="false">
+          <name lang="default">Sao Tome and Principe</name>
+        </enum>
+        <enum literal="SAU" default="false" inherited="true" excluded="false">
+          <name lang="default">Saudi Arabia</name>
+        </enum>
+        <enum literal="SEN" default="false" inherited="true" excluded="false">
+          <name lang="default">Senegal</name>
+        </enum>
+        <enum literal="SRB" default="false" inherited="true" excluded="false">
+          <name lang="default">Serbia</name>
+        </enum>
+        <enum literal="SYC" default="false" inherited="true" excluded="false">
+          <name lang="default">Seychelles</name>
+        </enum>
+        <enum literal="SLE" default="false" inherited="true" excluded="false">
+          <name lang="default">Sierra Leone</name>
+        </enum>
+        <enum literal="SGP" default="false" inherited="true" excluded="false">
+          <name lang="default">Singapore</name>
+        </enum>
+        <enum literal="SVK" default="false" inherited="true" excluded="false">
+          <name lang="default">Slovakia</name>
+        </enum>
+        <enum literal="SVN" default="false" inherited="true" excluded="false">
+          <name lang="default">Slovenia</name>
+        </enum>
+        <enum literal="SLB" default="false" inherited="true" excluded="false">
+          <name lang="default">Solomon Islands</name>
+        </enum>
+        <enum literal="SOM" default="false" inherited="true" excluded="false">
+          <name lang="default">Somalia</name>
+        </enum>
+        <enum literal="ZAF" default="false" inherited="true" excluded="false">
+          <name lang="default">South Africa</name>
+        </enum>
+        <enum literal="SGS" default="false" inherited="true" excluded="false">
+          <name lang="default">South Georgia and the South Sandwich Islands</name>
+        </enum>
+        <enum literal="SSD" default="false" inherited="true" excluded="false">
+          <name lang="default">South Sudan</name>
+        </enum>
+        <enum literal="ESP" default="false" inherited="true" excluded="false">
+          <name lang="default">Spain</name>
+        </enum>
+        <enum literal="LKA" default="false" inherited="true" excluded="false">
+          <name lang="default">Sri Lanka</name>
+        </enum>
+        <enum literal="SDN" default="false" inherited="true" excluded="false">
+          <name lang="default">Sudan</name>
+        </enum>
+        <enum literal="SUR" default="false" inherited="true" excluded="false">
+          <name lang="default">Suriname</name>
+        </enum>
+        <enum literal="SJM" default="false" inherited="true" excluded="false">
+          <name lang="default">Svalbard and Jan Mayen Islands</name>
+        </enum>
+        <enum literal="SWZ" default="false" inherited="true" excluded="false">
+          <name lang="default">Swaziland</name>
+        </enum>
+        <enum literal="SWE" default="false" inherited="true" excluded="false">
+          <name lang="default">Sweden</name>
+        </enum>
+        <enum literal="CHE" default="false" inherited="true" excluded="false">
+          <name lang="default">Switzerland</name>
+        </enum>
+        <enum literal="SYR" default="false" inherited="true" excluded="false">
+          <name lang="default">Syrian Arab Republic (Syria)</name>
+        </enum>
+        <enum literal="TWN" default="false" inherited="true" excluded="false">
+          <name lang="default">Taiwan, Republic of China</name>
+        </enum>
+        <enum literal="TJK" default="false" inherited="true" excluded="false">
+          <name lang="default">Tajikistan</name>
+        </enum>
+        <enum literal="TZA" default="false" inherited="true" excluded="false">
+          <name lang="default">Tanzania, United Republic of</name>
+        </enum>
+        <enum literal="THA" default="false" inherited="true" excluded="false">
+          <name lang="default">Thailand</name>
+        </enum>
+        <enum literal="TLS" default="false" inherited="true" excluded="false">
+          <name lang="default">Timor-Leste</name>
+        </enum>
+        <enum literal="TGO" default="false" inherited="true" excluded="false">
+          <name lang="default">Togo</name>
+        </enum>
+        <enum literal="TKL" default="false" inherited="true" excluded="false">
+          <name lang="default">Tokelau</name>
+        </enum>
+        <enum literal="TON" default="false" inherited="true" excluded="false">
+          <name lang="default">Tonga</name>
+        </enum>
+        <enum literal="TTO" default="false" inherited="true" excluded="false">
+          <name lang="default">Trinidad and Tobago</name>
+        </enum>
+        <enum literal="TUN" default="false" inherited="true" excluded="false">
+          <name lang="default">Tunisia</name>
+        </enum>
+        <enum literal="TUR" default="false" inherited="true" excluded="false">
+          <name lang="default">Turkey</name>
+        </enum>
+        <enum literal="TKM" default="false" inherited="true" excluded="false">
+          <name lang="default">Turkmenistan</name>
+        </enum>
+        <enum literal="TCA" default="false" inherited="true" excluded="false">
+          <name lang="default">Turks and Caicos Islands</name>
+        </enum>
+        <enum literal="TUV" default="false" inherited="true" excluded="false">
+          <name lang="default">Tuvalu</name>
+        </enum>
+        <enum literal="UGA" default="false" inherited="true" excluded="false">
+          <name lang="default">Uganda</name>
+        </enum>
+        <enum literal="UKR" default="false" inherited="true" excluded="false">
+          <name lang="default">Ukraine</name>
+        </enum>
+        <enum literal="ARE" default="false" inherited="true" excluded="false">
+          <name lang="default">United Arab Emirates</name>
+        </enum>
+        <enum literal="GBR" default="false" inherited="true" excluded="false">
+          <name lang="default">United Kingdom</name>
+        </enum>
+        <enum literal="USA" default="false" inherited="true" excluded="false">
+          <name lang="default">United States of America</name>
+        </enum>
+        <enum literal="UMI" default="false" inherited="true" excluded="false">
+          <name lang="default">United States Minor Outlying Islands</name>
+        </enum>
+        <enum literal="URY" default="false" inherited="true" excluded="false">
+          <name lang="default">Uruguay</name>
+        </enum>
+        <enum literal="UZB" default="false" inherited="true" excluded="false">
+          <name lang="default">Uzbekistan</name>
+        </enum>
+        <enum literal="VUT" default="false" inherited="true" excluded="false">
+          <name lang="default">Vanuatu</name>
+        </enum>
+        <enum literal="VEN" default="false" inherited="true" excluded="false">
+          <name lang="default">Venezuela (Bolivarian Republic of)</name>
+        </enum>
+        <enum literal="VNM" default="false" inherited="true" excluded="false">
+          <name lang="default">Viet Nam</name>
+        </enum>
+        <enum literal="VIR" default="false" inherited="true" excluded="false">
+          <name lang="default">Virgin Islands, US</name>
+        </enum>
+        <enum literal="WLF" default="false" inherited="true" excluded="false">
+          <name lang="default">Wallis and Futuna Islands</name>
+        </enum>
+        <enum literal="ESH" default="false" inherited="true" excluded="false">
+          <name lang="default">Western Sahara</name>
+        </enum>
+        <enum literal="YEM" default="false" inherited="true" excluded="false">
+          <name lang="default">Yemen</name>
+        </enum>
+        <enum literal="ZMB" default="false" inherited="true" excluded="false">
+          <name lang="default">Zambia</name>
+        </enum>
+        <enum literal="ZWE" default="false" inherited="true" excluded="false">
+          <name lang="default">Zimbabwe</name>
+        </enum>
+        <base>
+          <relation ref="dsd=AddressGeneric+dataElement=+rJnfpZHRO+hO6WI8WQDwQ" type="Data Element" name="Type" kind="Element">
+            <target name="country" typeName="Data Element"/>
+            <inEntity name="AddressGeneric" typeName="Data Structure Definition"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="dsd=USAddress+dataElement=qnlixIjHSUatWakHn0hP6Q~DOHqSZruQH6zRgCrchW4Fw" type="dataElement" typeName="Data Element" kind="Element" name="lineOne" path="/lineOne" inherited="true">
+        <displayName lang="default">Line One</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">150</maxLength>
+        <base>
+          <relation ref="dsd=AddressGeneric+dataElement=DOHqSZruQH6zRgCrchW4Fw" type="Data Element" name="Type" kind="Element">
+            <target name="lineOne" typeName="Data Element"/>
+            <inEntity name="AddressGeneric" typeName="Data Structure Definition"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="dsd=USAddress+dataElement=qnlixIjHSUatWakHn0hP6Q~QfIHmf8gSLGbVtctDyGWTw" type="dataElement" typeName="Data Element" kind="Element" name="lineTwo" path="/lineTwo" inherited="true">
+        <displayName lang="default">Line Two</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">150</maxLength>
+        <base>
+          <relation ref="dsd=AddressGeneric+dataElement=QfIHmf8gSLGbVtctDyGWTw" type="Data Element" name="Type" kind="Element">
+            <target name="lineTwo" typeName="Data Element"/>
+            <inEntity name="AddressGeneric" typeName="Data Structure Definition"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="dsd=USAddress+dataElement=qnlixIjHSUatWakHn0hP6Q~QkLckljVTn2vm2WWj1Fdhg" type="dataElement" typeName="Data Element" kind="Element" name="state" path="/state" inherited="true">
+        <displayName lang="default">state</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">150</maxLength>
+        <base>
+          <relation ref="dsd=AddressGeneric+dataElement=QkLckljVTn2vm2WWj1Fdhg" type="Data Element" name="Type" kind="Element">
+            <target name="state" typeName="Data Element"/>
+            <inEntity name="AddressGeneric" typeName="Data Structure Definition"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="dsd=USAddress+dataElement=qnlixIjHSUatWakHn0hP6Q~0dSuGd6HSuaIJKp1QVMirA" type="dataElement" typeName="Data Element" kind="Element" name="postalCode" path="/postalCode" inherited="true">
+        <displayName lang="default">postalCode</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">150</maxLength>
+        <base>
+          <relation ref="dsd=AddressGeneric+dataElement=0dSuGd6HSuaIJKp1QVMirA" type="Data Element" name="Type" kind="Element">
+            <target name="postalCode" typeName="Data Element"/>
+            <inEntity name="AddressGeneric" typeName="Data Structure Definition"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="dsd=USAddress+dataElement=wQeH7Sb2RdaJtHCHkd1CHA" type="dataElement" typeName="Data Element" kind="Element" name="county" path="/USAddress/county">
+        <displayName lang="default">county</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">100</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=county" type="Schema Element" name="Type" kind="Element">
+            <target name="county" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="dsd=USAddress+dataElement=pwgBX+yFT5OVOyrvflbmhw" type="dataElement" typeName="Data Element" kind="Element" name="lineFour" path="/USAddress/lineFour">
+        <displayName lang="default">lineFour</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">150</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=lineFour" type="Schema Element" name="Type" kind="Element">
+            <target name="lineFour" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="dsd=USAddress+dataElement=mUNncXS9Qz+nf--YWHa2QQ" type="dataElement" typeName="Data Element" kind="Element" name="lineThree" path="/USAddress/lineThree">
+        <displayName lang="default">lineThree</displayName>
+        <minOccurs inherited="true">0</minOccurs>
+        <maxOccurs inherited="true">1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="true">0</minLength>
+        <maxLength inherited="true">150</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=lineThree" type="Schema Element" name="Type" kind="Element">
+            <target name="lineThree" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+    </dataElements>
+    <details>
+      <element id="dsd=USAddress+dsd.dsdd=bAAmEpwlQFedfyJR09wlLQ" type="dsd.dsdd" typeName="Data Structure Definition Details" kind="Element" name="USAddress Data Structure Definition Details" path="USAddress Data Structure Definition Details"/>
+    </details>
+  </entity>
+</model:Model>

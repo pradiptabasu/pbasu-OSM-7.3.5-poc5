@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.oracle.com/communications/sce/osm/model/orchestration" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:ord="http://xmlns.oracle.com/communications/sce/osm/model/order" xmlns:osm="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xmlns:prov="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xsi:type="OrderComponentSpec" name="TargetSystem">
+  <com:displayName>Target System</com:displayName>
+  <com:information>This is the base order component specification for all system type order component specifications. Any common properties or characteristics shared by all system type order component specifications would be defined in here and inherited. This parent order component specification also provides a way to categorize order component specifications as you can see by how they are arranged in the editors.</com:information>
+  <com:saveVersion>4</com:saveVersion>
+  <namespace>http://oracle.communications.ordermanagement.unsupported.centralom</namespace>
+  <minDuration/>
+  <defaultDuration/>
+  <orderTemplateContribution/>
+</com:modelEntity>

@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:Q1="http://xmlns.oracle.com/InputMessage" xmlns:Q2="http://xmlns.oracle.com/communications/sce/dictionary/OracleComms_OSM_CommonDataDictionary/OracleComms_OSM_CommonDataDictionary" xmlns:tns="http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample-Orchestration/OsmCentralOMExample-Orchestration" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample-Orchestration/OsmCentralOMExample-Orchestration">
+    <xs:import namespace="http://xmlns.oracle.com/communications/sce/dictionary/OracleComms_OSM_CommonDataDictionary/OracleComms_OSM_CommonDataDictionary" schemaLocation="../../OracleComms_OSM_CommonDataDictionary/dataDictionary/OracleComms_OSM_CommonDataDictionary.xsd"/>
+    <xs:import namespace="http://xmlns.oracle.com/InputMessage" schemaLocation="InputMessage.xsd"/>
+        <xs:complexType name="FunctionType">
+    <xs:complexContent>
+      <xs:extension base="Q2:FulfillmentFunctionType">
+                    
+                
+                  
+                <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="componentKey">
+                        <xs:annotation>
+          <xs:documentation/>
+        </xs:annotation>
+                <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="200"/>
+                                  <xs:minLength value="0"/>
+                    </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="orderItem">
+                        <xs:annotation>
+          <xs:documentation/>
+        </xs:annotation>
+                <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="xs:anyType"/>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+                <xs:element maxOccurs="1" minOccurs="0" name="Status">
+                        <xs:annotation>
+          <xs:documentation/>
+        </xs:annotation>
+                <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="xs:anyType">
+              <xs:sequence>
+                <xs:element maxOccurs="1" minOccurs="0" name="ErrorCode">
+                                                      <xs:annotation>
+                    <xs:documentation/>
+                  </xs:annotation>
+                                    <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="20"/>
+                                                      <xs:minLength value="0"/>
+                                        </xs:restriction>
+        </xs:simpleType>
+                </xs:element>
+                                              <xs:element maxOccurs="1" minOccurs="0" name="ErrorMessage">
+                                                      <xs:annotation>
+                    <xs:documentation/>
+                  </xs:annotation>
+                                    <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="200"/>
+                                                                <xs:minLength value="0"/>
+                                        </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                                <xs:element maxOccurs="1" minOccurs="0" name="ErrorStatus">
+                                                      <xs:annotation>
+                    <xs:documentation/>
+                  </xs:annotation>
+                                    <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:minLength value="0"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                            </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+        </xs:sequence>
+            </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+    <xs:complexType name="CustomerDetails">
+    <xs:complexContent>
+      <xs:extension base="Q1:CustomerAddress"/>
+    </xs:complexContent>
+  </xs:complexType>
+        <xs:complexType name="OrderHeader">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="numSalesOrder">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element maxOccurs="1" minOccurs="0" name="typeOrder">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+    <xs:complexType name="AccountDetails">
+    <xs:complexContent>
+      <xs:extension base="Q1:CustomerAccountType"/>
+    </xs:complexContent>
+  </xs:complexType>
+    <xs:complexType name="ResponseParamGroup">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="ResponseParam">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:restriction base="xs:anyType">
+              <xs:sequence>
+                <xs:element name="componentKey">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string"/>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="paramName">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string"/>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="paramValue">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string"/>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:restriction>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+    <xs:complexType name="FalloutMessage">
+    <xs:sequence/>
+  </xs:complexType>
+    <xs:complexType name="StatusType">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="ErrorCode">
+                        <xs:annotation>
+          <xs:documentation/>
+        </xs:annotation>
+                <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element maxOccurs="1" minOccurs="0" name="ErrorMessage">
+                        <xs:annotation>
+          <xs:documentation/>
+        </xs:annotation>
+                <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="200"/>
+                                  <xs:minLength value="0"/>
+                    </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element maxOccurs="1" minOccurs="0" name="ErrorStatus">
+                        <xs:annotation>
+          <xs:documentation/>
+        </xs:annotation>
+                <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+    <xs:complexType name="Status">
+    <xs:sequence>
+                                                                </xs:sequence>
+  </xs:complexType>
+
+    <xs:complexType name="OrderItem">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="Q2:OrderItem">
+        <xs:sequence>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <xs:element maxOccurs="1" minOccurs="1" name="productClass">
+            <xs:annotation>
+              <xs:documentation/>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="100"/>
+                <xs:minLength value="0"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+                    <xs:element maxOccurs="1" minOccurs="1" name="productSpec">
+            <xs:annotation>
+              <xs:documentation/>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="100"/>
+                <xs:minLength value="0"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+                    <xs:element maxOccurs="1" minOccurs="1" name="lineId">
+            <xs:annotation>
+              <xs:documentation/>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="100"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+                    <xs:element maxOccurs="1" minOccurs="1" name="lineItemName">
+            <xs:annotation>
+              <xs:documentation/>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="100"/>
+                                              <xs:minLength value="0"/>
+                            </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+                    <xs:element maxOccurs="1" minOccurs="1" name="requestedDeliveryDate">
+            <xs:annotation>
+              <xs:documentation/>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:dateTime"/>
+            </xs:simpleType>
+          </xs:element>
+                    <xs:element maxOccurs="1" minOccurs="1" name="parentLineId">
+            <xs:annotation>
+              <xs:documentation/>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="100"/>
+                                              <xs:minLength value="0"/>
+                            </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+                    <xs:element maxOccurs="1" minOccurs="1" name="region">
+            <xs:annotation>
+              <xs:documentation/>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string"/>
+            </xs:simpleType>
+          </xs:element>
+                    <xs:element maxOccurs="1" minOccurs="1" name="typeCode">
+            <xs:annotation>
+              <xs:documentation/>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string"/>
+            </xs:simpleType>
+          </xs:element>
+                    <xs:element maxOccurs="1" minOccurs="0" name="serviceId">
+            <xs:annotation>
+              <xs:documentation/>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string"/>
+            </xs:simpleType>
+          </xs:element>
+                    <xs:element maxOccurs="1" minOccurs="0" name="relatedBundleId">
+            <xs:annotation>
+              <xs:documentation/>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:minLength value="0"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+                    <xs:element maxOccurs="1" minOccurs="0" name="lineItemPayload">
+            <xs:annotation>
+              <xs:documentation/>
+            </xs:annotation>
+            <xs:complexType/>
+          </xs:element>
+                    <xs:element maxOccurs="1" minOccurs="0" name="ResponseParamGroup">
+            <xs:annotation>
+              <xs:documentation/>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="ResponseParam">
+                  <xs:annotation>
+                    <xs:documentation/>
+                  </xs:annotation>
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element maxOccurs="1" minOccurs="1" name="paramName">
+                        <xs:annotation>
+                          <xs:documentation/>
+                        </xs:annotation>
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string"/>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element maxOccurs="1" minOccurs="0" name="paramValue">
+                        <xs:annotation>
+                          <xs:documentation/>
+                        </xs:annotation>
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string"/>
+                        </xs:simpleType>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+                </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

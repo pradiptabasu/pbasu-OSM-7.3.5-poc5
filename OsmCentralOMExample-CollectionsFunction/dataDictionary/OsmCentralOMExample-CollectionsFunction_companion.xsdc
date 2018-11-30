@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns="http://www.mslv.com/studio/core/model/common" xmlns:data="http://www.oracle.com/communications/studio/core/model/common/data" xmlns:provisioning="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xsi:type="com:dataDictionaryCompanionType" name="OsmCentralOMExample-CollectionsFunction_companion">
+  <com:displayName>DDCM</com:displayName>
+  <com:saveVersion>2</com:saveVersion>
+  <com:id>bDNQczxO--+x---5l0h5dw</com:id>
+  <com:dataDictionaryNode>
+    <com:entity>OsmCentralOMExample-CollectionsFunction</com:entity>
+    <com:entityType>xsd</com:entityType>
+    <com:relationship>com.mslv.studio.core.data.dictionary.extension</com:relationship>
+    <com:element>CollectionsFunction</com:element>
+    <com:elementType>CollectionsFunction</com:elementType>
+    <com:baseElement>FunctionType</com:baseElement>
+    <com:baseNamespace>http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample-Orchestration/OsmCentralOMExample-Orchestration</com:baseNamespace>
+    <com:dataElementId>CollectionsFunction</com:dataElementId>
+    <com:extension xsi:type="provisioning:ElementExtensionType"/>
+    <com:minCardinality>0</com:minCardinality>
+    <com:maxCardinality>-1</com:maxCardinality>
+    <com:dataDictionaryDetails>
+      <com:detail xsi:type="data:dataElementCommonDetail">
+        <com:id>6cgvnhAP--+xVJZn---yGQ</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+        <data:dataElementId>CollectionsFunction</data:dataElementId>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>-1</data:maxMultiplicity>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementInformationDetails">
+        <com:id>--+4--+K--+3jncqpxwu+A</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</com:elementType>
+        <data:dataElementId>CollectionsFunction</data:dataElementId>
+      </com:detail>
+    </com:dataDictionaryDetails>
+  </com:dataDictionaryNode>
+  <com:dataDictionaryNode>
+    <com:entity>OsmCentralOMExample-CollectionsFunction</com:entity>
+    <com:entityType>xsd</com:entityType>
+    <com:relationship>com.mslv.studio.core.data.dictionary.extension</com:relationship>
+    <com:element>CollectionsFunction/componentKey</com:element>
+    <com:elementType>(Local Structure)</com:elementType>
+    <com:baseElement>string</com:baseElement>
+    <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
+    <com:dataElementId>CollectionsFunction/componentKey</com:dataElementId>
+    <com:extension xsi:type="provisioning:ElementExtensionType"/>
+    <com:dataDictionaryDetails>
+      <com:detail xsi:type="data:dataElementEnumerationDetail">
+        <com:id>PeFf2GYI--+0---1B4omIg</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</com:elementType>
+        <data:dataElementId>CollectionsFunction/componentKey</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementInformationDetails">
+        <com:id>---+---8--+v--+54NdKiA</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</com:elementType>
+        <data:dataElementId>CollectionsFunction/componentKey</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementCommonDetail">
+        <com:id>--+l---T--+----VpQIs9Q</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+        <data:dataElementId>CollectionsFunction/componentKey</data:dataElementId>
+        <data:defaultValue></data:defaultValue>
+        <data:deprecated>false</data:deprecated>
+        <data:abstract>false</data:abstract>
+        <data:internal>false</data:internal>
+        <data:minLength>0</data:minLength>
+        <data:maxLength>200</data:maxLength>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </com:detail>
+    </com:dataDictionaryDetails>
+  </com:dataDictionaryNode>
+  <com:dataDictionaryNode>
+    <com:entity>OsmCentralOMExample-CollectionsFunction</com:entity>
+    <com:entityType>xsd</com:entityType>
+    <com:relationship>com.mslv.studio.core.data.dictionary.extension</com:relationship>
+    <com:element>CollectionsFunction/orderItem</com:element>
+    <com:elementType>(Local Structure)</com:elementType>
+    <com:baseElement>(Local Structure)</com:baseElement>
+    <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
+    <com:dataElementId>CollectionsFunction/orderItem</com:dataElementId>
+    <com:dataDictionaryDetails>
+      <com:detail xsi:type="data:dataElementInformationDetails">
+        <com:id>9t4p---T--+P--+0g4sBnQ</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</com:elementType>
+        <data:dataElementId>CollectionsFunction/orderItem</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementCommonDetail">
+        <com:id>---HcKQK--+M1cZZEHEqvQ</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+        <data:dataElementId>CollectionsFunction/orderItem</data:dataElementId>
+        <data:defaultValue></data:defaultValue>
+        <data:deprecated>false</data:deprecated>
+        <data:abstract>false</data:abstract>
+        <data:internal>false</data:internal>
+        <data:minLength>0</data:minLength>
+        <data:maxLength>-1</data:maxLength>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>-1</data:maxMultiplicity>
+      </com:detail>
+    </com:dataDictionaryDetails>
+  </com:dataDictionaryNode>
+  <com:dataDictionaryNode>
+    <com:entity>OsmCentralOMExample-CollectionsFunction</com:entity>
+    <com:entityType>xsd</com:entityType>
+    <com:relationship>com.mslv.studio.core.data.dictionary.extension</com:relationship>
+    <com:element>CollectionsFunction/Status</com:element>
+    <com:elementType>(Local Structure)</com:elementType>
+    <com:baseElement>(Local Structure)</com:baseElement>
+    <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
+    <com:dataElementId>CollectionsFunction/Status</com:dataElementId>
+    <com:dataDictionaryDetails>
+      <com:detail xsi:type="data:dataElementInformationDetails">
+        <com:id>--+PokM4--+9---A-akuOw</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</com:elementType>
+        <data:dataElementId>CollectionsFunction/Status</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementCommonDetail">
+        <com:id>q3Vr---k--+c---e---lTg</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+        <data:dataElementId>CollectionsFunction/Status</data:dataElementId>
+        <data:defaultValue></data:defaultValue>
+        <data:deprecated>false</data:deprecated>
+        <data:abstract>false</data:abstract>
+        <data:internal>false</data:internal>
+        <data:minLength>0</data:minLength>
+        <data:maxLength>-1</data:maxLength>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </com:detail>
+    </com:dataDictionaryDetails>
+  </com:dataDictionaryNode>
+  <com:dataDictionaryNode>
+    <com:entity>OsmCentralOMExample-CollectionsFunction</com:entity>
+    <com:entityType>xsd</com:entityType>
+    <com:relationship>com.mslv.studio.core.data.dictionary.extension</com:relationship>
+    <com:element>CollectionsFunction/Status/ErrorCode</com:element>
+    <com:elementType>(Local Structure)</com:elementType>
+    <com:baseElement>string</com:baseElement>
+    <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
+    <com:dataElementId>CollectionsFunction/Status/ErrorCode</com:dataElementId>
+    <com:dataDictionaryDetails>
+      <com:detail xsi:type="data:dataElementEnumerationDetail">
+        <com:id>--+ON8lX--+iqoMm---WfA</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</com:elementType>
+        <data:dataElementId>CollectionsFunction/Status/ErrorCode</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementInformationDetails">
+        <com:id>--+aVTlY--+8--+k--+DTg</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</com:elementType>
+        <data:dataElementId>CollectionsFunction/Status/ErrorCode</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementCommonDetail">
+        <com:id>ACA2---t--+c---3--+YQw</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+        <data:dataElementId>CollectionsFunction/Status/ErrorCode</data:dataElementId>
+        <data:defaultValue></data:defaultValue>
+        <data:deprecated>false</data:deprecated>
+        <data:abstract>false</data:abstract>
+        <data:internal>false</data:internal>
+        <data:minLength>0</data:minLength>
+        <data:maxLength>-1</data:maxLength>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </com:detail>
+    </com:dataDictionaryDetails>
+  </com:dataDictionaryNode>
+  <com:dataDictionaryNode>
+    <com:entity>OsmCentralOMExample-CollectionsFunction</com:entity>
+    <com:entityType>xsd</com:entityType>
+    <com:relationship>com.mslv.studio.core.data.dictionary.extension</com:relationship>
+    <com:element>CollectionsFunction/Status/ErrorMessage</com:element>
+    <com:elementType>(Local Structure)</com:elementType>
+    <com:baseElement>string</com:baseElement>
+    <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
+    <com:dataElementId>CollectionsFunction/Status/ErrorMessage</com:dataElementId>
+    <com:dataDictionaryDetails>
+      <com:detail xsi:type="data:dataElementEnumerationDetail">
+        <com:id>Brhoz9Rm--+9i38hrsE14g</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</com:elementType>
+        <data:dataElementId>CollectionsFunction/Status/ErrorMessage</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementInformationDetails">
+        <com:id>ZA4FFiB2--+Xz6sMLCEqDQ</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</com:elementType>
+        <data:dataElementId>CollectionsFunction/Status/ErrorMessage</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementCommonDetail">
+        <com:id>uPFMEK4D--+N---X---FAQ</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+        <data:dataElementId>CollectionsFunction/Status/ErrorMessage</data:dataElementId>
+        <data:defaultValue></data:defaultValue>
+        <data:deprecated>false</data:deprecated>
+        <data:abstract>false</data:abstract>
+        <data:internal>false</data:internal>
+        <data:minLength>0</data:minLength>
+        <data:maxLength>200</data:maxLength>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </com:detail>
+    </com:dataDictionaryDetails>
+  </com:dataDictionaryNode>
+  <com:dataDictionaryNode>
+    <com:entity>OsmCentralOMExample-CollectionsFunction</com:entity>
+    <com:entityType>xsd</com:entityType>
+    <com:relationship>com.mslv.studio.core.data.dictionary.extension</com:relationship>
+    <com:element>CollectionsFunction/Status/ErrorStatus</com:element>
+    <com:elementType>(Local Structure)</com:elementType>
+    <com:baseElement>string</com:baseElement>
+    <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
+    <com:dataElementId>CollectionsFunction/Status/ErrorStatus</com:dataElementId>
+    <com:dataDictionaryDetails>
+      <com:detail xsi:type="data:dataElementEnumerationDetail">
+        <com:id>--+Q8Zky--+S---r---zyQ</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</com:elementType>
+        <data:dataElementId>CollectionsFunction/Status/ErrorStatus</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementInformationDetails">
+        <com:id>AZ1xYh8p--+5TcMf--+IFg</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</com:elementType>
+        <data:dataElementId>CollectionsFunction/Status/ErrorStatus</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementCommonDetail">
+        <com:id>Z6UD---K--+R--+KO5ghQA</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+        <data:dataElementId>CollectionsFunction/Status/ErrorStatus</data:dataElementId>
+        <data:defaultValue></data:defaultValue>
+        <data:deprecated>false</data:deprecated>
+        <data:abstract>false</data:abstract>
+        <data:internal>false</data:internal>
+        <data:minLength>0</data:minLength>
+        <data:maxLength>-1</data:maxLength>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </com:detail>
+    </com:dataDictionaryDetails>
+  </com:dataDictionaryNode>
+  <com:dataDictionaryNode>
+    <com:entity>OsmCentralOMExample-CollectionsFunction</com:entity>
+    <com:entityType>xsd</com:entityType>
+    <com:relationship>com.mslv.studio.core.data.dictionary.extension</com:relationship>
+    <com:element>CollectionsStatus</com:element>
+    <com:elementType>CollectionsStatus</com:elementType>
+    <com:baseElement>StatusType</com:baseElement>
+    <com:baseNamespace>http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample-Orchestration/OsmCentralOMExample-Orchestration</com:baseNamespace>
+    <com:dataElementId>CollectionsStatus</com:dataElementId>
+    <com:extension xsi:type="provisioning:ElementExtensionType"/>
+    <com:minCardinality>0</com:minCardinality>
+    <com:maxCardinality>1</com:maxCardinality>
+    <com:dataDictionaryDetails>
+      <com:detail xsi:type="data:dataElementCommonDetail">
+        <com:id>--+F---l--+F---ylhkiYA</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+        <data:dataElementId>CollectionsStatus</data:dataElementId>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementInformationDetails">
+        <com:id>--+X1Vwp--+4hRIszPdd9A</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</com:elementType>
+        <data:dataElementId>CollectionsStatus</data:dataElementId>
+      </com:detail>
+    </com:dataDictionaryDetails>
+  </com:dataDictionaryNode>
+  <com:dataDictionaryNode>
+    <com:entity>OsmCentralOMExample-CollectionsFunction</com:entity>
+    <com:entityType>xsd</com:entityType>
+    <com:relationship>com.mslv.studio.core.data.dictionary.extension</com:relationship>
+    <com:element>CollectionsStatus/ErrorCode</com:element>
+    <com:elementType>(Local Structure)</com:elementType>
+    <com:baseElement>string</com:baseElement>
+    <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
+    <com:dataElementId>CollectionsStatus/ErrorCode</com:dataElementId>
+    <com:extension xsi:type="provisioning:ElementExtensionType"/>
+    <com:dataDictionaryDetails>
+      <com:detail xsi:type="data:dataElementEnumerationDetail">
+        <com:id>---v--+L--+3---4---7ig</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</com:elementType>
+        <data:dataElementId>CollectionsStatus/ErrorCode</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementInformationDetails">
+        <com:id>zNJe--+C--+SFGtA-AtuIw</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</com:elementType>
+        <data:dataElementId>CollectionsStatus/ErrorCode</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementCommonDetail">
+        <com:id>---Lg64R--+TU6cEpWYMOA</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+        <data:dataElementId>CollectionsStatus/ErrorCode</data:dataElementId>
+        <data:defaultValue></data:defaultValue>
+        <data:deprecated>false</data:deprecated>
+        <data:abstract>false</data:abstract>
+        <data:internal>false</data:internal>
+        <data:minLength>0</data:minLength>
+        <data:maxLength>-1</data:maxLength>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </com:detail>
+    </com:dataDictionaryDetails>
+  </com:dataDictionaryNode>
+  <com:dataDictionaryNode>
+    <com:entity>OsmCentralOMExample-CollectionsFunction</com:entity>
+    <com:entityType>xsd</com:entityType>
+    <com:relationship>com.mslv.studio.core.data.dictionary.extension</com:relationship>
+    <com:element>CollectionsStatus/ErrorMessage</com:element>
+    <com:elementType>(Local Structure)</com:elementType>
+    <com:baseElement>string</com:baseElement>
+    <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
+    <com:dataElementId>CollectionsStatus/ErrorMessage</com:dataElementId>
+    <com:extension xsi:type="provisioning:ElementExtensionType"/>
+    <com:dataDictionaryDetails>
+      <com:detail xsi:type="data:dataElementEnumerationDetail">
+        <com:id>gIxMLHcT--+w---87O02oA</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</com:elementType>
+        <data:dataElementId>CollectionsStatus/ErrorMessage</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementInformationDetails">
+        <com:id>---Umt0g--+gI9dy---V9g</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</com:elementType>
+        <data:dataElementId>CollectionsStatus/ErrorMessage</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementCommonDetail">
+        <com:id>--+A--+T--+o--+O---Y-w</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+        <data:dataElementId>CollectionsStatus/ErrorMessage</data:dataElementId>
+        <data:defaultValue></data:defaultValue>
+        <data:deprecated>false</data:deprecated>
+        <data:abstract>false</data:abstract>
+        <data:internal>false</data:internal>
+        <data:minLength>0</data:minLength>
+        <data:maxLength>200</data:maxLength>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </com:detail>
+    </com:dataDictionaryDetails>
+  </com:dataDictionaryNode>
+  <com:dataDictionaryNode>
+    <com:entity>OsmCentralOMExample-CollectionsFunction</com:entity>
+    <com:entityType>xsd</com:entityType>
+    <com:relationship>com.mslv.studio.core.data.dictionary.extension</com:relationship>
+    <com:element>CollectionsStatus/ErrorStatus</com:element>
+    <com:elementType>(Local Structure)</com:elementType>
+    <com:baseElement>string</com:baseElement>
+    <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
+    <com:dataElementId>CollectionsStatus/ErrorStatus</com:dataElementId>
+    <com:extension xsi:type="provisioning:ElementExtensionType"/>
+    <com:dataDictionaryDetails>
+      <com:detail xsi:type="data:dataElementEnumerationDetail">
+        <com:id>---I-ZpT--+HfzA+mBxMmw</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</com:elementType>
+        <data:dataElementId>CollectionsStatus/ErrorStatus</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementInformationDetails">
+        <com:id>0D5aNAkN--+ZZZl4--+KjQ</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</com:elementType>
+        <data:dataElementId>CollectionsStatus/ErrorStatus</data:dataElementId>
+      </com:detail>
+      <com:detail xsi:type="data:dataElementCommonDetail">
+        <com:id>--+f---8--+v--+GTxEctw</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+        <data:dataElementId>CollectionsStatus/ErrorStatus</data:dataElementId>
+        <data:defaultValue></data:defaultValue>
+        <data:deprecated>false</data:deprecated>
+        <data:abstract>false</data:abstract>
+        <data:internal>false</data:internal>
+        <data:minLength>0</data:minLength>
+        <data:maxLength>-1</data:maxLength>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </com:detail>
+    </com:dataDictionaryDetails>
+  </com:dataDictionaryNode>
+</com:modelEntity>

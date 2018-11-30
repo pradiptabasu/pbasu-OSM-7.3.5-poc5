@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ord:CreateOrder
+	xmlns:ord="http://xmlns.oracle.com/communications/ordermanagement">
+	<im:order xmlns:im="http://xmlns.oracle.com/InputMessage"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://xmlns.oracle.com/InputMessage ../dataDictionary/InputMessage.xsd">
+		<im:numSalesOrder>123456CD-13</im:numSalesOrder>
+		<im:typeOrder>Add</im:typeOrder>
+		<im:customerAccount>
+			<im:numAccount>TEL1234</im:numAccount>
+			<im:status>Existing</im:status>
+			<im:corporate>PoC</im:corporate>
+			<im:cpfClient>888.444.222-00</im:cpfClient>
+			<im:cnpjClient>01.947.770/0001-09</im:cnpjClient>
+			<im:inscrState>232,232,232,232</im:inscrState>
+			<im:clientSince>1987-01-01</im:clientSince>
+			<im:segmentMarkets>
+				<im:segmentMarket>Systems</im:segmentMarket>
+			</im:segmentMarkets>
+			<im:category>Corporate</im:category>
+			<im:invoiceProfile>
+				<im:mediaType>1</im:mediaType>
+				<im:typeInvoice>Summary</im:typeInvoice>
+				<im:billingCycle>Q11</im:billingCycle>
+				<im:exemptionICMS>true</im:exemptionICMS>
+				<im:empresaFaturamento>Oi Fixed</im:empresaFaturamento>
+				<im:paymentMethod>1</im:paymentMethod>
+			</im:invoiceProfile>
+			<im:customerAddress>
+				<im:locationType>Street</im:locationType>
+				<im:nameLocation>Jangadeiros</im:nameLocation>
+				<im:number>48</im:number>
+				<im:typeCompl>floor</im:typeCompl>
+				<im:numCompl>6</im:numCompl>
+				<im:district>Ipanema</im:district>
+				<im:codeLocation>5000</im:codeLocation>
+				<im:city>Rio de Janeiro</im:city>
+				<im:state>RJ</im:state>
+				<im:referencePoint>Gen. Osorio Square</im:referencePoint>
+				<im:areaCode>22420-010</im:areaCode>
+				<im:typeAddress>Building</im:typeAddress>
+			</im:customerAddress>
+		</im:customerAccount>
+		<im:salesOrderLineGroup>
+
+			
+
+			
+
+			<!-- BROADBAND BUNDLE - BUNDLE -->
+			<im:salesOrderLine>
+				<im:lineId>13</im:lineId>
+				<im:promotionalSalesOrderLineReference>1
+			</im:promotionalSalesOrderLineReference>
+				<im:serviceId></im:serviceId>
+				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
+				<im:serviceActionCode>Add</im:serviceActionCode>
+
+				<im:itemReference>
+					<im:name>Broadband Bundle</im:name>
+					<im:typeCode>BUNDLE</im:typeCode>
+					<im:specificationGroup></im:specificationGroup>
+				</im:itemReference>
+			</im:salesOrderLine>
+
+			<!-- BROADBAND SERVICE – SERVICE BUNDLE -->
+			<im:salesOrderLine>
+				<im:lineId>14</im:lineId>
+				<im:parentLineReference>
+					<im:parentLineId>13</im:parentLineId>
+					<im:hierarchyName>default</im:hierarchyName>
+				</im:parentLineReference>
+				<im:rootParentLineId>13</im:rootParentLineId>
+				<im:promotionalSalesOrderLineReference>1
+			</im:promotionalSalesOrderLineReference>
+				<im:serviceId></im:serviceId>
+				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
+				<im:serviceActionCode>Add</im:serviceActionCode>
+
+				<im:itemReference>
+					<im:name>Broadband Service</im:name>
+					<im:typeCode>SERVICE BUNDLE</im:typeCode>
+					<im:specificationGroup></im:specificationGroup>
+				</im:itemReference>
+			</im:salesOrderLine>
+
+
+			<!-- Velox Premium High Speed Internet – 8Mbps -->
+			<im:salesOrderLine>
+				<im:lineId>15</im:lineId>
+				<im:parentLineReference>
+					<im:parentLineId>14</im:parentLineId>
+					<im:hierarchyName>default</im:hierarchyName>
+				</im:parentLineReference>
+				<im:rootParentLineId>13</im:rootParentLineId>
+				<im:promotionalSalesOrderLineReference>1
+			</im:promotionalSalesOrderLineReference>
+				<im:serviceId>2343</im:serviceId>
+				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
+				<im:serviceActionCode>Add</im:serviceActionCode>
+				<im:serviceAddress>
+					<im:locationType>Street</im:locationType>
+					<im:nameLocation>Jangadeiros</im:nameLocation>
+					<im:number>48</im:number>
+					<im:typeCompl>floor</im:typeCompl>
+					<im:numCompl>6</im:numCompl>
+					<im:district>Ipanema</im:district>
+					<im:codeLocation>5000</im:codeLocation>
+					<im:city>Rio de Janeiro</im:city>
+					<im:state>RJ</im:state>
+					<im:referencePoint>Gen. Osorio Square</im:referencePoint>
+					<im:areaCode>22420-010</im:areaCode>
+					<im:typeAddress>Building</im:typeAddress>
+				</im:serviceAddress>
+				<im:itemReference>
+					<im:name>Velox Premium High Speed Internet 8Mbps</im:name>
+					<im:typeCode>PRODUCT</im:typeCode>
+					<im:primaryClassificationCode>High Speed Internet Service Class</im:primaryClassificationCode>
+					<im:specificationGroup>
+						<im:specification>
+							<im:serviceActioncode>ADD</im:serviceActioncode>
+							<im:name>typeADSL</im:name>
+							<im:dataTypeCode>Text</im:dataTypeCode>
+							<im:value>DSL_8M</im:value>
+						</im:specification>
+						<im:specification>
+							<im:serviceActioncode>ADD</im:serviceActioncode>
+							<im:name>numExtensions</im:name>
+							<im:dataTypeCode>Number</im:dataTypeCode>
+							<im:value>2</im:value>
+						</im:specification>
+						<im:specification>
+							<im:serviceActioncode>ADD</im:serviceActioncode>
+							<im:name>computerType</im:name>
+							<im:dataTypeCode>Text</im:dataTypeCode>
+							<im:value>PC</im:value>
+						</im:specification>
+						<im:specification>
+							<im:serviceActioncode>ADD</im:serviceActioncode>
+							<im:name>operatingSystem</im:name>
+							<im:dataTypeCode>Text</im:dataTypeCode>
+							<im:value>Windows XP</im:value>
+						</im:specification>
+						<im:specification>
+							<im:serviceActioncode>ADD</im:serviceActioncode>
+							<im:name>flgCDRom</im:name>
+							<im:dataTypeCode>Number</im:dataTypeCode>
+							<im:value>1</im:value>
+						</im:specification>
+						<im:specification>
+							<im:serviceActioncode>ADD</im:serviceActioncode>
+							<im:name>ramMemory</im:name>
+							<im:dataTypeCode>Text</im:dataTypeCode>
+							<im:value>1GB</im:value>
+						</im:specification>
+							<im:specification>
+							<im:serviceActioncode>ADD</im:serviceActioncode>
+							<im:name>flgCard</im:name>
+							<im:dataTypeCode>Number</im:dataTypeCode>
+							<im:value>0</im:value>
+						</im:specification>
+						<im:specification>
+							<im:serviceActioncode>ADD</im:serviceActioncode>
+							<im:name>flgUSB</im:name>
+							<im:dataTypeCode>Number</im:dataTypeCode>
+							<im:value>1</im:value>
+						</im:specification>
+					</im:specificationGroup>
+				</im:itemReference>
+			</im:salesOrderLine>
+			<!-- END Velox Premium High Speed Internet – 8Mbps - PRODUCT-->
+
+			<!-- Speed By Demand - PRODUCT -->
+			<im:salesOrderLine>
+				<im:lineId>16</im:lineId>
+				<im:parentLineReference>
+					<im:parentLineId>14</im:parentLineId>
+					<im:hierarchyName>default</im:hierarchyName>
+				</im:parentLineReference>
+				<im:rootParentLineId>13</im:rootParentLineId>
+				<im:promotionalSalesOrderLineReference>1
+			</im:promotionalSalesOrderLineReference>
+				<im:serviceId></im:serviceId>
+				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
+				<im:serviceActionCode>Add</im:serviceActionCode>
+				<im:serviceAddress>
+					<im:locationType>Street</im:locationType>
+					<im:nameLocation>Jangadeiros</im:nameLocation>
+					<im:number>48</im:number>
+					<im:typeCompl>floor</im:typeCompl>
+					<im:numCompl>6</im:numCompl>
+					<im:district>Ipanema</im:district>
+					<im:codeLocation>5000</im:codeLocation>
+					<im:city>Rio de Janeiro</im:city>
+					<im:state>RJ</im:state>
+					<im:referencePoint>Gen. Osorio Square</im:referencePoint>
+					<im:areaCode>22420-010</im:areaCode>
+					<im:typeAddress>Building</im:typeAddress>
+				</im:serviceAddress>
+				<im:itemReference>
+					<im:name>Speed By Demand</im:name>
+					<im:typeCode>PRODUCT</im:typeCode>
+					<im:primaryClassificationCode>Broadband Service Feature Class</im:primaryClassificationCode>
+					<im:specificationGroup></im:specificationGroup>
+				</im:itemReference>
+			</im:salesOrderLine>
+			<!-- END Speed By Demand - PRODUCT -->
+			<!-- BROADBAND SERVICE – SERVICE BUNDLE -->
+			<!-- BROADBAND BUNDLE - BUNDLE -->
+	
+		</im:salesOrderLineGroup>
+	</im:order>
+</ord:CreateOrder>

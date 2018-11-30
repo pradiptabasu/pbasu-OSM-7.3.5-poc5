@@ -1,0 +1,11 @@
+<weblogic-application xmlns="http://www.bea.com/ns/weblogic/90" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <listener>
+        <listener-class>oracle.communications.ordermanagement.unsupported.emulator.EmulatorLifecycleListener</listener-class>
+        <run-as-principal-name>oms-internal</run-as-principal-name>
+    </listener>
+    <prefer-application-packages>
+        <package-name>org.apache.xerces.*</package-name>
+        <package-name>org.apache.xml.*</package-name>
+        <package-name>org.apache.html.dom.*</package-name>
+    </prefer-application-packages>
+</weblogic-application>

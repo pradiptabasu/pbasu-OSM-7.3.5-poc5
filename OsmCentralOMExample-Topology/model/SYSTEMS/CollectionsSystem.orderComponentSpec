@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.oracle.com/communications/sce/osm/model/orchestration" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:ord="http://xmlns.oracle.com/communications/sce/osm/model/order" xmlns:osm="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xmlns:prov="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xsi:type="OrderComponentSpec" name="CollectionsSystem">
+  <com:displayName>Collections System</com:displayName>
+  <com:information>The collections system is responsible for tracking and managing customer payment of services and products. It needs to be informed whenever a payment is owed by a customer. A collections system goes hand in hand with a billing system. Billing notifies customers of payments owed, while collections tracks those payments.&#xD;
+&#xD;
+This order component specification for a collections system is used in the decomposition stage that determines the target fulfillment system. Order items are targeted to this collections system based on the CollectionsToCollectionsSystem decomposition rule. In this sample cartridge, there is a single collections system. All order items that require a collections function are targeted to this collections system.</com:information>
+  <com:saveVersion>4</com:saveVersion>
+  <namespace>http://oracle.communications.ordermanagement.unsupported.centralom</namespace>
+  <extends>
+    <com:entity>TargetSystem</com:entity>
+    <com:entityType>orderComponentSpec</com:entityType>
+    <com:relationship>oracle.communications.sce.osm.orchestration.orderComponentSpec.parentOrderComponent</com:relationship>
+  </extends>
+  <minDuration/>
+  <defaultDuration/>
+  <orderTemplateContribution/>
+</com:modelEntity>

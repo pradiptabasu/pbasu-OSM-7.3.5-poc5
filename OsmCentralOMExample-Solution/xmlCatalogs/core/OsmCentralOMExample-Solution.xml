@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog:catalog xmlns:catalog="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <catalog:rewriteURI rewritePrefix="urn:oracle:communications:ordermanagement:OsmCentralOMExample-Solution:2.0.0.0.0" uriStartString="urn:oracle:communications:ordermanagement:OsmCentralOMExample-Orchestration:1.0.0.0.0"/>
+  <catalog:rewriteURI rewritePrefix="urn:oracle:communications:ordermanagement:OsmCentralOMExample-Solution:2.0.0.0.0" uriStartString="urn:oracle:communications:ordermanagement:OsmCentralOMExample-ProductClasses:1.0.0.0.0"/>
+  <catalog:rewriteURI rewritePrefix="urn:oracle:communications:ordermanagement:OsmCentralOMExample-Solution:2.0.0.0.0" uriStartString="urn:oracle:communications:ordermanagement:OsmCentralOMExample-ProductSpec:1.1.0.0.0"/>
+  <catalog:rewriteURI rewritePrefix="urn:oracle:communications:ordermanagement:OsmCentralOMExample-Solution:2.0.0.0.0" uriStartString="urn:oracle:communications:ordermanagement:OsmCentralOMExample-SyncCustomerFunction:1.0.0.0.0"/>
+  <catalog:rewriteURI rewritePrefix="urn:oracle:communications:ordermanagement:OsmCentralOMExample-Solution:2.0.0.0.0" uriStartString="urn:oracle:communications:ordermanagement:OsmCentralOMExample-Topology:1.1.0.0.0"/>
+  <catalog:rewriteURI rewritePrefix="urn:oracle:communications:ordermanagement:OsmCentralOMExample-Solution:2.0.0.0.0" uriStartString="urn:oracle:communications:ordermanagement:OsmCentralOMExample-CollectionsFunction:1.0.0.0.0"/>
+  <catalog:rewriteURI rewritePrefix="urn:oracle:communications:ordermanagement:OsmCentralOMExample-Solution:2.0.0.0.0" uriStartString="urn:oracle:communications:ordermanagement:OsmCentralOMExample-BillingFunction:1.1.0.0.0"/>
+  <catalog:rewriteURI rewritePrefix="urn:oracle:communications:ordermanagement:OsmCentralOMExample-Solution:2.0.0.0.0" uriStartString="urn:oracle:communications:ordermanagement:OsmCentralOMExample-MarketingFunction:1.0.0.0.0"/>
+  <catalog:rewriteURI rewritePrefix="urn:oracle:communications:ordermanagement:OsmCentralOMExample-Solution:2.0.0.0.0" uriStartString="urn:oracle:communications:ordermanagement:OsmCentralOMExample-ProvisioningFunction:1.0.0.0.0"/>
+  <catalog:rewriteURI rewritePrefix="urn:oracle:communications:ordermanagement:OsmCentralOMExample-Solution:2.0.0.0.0" uriStartString="urn:oracle:communications:ordermanagement:OsmCentralOMExample-FulfillmentState:1.0.0.0.0"/>
+  <catalog:rewriteURI rewritePrefix="urn:oracle:communications:ordermanagement:OsmCentralOMExample-Solution:2.0.0.0.0" uriStartString="urn:oracle:communications:ordermanagement:OsmCentralOMExample-ShipFunction:1.0.0.0.0"/>
+</catalog:catalog>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:Q1="http://xmlns.oracle.com/InputMessage" xmlns:tns="http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample/billing" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample/billing">
+        <xs:import namespace="http://xmlns.oracle.com/InputMessage" schemaLocation="../../OsmCentralOMExample-Orchestration/dataDictionary/InputMessage.xsd"/>
+    <xs:element name="order" type="tns:OrderType"/>
+        <xs:complexType name="InvoiceProfileType">
+    <xs:complexContent>
+      <xs:extension base="Q1:InvoiceProfileType">
+                    
+                        
+                  
+                        
+                
+                        
+                      
+                    
+                <xs:sequence>
+          <xs:element name="idInvoiceProfile">
+            <xs:simpleType>
+              <xs:restriction base="xs:string"/>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="numCustomerAccount">
+            <xs:simpleType>
+              <xs:restriction base="xs:string"/>
+            </xs:simpleType>
+          </xs:element>
+                                      <xs:element maxOccurs="1" minOccurs="1" name="invoiceProfileAddress">
+            <xs:complexType>
+              <xs:complexContent>
+                                                                                <xs:extension base="Q1:CustomerAddress"/>
+              </xs:complexContent>
+            </xs:complexType>
+          </xs:element>
+                                    <xs:element maxOccurs="1" minOccurs="0" name="billingRegion">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:minLength value="0"/>
+                <xs:maxLength value="40"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+                </xs:sequence>
+            </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+                        <xs:complexType name="OrderType">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="numSalesOrder">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element maxOccurs="1" minOccurs="0" name="numOrder">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element maxOccurs="1" minOccurs="0" name="typeProduct">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element maxOccurs="1" minOccurs="0" name="commandProduct">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element maxOccurs="1" minOccurs="0" name="typeOrder">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Activation"/>
+            <xs:enumeration value="Change"/>
+            <xs:enumeration value="Cancelation"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="invoiceProfile">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="tns:InvoiceProfileType"/>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

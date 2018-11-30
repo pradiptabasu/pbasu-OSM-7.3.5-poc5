@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.oracle.com/communications/sce/osm/model/orchestration" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:ord="http://xmlns.oracle.com/communications/sce/osm/model/order" xmlns:osm="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xmlns:prov="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xsi:type="DecompositionRuleType" name="ProvisionToDSLProvisioningSystem_Region1">
+  <com:displayName>Provision To DSL Provisioning System - Region1</com:displayName>
+  <com:information>This ProvisiongToDSLProvisioningSystem_Region1 decomposition rule specifies that all broadband order items not for Rio de Janeiro that require a provisioning function are to be targeted to the DSLProvisioningSystem_Region1 system for processing. The product specification on the Details tab limits the scope of the source order items. The decomposition condition on the Conditions tab is evaluated against each source order item to determine if that order item is forwarded to the DSLProvisioningSystem_Region1 order component. The isOtherRegion condition is an XQuery expression that returns true when the order item region is not equal to Rio de Janeiro.</com:information>
+  <com:saveVersion>12</com:saveVersion>
+  <namespace>http://oracle.communications.ordermanagement.unsupported.centralom</namespace>
+  <orderItem>
+    <com:entity>CustomerOrderItemSpecification</com:entity>
+    <com:entityType>orderItemSpec</com:entityType>
+    <com:relationship>oracle.communications.sce.osm.orchestration.decompositionRule.orderItem</com:relationship>
+  </orderItem>
+  <product>
+    <com:entity>Service.Broadband</com:entity>
+    <com:entityType>productSpec</com:entityType>
+    <com:relationship>oracle.communications.sce.osm.orchestration.decompositionRule.productSpec</com:relationship>
+  </product>
+  <source>
+    <com:entity>ProvisioningFunction</com:entity>
+    <com:entityType>orderComponentSpec</com:entityType>
+    <com:relationship>oracle.communications.sce.osm.orchestration.decompositionRule.source</com:relationship>
+  </source>
+  <target>
+    <com:entity>DSLProvisioningSystem_Region1</com:entity>
+    <com:entityType>orderComponentSpec</com:entityType>
+    <com:relationship>oracle.communications.sce.osm.orchestration.decompositionRule.target</com:relationship>
+  </target>
+  <conditionRef>
+    <com:entity>SiebelOrderItemSpecification</com:entity>
+    <com:entityType>orderItemSpec</com:entityType>
+    <com:relationship>oracle.communications.sce.osm.orchestration.decompositionRule.condition</com:relationship>
+    <com:element>isOtherRegion</com:element>
+  </conditionRef>
+</com:modelEntity>

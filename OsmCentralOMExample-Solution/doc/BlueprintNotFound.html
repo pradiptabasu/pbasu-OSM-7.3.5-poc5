@@ -1,0 +1,34 @@
+<html>
+
+<head xmlns="">
+    <META http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type"/>
+    <meta content="text/css" http-equiv="Content-Style-Type"/>
+    <link type="text/css" charset="ISO-8859-1" href="guide/guide.css" rel="stylesheet"/>
+
+    <title>Blueprint View</title>
+</head>
+
+<body>
+
+<h1>Blueprint not available</h1>
+
+<p>Blueprints are created as part of the project build process.  A Blueprint is created (or recreated) when the entity is problem free and a full or incremental build is run which includes the entity.</p>
+<p>A Blueprint may be unavailable for the following reasons: 
+<ul>
+<li>Problem markers exist on the related entity preventing creation of the Blueprint.</li>
+<li>The project build is disabled and entity has not been created.</li>
+<li>Incremental builder may consider the entity as up-to-date, but the generated blueprint is not present.</li>
+<li>The build is currently running and the blueprint has not yet been produced.</li>
+</ul>
+</p>
+<p>To resolve the issue: 
+<ul>
+<li>If the project is building, wait for it to complete.  The in-progress build may resolve the issue.
+<li>Check if problem markers exist on this entity.  Error markers will prevent the Blueprint from generating.  Resolve outstanding errors and save.</li>
+<li>Enable <i>Build Automatically</i> on the Project menu, or <i>Build Project</i> manually.</li>
+<li>If the build is enabled and the entity has no error markers, <i>Clean</i> the project to force a build of the entity.</li>
+</ul>
+</p>
+</body>
+</html>

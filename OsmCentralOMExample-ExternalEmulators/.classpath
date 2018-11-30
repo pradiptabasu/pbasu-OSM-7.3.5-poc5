@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="var" path="OSM_SDK_HOME/Automation/automationdeploy_bin/commons-logging-1.1.jar"/>
+	<classpathentry kind="var" path="OSM_SDK_HOME/Automation/automationdeploy_bin/commons-lang-2.6.jar"/>
+	<classpathentry kind="var" path="OSM_SDK_HOME/Automation/automationdeploy_bin/saxon9-xpath.jar"/>
+	<classpathentry kind="var" path="OSM_SDK_HOME/Automation/automationdeploy_bin/saxon9.jar"/>
+	<classpathentry kind="var" path="OSM_SDK_HOME/Automation/automationdeploy_bin/saxon9-dom.jar"/>
+	<classpathentry kind="var" path="OSM_SDK_HOME/Automation/automationdeploy_bin/xercesImpl.jar"/>
+	<classpathentry kind="var" path="OSM_SDK_HOME/Automation/automationdeploy_bin/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="var" path="ORACLE_MIDDLEWARE_HOME/wlserver_10.3/server/lib/weblogic.jar"/>
+	<classpathentry kind="var" path="ORACLE_MIDDLEWARE_HOME/wlserver_10.3/server/lib/wlclient.jar"/>
+	<classpathentry kind="var" path="ORACLE_MIDDLEWARE_HOME/modules/javax.jms_1.1.1.jar"/>
+	<classpathentry kind="var" path="OSM_SDK_HOME/Automation/automationdeploy_bin/automation_plugins.jar"/>
+	<classpathentry kind="var" path="OSM_SDK_HOME/Automation/automationdeploy_bin/commons-vfs-1.0.jar"/>
+	<classpathentry kind="var" path="OSM_SDK_HOME/Automation/automationdeploy_bin/commons-io-2.0.1.jar"/>
+	<classpathentry kind="var" path="OSM_SDK_HOME/Automation/automationdeploy_bin/resolver.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

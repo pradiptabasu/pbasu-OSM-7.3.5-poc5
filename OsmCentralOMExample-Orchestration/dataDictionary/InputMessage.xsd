@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/InputMessage" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:im="http://xmlns.oracle.com/InputMessage">
+	<element name="order" type="im:OrderType"/>
+	<complexType name="OrderType">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="numSalesOrder" type="string">
+				<annotation>
+					<documentation>Unique identifier for the order.
+						Maps to the Order/numSalesOrder field in the OI spreadsheet
+					</documentation>
+				</annotation>
+			</element>
+			<element maxOccurs="1" minOccurs="1" name="typeOrder">
+				<annotation>
+					<documentation>Indicates the type of order action.
+						Provides an enumeration with choices: Add, Change and Cancel.
+						Maps to the Order/typeOrder field in the spreadsheet.  </documentation>
+				</annotation>
+											<simpleType>
+					<restriction base="string">
+						<enumeration value="Add"/>
+						<enumeration value="Change"/>
+						<enumeration value="Cancel"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element maxOccurs="1" minOccurs="1" name="customerAccount" type="im:CustomerAccountType">
+				<annotation>
+					<documentation>Contains customer information.
+						Maps to the Order/Customer Account field in the OI spreadsheet
+					</documentation>
+				</annotation>
+			</element>
+			<element maxOccurs="1" minOccurs="1" name="salesOrderLineGroup" type="im:SalesOrderLineGroup"/>
+		</sequence>
+	</complexType>
+
+	<complexType name="SalesOrderLineGroup">
+		<sequence>
+			<element maxOccurs="unbounded" minOccurs="1" name="salesOrderLine" type="im:SalesOrderLine"/>
+		</sequence>
+	</complexType>
+
+	<complexType name="SalesOrderLine">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="lineId">
+				<annotation>
+					<documentation>this is the unique id for this order line within the order.  Indicates 
+					the ordering of line items in the sales order.
+					</documentation>
+				</annotation>
+                			<simpleType>
+          <restriction base="string">
+            <maxLength value="50"/>
+          </restriction>
+        </simpleType>
+            </element>
+
+			<element maxOccurs="unbounded" minOccurs="0" name="parentLineReference">
+				<annotation>
+					<documentation>this is the unique id for the direct parent of this line.
+					</documentation>
+				</annotation>
+				<complexType>
+					<sequence>
+						<element maxOccurs="1" minOccurs="1" name="parentLineId">
+              <simpleType>
+                <restriction base="string">
+                  <maxLength value="50"/>
+                </restriction>
+              </simpleType>
+            </element>
+						<element maxOccurs="1" minOccurs="1" name="hierarchyName">
+              <simpleType>
+                <restriction base="string">
+                  <maxLength value="50"/>
+                </restriction>
+              </simpleType>
+            </element>
+					</sequence>
+				</complexType>
+			</element>
+			<element maxOccurs="1" minOccurs="0" name="rootParentLineId">
+				<annotation>
+					<documentation>this is the unique id for the root parent of this line.
+					</documentation>
+				</annotation>
+                			<simpleType>
+          <restriction base="string">
+            <maxLength value="50"/>
+          </restriction>
+        </simpleType>
+            </element>
+			<element maxOccurs="1" minOccurs="0" name="promotionalSalesOrderLineReference">
+				<annotation>
+					<documentation>this is the unique id for the root parent of this line.
+					</documentation>
+				</annotation>
+                			<simpleType>
+          <restriction base="string">
+            <maxLength value="50"/>
+          </restriction>
+        </simpleType>
+            </element>
+            
+			<element maxOccurs="1" minOccurs="0" name="serviceId">
+				<annotation>
+					<documentation>this is the service id for the line.&#13;
+Original Oi Attributes:&#13;
+- For a fixed service, it holds numFixed&#13;
+- For a mobile service, it holds numMobile</documentation>
+				</annotation>
+                			<simpleType>
+          <restriction base="string">
+            <maxLength value="50"/>
+          </restriction>
+        </simpleType>
+            </element>
+			<element maxOccurs="1" minOccurs="1" name="requestedDeliveryDate">
+        <annotation>
+          <documentation>Original Oi Attribute: dateCommitment</documentation>
+        </annotation>
+        <simpleType>
+          <restriction base="dateTime"/>
+        </simpleType>
+      </element>
+			<element maxOccurs="1" minOccurs="1" name="serviceActionCode">
+				<simpleType>
+					<restriction base="string">
+						<enumeration value="Add"/>
+						<enumeration value="Change"/>
+						<enumeration value="Cancel"/>
+						<enumeration value="Delete"/>
+                        					<maxLength value="50"/>
+                    </restriction>
+				</simpleType>
+			</element>
+			<element name="serviceAddress" minOccurs="0" maxOccurs="1" type="im:CustomerAddress"/>
+			<element maxOccurs="1" minOccurs="1" name="itemReference" type="im:ItemReferenceType"/>
+		</sequence>
+	</complexType>
+
+	<complexType name="ItemReferenceType">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="name">
+        <simpleType>
+          <restriction base="string">
+            <maxLength value="50"/>
+          </restriction>
+        </simpleType>
+      </element>
+			<element maxOccurs="1" minOccurs="1" name="typeCode">
+				<simpleType>
+					<restriction base="string">
+						<enumeration value="PRODUCT"/>
+						<enumeration value="BUNDLE"/>
+						<enumeration value="OFFER"/>
+                        					<maxLength value="50"/>
+                    </restriction>
+				</simpleType>
+			</element>
+			<element maxOccurs="1" minOccurs="0" name="primaryClassificationCode">
+        <simpleType>
+          <restriction base="string">
+            <maxLength value="50"/>
+          </restriction>
+        </simpleType>
+      </element>
+			<element maxOccurs="1" minOccurs="1" name="specificationGroup">
+				<complexType>
+					<sequence>
+						<element maxOccurs="unbounded" minOccurs="0" name="specification" type="im:SpecificationType"/>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+
+	<complexType name="SpecificationType">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="serviceActioncode">
+				<simpleType>
+					<restriction base="string">
+						<enumeration value="ADD"/>
+						<enumeration value="DELETE"/>
+                        					<maxLength value="50"/>
+                    </restriction>
+				</simpleType>
+			</element>
+			<element maxOccurs="1" minOccurs="1" name="name">
+        <simpleType>
+          <restriction base="string">
+            <maxLength value="50"/>
+          </restriction>
+        </simpleType>
+      </element>
+			<element maxOccurs="1" minOccurs="1" name="dataTypeCode">
+				<simpleType>
+					<restriction base="string">
+						<enumeration value="Text"/>
+						<enumeration value="Number"/>
+						<enumeration value="Boolean"/>
+                        					<maxLength value="50"/>
+                    </restriction>
+				</simpleType>
+			</element>
+			<element maxOccurs="1" minOccurs="1" name="value">
+        <simpleType>
+          <restriction base="string">
+            <maxLength value="50"/>
+          </restriction>
+        </simpleType>
+      </element>
+
+		</sequence>
+	</complexType>
+	<complexType name="CustomerAccountType">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="numAccount" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="status">
+				<simpleType>
+					<restriction base="string">
+						<enumeration value="New"/>
+						<enumeration value="Existing"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element maxOccurs="1" minOccurs="0" name="corporate" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="cpfClient" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="cnpjClient" type="string"/>
+			<element maxOccurs="1" minOccurs="0" name="inscrState" type="string"/>
+			<element maxOccurs="1" minOccurs="1" name="clientSince" type="date"/>
+			<element maxOccurs="1" minOccurs="0" name="segmentMarkets">
+				<complexType>
+					<sequence>
+						<element maxOccurs="unbounded" minOccurs="0" name="segmentMarket" type="string"/>
+					</sequence>
+				</complexType>
+			</element>
+			<element maxOccurs="1" minOccurs="1" name="category">
+				<simpleType>
+					<restriction base="string">
+						<enumeration value="Residential"/>
+						<enumeration value="Corporate"/>
+					</restriction>
+				</simpleType>
+			</element>
+			<element maxOccurs="1" minOccurs="1" name="invoiceProfile" type="im:InvoiceProfileType"/>
+			<element maxOccurs="1" minOccurs="1" name="customerAddress" type="im:CustomerAddress"/>
+		</sequence>
+	</complexType>
+	<complexType name="InvoiceProfileType">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="mediaType">
+				<simpleType>
+					<restriction base="string">
+						<enumeration value="1"/>
+						<enumeration value="2"/>
+						<enumeration value="3"/>
+                        					<maxLength value="50"/>
+                    </restriction>
+				</simpleType>
+			</element>
+			<element maxOccurs="1" minOccurs="1" name="typeInvoice">
+				<simpleType>
+					<restriction base="string">
+						<enumeration value="Summary"/>
+						<enumeration value="Detailed"/>
+                        					<maxLength value="50"/>
+                    </restriction>
+				</simpleType>
+			</element>
+
+			<element maxOccurs="1" minOccurs="1" name="billingCycle">
+				<simpleType>
+					<restriction base="string">
+						<enumeration value="Q11"/>
+						<enumeration value="S12"/>
+						<enumeration value="U13"/>
+                        					<maxLength value="50"/>
+                    </restriction>
+				</simpleType>
+			</element>
+			<element maxOccurs="1" minOccurs="1" name="exemptionICMS">
+        <simpleType>
+          <restriction base="boolean"/>
+        </simpleType>
+      </element>
+			<element maxOccurs="1" minOccurs="1" name="empresaFaturamento">
+				<simpleType>
+					<restriction base="string">
+						<enumeration value="Oi Fixed"/>
+						<enumeration value="Oi Mobile"/>
+						<enumeration value="Oi Velox"/>
+                        					<maxLength value="50"/>
+                    </restriction>
+				</simpleType>
+			</element>
+			<element maxOccurs="1" minOccurs="1" name="paymentMethod">
+				<simpleType>
+					<restriction base="string">
+						<enumeration value="1"/>
+						<enumeration value="2"/>
+                        					<maxLength value="50"/>
+                    </restriction>
+				</simpleType>
+			</element>
+
+		</sequence>
+	</complexType>
+
+	<complexType name="CustomerAddress">
+		<sequence>
+
+			<element maxOccurs="1" minOccurs="1" name="locationType">
+				<simpleType>
+					<restriction base="string">
+						<enumeration value="Street"/>
+						<enumeration value="Avenue"/>
+						<enumeration value="Square"/>
+                        					<maxLength value="50"/>
+                    </restriction>
+				</simpleType>
+			</element>
+			<element maxOccurs="1" minOccurs="1" name="nameLocation">
+        <simpleType>
+          <restriction base="string">
+            <maxLength value="200"/>
+          </restriction>
+        </simpleType>
+      </element>
+			<element maxOccurs="1" minOccurs="0" name="number">
+        <simpleType>
+          <restriction base="string">
+            <maxLength value="50"/>
+          </restriction>
+        </simpleType>
+      </element>
+			<element maxOccurs="1" minOccurs="0" name="typeCompl">
+        <simpleType>
+          <restriction base="string">
+            <maxLength value="50"/>
+          </restriction>
+        </simpleType>
+      </element>
+			<element maxOccurs="1" minOccurs="0" name="numCompl">
+        <simpleType>
+          <restriction base="string">
+            <maxLength value="50"/>
+          </restriction>
+        </simpleType>
+      </element>
+			<element maxOccurs="1" minOccurs="0" name="district">
+        <simpleType>
+          <restriction base="string">
+            <maxLength value="50"/>
+          </restriction>
+        </simpleType>
+      </element>
+			<element maxOccurs="1" minOccurs="0" name="codeLocation">
+        <simpleType>
+          <restriction base="string">
+            <maxLength value="50"/>
+          </restriction>
+        </simpleType>
+      </element>
+			<element maxOccurs="1" minOccurs="0" name="city">
+        <simpleType>
+          <restriction base="string">
+            <maxLength value="50"/>
+          </restriction>
+        </simpleType>
+      </element>
+			<element maxOccurs="1" minOccurs="0" name="state">
+        <simpleType>
+          <restriction base="string">
+            <maxLength value="50"/>
+          </restriction>
+        </simpleType>
+      </element>
+			<element maxOccurs="1" minOccurs="0" name="referencePoint">
+        <simpleType>
+          <restriction base="string">
+            <maxLength value="50"/>
+          </restriction>
+        </simpleType>
+      </element>
+			<element maxOccurs="1" minOccurs="0" name="areaCode">
+        <simpleType>
+          <restriction base="string">
+            <maxLength value="50"/>
+          </restriction>
+        </simpleType>
+      </element>
+			<element maxOccurs="1" minOccurs="0" name="typeAddress">
+				<simpleType>
+					<restriction base="string">
+						<enumeration value="Building"/>
+						<enumeration value="House"/>
+						<enumeration value="Apartment"/>
+                        					<maxLength value="50"/>
+                    </restriction>
+				</simpleType>
+			</element>
+
+
+		</sequence>
+	</complexType>
+</schema>

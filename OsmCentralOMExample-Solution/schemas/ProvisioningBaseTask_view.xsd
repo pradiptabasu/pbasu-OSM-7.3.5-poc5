@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns:ProvisioningBaseTask="urn:com:metasolv:oms:xmlapi:1"
+	
+           targetNamespace="urn:com:metasolv:oms:xmlapi:1">
+
+  
+    <xs:complexType name="ProvisioningBaseTask">
+        <xs:sequence>
+        <xs:element name="ControlData">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Functions">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ProvisioningFunction">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="SystemInteraction">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="ConversationId" type="xs:string"/>
+                      </xs:sequence>
+                    </xs:complexType>
+                    </xs:element>
+                    <xs:element name="componentKey" type="xs:string"/>
+                    <xs:element name="orderItem">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="orderItemRef">
+                        <xs:complexType>
+                          <xs:sequence>
+                            <xs:element name="productClass" type="xs:string"/>
+                            <xs:element name="productSpec" type="xs:string"/>
+                            <xs:element name="lineId" type="xs:string"/>
+                            <xs:element name="lineItemName" type="xs:string"/>
+                            <xs:element name="requestedDeliveryDate" type="xs:dateTime"/>
+                            <xs:element name="parentLineId" type="xs:string"/>
+                            <xs:element name="region" type="xs:string"/>
+                            <xs:element name="typeCode" type="xs:string"/>
+                            <xs:element name="serviceId" type="xs:string"/>
+                            <xs:element name="lineItemPayload">
+                            <xs:complexType>
+                              <xs:sequence>
+                              </xs:sequence>
+                            </xs:complexType>
+                            </xs:element>
+                            <xs:element name="PointOfNoReturn" type="xs:string"/>
+                            <xs:element name="OrderItemFulfillmentState" type="xs:string"/>
+                          </xs:sequence>
+                        </xs:complexType>
+                        </xs:element>
+                        <xs:element name="ExternalFulfillmentState" type="xs:string"/>
+                      </xs:sequence>
+                    </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Status">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="ErrorCode" type="xs:string"/>
+                        <xs:element name="ErrorMessage" type="xs:string"/>
+                        <xs:element name="ErrorStatus" type="xs:string"/>
+                      </xs:sequence>
+                    </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+        </xs:element>
+        <xs:element name="Status">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ProvisioningFixedStatus">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ErrorCode" type="xs:string"/>
+                <xs:element name="ErrorMessage" type="xs:string"/>
+                <xs:element name="ErrorStatus" type="xs:string"/>
+              </xs:sequence>
+            </xs:complexType>
+            </xs:element>
+            <xs:element name="ProvisioningMobileStatus">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ErrorCode" type="xs:string"/>
+                <xs:element name="ErrorMessage" type="xs:string"/>
+                <xs:element name="ErrorStatus" type="xs:string"/>
+              </xs:sequence>
+            </xs:complexType>
+            </xs:element>
+            <xs:element name="ProvisioningDSLRegion1Status">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ErrorCode" type="xs:string"/>
+                <xs:element name="ErrorMessage" type="xs:string"/>
+                <xs:element name="ErrorStatus" type="xs:string"/>
+              </xs:sequence>
+            </xs:complexType>
+            </xs:element>
+            <xs:element name="ProvisioningDSLRegion2Status">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ErrorCode" type="xs:string"/>
+                <xs:element name="ErrorMessage" type="xs:string"/>
+                <xs:element name="ErrorStatus" type="xs:string"/>
+              </xs:sequence>
+            </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+        </xs:element>
+
+        </xs:sequence>
+    </xs:complexType>
+	
+	<xs:element name="ProvisioningBaseTask" type="ProvisioningBaseTask:ProvisioningBaseTask"/>
+</xs:schema>

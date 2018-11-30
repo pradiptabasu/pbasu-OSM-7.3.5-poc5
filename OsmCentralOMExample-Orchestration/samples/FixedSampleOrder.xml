@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ord:CreateOrder
+	xmlns:ord="http://xmlns.oracle.com/communications/ordermanagement">
+	<im:order xmlns:im="http://xmlns.oracle.com/InputMessage"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://xmlns.oracle.com/InputMessage ../dataDictionary/InputMessage.xsd">
+		<im:numSalesOrder>123456AB-1</im:numSalesOrder>
+		<im:typeOrder>Add</im:typeOrder>
+		<im:customerAccount>
+			<im:numAccount>TEL1234</im:numAccount>
+			<im:status>Existing</im:status>
+			<im:corporate>PoC</im:corporate>
+			<im:cpfClient>888.444.222-00</im:cpfClient>
+			<im:cnpjClient>01.947.770/0001-09</im:cnpjClient>
+			<im:inscrState>232,232,232,232</im:inscrState>
+			<im:clientSince>1987-01-01</im:clientSince>
+			<im:segmentMarkets>
+				<im:segmentMarket>Systems</im:segmentMarket>
+			</im:segmentMarkets>
+			<im:category>Corporate</im:category>
+			<im:invoiceProfile>
+				<im:mediaType>1</im:mediaType>
+				<im:typeInvoice>Summary</im:typeInvoice>
+				<im:billingCycle>Q11</im:billingCycle>
+				<im:exemptionICMS>true</im:exemptionICMS>
+				<im:empresaFaturamento>Oi Fixed</im:empresaFaturamento>
+				<im:paymentMethod>1</im:paymentMethod>
+			</im:invoiceProfile>
+			<im:customerAddress>
+				<im:locationType>Street</im:locationType>
+				<im:nameLocation>Jangadeiros</im:nameLocation>
+				<im:number>48</im:number>
+				<im:typeCompl>floor</im:typeCompl>
+				<im:numCompl>6</im:numCompl>
+				<im:district>Ipanema</im:district>
+				<im:codeLocation>5000</im:codeLocation>
+				<im:city>Rio de Janeiro</im:city>
+				<im:state>RJ</im:state>
+				<im:referencePoint>Gen. Osorio Square</im:referencePoint>
+				<im:areaCode>22420-010</im:areaCode>
+				<im:typeAddress>Building</im:typeAddress>
+			</im:customerAddress>
+		</im:customerAccount>
+		<im:salesOrderLineGroup>
+
+			
+			<!-- FIXED BUNDLE - BUNDLE -->
+			<im:salesOrderLine>
+				<im:lineId>2</im:lineId>
+				<im:promotionalSalesOrderLineReference>1
+			</im:promotionalSalesOrderLineReference>
+				<im:serviceId></im:serviceId>
+				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
+				<im:serviceActionCode>Add</im:serviceActionCode>
+
+				<im:itemReference>
+					<im:name>Fixed Bundle</im:name>
+					<im:typeCode>BUNDLE</im:typeCode>
+					<im:specificationGroup />
+				</im:itemReference>
+			</im:salesOrderLine>
+
+			<!-- FIXED SERVICE - SERVICE BUNDLE -->
+			<im:salesOrderLine>
+				<im:lineId>3</im:lineId>
+				<im:parentLineReference>
+					<im:parentLineId>2</im:parentLineId>
+					<im:hierarchyName>default</im:hierarchyName>
+				</im:parentLineReference>
+				<im:rootParentLineId>2</im:rootParentLineId>
+				<im:promotionalSalesOrderLineReference>1
+			</im:promotionalSalesOrderLineReference>
+				<im:serviceId></im:serviceId>
+				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
+				<im:serviceActionCode>Add</im:serviceActionCode>
+				<im:itemReference>
+					<im:name>Fixed Service</im:name>
+					<im:typeCode>SERVICE BUNDLE</im:typeCode>
+					<im:specificationGroup></im:specificationGroup>
+				</im:itemReference>
+			</im:salesOrderLine>
+
+			<!-- FIXED SERVICE CLASS -->
+			<im:salesOrderLine>
+				<im:lineId>4</im:lineId>
+				<im:parentLineReference>
+					<im:parentLineId>3</im:parentLineId>
+					<im:hierarchyName>default</im:hierarchyName>
+				</im:parentLineReference>
+				<im:rootParentLineId>2</im:rootParentLineId>
+				<im:promotionalSalesOrderLineReference>1
+			</im:promotionalSalesOrderLineReference>
+				<im:serviceId>552131313131</im:serviceId>
+				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
+				<im:serviceActionCode>Add</im:serviceActionCode>
+				<im:serviceAddress>
+					<im:locationType>Street</im:locationType>
+					<im:nameLocation>Jangadeiros</im:nameLocation>
+					<im:number>48</im:number>
+					<im:typeCompl>floor</im:typeCompl>
+					<im:numCompl>6</im:numCompl>
+					<im:district>Ipanema</im:district>
+					<im:codeLocation>5000</im:codeLocation>
+					<im:city>Rio de Janeiro</im:city>
+					<im:state>RJ</im:state>
+					<im:referencePoint>Gen. Osorio Square</im:referencePoint>
+					<im:areaCode>22420-010</im:areaCode>
+					<im:typeAddress>Building</im:typeAddress>
+				</im:serviceAddress>
+				<im:itemReference>
+					<im:name>Commercial Fixed Service</im:name>
+					<im:typeCode>PRODUCT</im:typeCode>
+					<im:primaryClassificationCode>Fixed Service Plan Class</im:primaryClassificationCode>
+					<im:specificationGroup></im:specificationGroup>
+				</im:itemReference>
+			</im:salesOrderLine>
+			<!-- END FIXED SERVICE CLASS -->
+
+			<!-- FIXED CALLER ID - PRODUCT -->
+			<im:salesOrderLine>
+				<im:lineId>5</im:lineId>
+				<im:parentLineReference>
+					<im:parentLineId>3</im:parentLineId>
+					<im:hierarchyName>default</im:hierarchyName>
+				</im:parentLineReference>
+				<im:rootParentLineId>2</im:rootParentLineId>
+				<im:promotionalSalesOrderLineReference>1
+			</im:promotionalSalesOrderLineReference>
+				<im:serviceId></im:serviceId>
+				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
+				<im:serviceActionCode>Add</im:serviceActionCode>
+				<im:serviceAddress>
+					<im:locationType>Street</im:locationType>
+					<im:nameLocation>Jangadeiros</im:nameLocation>
+					<im:number>48</im:number>
+					<im:typeCompl>floor</im:typeCompl>
+					<im:numCompl>6</im:numCompl>
+					<im:district>Ipanema</im:district>
+					<im:codeLocation>5000</im:codeLocation>
+					<im:city>Rio de Janeiro</im:city>
+					<im:state>RJ</im:state>
+					<im:referencePoint>Gen. Osorio Square</im:referencePoint>
+					<im:areaCode>22420-010</im:areaCode>
+					<im:typeAddress>Building</im:typeAddress>
+				</im:serviceAddress>
+				<im:itemReference>
+					<im:name>Fixed Caller ID</im:name>
+					<im:typeCode>PRODUCT</im:typeCode>
+					<im:primaryClassificationCode>Fixed Service Feature Class</im:primaryClassificationCode>
+					<im:specificationGroup></im:specificationGroup>
+				</im:itemReference>
+			</im:salesOrderLine>
+			<!-- END FIXED CALLER ID - PRODUCT -->
+			<!-- FIXED CALL WAITING - PRODUCT -->
+			<im:salesOrderLine>
+				<im:lineId>6</im:lineId>
+				<im:parentLineReference>
+					<im:parentLineId>3</im:parentLineId>
+					<im:hierarchyName>default</im:hierarchyName>
+				</im:parentLineReference>
+				<im:rootParentLineId>2</im:rootParentLineId>
+				<im:promotionalSalesOrderLineReference>1
+			</im:promotionalSalesOrderLineReference>
+				<im:serviceId></im:serviceId>
+				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
+				<im:serviceActionCode>Add</im:serviceActionCode>
+				<im:serviceAddress>
+					<im:locationType>Street</im:locationType>
+					<im:nameLocation>Jangadeiros</im:nameLocation>
+					<im:number>48</im:number>
+					<im:typeCompl>floor</im:typeCompl>
+					<im:numCompl>6</im:numCompl>
+					<im:district>Ipanema</im:district>
+					<im:codeLocation>5000</im:codeLocation>
+					<im:city>Rio de Janeiro</im:city>
+					<im:state>RJ</im:state>
+					<im:referencePoint>Gen. Osorio Square</im:referencePoint>
+					<im:areaCode>22420-010</im:areaCode>
+					<im:typeAddress>Building</im:typeAddress>
+				</im:serviceAddress>
+				<im:itemReference>
+					<im:name>Fixed Call Waiting</im:name>
+					<im:typeCode>PRODUCT</im:typeCode>
+					<im:primaryClassificationCode>Fixed Service Feature Class</im:primaryClassificationCode>
+					<im:specificationGroup></im:specificationGroup>
+				</im:itemReference>
+			</im:salesOrderLine>
+			<!-- END FIXED CALL WAITING - PRODUCT -->
+			<!-- END FIXED SERVICE - SERVICE BUNDLE -->
+			<!-- END FIXED BUNDLE - BUNDLE -->
+
+			
+		</im:salesOrderLineGroup>
+	</im:order>
+</ord:CreateOrder>

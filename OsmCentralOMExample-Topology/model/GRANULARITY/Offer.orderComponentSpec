@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.oracle.com/communications/sce/osm/model/orchestration" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:ord="http://xmlns.oracle.com/communications/sce/osm/model/order" xmlns:osm="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xmlns:prov="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xsi:type="OrderComponentSpec" name="Offer">
+  <com:displayName>Offer</com:displayName>
+  <com:information>The Offer order component specification is used to represent offer processing granularity, or in other words, the hierarchical grouping of order items packaged together in a request that represents a marketing offer. There are no decomposition rules using the offer processing granularity in this sample cartridge.&#xD;
+&#xD;
+There are a couple of key things to note with this order component&#xD;
+- This is an executable order component as specified through the check box on the Details tab. This means that this is a final order component used in the orchestration plan output&#xD;
+</com:information>
+  <com:saveVersion>3</com:saveVersion>
+  <namespace>http://oracle.communications.ordermanagement.unsupported.centralom</namespace>
+  <extends>
+    <com:entity>ProcessingGranularity</com:entity>
+    <com:entityType>orderComponentSpec</com:entityType>
+    <com:relationship>oracle.communications.sce.osm.orchestration.orderComponentSpec.parentOrderComponent</com:relationship>
+  </extends>
+  <minDuration/>
+  <defaultDuration/>
+  <isExecutable>true</isExecutable>
+  <orderTemplateContribution/>
+</com:modelEntity>

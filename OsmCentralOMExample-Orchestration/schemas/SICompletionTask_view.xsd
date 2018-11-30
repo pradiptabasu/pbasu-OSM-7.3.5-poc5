@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns:SICompletionTask="urn:com:metasolv:oms:xmlapi:1"
+	
+           targetNamespace="urn:com:metasolv:oms:xmlapi:1"> 
+  
+    <xs:complexType name="SICompletionTask">
+        <xs:sequence>
+        <xs:element name="OrderHeader">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="numSalesOrder" type="xs:string"/>
+            <xs:element name="typeOrder" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+        </xs:element>
+
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

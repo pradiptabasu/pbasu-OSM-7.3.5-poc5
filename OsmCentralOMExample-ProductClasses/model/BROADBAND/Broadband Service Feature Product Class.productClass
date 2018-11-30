@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.oracle.com/communications/sce/osm/model/orchestration" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:ord="http://xmlns.oracle.com/communications/sce/osm/model/order" xmlns:osm="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xmlns:prov="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xsi:type="ProductClassType" name="Broadband Service Feature Product Class">
+  <com:displayName>Broadband Service Feature Product Class</com:displayName>
+  <com:saveVersion>2</com:saveVersion>
+  <com:id>---8SUMh--+k---D--+Emw</com:id>
+  <effectivity/>
+  <productSpecRef>
+    <com:entity>Service.Broadband</com:entity>
+    <com:entityType>productSpec</com:entityType>
+    <com:relationship>oracle.communications.sce.osm.orchestration.productClass.productSpec</com:relationship>
+  </productSpecRef>
+</com:modelEntity>

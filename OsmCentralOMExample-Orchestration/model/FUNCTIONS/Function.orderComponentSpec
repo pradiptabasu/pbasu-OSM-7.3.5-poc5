@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.oracle.com/communications/sce/osm/model/orchestration" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:ord="http://xmlns.oracle.com/communications/sce/osm/model/order" xmlns:osm="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xmlns:prov="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xsi:type="OrderComponentSpec" name="Function">
+  <com:displayName>Function</com:displayName>
+  <com:information>The Function order component specification is a parent function that is an umbrella for all function based order component specifications. It can be used to define common properties that can be inherited by all function based order component specifications.</com:information>
+  <com:saveVersion>3</com:saveVersion>
+  <namespace>http://oracle.communications.ordermanagement.unsupported.centralom</namespace>
+  <minDuration/>
+  <defaultDuration/>
+  <orderTemplateContribution/>
+</com:modelEntity>

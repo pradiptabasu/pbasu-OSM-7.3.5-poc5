@@ -1,0 +1,100 @@
+<project name="OSMAutomationPlugins" basedir="." default="main">
+	<!-- properties -->
+	<!-- the following three properties are configured as Oracle Service Studio properties -->	
+	<property name="studio.weblogic.home" value=""/>
+	<property name="studio.java.sdk.home" value=""/>
+	<property name="studio.osm.sdk.home" value=""/>
+	
+	<!-- project library and resource sources -->
+	<property name="studio.project.java.lib.dir" value=""/>
+	<property name="studio.project.java.out.dir" value=""/>
+	<property name="studio.project.resources.dir" value=""/>
+	<property name="studio.project.build.staging.dir" value=""/>
+	<property name="studio.automation.custom.dir" value=""/>
+	<property name="studio.automation.generated.dir" value=""/>		
+	
+	
+	<!-- namespace and version are derived from the cartridge -->
+	<property name="studio.cartridge.namespace" value=""/>
+	<property name="studio.cartridge.version" value=""/>
+	
+	<property name="studio.application.name" value="osm"/>
+	
+	<!-- additional WebLogic configuration -->
+	<property name="studio.weblogic.lib.dir" value="${studio.weblogic.home}/server/lib"/>
+	<property name="studio.weblogic.jar" value="${studio.weblogic.lib.dir}/weblogic.jar"/>
+	
+	<!-- additional Java SDK configuration -->
+	<property name="studio.java.sdk.lib.dir" value="${studio.java.sdk.home}/lib"/>
+	<property name="studio.java.sdk.tools.jar" value="${studio.java.sdk.lib.dir}/tools.jar"/>
+	
+	<!-- additional OSM SDK configuration -->
+	<property name="studio.osm.sdk.deploytool.jar" value="${studio.osm.sdk.home}/deploytool.jar"/>
+	
+	<property name="studio.osm.sdk.automation.dir" value=""/>
+	<property name="studio.osm.sdk.deploybin.dir" value="${studio.osm.sdk.automation.dir}/automationdeploy_bin"/> 
+	<property name="studio.osm.sdk.automation.schema" value="${studio.osm.sdk.deploybin.dir}/databasePlugin.xsd"/>
+	
+	<!-- automation map sources --> 
+	<property name="studio.automation.map.file.name" value="automationMap.xml"/>
+	<property name="studio.automation.generated.map" value="${studio.automation.generated.dir}/${studio.automation.map.file.name}"/>
+	<property name="studio.automation.generated.schema" value="${studio.automation.generated.dir}/generatedMap.xsd"/>	
+	
+	<!-- temporary staging destinations -->
+	<property name="studio.automation.staging.dir" value="${studio.automation.generated.dir}/staging-temp"/>
+	<property name="studio.automation.assemble.dir" value="${studio.automation.generated.dir}"/>
+	
+	<!-- automation schema and map used for bundling -->
+	<property name="studio.automation.schema" value="${studio.automation.generated.schema}"/>
+	<property name="studio.automation.map" value="${studio.automation.generated.map}"/>
+	
+	<!--Check if the automation map exists, no need to run assemble if automation map does not exist-->
+	<available file="${studio.automation.generated.map}" property="automation.exists"/>
+	
+	<path id="class.path">
+		<fileset dir="${studio.osm.sdk.deploybin.dir}">
+			<include name="**/*.jar"/>
+		</fileset>
+		<pathelement location="${studio.weblogic.jar}"/>
+		<pathelement location="${studio.osm.sdk.deploytool.jar}"/>
+	</path>
+	
+	<taskdef name="plugin-assemble" classname="com.mslv.oms.deploytool.anttasks.OMSPluginAssemble"
+		classpathref="class.path"/>
+	
+	<!-- targets -->
+	<target name="main" depends="echoSCEproperties, assemble-plugins"/>
+	
+	<target name="echoSCEproperties">
+		<echoproperties>
+			<propertyset>
+				<propertyref prefix="studio."/>
+			</propertyset>
+		</echoproperties>
+	</target>
+	
+	<target name="assemble-plugins" if="automation.exists">
+		<description> </description>
+		<echo>Assembling the OSM automation components.</echo>
+		<plugin-assemble automap="${studio.automation.map}"
+			application="${studio.application.name}" namespace="${studio.cartridge.namespace}"
+			version="${studio.cartridge.version}" sdkdir="${studio.osm.sdk.automation.dir}"
+			stagedir="${studio.automation.staging.dir}" destdir="${studio.automation.assemble.dir}"
+			libdir="${studio.project.java.lib.dir}" plugindir="${studio.project.java.out.dir}"
+			classpath="${studio.weblogic.jar};${studio.java.sdk.tools.jar};${studio.osm.sdk.deploytool.jar}"
+			schema="${studio.automation.schema}">
+			<metainf dir="${studio.automation.custom.dir}" includes="**/${studio.automation.map.file.name}"/>
+		    <metainf dir="${studio.project.build.staging.dir}/resources" includes="resources.zip"/>
+		    <metainf dir="${studio.project.build.staging.dir}/xmlCatalogs" includes="catalogs.zip"/>
+		    <metainf dir="${studio.project.build.staging.dir}/resources" includes="**/*.*"/>
+		</plugin-assemble>
+	</target>
+	
+	<target name="cleanPackage">
+		<echo>Cleaning the environment.</echo>
+		<echo message="Removing folder ${studio.automation.assemble.dir}"/>
+		<delete dir="${studio.automation.assemble.dir}" quiet="true" includeemptydirs="true"/>
+		<echo message="Removing folder ${studio.automation.staging.dir}"/>
+		<delete dir="${studio.automation.staging.dir}" quiet="true" includeemptydirs="true"/>
+	</target>
+</project>

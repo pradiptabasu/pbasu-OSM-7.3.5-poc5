@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns:FalloutCompletionTask="urn:com:metasolv:oms:xmlapi:1"
+	
+           targetNamespace="urn:com:metasolv:oms:xmlapi:1">
+
+  
+    <xs:complexType name="FalloutCompletionTask">
+        <xs:sequence>
+        <xs:element name="FalloutMessage">
+        <xs:complexType>
+        	<xs:sequence>
+        		<xs:any namespace="##any" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+        	</xs:sequence>
+        </xs:complexType>
+        </xs:element>
+
+        </xs:sequence>
+    </xs:complexType>
+	
+	<xs:element name="FalloutCompletionTask" type="FalloutCompletionTask:FalloutCompletionTask"/>
+</xs:schema>

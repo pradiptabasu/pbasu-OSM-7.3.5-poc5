@@ -1,0 +1,2 @@
+Class-Path: javax.jms_1.1.1.jar commons-logging-1.1.jar commons-lang-2.1.jar omslogging.jar log4j-1.2.13.jar saxon9-xpath.jar saxon9.jar saxon9-dom.jar xercesImpl.jar commons-collections-3.2.jar automation_plugins.jar commons-vfs-1.0.jar commons-net-2.0.jar commons-io-1.4.jar commons-httpclient-3.0.1.jar omsresources.jar commons-codec-1.3.jar resolver.jar 
+

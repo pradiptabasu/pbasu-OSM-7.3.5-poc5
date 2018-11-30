@@ -1,0 +1,138 @@
+<project name="Loopback.Emulators" default="build" basedir=".">
+	<!-- set global properties for this build -->
+	<property environment="env"/>
+	<condition property="HOSTNAME" value="${env.COMPUTERNAME}" else="${env.HOSTNAME}">
+		<os family="windows"/>
+	</condition>
+	<property name="build-properties" value="${basedir}/${HOSTNAME}.properties"/>
+	<property file="${build-properties}"/>
+	<property name="build-properties" value="build.properties"/>
+	<property classpath="." resource="${build-properties}"/>
+	
+	<property name="build.sysclasspath" value="ignore"/>
+
+	<property name="build" value="${basedir}/build"/>
+	<property name="src.dir" value="${basedir}/src"/>
+	<property name="stage" value="${build}/stage"/>
+	<property name="resource.dir" value="${basedir}/resources"/>
+
+	<!-- Source directories -->		
+	<property name="external_emulator.src.dir" value="${basedir}/external_emulator_descriptor"/>
+	
+	<property name="external_emulator" value="OsmCentralOMExample_ExternalEmulator"/>
+	
+	<property name="external_emulator.stage" value="${build}/${external_emulator}_stage"/>
+	
+	<property name="external_emulator.archive" value="${external_emulator}.jar"/>
+	
+	<property name="external_emulator.ear.dir" value="${build}/${external_emulator}_ear"/>
+	
+	<path id="project.class.path">
+		<pathelement path="${aia.wls.lib.dir}/weblogic.jar"/>
+		<pathelement path="${aia.wls.lib.dir}/wlclient.jar"/>
+		<pathelement path="${aia.jdev.lib.dir}/javax.jms_1.1.1.jar"/>
+		<fileset dir="${aia.osm.lib.dir}" includes="*.jar"/>
+	</path>
+	
+	<taskdef name="wlappc" classname="weblogic.ant.taskdefs.j2ee.Appc" classpathref="project.class.path"/> 
+	<taskdef name="wldeploy" classname="weblogic.ant.taskdefs.management.WLDeploy" classpathref="project.class.path"/>
+	
+	<target name="clean">
+		<delete dir="${build}"/>
+	</target>
+	
+	<!-- Compile classes into the serverclasses directory -->
+	<target name="build" depends="clean">
+		<echo>Building Loopback Emulators</echo>
+  		<mkdir dir="${build}"/>
+  		<mkdir dir="${stage}"/>
+		
+		<javac srcdir="${src.dir}" debug="on" destdir="${stage}" classpathref="project.class.path">
+      		<include name="**/**.java"/>
+    	</javac>
+    	
+		<copy todir="${external_emulator.stage}">
+			<fileset dir="${stage}">
+				<include name="**/*.*"/>
+			</fileset>	
+		</copy>
+		
+		<mkdir dir="${external_emulator.stage}/META-INF/resources"/>
+		
+		<copy todir="${external_emulator.stage}/META-INF">
+			<fileset dir="${external_emulator.src.dir}/META-INF">
+				<include name="*.xml"/>
+			</fileset>	
+		</copy>
+				
+		<copy todir="${external_emulator.stage}/META-INF/resources">
+			<fileset dir="${resource.dir}">
+				<include name="**/*.*"/>
+			</fileset>	
+		</copy>
+		
+		<mkdir dir="${external_emulator.ear.dir}"/>
+		
+		<jar destfile="${external_emulator.ear.dir}\${external_emulator.archive}" basedir="${external_emulator.stage}" manifest="${basedir}/etc/Manifest.mf"/>
+		
+		<wlappc source="${external_emulator.ear.dir}\${external_emulator.archive}" compiler="javac" verbose="true"/>
+		
+		<mkdir dir="${external_emulator.ear.dir}/META-INF"/>  		
+		<copy todir="${external_emulator.ear.dir}/META-INF">
+			<fileset dir="${external_emulator.src.dir}">
+				<include name="application.xml"/>
+				<include name="weblogic-application.xml"/>
+			</fileset>	
+		</copy>
+		  		
+		<copy todir="${external_emulator.ear.dir}">
+			<fileset dir="${aia.jdev.lib.dir}">
+				<include name="javax.jms_1.1.1.jar"/>
+			</fileset>
+			<fileset dir="${aia.osm.lib.dir}" includes="*.jar"/>
+		</copy>
+		
+		
+  		
+		<jar destfile="${build}/${external_emulator}.ear" basedir="${external_emulator.ear.dir}"/>    	
+
+		<!--
+		<delete dir="${external_emulator.stage}"/>
+		
+		<delete dir="${external_emulator.ear.dir}"/>
+		-->
+	</target>
+  
+	<target name="deploy_emulators" depends="build">
+		
+		<wldeploy 
+			action="deploy" 
+			verbose="true" 
+			debug="true" 
+			name="${external_emulator}" 
+			source="${build}/${external_emulator}.ear"  
+			user="${wls.user}" 
+			password="${wls.password}"
+			adminurl="${wls.url}" 
+			targets="${wls.server}" 
+			upload="true"/>
+		
+	</target>
+	
+	
+	
+	<target name="undeploy">
+
+		
+		<wldeploy 
+			action="undeploy" 
+			verbose="true" 
+			debug="true" 
+			name="${external_emulator}" 
+			user="${wls.user}" 
+			password="${wls.password}"
+			adminurl="${wls.url}" 
+			targets="${wls.server}"/>
+	</target>
+	
+</project>

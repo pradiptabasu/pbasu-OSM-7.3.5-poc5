@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.metasolv.com/Provisioning/database/DatabasePlugin/2006/02/28" xmlns:am="http://www.metasolv.com/OMS/AutomationMap/2001/11/23" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.metasolv.com/Provisioning/database/DatabasePlugin/2006/02/28" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:import namespace="http://www.metasolv.com/OMS/AutomationMap/2001/11/23" schemaLocation="automationMap.xsd"/>
+  <xs:complexType name="DatabasePlugin">
+    <xs:annotation>
+      <xs:documentation>The "implement" element of the automationMap.xml entry must be of this xsi:type.  Elements of this type indicate the location of the configuration file that specifies the configuration of a single database plugin.  The rest of this schema specifiies the format of this configuration file.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="am:Implementation">
+        <xs:sequence>
+          <xs:element name="configLocation" type="ConfigLocationType"/>
+          <xs:element name="completionStatus" type="MnemonicType" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ConfigLocationType">
+    <xs:annotation>
+      <xs:documentation>Elements of this type specify the location of the database plugin configuration file.</xs:documentation>
+    </xs:annotation>
+    <xs:choice>
+      <xs:element name="url" type="xs:anyURI">
+        <xs:annotation>
+          <xs:documentation>URL to database plugin configuration.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="file" type="xs:token">
+        <xs:annotation>
+          <xs:documentation>Absolute path of database plugin configuration file in the filesystem.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="resource" type="xs:token">
+        <xs:annotation>
+          <xs:documentation>Location of database configuration file which is in the plugin's CLASSPATH, according to the format specified by java.jang.Class#getResource(String).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:choice>
+  </xs:complexType>
+  <!-- ***** The schema for the database plugin configuration document follows  *****-->
+  <xs:element name="implementation" type="impementationType">
+    <xs:annotation>
+      <xs:documentation>The root of the database plugin configuration specification.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="impementationType">
+    <xs:annotation>
+      <xs:documentation>Elements of this type specify a database plugin instance's configuration.</xs:documentation>
+    </xs:annotation>
+    <xs:choice maxOccurs="unbounded">
+      <xs:element name="transaction" type="TransactionType">
+        <xs:annotation>
+          <xs:documentation>Specifies a transaction demarcation.  Queries and updates contained in this element will be processed in the context of a single transaction.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="query" type="StandAloneQueryStatementType">
+        <xs:annotation>
+          <xs:documentation>A statement that queries the database for information.  The returned resutls are used to update the order data.</xs:documentation>
+        </xs:annotation>
+        <xs:key name="queryBindPathKey">
+          <xs:selector xpath="bindPath"/>
+          <xs:field xpath="@id"/>
+        </xs:key>
+        <xs:keyref name="queryParamBindPathKey" refer="queryBindPathKey">
+          <xs:selector xpath="parameter"/>
+          <xs:field xpath="@bindPathRef"/>
+        </xs:keyref>
+        <xs:keyref name="queryColumnBindPathKey" refer="queryBindPathKey">
+          <xs:selector xpath="resultSet/column"/>
+          <xs:field xpath="@bindPathRef"/>
+        </xs:keyref>
+      </xs:element>
+      <xs:element name="update" type="StandAloneUpdateStatementType">
+        <xs:annotation>
+          <xs:documentation>Statement that updates the database, but does not return results.</xs:documentation>
+        </xs:annotation>
+        <xs:key name="updateBindPathKey">
+          <xs:selector xpath="bindPath"/>
+          <xs:field xpath="@id"/>
+        </xs:key>
+        <xs:keyref name="updateParamBindPathKey" refer="updateBindPathKey">
+          <xs:selector xpath="parameter"/>
+          <xs:field xpath="@bindPathRef"/>
+        </xs:keyref>
+      </xs:element>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="TransactionType">
+    <xs:annotation>
+      <xs:documentation>Elements of this type specify a transaction demarcation.  Queries and updates contained in this element will be processed in the context of a single transaction.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="dataSource" type="DataSourceType">
+        <xs:annotation>
+          <xs:documentation>The java DataSource to use to create database connections.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="query" type="QueryStatementType">
+          <xs:annotation>
+            <xs:documentation>A statement that queries the database for information.  The returned resutls are used to update the order data.</xs:documentation>
+          </xs:annotation>
+          <xs:key name="transQueryBindPathKey">
+            <xs:selector xpath="bindPath"/>
+            <xs:field xpath="@id"/>
+          </xs:key>
+          <xs:keyref name="transQueryParamBindPathKey" refer="transQueryBindPathKey">
+            <xs:selector xpath="parameter"/>
+            <xs:field xpath="@bindPathRef"/>
+          </xs:keyref>
+          <xs:keyref name="transQueryColumnBindPathKey" refer="transQueryBindPathKey">
+            <xs:selector xpath="resultSet/column"/>
+            <xs:field xpath="@bindPathRef"/>
+          </xs:keyref>
+        </xs:element>
+        <xs:element name="update" type="UpdateStatementType">
+          <xs:annotation>
+            <xs:documentation>A statement that updates the database, but does not return results.</xs:documentation>
+          </xs:annotation>
+          <xs:key name="transUpdateBindPathKey">
+            <xs:selector xpath="bindPath"/>
+            <xs:field xpath="@id"/>
+          </xs:key>
+          <xs:keyref name="transUpdateParamBindPathKey" refer="transUpdateBindPathKey">
+            <xs:selector xpath="parameter"/>
+            <xs:field xpath="@bindPathRef"/>
+          </xs:keyref>
+        </xs:element>
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="isolationLevel" type="TransactionIsolationLevelType">
+      <xs:annotation>
+        <xs:documentation>The transaction isolation level. All statements (queries and updates) that are a part of this transaction will share this isolation level.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="scrollType" type="ResultSetScrollType" use="optional" default="FORWARD_ONLY">
+      <xs:annotation>
+        <xs:documentation>The ResultSet scroll type.  See java.sql.ResultSet.TYPE_FORWARD_ONLY, java.sql.ResultSet.TYPE_SCROLL_SENSITIVE, java.sql.ResultSet.TYPE_SCROLL_INSENSITIVE</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="StatementType" abstract="true">
+    <xs:annotation>
+      <xs:documentation>Elements of this abstract type model a single SQL operation.  Stetements are processed in the order that they are declared.  If the statement is not contained within a TransactionType element, it is committed immediately.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:choice>
+        <xs:element name="sql" type="SQLType">
+          <xs:annotation>
+            <xs:documentation>The SQL (INSERT, UPDATE, DELETE, etc.) statement to invoke.  Parameters are indicated by "?".</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="call" type="CallType">
+          <xs:annotation>
+            <xs:documentation>The stored procedure or function.  The required format is documented in the java.sql.CallableStatement javdoc. Parameters are indicated by "?".</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:choice>
+      <xs:element name="bindPath" type="BindPathType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>Definition of a bind path that will be used to correlate outbound parameter values and inbound result set column values. Instances of this result column will be bound to instances of the specified parameter at the specified path, after which their paths may diverge.  This attribute is only relevant when a parameter's path includes a multi-instance group element.  A BindPath's XPath may be any valid XPath 1.0 expression.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="parameter" type="ParameterType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>Specifies the XPath expression that to resolve to a statement parameter value.  Parameters are evaluated and applied to the statement in document order.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="resultSet" type="ResultSetType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="exception" type="ExceptionType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>Specifies the behavior that the database plugin should exhibit when a particular Java exception is caught during processing.  Exceptions can be ignored or they can complete the associated task with a particular exit status.  If the exception is an instance of java.sql.SQLException, behavior may be further constrained to exceptions that have a particular error code or SQL state value.  Exception handlers are evaluated in document order; that is, the first exception handler that matches the thrown exception will be used.  If no exception handler exists for a thrown exception, the exception will be wrapped in a com.mslv.oms.automation.plugin.JDBCPluginException and rethrown.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="timeout" type="xs:positiveInteger" use="optional">
+      <xs:annotation>
+        <xs:documentation>The timeout in seconds that the plugin will wait for the statement to execute.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="StandAloneStatementType" abstract="true">
+    <xs:annotation>
+      <xs:documentation>Elements of this abstract type model a single SQL operation.  Stetements are processed in the order that they are declared.  If the statement is not contained within a TransactionType element, it is committed immediately.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="dataSource" type="DataSourceType">
+        <xs:annotation>
+          <xs:documentation>The java DataSource to use to create database connections.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:choice>
+        <xs:element name="sql" type="SQLType">
+          <xs:annotation>
+            <xs:documentation>The SQL (INSERT, UPDATE, DELETE, etc.) statement to invoke.  Parameters are indicated by "?".</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="call" type="CallType">
+          <xs:annotation>
+            <xs:documentation>The stored procedure or function.  The required format is documented in the java.sql.CallableStatement javdoc. Parameters are indicated by "?".</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:choice>
+      <xs:element name="bindPath" type="BindPathType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>Reference to a bind path that will be used to correlate outbound parameter values and inbound result set column values. Instances of this result column will be bound to instances of the specified parameter at the specified path, after which their paths may diverge.  This attribute is only relevant when a parameter's path includes a multi-instance group element.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="parameter" type="ParameterType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>Specifies the XPath expression that to resolve to a statement parameter value.  Parameters are evaluated and applied to the statement in document order.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="resultSet" type="ResultSetType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="exception" type="ExceptionType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>Specifies the behavior that the database plugin should exhibit when a particular Java exception is caught during processing.  Exceptions can be ignored or they can complete the associated task with a particular exit status.  If the exception is an instance of java.sql.SQLException, behavior may be further constrained to exceptions that have a particular error code or SQL state value.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="timeout" type="xs:positiveInteger" use="optional">
+      <xs:annotation>
+        <xs:documentation>The timeout in seconds that the plugin will wait for the statement to execute.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="BindPathType">
+    <xs:attribute name="id" type="xs:token" use="required"/>
+    <xs:attribute name="path" type="XPathType" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="AbstractQueryStatementType" abstract="true">
+    <xs:annotation>
+      <xs:documentation>Elements of this type model statements that query the database for information.  The returned resutls are used to update order data.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="StatementType">
+        <xs:sequence>
+          <xs:choice>
+            <xs:element name="sql" type="SQLType">
+              <xs:annotation>
+                <xs:documentation>The SQL (INSERT, UPDATE, DELETE, etc.) statement to invoke.  Parameters are indicated by "?".</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="call" type="CallType">
+              <xs:annotation>
+                <xs:documentation>The stored procedure or function.  The required format is documented in the java.sql.CallableStatement javdoc. Parameters are indicated by "?".</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:choice>
+          <xs:element name="bindPath" type="BindPathType" minOccurs="0" maxOccurs="unbounded">
+            <xs:annotation>
+              <xs:documentation>Definition of a bind path that will be used to correlate outbound parameter values and inbound result set column values. Instances of this result column will be bound to instances of the specified parameter at the specified path, after which their paths may diverge.  This attribute is only relevant when a parameter's path includes a multi-instance group element.  A BindPath's XPath may be any valid XPath 1.0 expression.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="parameter" type="ParameterType" minOccurs="0" maxOccurs="unbounded">
+            <xs:annotation>
+              <xs:documentation>Specifies the XPath expression that to resolve to a statement parameter value.  Parameters are evaluated and applied to the statement in document order.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="resultSet" type="ResultSetType" maxOccurs="unbounded"/>
+          <xs:element name="exception" type="ExceptionType" minOccurs="0" maxOccurs="unbounded">
+            <xs:annotation>
+              <xs:documentation>Specifies the behavior that the database plugin should exhibit when a particular Java exception is caught during processing.  Exceptions can be ignored or they can complete the associated task with a particular exit status.  If the exception is an instance of java.sql.SQLException, behavior may be further constrained to exceptions that have a particular error code or SQL state value.  Exception handlers are evaluated in document order; that is, the first exception handler that matches the thrown exception will be used.  If no exception handler exists for a thrown exception, the exception will be wrapped in a com.mslv.oms.automation.plugin.JDBCPluginException and rethrown.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="QueryStatementType">
+    <xs:annotation>
+      <xs:documentation>Elements of this type model statements that query the database for information.  The returned resutls are used to update order data.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="AbstractQueryStatementType">
+        <xs:attribute name="fetchSize" type="xs:positiveInteger" use="optional">
+          <xs:annotation>
+            <xs:documentation>Gives the underlying JDBC driver a hint as to the number of rows that should be fetched from the database when more rows are needed.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="maxFieldSize" type="xs:positiveInteger" use="optional">
+          <xs:annotation>
+            <xs:documentation>Sets the limit for the maximum number of bytes in a ResultSet  column storing character or binary values to the given number of bytes.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="maxRows" type="xs:positiveInteger" use="optional">
+          <xs:annotation>
+            <xs:documentation>Sets the limit for the maximum number of returned rows.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="AbstractStandAloneQueryStatementType" abstract="true">
+    <xs:annotation>
+      <xs:documentation>Elements of this type model statements that query the database for information.  The returned resutls are used to update order data.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:restriction base="StandAloneStatementType">
+        <xs:sequence>
+          <xs:element name="dataSource" type="DataSourceType">
+            <xs:annotation>
+              <xs:documentation>The java DataSource to use to create database connections.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:choice>
+            <xs:element name="sql" type="SQLType">
+              <xs:annotation>
+                <xs:documentation>The SQL (INSERT, UPDATE, DELETE, etc.) statement to invoke.  Parameters are indicated by "?".</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="call" type="CallType">
+              <xs:annotation>
+                <xs:documentation>The stored procedure or function.  The required format is documented in the java.sql.CallableStatement javdoc. Parameters are indicated by "?".</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:choice>
+          <xs:element name="bindPath" type="BindPathType" minOccurs="0" maxOccurs="unbounded">
+            <xs:annotation>
+              <xs:documentation>Reference to a bind path that will be used to correlate outbound parameter values and inbound result set column values. Instances of this result column will be bound to instances of the specified parameter at the specified path, after which their paths may diverge.  This attribute is only relevant when a parameter's path includes a multi-instance group element.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="parameter" type="ParameterType" minOccurs="0" maxOccurs="unbounded">
+            <xs:annotation>
+              <xs:documentation>Specifies the XPath expression that to resolve to a statement parameter value.  Parameters are evaluated and applied to the statement in document order.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="resultSet" type="ResultSetType" maxOccurs="unbounded"/>
+          <xs:element name="exception" type="ExceptionType" minOccurs="0" maxOccurs="unbounded">
+            <xs:annotation>
+              <xs:documentation>Specifies the behavior that the database plugin should exhibit when a particular Java exception is caught during processing.  Exceptions can be ignored or they can complete the associated task with a particular exit status.  If the exception is an instance of java.sql.SQLException, behavior may be further constrained to exceptions that have a particular error code or SQL state value.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="StandAloneQueryStatementType">
+    <xs:annotation>
+      <xs:documentation>Elements of this type model statements that query the database for information.  The returned resutls are used to update order data.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="AbstractStandAloneQueryStatementType">
+        <xs:attribute name="fetchSize" type="xs:positiveInteger" use="optional">
+          <xs:annotation>
+            <xs:documentation>Gives the underlying JDBC driver a hint as to the number of rows that should be fetched from the database when more rows are needed.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="maxFieldSize" type="xs:positiveInteger" use="optional">
+          <xs:annotation>
+            <xs:documentation>Sets the limit for the maximum number of bytes in a ResultSet  column storing character or binary values to the given number of bytes.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="maxRows" type="xs:positiveInteger" use="optional">
+          <xs:annotation>
+            <xs:documentation>Sets the limit for the maximum number of returned rows.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="UpdateStatementType">
+    <xs:annotation>
+      <xs:documentation>Elements of this type model statements that update the database, but do not return results.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="StatementType"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="StandAloneUpdateStatementType">
+    <xs:annotation>
+      <xs:documentation>Elements of this type model statements that update the database, but do not return results.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="StandAloneStatementType"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ParameterType" abstract="true">
+    <xs:annotation>
+      <xs:documentation>Elements of this type specify a parameter, the value of which will be bound to a StatementType element's "sql" or "call" statement.  Paramters are processed in the order that they are declared.</xs:documentation>
+    </xs:annotation>
+  </xs:complexType>
+  <xs:complexType name="ProvisioningParameterType">
+    <xs:annotation>
+      <xs:documentation>Elements of this type specify a parameter, the value of which will be bound to a StatementType element's "sql" or "call" statement.  Paramters are processed in the order that they are declared.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="ParameterType">
+        <xs:attribute name="bindPathRef" type="xs:token">
+          <xs:annotation>
+            <xs:documentation>Reference to a BindPath defined elsewhere on the statement.  If the 'path' attribute is undefined, the string-value() value of the BindPath's XPath is evaluated.  If Path is defined, the first Element selected by this BindPath's XPath is used as the context for the 'path' expression.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="path" type="XPathType">
+          <xs:annotation>
+            <xs:documentation>The XPath expression that points to the order data element(s) that will be used to set parameter values.  This is the path from the root ("_root") order data element. If more than one order data element is selected, multiple statements will be executed.  The number of statements that will be executed equals the number of unique combinations of values across all parameters associated with a statement.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="type" type="ProvisioningDataType" use="required">
+          <xs:annotation>
+            <xs:documentation>The datatype of the OMS parameter.  The lookup datatype should be specified with "text."</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="mode" type="CallModeType">
+          <xs:annotation>
+            <xs:documentation>The mode (IN, OUT, or INOUT) of the parameter.  This attribute will be ignored if the associated statement is not a "CallableStatement," i.e., denoted by "call" and not "sql."</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CursorParameterType">
+    <xs:annotation>
+      <xs:documentation>Elements of this type specify a parameter that indicates an Oracle Cursor, the value of which will be bound to a StatementType element's "call" statement.  Parameters are processed in the order that they are declared.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="ParameterType">
+        <xs:attribute name="type" type="xs:string" use="required" fixed="Cursor">
+          <xs:annotation>
+            <xs:documentation>Must be "Cursor" for this parameter type.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="mode" type="xs:string" use="required" fixed="out">
+          <xs:annotation>
+            <xs:documentation>The mode of the parameter.  Only OUT parameters are supported on Cursor parameter types.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ExceptionType">
+    <xs:annotation>
+      <xs:documentation>Elements of this type specify the behavior that the database plugin should exhibit when a particular Java exception is caught during processing.  Exceptions can be ignored or they can complete the associated task with a particular exit status.  If the exception is an instance of java.sql.SQLException, behavior may be further constrained to exceptions that have a particular error code or SQL state value.</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="class" type="xs:token" use="required">
+      <xs:annotation>
+        <xs:documentation>The java class of the exception to which this definition relates.  Must be assignable to java.lang.Exception</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="sqlState" type="xs:token">
+      <xs:annotation>
+        <xs:documentation>If the "class" attribute indicates a class that is a subclass of java.sql.SQLException, this attribute further constrains the exception definition to a particular SQL state value.  If the class is not a subclass of either of these classes, this attribute is ignored.  An exception that matches this or the "errorCode" value will be processed, i.e., it is an OR relationship, not an AND relationship.  See java.sql.SQLException for a discussion of SQLState.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="errorCode" type="xs:integer">
+      <xs:annotation>
+        <xs:documentation>If the "class" attribute indicates a class that is a subclass of java.sql.SQLException, this attribute further constrains the exception definition to a particular vendor-specific error code value.  If the class is not a subclass of either of these classes, this value is ignored.  An exception that matches this or the sqlState" value will be processed, i.e., it is an OR relationship, not an AND relationship.  See java.sql.SQLException for a discussion of ErrorCode.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="action" type="ExceptionActionType" use="required">
+      <xs:annotation>
+        <xs:documentation>The action to take when a matching exception is caught by the database plugin.  The exception can either be ignored, or it can signal that the task be completed with a particular exit status (the default).</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="exitStatus" type="MnemonicType">
+      <xs:annotation>
+        <xs:documentation>If action="completeTask," this attribute specifies the task exit status.  If action="ignore," this attribute is ignored.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="ResultSetType">
+    <xs:annotation>
+      <xs:documentation>Elements of this type model a result set that is returned from the database as well as how that result set should be processed when updating the order data.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="column" type="ResultSetColumnType" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>Models a single column in a single result set row.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="appliesTo" type="ResultSetAppliesToType" default="all">
+      <xs:annotation>
+        <xs:documentation>Some SQL queries can return more than one result set.  This attribute indicates whether the associated ResultSetType element a single result set or all result sets.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="appliesToRow" type="ResultSetAppliesToRowType" default="all">
+      <xs:annotation>
+        <xs:documentation>Indicates whether the associated ResultSetType element applies to a single row or to all rows.  Valid values are "all" or a row number.  The first ResultSetType element encountered in document order traversal that contains a ResultSetAppliesToType attribute value that matches the result set row number will be used.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="ResultSetColumnType">
+    <xs:annotation>
+      <xs:documentation>Elements of this type model a single column in a single result set row.</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="number" type="xs:positiveInteger" use="required">
+      <xs:annotation>
+        <xs:documentation>The result set column number.  The first column is 1.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="path" type="XPathType">
+      <xs:annotation>
+        <xs:documentation>The path to the order data element(s) to be updated.  If this XPath selects multiple elements, each will be updated.  If "bindPathRef" is used, this is the path starting from the end of "bindPath"'s "path."  Otherwise, it is the path from the order root ("_root") element.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="updateOnMatch" type="xs:boolean" default="true">
+      <xs:annotation>
+        <xs:documentation>If "true" (default), the plugin will attempt to update the order field(s) that matches the "path" value.  If "false", the plugin will always attempt to add the leaf element specified by the "path" value.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="bindPathRef" type="xs:token">
+      <xs:annotation>
+        <xs:documentation>Reference to a bind path that will be used to correlate outbound parameter values and inbound result set column values. Instances of this result column will be bound to instances of the specified parameter at the specified path, after which their paths may diverge.  This attribute is only relevant when a parameter's path includes a multi-instance group element.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:simpleType name="SQLType">
+    <xs:annotation>
+      <xs:documentation>Elements of this type model a SQL statement (INSERT, UPDATE, DELETE, etc.).</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:normalizedString"/>
+  </xs:simpleType>
+  <xs:simpleType name="CallType">
+    <xs:annotation>
+      <xs:documentation>Elements of this type model a stored procedure or function.  The required format is documented in the java.sql.CallableStatement javdoc.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:normalizedString">
+      <xs:pattern value="\{.*\}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DataSourceType">
+    <xs:annotation>
+      <xs:documentation>Elements of this type specify the JDBC DataSource to use.  This DataSource must be properly configured in WebLogic.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token"/>
+  </xs:simpleType>
+  <xs:simpleType name="ResultSetAppliesToType">
+    <xs:annotation>
+      <xs:documentation>Some SQL queries can return more than one result set.  Attributes of this type indicate whether the associated ResultSetType element a single result set or all result sets.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:pattern value="all|[1-9]+[0-9]*"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ResultSetAppliesToRowType">
+    <xs:annotation>
+      <xs:documentation>Attributes of this type indicate whether the associated ResultSetType element applies to a single row or to all rows.  Valid values are "all" or a row number.  The first ResultSetType element encountered in document order traversal that contains a ResultSetAppliesToType attribute value that matches the result set row number will be used.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:pattern value="all|[1-9]+[0-9]*"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ResultSetScrollType">
+    <xs:annotation>
+      <xs:documentation>Attributes of this type indicate whether the associated ResultSetType element applies to a single row or to all rows.  Valid values are "all" or a row number.  The first ResultSetType element encountered in document order traversal that contains a ResultSetAppliesToType attribute value that matches the result set row number will be used.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="FORWARD_ONLY"/>
+      <xs:enumeration value="SCROLL_SENSITIVE"/>
+      <xs:enumeration value="SCROLL_INSENSITIVE"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ExceptionActionType">
+    <xs:annotation>
+      <xs:documentation>Attributes of this type specify that action to be taken when a particular java exception is caught.  Valid actions are to ignore the exception or complete the associated task with a particular exit status.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="ignore">
+        <xs:annotation>
+          <xs:documentation>Indicates that the exception should be ignored.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="completeTask">
+        <xs:annotation>
+          <xs:documentation>Indicates that the exception should cause the associated task to complete.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CallModeType">
+    <xs:annotation>
+      <xs:documentation>Attributes of this type specify the mode (IN, OUT, or INOUT) of a parameter that is associated with CallType statements.  The value of this attribute will be ignored if the associated statement is not a callable statement (indicated by a CallType element).</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="in"/>
+      <xs:enumeration value="out"/>
+      <xs:enumeration value="inout"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ProvisioningDataType">
+    <xs:annotation>
+      <xs:documentation>Attributes of this type specify a Provisioning product datatype.  Provisioning Lookup data types should be specified with the "text" value.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="boolean"/>
+      <xs:enumeration value="currency"/>
+      <xs:enumeration value="date"/>
+      <xs:enumeration value="dateTime"/>
+      <xs:enumeration value="numeric"/>
+      <xs:enumeration value="phone"/>
+      <xs:enumeration value="text">
+        <xs:annotation>
+          <xs:documentation>Use "text" for lookup as well</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TransactionIsolationLevelType">
+    <xs:annotation>
+      <xs:documentation>Attributes of this type specify the transaction isolation level of the associated TransactionType element.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="READ_UNCOMMITTED">
+        <xs:annotation>
+          <xs:documentation>Not supported by Oracle.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="READ_COMMITTED"/>
+      <xs:enumeration value="REPEATABLE_READ">
+        <xs:annotation>
+          <xs:documentation>Not supported by Oracle.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SERIALIZABLE"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="XPathType">
+    <xs:annotation>
+      <xs:documentation>Attributes of this type contain XPath expressions.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token"/>
+  </xs:simpleType>
+  <xs:simpleType name="MnemonicType">
+    <xs:annotation>
+      <xs:documentation>Attributes of this type contain Provisioning product mnemonics.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:NCName">
+      <xs:maxLength value="254"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

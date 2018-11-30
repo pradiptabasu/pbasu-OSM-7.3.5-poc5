@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.oracle.com/communications/sce/osm/model/orchestration" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:ord="http://xmlns.oracle.com/communications/sce/osm/model/order" xmlns:osm="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xmlns:prov="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xsi:type="ProductSpec" name="Service.Mobile">
+  <com:displayName>Service.Mobile</com:displayName>
+  <com:information>The Service.Mobile product specification defines components and dependencies for all mobile services associated product classes. It uses the order components specified by its parent (BaseProductSpec) to define dependencies from the CollectionsFunction, SyncCustomerFunction and Marketing Function to the BillingFunction. It also specifies the use of the ProvisiongFunction, with an additional dependency such that the BillingFunction must wait for the ProvisioningFunction to complete. These dependencies are all based on the same order item and are across functions.</com:information>
+  <com:saveVersion>13</com:saveVersion>
+  <namespace>http://oracle.communications.ordermanagement.unsupported.centralom</namespace>
+  <extends>
+    <com:entity>BaseProductSpec</com:entity>
+    <com:entityType>productSpec</com:entityType>
+    <com:relationship>oracle.communications.sce.osm.orchestration.productSpec.parentProductSpec</com:relationship>
+  </extends>
+  <orchestrationPlan>
+    <fulfillmentMode>
+      <com:entity>Deliver</com:entity>
+      <com:entityType>fulfillmentMode</com:entityType>
+      <com:relationship>oracle.communications.sce.osm.orchestration.productSpec.fulfillmentMode</com:relationship>
+    </fulfillmentMode>
+    <processingDuration/>
+    <component>
+      <com:entity>ProvisioningFunction</com:entity>
+      <com:entityType>orderComponentSpec</com:entityType>
+      <com:relationship>oracle.communications.sce.osm.orchestration.productSpec.orchPlanComponent</com:relationship>
+      <processingDuration/>
+    </component>
+    <transition>
+      <from>
+        <component>
+          <com:entity>ProvisioningFunction</com:entity>
+          <com:entityType>orderComponentSpec</com:entityType>
+          <com:relationship>oracle.communications.sce.osm.orchestration.productSpec.from.orchPlanComponent</com:relationship>
+        </component>
+      </from>
+      <to>
+        <com:entity>BillingFunction</com:entity>
+        <com:entityType>orderComponentSpec</com:entityType>
+        <com:relationship>oracle.communications.sce.osm.orchestration.productSpec.to.orchPlanComponent</com:relationship>
+      </to>
+      <waitForCondition xsi:type="TaskStateWaitForConditionType">
+        <delayResolution/>
+        <state>
+          <com:entity>stateType</com:entity>
+          <com:entityType>process</com:entityType>
+          <com:relationship>default</com:relationship>
+          <com:element>completed</com:element>
+        </state>
+      </waitForCondition>
+      <orderItemDependencyCriteria xsi:type="IdentityIntersectionOrderItemRelationship"/>
+    </transition>
+    <transition>
+      <from>
+        <component>
+          <com:entity>BillingFunction</com:entity>
+          <com:entityType>orderComponentSpec</com:entityType>
+          <com:relationship>oracle.communications.sce.osm.orchestration.productSpec.from.orchPlanComponent</com:relationship>
+        </component>
+      </from>
+      <to>
+        <com:entity>CollectionsFunction</com:entity>
+        <com:entityType>orderComponentSpec</com:entityType>
+        <com:relationship>oracle.communications.sce.osm.orchestration.productSpec.to.orchPlanComponent</com:relationship>
+      </to>
+      <waitForCondition xsi:type="TaskStateWaitForConditionType">
+        <delayResolution/>
+        <state>
+          <com:entity>stateType</com:entity>
+          <com:entityType>process</com:entityType>
+          <com:relationship>default</com:relationship>
+          <com:element>completed</com:element>
+        </state>
+      </waitForCondition>
+      <orderItemDependencyCriteria xsi:type="IdentityIntersectionOrderItemRelationship"/>
+    </transition>
+    <transition>
+      <from>
+        <component>
+          <com:entity>BillingFunction</com:entity>
+          <com:entityType>orderComponentSpec</com:entityType>
+          <com:relationship>oracle.communications.sce.osm.orchestration.productSpec.from.orchPlanComponent</com:relationship>
+        </component>
+      </from>
+      <to>
+        <com:entity>MarketingFunction</com:entity>
+        <com:entityType>orderComponentSpec</com:entityType>
+        <com:relationship>oracle.communications.sce.osm.orchestration.productSpec.to.orchPlanComponent</com:relationship>
+      </to>
+      <waitForCondition xsi:type="TaskStateWaitForConditionType">
+        <delayResolution/>
+        <state>
+          <com:entity>stateType</com:entity>
+          <com:entityType>process</com:entityType>
+          <com:relationship>default</com:relationship>
+          <com:element>completed</com:element>
+        </state>
+      </waitForCondition>
+      <orderItemDependencyCriteria xsi:type="IdentityIntersectionOrderItemRelationship"/>
+    </transition>
+    <transition>
+      <from>
+        <component>
+          <com:entity>BillingFunction</com:entity>
+          <com:entityType>orderComponentSpec</com:entityType>
+          <com:relationship>oracle.communications.sce.osm.orchestration.productSpec.from.orchPlanComponent</com:relationship>
+        </component>
+      </from>
+      <to>
+        <com:entity>SyncCustomerFunction</com:entity>
+        <com:entityType>orderComponentSpec</com:entityType>
+        <com:relationship>oracle.communications.sce.osm.orchestration.productSpec.to.orchPlanComponent</com:relationship>
+      </to>
+      <waitForCondition xsi:type="TaskStateWaitForConditionType">
+        <delayResolution/>
+        <state>
+          <com:entity>stateType</com:entity>
+          <com:entityType>process</com:entityType>
+          <com:relationship>default</com:relationship>
+          <com:element>completed</com:element>
+        </state>
+      </waitForCondition>
+      <orderItemDependencyCriteria xsi:type="IdentityIntersectionOrderItemRelationship"/>
+    </transition>
+  </orchestrationPlan>
+  <orchestrationPlan>
+    <fulfillmentMode>
+      <com:entity>Cancel</com:entity>
+      <com:entityType>fulfillmentMode</com:entityType>
+      <com:relationship>oracle.communications.sce.osm.orchestration.productSpec.fulfillmentMode</com:relationship>
+    </fulfillmentMode>
+    <processingDuration/>
+  </orchestrationPlan>
+</com:modelEntity>

@@ -1,0 +1,22 @@
+<!-- edited with XMLSPY v5 rel. 2 U (http://www.xmlspy.com) by XMLSPY 5 Professional Ed., Installed Multi for 126 users (MetaSolv Software Inc.) -->
+<project name="OSMStudio" basedir="." default="main">
+	<!-- jar classes-->
+	<property name="plugins.classes.outputDir" value="${basedir}/../out"/>
+	<property name="plugins.assemble.destdir" value="${basedir}/../cartridgeBuild/automation"/>
+	
+	<!-- targets -->
+	<target name="main" depends="package"/>
+	
+	<target name="package" depends="cleanPackage">
+			<!--	<echo message="Project Name=${project_name}"/>
+				<echo message="Destination Jar=${jarTarget}"/>
+				<echo message="Output Dir=${outputDir}"/>
+				<jar destfile="${jarTarget}" basedir="${outputDir}" filesonly="false"/> -->
+	</target>
+	
+	<target name="cleanPackage">
+		<echo>cleaning environment</echo>
+		<delete dir="${plugins.classes.outputDir}" quiet="true" includeEmptyDirs="true"/> 
+		<delete dir="${plugins.assemble.destdir}" quiet="true" includeEmptyDirs="true"/> 
+	</target>
+</project>

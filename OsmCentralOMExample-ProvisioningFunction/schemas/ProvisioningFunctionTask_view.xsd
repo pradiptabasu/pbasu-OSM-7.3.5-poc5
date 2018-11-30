@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns:ProvisioningFunctionTask="urn:com:metasolv:oms:xmlapi:1"
+	
+           targetNamespace="urn:com:metasolv:oms:xmlapi:1"> 
+  
+    <xs:complexType name="ProvisioningFunctionTask">
+        <xs:sequence>
+        <xs:element name="OrderHeader">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="numSalesOrder" type="xs:string"/>
+            <xs:element name="typeOrder" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+        </xs:element>
+        <xs:element name="CustomerDetails">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="locationType" type="xs:string"/>
+            <xs:element name="nameLocation" type="xs:string"/>
+            <xs:element name="number" type="xs:string"/>
+            <xs:element name="typeCompl" type="xs:string"/>
+            <xs:element name="numCompl" type="xs:string"/>
+            <xs:element name="district" type="xs:string"/>
+            <xs:element name="codeLocation" type="xs:string"/>
+            <xs:element name="city" type="xs:string"/>
+            <xs:element name="state" type="xs:string"/>
+            <xs:element name="referencePoint" type="xs:string"/>
+            <xs:element name="areaCode" type="xs:string"/>
+            <xs:element name="typeAddress" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+        </xs:element>
+        <xs:element name="ControlData">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Functions">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ProvisioningFunction">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="componentKey" type="xs:string"/>
+                    <xs:element name="orderItem">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="orderItemRef">
+                        <xs:complexType>
+                          <xs:sequence>
+                            <xs:element name="productClass" type="xs:string"/>
+                            <xs:element name="productSpec" type="xs:string"/>
+                            <xs:element name="lineId" type="xs:string"/>
+                            <xs:element name="lineItemName" type="xs:string"/>
+                            <xs:element name="requestedDeliveryDate" type="xs:dateTime"/>
+                            <xs:element name="parentLineId" type="xs:string"/>
+                            <xs:element name="region" type="xs:string"/>
+                            <xs:element name="typeCode" type="xs:string"/>
+                            <xs:element name="serviceId" type="xs:string"/>
+                            <xs:element name="lineItemPayload" type="xs:(Local Structure)"/>
+                          </xs:sequence>
+                        </xs:complexType>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+        </xs:element>
+        <xs:element name="AccountDetails">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="numAccount" type="xs:string"/>
+            <xs:element name="status" type="xs:string"/>
+            <xs:element name="corporate" type="xs:string"/>
+            <xs:element name="cpfClient" type="xs:string"/>
+            <xs:element name="cnpjClient" type="xs:string"/>
+            <xs:element name="inscrState" type="xs:string"/>
+            <xs:element name="clientSince" type="xs:date"/>
+            <xs:element name="category" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+        </xs:element>
+        <xs:element name="ResponseParamGroup">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResponseParam">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="paramName" type="xs:string"/>
+                <xs:element name="paramValue" type="xs:string"/>
+              </xs:sequence>
+            </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+        </xs:element>
+
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.oracle.com/communications/sce/osm/model/orchestration" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:ord="http://xmlns.oracle.com/communications/sce/osm/model/order" xmlns:osm="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xmlns:prov="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xsi:type="OrderCompositionRuleSetType" name="CentralOMExample-RuleSet">
+  <com:displayName lang="[default]">CentralOMExample-RuleSet</com:displayName>
+  <com:saveVersion>14</com:saveVersion>
+  <com:id>FbhJCkJO--+L--+w1GQEpQ</com:id>
+  <namespace>http://oracle.communications.ordermanagement.unsupported.centralom</namespace>
+  <order>
+    <com:entity>OsmCentralOMExampleOrder</com:entity>
+    <com:entityType>order</com:entityType>
+    <com:relationship>oracle.communications.sce.osm.orchestration.composition.ruleSet.order.order</com:relationship>
+  </order>
+  <rule name="Failed_Rule">
+    <com:id>hKZ1---A--+y--+8---g9Q</com:id>
+    <com:elementType>oracle.communications.sce.osm.orchestration.composition.ruleSet.order.rule</com:elementType>
+    <osm:description lang="[default]">Failed Rule</osm:description>
+    <compositeState>
+      <com:entity>BillingStateMap</com:entity>
+      <com:entityType>fulfillmentStateMap</com:entityType>
+      <com:relationship>oracle.communications.sce.osm.orchestration.compositionCompositeState</com:relationship>
+      <com:element>Hu1n------+ktPpD3k0+Yg</com:element>
+      <com:elementType>oracle.communications.sce.osm.orchestration.fulfillmentstatemap.fulfillmentStateMap.state</com:elementType>
+      <com:elementName>Failed</com:elementName>
+    </compositeState>
+    <compositionCondition name="Any_Failed">
+      <com:id>8CV0--+V--+8fAxlPbEvLw</com:id>
+      <com:elementType>oracle.communications.sce.osm.orchestration.composition.condition.order</com:elementType>
+      <osm:description lang="[default]">Any Failed</osm:description>
+      <any>
+        <com:entity>BillingStateMap</com:entity>
+        <com:entityType>fulfillmentStateMap</com:entityType>
+        <com:relationship>oracle.communications.sce.osm.orchestration.compositionCondition</com:relationship>
+        <com:element>Hu1n------+ktPpD3k0+Yg</com:element>
+        <com:elementType>oracle.communications.sce.osm.orchestration.fulfillmentstatemap.fulfillmentStateMap.state</com:elementType>
+        <com:elementName>Failed</com:elementName>
+      </any>
+    </compositionCondition>
+  </rule>
+  <rule name="Completed_Rule">
+    <com:id>Qsck--+j--+2hrQrtXYFbw</com:id>
+    <com:elementType>oracle.communications.sce.osm.orchestration.composition.ruleSet.order.rule</com:elementType>
+    <osm:description lang="[default]">Completed Rule</osm:description>
+    <compositeState>
+      <com:entity>BillingStateMap</com:entity>
+      <com:entityType>fulfillmentStateMap</com:entityType>
+      <com:relationship>oracle.communications.sce.osm.orchestration.compositionCompositeState</com:relationship>
+      <com:element>--+l--+5--+8gzsoq5sQhA</com:element>
+      <com:elementType>oracle.communications.sce.osm.orchestration.fulfillmentstatemap.fulfillmentStateMap.state</com:elementType>
+      <com:elementName>Completed</com:elementName>
+    </compositeState>
+    <compositionCondition name="All_Completed">
+      <com:id>Dbsf---9--+x0Xxm---V-w</com:id>
+      <com:elementType>oracle.communications.sce.osm.orchestration.composition.condition.order</com:elementType>
+      <osm:description lang="[default]">All Completed</osm:description>
+      <all>
+        <com:entity>BillingStateMap</com:entity>
+        <com:entityType>fulfillmentStateMap</com:entityType>
+        <com:relationship>oracle.communications.sce.osm.orchestration.compositionCondition</com:relationship>
+        <com:element>--+l--+5--+8gzsoq5sQhA</com:element>
+        <com:elementType>oracle.communications.sce.osm.orchestration.fulfillmentstatemap.fulfillmentStateMap.state</com:elementType>
+        <com:elementName>Completed</com:elementName>
+      </all>
+    </compositionCondition>
+  </rule>
+  <rule name="In_Progress_Rule">
+    <com:id>---WSIhT--+GPLU4---4gg</com:id>
+    <com:elementType>oracle.communications.sce.osm.orchestration.composition.ruleSet.order.rule</com:elementType>
+    <osm:description lang="[default]">In Progress Rule</osm:description>
+    <compositeState>
+      <com:entity>BillingStateMap</com:entity>
+      <com:entityType>fulfillmentStateMap</com:entityType>
+      <com:relationship>oracle.communications.sce.osm.orchestration.compositionCompositeState</com:relationship>
+      <com:element>VbIj---k--+l--+j+7pWJw</com:element>
+      <com:elementType>oracle.communications.sce.osm.orchestration.fulfillmentstatemap.fulfillmentStateMap.state</com:elementType>
+      <com:elementName>In_Progress</com:elementName>
+    </compositeState>
+    <compositionCondition name="Any_In_Progress_Completed">
+      <com:id>---2--+c--+Xcsg6--+22Q</com:id>
+      <com:elementType>oracle.communications.sce.osm.orchestration.composition.condition.order</com:elementType>
+      <osm:description lang="[default]">Any In Progress Completed</osm:description>
+      <any>
+        <com:entity>BillingStateMap</com:entity>
+        <com:entityType>fulfillmentStateMap</com:entityType>
+        <com:relationship>oracle.communications.sce.osm.orchestration.compositionCondition</com:relationship>
+        <com:element>--+l--+5--+8gzsoq5sQhA</com:element>
+        <com:elementType>oracle.communications.sce.osm.orchestration.fulfillmentstatemap.fulfillmentStateMap.state</com:elementType>
+        <com:elementName>Completed</com:elementName>
+      </any>
+      <any>
+        <com:entity>BillingStateMap</com:entity>
+        <com:entityType>fulfillmentStateMap</com:entityType>
+        <com:relationship>oracle.communications.sce.osm.orchestration.compositionCondition</com:relationship>
+        <com:element>VbIj---k--+l--+j+7pWJw</com:element>
+        <com:elementType>oracle.communications.sce.osm.orchestration.fulfillmentstatemap.fulfillmentStateMap.state</com:elementType>
+        <com:elementName>In_Progress</com:elementName>
+      </any>
+    </compositionCondition>
+    <compositionCondition name="None_Failed_Cancelled">
+      <com:id>7Nd1j44K--+6ReFJ--+UxQ</com:id>
+      <com:elementType>oracle.communications.sce.osm.orchestration.composition.condition.order</com:elementType>
+      <osm:description lang="[default]">None Failed Cancelled</osm:description>
+      <none>
+        <com:entity>BillingStateMap</com:entity>
+        <com:entityType>fulfillmentStateMap</com:entityType>
+        <com:relationship>oracle.communications.sce.osm.orchestration.compositionCondition</com:relationship>
+        <com:element>--+QdTMo--+d--+3--+Xdg</com:element>
+        <com:elementType>oracle.communications.sce.osm.orchestration.fulfillmentstatemap.fulfillmentStateMap.state</com:elementType>
+        <com:elementName>Cancelled</com:elementName>
+      </none>
+      <none>
+        <com:entity>BillingStateMap</com:entity>
+        <com:entityType>fulfillmentStateMap</com:entityType>
+        <com:relationship>oracle.communications.sce.osm.orchestration.compositionCondition</com:relationship>
+        <com:element>Hu1n------+ktPpD3k0+Yg</com:element>
+        <com:elementType>oracle.communications.sce.osm.orchestration.fulfillmentstatemap.fulfillmentStateMap.state</com:elementType>
+        <com:elementName>Failed</com:elementName>
+      </none>
+    </compositionCondition>
+  </rule>
+</com:modelEntity>

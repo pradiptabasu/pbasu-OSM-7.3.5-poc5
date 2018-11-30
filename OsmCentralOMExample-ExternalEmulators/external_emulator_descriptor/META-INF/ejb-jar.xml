@@ -1,0 +1,308 @@
+<ejb-jar xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/ejb-jar_2_1.xsd"
+	version="2.1">
+	<enterprise-beans>
+		<message-driven>
+			<ejb-name>ExternalSystemEmulator_DslProvisioningRegion1</ejb-name>
+			<ejb-class>oracle.communications.ordermanagement.unsupported.emulator.ExternalSystemEmulatorMdb</ejb-class>
+			<transaction-type>Container</transaction-type>
+			<message-destination-type>javax.jms.Queue</message-destination-type>
+			<env-entry>
+				<description>Connection Factory Name</description>
+				<env-entry-name>CONNECTION_FACTORY_JNDI</env-entry-name>
+				<env-entry-type>java.lang.String</env-entry-type>
+				<env-entry-value>mslv/oms/oms1/internal/jms/ConnectionFactory</env-entry-value>
+			</env-entry>
+			<env-entry>
+				<description>XQuery Script Name</description>
+				<env-entry-name>XQUERY_SCRIPT</env-entry-name>
+				<env-entry-type>java.lang.String</env-entry-type>
+				<env-entry-value>resources/xquery/dslProvisioningRegion1_simulate_response.xqy</env-entry-value>
+			</env-entry>
+			<env-entry>
+				<description>Target JNDI Name</description>
+				<env-entry-name>DESTINATION_JNDI</env-entry-name>
+				<env-entry-type>java.lang.String</env-entry-type>
+				<env-entry-value>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_DslProvisioningRegion1_Response_Queue</env-entry-value>
+			</env-entry>
+			<security-identity>
+				<run-as>
+					<role-name>omsadmin</role-name>
+				</run-as>
+			</security-identity>
+		</message-driven>
+
+		<message-driven>
+			<ejb-name>ExternalSystemEmulator_DslProvisioningRegion2</ejb-name>
+			<ejb-class>oracle.communications.ordermanagement.unsupported.emulator.ExternalSystemEmulatorMdb</ejb-class>
+			<transaction-type>Container</transaction-type>
+			<message-destination-type>javax.jms.Queue</message-destination-type>
+			<env-entry>
+				<description>Connection Factory Name</description>
+				<env-entry-name>CONNECTION_FACTORY_JNDI</env-entry-name>
+				<env-entry-type>java.lang.String</env-entry-type>
+				<env-entry-value>mslv/oms/oms1/internal/jms/ConnectionFactory</env-entry-value>
+			</env-entry>
+			<env-entry>
+				<description>XQuery Script Name</description>
+				<env-entry-name>XQUERY_SCRIPT</env-entry-name>
+				<env-entry-type>java.lang.String</env-entry-type>
+				<env-entry-value>resources/xquery/dslProvisioningRegion2_simulate_response.xqy</env-entry-value>
+			</env-entry>
+			<env-entry>
+				<description>Target JNDI Name</description>
+				<env-entry-name>DESTINATION_JNDI</env-entry-name>
+				<env-entry-type>java.lang.String</env-entry-type>
+				<env-entry-value>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_DslProvisioningRegion2_Response_Queue</env-entry-value>
+			</env-entry>
+			<security-identity>
+				<run-as>
+					<role-name>omsadmin</role-name>
+				</run-as>
+			</security-identity>
+		</message-driven>
+
+		<message-driven>
+			<ejb-name>ExternalSystemEmulator_MobileProvisioning</ejb-name>
+			<ejb-class>oracle.communications.ordermanagement.unsupported.emulator.ExternalSystemEmulatorMdb</ejb-class>
+			<transaction-type>Container</transaction-type>
+			<message-destination-type>javax.jms.Queue</message-destination-type>
+			<env-entry>
+				<description>Connection Factory Name</description>
+				<env-entry-name>CONNECTION_FACTORY_JNDI</env-entry-name>
+				<env-entry-type>java.lang.String</env-entry-type>
+				<env-entry-value>mslv/oms/oms1/internal/jms/ConnectionFactory</env-entry-value>
+			</env-entry>
+			<env-entry>
+				<description>XQuery Script Name</description>
+				<env-entry-name>XQUERY_SCRIPT</env-entry-name>
+				<env-entry-type>java.lang.String</env-entry-type>
+				<env-entry-value>resources/xquery/mobileProvisioning_simulate_response.xqy</env-entry-value>
+			</env-entry>
+			<env-entry>
+				<description>Target JNDI Name</description>
+				<env-entry-name>DESTINATION_JNDI</env-entry-name>
+				<env-entry-type>java.lang.String</env-entry-type>
+				<env-entry-value>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_MobileProvisioning_Response_Queue</env-entry-value>
+			</env-entry>
+			<security-identity>
+				<run-as>
+					<role-name>omsadmin</role-name>
+				</run-as>
+			</security-identity>
+		</message-driven>
+
+		<message-driven>
+			<ejb-name>ExternalSystemEmulator_FixedProvisioning</ejb-name>
+			<ejb-class>oracle.communications.ordermanagement.unsupported.emulator.ExternalSystemEmulatorMdb</ejb-class>
+			<transaction-type>Container</transaction-type>
+			<message-destination-type>javax.jms.Queue</message-destination-type>
+			<env-entry>
+				<description>Connection Factory Name</description>
+				<env-entry-name>CONNECTION_FACTORY_JNDI</env-entry-name>
+				<env-entry-type>java.lang.String</env-entry-type>
+				<env-entry-value>mslv/oms/oms1/internal/jms/ConnectionFactory</env-entry-value>
+			</env-entry>
+			<env-entry>
+				<description>XQuery Script Name</description>
+				<env-entry-name>XQUERY_SCRIPT</env-entry-name>
+				<env-entry-type>java.lang.String</env-entry-type>
+				<env-entry-value>resources/xquery/fixedProvisioning_simulate_response.xqy</env-entry-value>
+			</env-entry>
+			<env-entry>
+				<description>Target JNDI Name</description>
+				<env-entry-name>DESTINATION_JNDI</env-entry-name>
+				<env-entry-type>java.lang.String</env-entry-type>
+				<env-entry-value>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_FixedProvisioning_Response_Queue</env-entry-value>
+			</env-entry>
+			<security-identity>
+				<run-as>
+					<role-name>omsadmin</role-name>
+				</run-as>
+			</security-identity>
+		</message-driven>
+
+		<message-driven>
+			<ejb-name>ExternalSystemEmulator_Billing</ejb-name>
+			<ejb-class>oracle.communications.ordermanagement.unsupported.emulator.ExternalSystemEmulatorMdb</ejb-class>
+			<transaction-type>Container</transaction-type>
+			<message-destination-type>javax.jms.Queue</message-destination-type>
+			<env-entry>
+				<description>Connection Factory Name</description>
+				<env-entry-name>CONNECTION_FACTORY_JNDI</env-entry-name>
+				<env-entry-type>java.lang.String</env-entry-type>
+				<env-entry-value>mslv/oms/oms1/internal/jms/ConnectionFactory</env-entry-value>
+			</env-entry>
+			<env-entry>
+				<description>XQuery Script Name</description>
+				<env-entry-name>XQUERY_SCRIPT</env-entry-name>
+				<env-entry-type>java.lang.String</env-entry-type>
+				<env-entry-value>resources/xquery/billing_simulate_response.xqy</env-entry-value>
+			</env-entry>
+			<env-entry>
+				<description>Target JNDI Name</description>
+				<env-entry-name>DESTINATION_JNDI</env-entry-name>
+				<env-entry-type>java.lang.String</env-entry-type>
+				<env-entry-value>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_Billing_Response_Queue</env-entry-value>
+			</env-entry>
+			<security-identity>
+				<run-as>
+					<role-name>omsadmin</role-name>
+				</run-as>
+			</security-identity>
+		</message-driven>
+
+		<message-driven>
+			<ejb-name>ExternalSystemEmulator_Marketing</ejb-name>
+			<ejb-class>oracle.communications.ordermanagement.unsupported.emulator.ExternalSystemEmulatorMdb</ejb-class>
+			<transaction-type>Container</transaction-type>
+			<message-destination-type>javax.jms.Queue</message-destination-type>
+			<env-entry>
+				<description>Connection Factory Name</description>
+				<env-entry-name>CONNECTION_FACTORY_JNDI</env-entry-name>
+				<env-entry-type>java.lang.String</env-entry-type>
+				<env-entry-value>mslv/oms/oms1/internal/jms/ConnectionFactory</env-entry-value>
+			</env-entry>
+			<env-entry>
+				<description>XQuery Script Name</description>
+				<env-entry-name>XQUERY_SCRIPT</env-entry-name>
+				<env-entry-type>java.lang.String</env-entry-type>
+				<env-entry-value>resources/xquery/marketing_simulate_response.xqy</env-entry-value>
+			</env-entry>
+			<env-entry>
+				<description>Target JNDI Name</description>
+				<env-entry-name>DESTINATION_JNDI</env-entry-name>
+				<env-entry-type>java.lang.String</env-entry-type>
+				<env-entry-value>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_Marketing_Response_Queue</env-entry-value>
+			</env-entry>
+			<security-identity>
+				<run-as>
+					<role-name>omsadmin</role-name>
+				</run-as>
+			</security-identity>
+		</message-driven>
+
+		<message-driven>
+			<ejb-name>ExternalSystemEmulator_Customer</ejb-name>
+			<ejb-class>oracle.communications.ordermanagement.unsupported.emulator.ExternalSystemEmulatorMdb</ejb-class>
+			<transaction-type>Container</transaction-type>
+			<message-destination-type>javax.jms.Queue</message-destination-type>
+			<env-entry>
+				<description>Connection Factory Name</description>
+				<env-entry-name>CONNECTION_FACTORY_JNDI</env-entry-name>
+				<env-entry-type>java.lang.String</env-entry-type>
+				<env-entry-value>mslv/oms/oms1/internal/jms/ConnectionFactory</env-entry-value>
+			</env-entry>
+			<env-entry>
+				<description>XQuery Script Name</description>
+				<env-entry-name>XQUERY_SCRIPT</env-entry-name>
+				<env-entry-type>java.lang.String</env-entry-type>
+				<env-entry-value>resources/xquery/customer_simulate_response.xqy</env-entry-value>
+			</env-entry>
+			<env-entry>
+				<description>Target JNDI Name</description>
+				<env-entry-name>DESTINATION_JNDI</env-entry-name>
+				<env-entry-type>java.lang.String</env-entry-type>
+				<env-entry-value>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_Customer_Response_Queue</env-entry-value>
+			</env-entry>
+			<security-identity>
+				<run-as>
+					<role-name>omsadmin</role-name>
+				</run-as>
+			</security-identity>
+		</message-driven>
+
+		<message-driven>
+			<ejb-name>ExternalSystemEmulator_Collections</ejb-name>
+			<ejb-class>oracle.communications.ordermanagement.unsupported.emulator.ExternalSystemEmulatorMdb</ejb-class>
+			<transaction-type>Container</transaction-type>
+			<message-destination-type>javax.jms.Queue</message-destination-type>
+			<env-entry>
+				<description>Connection Factory Name</description>
+				<env-entry-name>CONNECTION_FACTORY_JNDI</env-entry-name>
+				<env-entry-type>java.lang.String</env-entry-type>
+				<env-entry-value>mslv/oms/oms1/internal/jms/ConnectionFactory</env-entry-value>
+			</env-entry>
+			<env-entry>
+				<description>XQuery Script Name</description>
+				<env-entry-name>XQUERY_SCRIPT</env-entry-name>
+				<env-entry-type>java.lang.String</env-entry-type>
+				<env-entry-value>resources/xquery/collections_simulate_response.xqy</env-entry-value>
+			</env-entry>
+			<env-entry>
+				<description>Target JNDI Name</description>
+				<env-entry-name>DESTINATION_JNDI</env-entry-name>
+				<env-entry-type>java.lang.String</env-entry-type>
+				<env-entry-value>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_Collections_Response_Queue</env-entry-value>
+			</env-entry>
+			<security-identity>
+				<run-as>
+					<role-name>omsadmin</role-name>
+				</run-as>
+			</security-identity>
+		</message-driven>
+	</enterprise-beans>
+	<assembly-descriptor>
+		<security-role>
+			<role-name>omsadmin</role-name>
+		</security-role>
+		<container-transaction>
+			<method>
+				<ejb-name>ExternalSystemEmulator_DslProvisioningRegion1</ejb-name>
+				<method-name>*</method-name>
+			</method>
+			<trans-attribute>Required</trans-attribute>
+		</container-transaction>
+		<container-transaction>
+			<method>
+				<ejb-name>ExternalSystemEmulator_DslProvisioningRegion2</ejb-name>
+				<method-name>*</method-name>
+			</method>
+			<trans-attribute>Required</trans-attribute>
+		</container-transaction>
+		<container-transaction>
+			<method>
+				<ejb-name>ExternalSystemEmulator_MobileProvisioning</ejb-name>
+				<method-name>*</method-name>
+			</method>
+			<trans-attribute>Required</trans-attribute>
+		</container-transaction>
+		<container-transaction>
+			<method>
+				<ejb-name>ExternalSystemEmulator_FixedProvisioning</ejb-name>
+				<method-name>*</method-name>
+			</method>
+			<trans-attribute>Required</trans-attribute>
+		</container-transaction>
+		<container-transaction>
+			<method>
+				<ejb-name>ExternalSystemEmulator_Billing</ejb-name>
+				<method-name>*</method-name>
+			</method>
+			<trans-attribute>Required</trans-attribute>
+		</container-transaction>
+		<container-transaction>
+			<method>
+				<ejb-name>ExternalSystemEmulator_Marketing</ejb-name>
+				<method-name>*</method-name>
+			</method>
+			<trans-attribute>Required</trans-attribute>
+		</container-transaction>
+		<container-transaction>
+			<method>
+				<ejb-name>ExternalSystemEmulator_Customer</ejb-name>
+				<method-name>*</method-name>
+			</method>
+			<trans-attribute>Required</trans-attribute>
+		</container-transaction>
+
+		<container-transaction>
+			<method>
+				<ejb-name>ExternalSystemEmulator_Collections</ejb-name>
+				<method-name>*</method-name>
+			</method>
+			<trans-attribute>Required</trans-attribute>
+		</container-transaction>
+	</assembly-descriptor>
+</ejb-jar>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.oracle.com/communications/sce/osm/model/orchestration" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:ord="http://xmlns.oracle.com/communications/sce/osm/model/order" xmlns:osm="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xmlns:prov="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xsi:type="OrderComponentSpec" name="Bundle">
+  <com:displayName>Bundle</com:displayName>
+  <com:information>The Bundle order component specification is used to represent bundle processing granularity, or in other words, the hierarchical grouping of order items packaged together in a request that represents a marketing bundle. Order items are grouped into bundle order components through the BillingToBundle decomposition rule.&#xD;
+&#xD;
+There are a couple of key things to note with this order component&#xD;
+- This is an executable order component as specified through the check box on the Details tab. This means that this is a final order component used in the orchestration plan output&#xD;
+- The Component ID tab is populated with an XQuery that specifies how to determine the bundle ID for an order item. The XQuery returns the bundle ID for an order item, and order items with the same bundle ID are grouped together when bundle processing granularity is specified.</com:information>
+  <com:saveVersion>6</com:saveVersion>
+  <namespace>http://oracle.communications.ordermanagement.unsupported.centralom</namespace>
+  <extends>
+    <com:entity>ProcessingGranularity</com:entity>
+    <com:entityType>orderComponentSpec</com:entityType>
+    <com:relationship>oracle.communications.sce.osm.orchestration.orderComponentSpec.parentOrderComponent</com:relationship>
+  </extends>
+  <componentId>
+    <textNodeExpression xsi:type="osm:XqueryExpressionRuleType">
+      <osm:xquery>declare namespace osm=&quot;http://xmlns.oracle.com/communications/ordermanagement/model&quot;;&#xD;
+declare namespace prop=&quot;http://oracle.communications.ordermanagement.unsupported.centralom&quot;;&#xD;&#xD;
+&#xD;
+declare namespace osmfn = &quot;java:oracle.communications.ordermanagement.orchestration.generation.OrchestrationXQueryFunctions&quot;;&#xD;
+    	&#xD;
+     &#xD;&#xD;
+ let $ancestors := osmfn:ancestors(&quot;CustomerOrderItemSpecification&quot;,&quot;default&quot;,&quot;http://oracle.communications.ordermanagement.unsupported.centralom&quot;)&#xD;&#xD;
+&#xD;
+      return&#xD;&#xD;
+&#xD;
+          if (fn:exists($ancestors[osm:properties/prop:typeCode='BUNDLE']))&#xD;&#xD;
+ &#xD;
+          then (&#xD;&#xD;
+&#xD;
+              concat($ancestors[osm:properties/prop:typeCode=('BUNDLE')][1]/osm:properties/prop:lineId/text(),'/BundleGranularity')&#xD;
+&#xD;&#xD;
+          )&#xD;
+&#xD;&#xD;
+          else (&#xD;&#xD;
+&#xD;
+          	'ALL_OFFERS_AND_NON_SERVICE_BILLING/BundleGranularity'&#xD;&#xD;
+&#xD;
+      	  )</osm:xquery>
+    </textNodeExpression>
+  </componentId>
+  <minDuration/>
+  <defaultDuration/>
+  <isExecutable>true</isExecutable>
+  <orderTemplateContribution/>
+</com:modelEntity>

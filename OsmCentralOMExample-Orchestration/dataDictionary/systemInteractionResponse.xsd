@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:tns="http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample/interactionResponse" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample/interactionResponse">
+    <xs:element name="orderResponse" type="tns:OrderResponseType"/>
+    <xs:complexType name="OrderResponseType">
+    <xs:sequence>
+      <xs:element name="numSalesOrder" type="xs:string"/>
+      <xs:element name="numOrder" type="xs:string"/>
+      <xs:element name="typeOrder" type="xs:string"/>
+      <xs:element name="errorCode">
+        <xs:simpleType>
+          <xs:restriction base="xs:int"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="central" type="xs:string"/>
+      <xs:element maxOccurs="1" minOccurs="0" name="port" type="xs:string"/>
+      <xs:element name="message" type="xs:string"/>
+      <xs:element name="status" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

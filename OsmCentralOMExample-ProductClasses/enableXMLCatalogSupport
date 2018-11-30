@@ -1,0 +1,17 @@
+declare namespace oi="http://xmlns.oracle.com/OIInputMessage";
+declare namespace osm="urn:com:metasolv:oms:xmlapi:1";
+declare namespace context = "java:com.mslv.oms.automation.TaskContext";
+
+let $order :=  ..//osm:GetOrder.Response
+
+return
+<order>
+
+	<numSalesOrder>$order/osm:Reference}</numSalesOrder>
+	<numOrder>{$order/osm:OrderID}</numOrder>
+	<typeOrder/>
+	<serviceType/>
+	<errorCode/>
+	<status/>
+	<message/>
+</order>

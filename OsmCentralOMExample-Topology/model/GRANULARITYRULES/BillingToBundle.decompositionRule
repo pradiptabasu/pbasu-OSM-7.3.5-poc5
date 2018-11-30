@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.oracle.com/communications/sce/osm/model/orchestration" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:ord="http://xmlns.oracle.com/communications/sce/osm/model/order" xmlns:osm="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xmlns:prov="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xsi:type="DecompositionRuleType" name="BillingToBundle">
+  <com:displayName>BillingToBundle</com:displayName>
+  <com:information>This BillingToBundle decomposition rule specifies that all billable order items for broadband, fixed and mobile services are to be assembled into bundle grouping for processing. It is worth noting that this decomposition rule maps directly from a function order component specification to a processing granularity order component specification. Even though the orchestration sequence specifies a DetermineTargetSystem stage in between.</com:information>
+  <com:saveVersion>13</com:saveVersion>
+  <namespace>http://oracle.communications.ordermanagement.unsupported.centralom</namespace>
+  <orderItem>
+    <com:entity>CustomerOrderItemSpecification</com:entity>
+    <com:entityType>orderItemSpec</com:entityType>
+    <com:relationship>oracle.communications.sce.osm.orchestration.decompositionRule.orderItem</com:relationship>
+  </orderItem>
+  <product>
+    <com:entity>Service.Broadband</com:entity>
+    <com:entityType>productSpec</com:entityType>
+    <com:relationship>oracle.communications.sce.osm.orchestration.decompositionRule.productSpec</com:relationship>
+  </product>
+  <product>
+    <com:entity>Service.Fixed</com:entity>
+    <com:entityType>productSpec</com:entityType>
+    <com:relationship>oracle.communications.sce.osm.orchestration.decompositionRule.productSpec</com:relationship>
+  </product>
+  <product>
+    <com:entity>Service.Mobile</com:entity>
+    <com:entityType>productSpec</com:entityType>
+    <com:relationship>oracle.communications.sce.osm.orchestration.decompositionRule.productSpec</com:relationship>
+  </product>
+  <source>
+    <com:entity>BillingFunction</com:entity>
+    <com:entityType>orderComponentSpec</com:entityType>
+    <com:relationship>oracle.communications.sce.osm.orchestration.decompositionRule.source</com:relationship>
+  </source>
+  <target>
+    <com:entity>Bundle</com:entity>
+    <com:entityType>orderComponentSpec</com:entityType>
+    <com:relationship>oracle.communications.sce.osm.orchestration.decompositionRule.target</com:relationship>
+  </target>
+</com:modelEntity>

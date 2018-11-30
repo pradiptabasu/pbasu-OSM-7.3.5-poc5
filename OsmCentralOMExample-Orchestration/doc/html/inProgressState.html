@@ -1,0 +1,21 @@
+<h2>In Progress Order State</h2>
+<p>The order is being provisioned. There is at least one live task running on the order.</p>
+
+<h3>Transitions</h3>
+
+<p><b>Abort Order:</b> </p>
+
+<p><b>Cancel Order:</b> Rolls back order to the creation task. You can specify a grace period to wait for all accepted tasks to complete before transitioning the order.</p>
+
+<p><b>Fail Order:</b> </p>
+
+<p><b>Process Amendment:</b> Initiates a transition to the Amending order state.</p>
+
+<p><b>Raise Exception:</b> Permits process exceptions to be raised.</p>
+
+<p><b>Submit Amendment:</b> Submits an amendment (typically from an external CRM system) and is followed by Process Amendment.</p>
+
+<p><b>Suspend Order:</b> Halt processing of an order. You can specify a grace period to wait for all accepted tasks to complete before transitioning the order.</p>
+
+<p><b>Update Order:</b> Update the data on an order.</p>
+<p>&nbsp;</p>

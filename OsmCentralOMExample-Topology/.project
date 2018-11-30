@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>OsmCentralOMExample-Topology</name>
+	<comment></comment>
+	<projects>
+		<project>OsmCentralOMExample-BillingFunction</project>
+		<project>OsmCentralOMExample-CollectionsFunction</project>
+		<project>OsmCentralOMExample-MarketingFunction</project>
+		<project>OsmCentralOMExample-ProductSpec</project>
+		<project>OsmCentralOMExample-ProvisioningFunction</project>
+		<project>OsmCentralOMExample-SyncCustomerFunction</project>
+		<project>OsmCentralOMExample-Orchestration</project>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>com.mslv.studio.core.builder.generator</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>com.mslv.studio.core.builder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>com.mslv.studio.provisioning.nature</nature>
+		<nature>com.mslv.studio.core.nature</nature>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+</projectDescription>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:Q1="http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample-Orchestration/OsmCentralOMExample-Orchestration" xmlns:tns="http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample-MarketingFunction/OsmCentralOMExample-MarketingFunction" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample-MarketingFunction/OsmCentralOMExample-MarketingFunction">
+    <xs:import namespace="http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample-Orchestration/OsmCentralOMExample-Orchestration" schemaLocation="../../OsmCentralOMExample-Orchestration/dataDictionary/OsmCentralOMExample-Orchestration.xsd"/>
+    <xs:complexType name="MarketingFunction">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="Q1:FunctionType"/>
+    </xs:complexContent>
+  </xs:complexType>
+    <xs:complexType name="MarketingStatus">
+    <xs:annotation>
+      <xs:documentation/>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="Q1:StatusType"/>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

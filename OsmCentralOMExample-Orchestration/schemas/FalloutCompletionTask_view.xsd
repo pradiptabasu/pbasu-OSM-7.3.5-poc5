@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns:FalloutCompletionTask="urn:com:metasolv:oms:xmlapi:1"
+	 
+    xmlns:exns0="http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample-Orchestration/OsmCentralOMExample-Orchestration"
+           targetNamespace="urn:com:metasolv:oms:xmlapi:1">
+    	<xs:import namespace="http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample-Orchestration/OsmCentralOMExample-Orchestration" schemaLocation="../dataDictionary/OsmCentralOMExample-Orchestration.xsd"/> 
+  
+    <xs:complexType name="FalloutCompletionTask">
+        <xs:sequence>
+        <xs:element name="FalloutMessage" type="exns0:FalloutMessage"/>
+
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

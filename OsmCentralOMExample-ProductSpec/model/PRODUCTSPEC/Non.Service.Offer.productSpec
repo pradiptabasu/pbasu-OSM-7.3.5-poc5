@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.oracle.com/communications/sce/osm/model/orchestration" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:ord="http://xmlns.oracle.com/communications/sce/osm/model/order" xmlns:osm="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xmlns:prov="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xsi:type="ProductSpec" name="Non.Service.Offer">
+  <com:displayName>Non.Service.Offer</com:displayName>
+  <com:information>The Non.Service.Offer is a product spec for all non service related order items. It does not define any components or dependencies at this time.</com:information>
+  <com:saveVersion>4</com:saveVersion>
+  <namespace>http://oracle.communications.ordermanagement.unsupported.centralom</namespace>
+  <extends>
+    <com:entity>BaseProductSpec</com:entity>
+    <com:entityType>productSpec</com:entityType>
+    <com:relationship>oracle.communications.sce.osm.orchestration.productSpec.parentProductSpec</com:relationship>
+  </extends>
+  <orchestrationPlan>
+    <fulfillmentMode>
+      <com:entity>Deliver</com:entity>
+      <com:entityType>fulfillmentMode</com:entityType>
+      <com:relationship>oracle.communications.sce.osm.orchestration.productSpec.fulfillmentMode</com:relationship>
+    </fulfillmentMode>
+    <processingDuration/>
+  </orchestrationPlan>
+  <orchestrationPlan>
+    <fulfillmentMode>
+      <com:entity>Cancel</com:entity>
+      <com:entityType>fulfillmentMode</com:entityType>
+      <com:relationship>oracle.communications.sce.osm.orchestration.productSpec.fulfillmentMode</com:relationship>
+    </fulfillmentMode>
+    <processingDuration/>
+  </orchestrationPlan>
+</com:modelEntity>

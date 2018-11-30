@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ord:CreateOrder
+	xmlns:ord="http://xmlns.oracle.com/communications/ordermanagement">
+	<im:order xmlns:im="http://xmlns.oracle.com/InputMessage"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://xmlns.oracle.com/InputMessage ../dataDictionary/InputMessage.xsd">
+		<im:numSalesOrder>scenario3-302</im:numSalesOrder>
+		<im:typeOrder>Cancel</im:typeOrder>
+		<im:customerAccount>
+			<im:numAccount>TEL1234</im:numAccount>
+			<im:status>Existing</im:status>
+			<im:corporate>PoC</im:corporate>
+			<im:cpfClient>888.444.222-00</im:cpfClient>
+			<im:cnpjClient>01.947.770/0001-09</im:cnpjClient>
+			<im:inscrState>232,232,232,232</im:inscrState>
+			<im:clientSince>1987-01-01</im:clientSince>
+			<im:segmentMarkets>
+				<im:segmentMarket>Systems</im:segmentMarket>
+			</im:segmentMarkets>
+			<im:category>Corporate</im:category>
+			<im:invoiceProfile>
+				<im:mediaType>1</im:mediaType>
+				<im:typeInvoice>Summary</im:typeInvoice>
+				<im:billingCycle>Q11</im:billingCycle>
+				<im:exemptionICMS>true</im:exemptionICMS>
+				<im:empresaFaturamento>Oi Fixed</im:empresaFaturamento>
+				<im:paymentMethod>1</im:paymentMethod>
+			</im:invoiceProfile>
+			<im:customerAddress>
+				<im:locationType>Street</im:locationType>
+				<im:nameLocation>Jangadeiros</im:nameLocation>
+				<im:number>48</im:number>
+				<im:typeCompl>floor</im:typeCompl>
+				<im:numCompl>6</im:numCompl>
+				<im:district>Ipanema</im:district>
+				<im:codeLocation>5000</im:codeLocation>
+				<im:city>Sao Paulo</im:city>
+				<im:state>RJ</im:state>
+				<im:referencePoint>Gen. Osorio Square</im:referencePoint>
+				<im:areaCode>22420-010</im:areaCode>
+				<im:typeAddress>Building</im:typeAddress>
+			</im:customerAddress>
+		</im:customerAccount>
+		<im:salesOrderLineGroup>
+
+			
+		</im:salesOrderLineGroup>
+	</im:order>
+</ord:CreateOrder>

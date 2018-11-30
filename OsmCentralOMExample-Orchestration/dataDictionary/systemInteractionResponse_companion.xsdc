@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity name="systemInteractionResponse_companion"
+    xmlns="http://www.mslv.com/studio/core/model/common"
+    xmlns:com="http://www.mslv.com/studio/core/model/common"
+    xmlns:data="http://www.oracle.com/communications/studio/core/model/common/data"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="com:dataDictionaryCompanionType">
+    <com:displayName>DDCM</com:displayName>
+</com:modelEntity>

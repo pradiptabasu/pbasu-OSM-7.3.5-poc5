@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.oracle.com/communications/sce/osm/model/orchestration" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:ord="http://xmlns.oracle.com/communications/sce/osm/model/order" xmlns:osm="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xmlns:prov="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xsi:type="DecompositionRuleType" name="FunctionToWholeOrder">
+  <com:displayName>FunctionToWholeOrder</com:displayName>
+  <com:information>This FunctionToWholeOrder decomposition rule specifies that all order items that require a provisioning function are to be assembled into whole order grouping for processing. It is worth noting that this decomposition rule maps directly from a function order component specification to a processing granularity order component specification. Even though the orchestration sequence specifies a DetermineTargetSystem stage in between.</com:information>
+  <com:saveVersion>6</com:saveVersion>
+  <namespace>http://oracle.communications.ordermanagement.unsupported.centralom</namespace>
+  <orderItem>
+    <com:entity>CustomerOrderItemSpecification</com:entity>
+    <com:entityType>orderItemSpec</com:entityType>
+    <com:relationship>oracle.communications.sce.osm.orchestration.decompositionRule.orderItem</com:relationship>
+  </orderItem>
+  <source>
+    <com:entity>ProvisioningFunction</com:entity>
+    <com:entityType>orderComponentSpec</com:entityType>
+    <com:relationship>oracle.communications.sce.osm.orchestration.decompositionRule.source</com:relationship>
+  </source>
+  <target>
+    <com:entity>WholeOrder</com:entity>
+    <com:entityType>orderComponentSpec</com:entityType>
+    <com:relationship>oracle.communications.sce.osm.orchestration.decompositionRule.target</com:relationship>
+  </target>
+</com:modelEntity>

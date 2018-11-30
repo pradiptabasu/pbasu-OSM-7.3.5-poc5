@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.oracle.com/communications/sce/osm/model/orchestration" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:ord="http://xmlns.oracle.com/communications/sce/osm/model/order" xmlns:osm="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xmlns:prov="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xsi:type="OrderRecognitionRuleType" name="FalloutOrp">
+  <com:displayName>FalloutOrp</com:displayName>
+  <com:saveVersion>21</com:saveVersion>
+  <namespace>http://oracle.communications.ordermanagement.unsupported.centralom</namespace>
+  <inputMessage>
+    <com:entity>OsmCentralOMExample-Orchestration</com:entity>
+    <com:entityType>xsd</com:entityType>
+    <com:relationship>oracle.communications.sce.osm.orchestration.orderRecognitionRule.inputMessage</com:relationship>
+    <com:element>FalloutMessage</com:element>
+    <com:elementType>com.mslv.studio.core.data.dictionary.node</com:elementType>
+    <com:namespace>http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample-Orchestration/OsmCentralOMExample-Orchestration</com:namespace>
+    <com:baseElement>(Reusable Structure)</com:baseElement>
+    <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
+  </inputMessage>
+  <targetOrder>
+    <com:entity>FalloutOrder</com:entity>
+    <com:entityType>order</com:entityType>
+    <com:relationship>oracle.communications.sce.osm.orchestration.orderRecognitionRule.targetOrder</com:relationship>
+  </targetOrder>
+  <recognitionRule xsi:type="osm:XqueryExpressionRuleType">
+    <osm:xquery>true()</osm:xquery>
+  </recognitionRule>
+  <relevancy>1</relevancy>
+  <orderDataRule xsi:type="osm:XqueryExpressionRuleType">
+    <osm:xquery>&lt;_root>&lt;/_root></osm:xquery>
+  </orderDataRule>
+  <orderHeaderRules>
+    <priority xsi:type="osm:XqueryExpressionRuleType">
+      <osm:xquery>'5'</osm:xquery>
+    </priority>
+  </orderHeaderRules>
+  <failOrder/>
+  <orderTemplateContribution>
+    <ord:nodeExtension>
+      <ord:path>/FalloutMessage</ord:path>
+      <ord:xmlType>true</ord:xmlType>
+    </ord:nodeExtension>
+    <ord:orderData>
+      <com:entity>OsmCentralOMExample-Orchestration</com:entity>
+      <com:entityType>xsd</com:entityType>
+      <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
+      <com:element>FalloutMessage</com:element>
+      <com:elementType>com.mslv.studio.core.data.dictionary.node</com:elementType>
+      <com:namespace>http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample-Orchestration/OsmCentralOMExample-Orchestration</com:namespace>
+      <com:baseElement>(Reusable Structure)</com:baseElement>
+      <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
+    </ord:orderData>
+  </orderTemplateContribution>
+</com:modelEntity>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.oracle.com/communications/sce/osm/model/orchestration" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:ord="http://xmlns.oracle.com/communications/sce/osm/model/order" xmlns:osm="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xmlns:prov="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xsi:type="OrderComponentSpec" name="DSLProvisioningSystem_Region1">
+  <com:displayName>DSL Provisioning System - Region1</com:displayName>
+  <com:information>The DSL provisioning system - region 1 system is responsible for handling DSL provisioning requests for everywhere except the region of Rio de Janeiro. This order component specification demonstrates how multiple systems with the same function are modeled and used.&#xD;
+&#xD;
+This order component specification for a provisioning system is used in the decomposition stage that determines the target fulfillment system. Order items are targeted to this provisioning system based on the ProvisionToDSLProvisioningSystem_Region1 decomposition rule. In this sample cartridge, there are four provisioning systems, each with their own decomposition rule. All broadband order items that are targeted to a region that is not Rio de Janeiro are handled by this provisioning system.</com:information>
+  <com:saveVersion>8</com:saveVersion>
+  <namespace>http://oracle.communications.ordermanagement.unsupported.centralom</namespace>
+  <extends>
+    <com:entity>TargetSystem</com:entity>
+    <com:entityType>orderComponentSpec</com:entityType>
+    <com:relationship>oracle.communications.sce.osm.orchestration.orderComponentSpec.parentOrderComponent</com:relationship>
+  </extends>
+  <minDuration/>
+  <defaultDuration/>
+  <orderTemplateContribution/>
+</com:modelEntity>

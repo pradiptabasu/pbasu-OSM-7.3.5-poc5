@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.oracle.com/communications/sce/osm/model/orchestration" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:ord="http://xmlns.oracle.com/communications/sce/osm/model/order" xmlns:osm="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xmlns:prov="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xsi:type="ProductSpec" name="BaseProductSpec">
+  <com:displayName>BaseProductSpec</com:displayName>
+  <com:information>The BaseProductSpec is a parent product spec for all product specifications in the system. It can be used to define common properties that are inherited by its children product specifications. This particular product specification indicates that the BillingFunction, CollectionsFunction, SyncCustomerFunction and MarketingFunction order components are common to all product specifications. It does not define what dependencies exist between the functions, as there is no common dependencies among all of its children.</com:information>
+  <com:saveVersion>18</com:saveVersion>
+  <com:id>--+4---1--+uzKt7--+Nig</com:id>
+  <namespace>http://oracle.communications.ordermanagement.unsupported.centralom</namespace>
+  <supportedFulfillmentMode>
+    <com:entity>Deliver</com:entity>
+    <com:entityType>fulfillmentMode</com:entityType>
+    <com:relationship>oracle.communications.sce.osm.orchestration.productSpec.fulfillmentMode</com:relationship>
+  </supportedFulfillmentMode>
+  <supportedFulfillmentMode>
+    <com:entity>Cancel</com:entity>
+    <com:entityType>fulfillmentMode</com:entityType>
+    <com:relationship>oracle.communications.sce.osm.orchestration.productSpec.fulfillmentMode</com:relationship>
+  </supportedFulfillmentMode>
+  <orchestrationPlan>
+    <fulfillmentMode>
+      <com:entity>Deliver</com:entity>
+      <com:entityType>fulfillmentMode</com:entityType>
+      <com:relationship>oracle.communications.sce.osm.orchestration.productSpec.fulfillmentMode</com:relationship>
+    </fulfillmentMode>
+    <processingDuration/>
+    <component>
+      <com:entity>BillingFunction</com:entity>
+      <com:entityType>orderComponentSpec</com:entityType>
+      <com:relationship>oracle.communications.sce.osm.orchestration.productSpec.orchPlanComponent</com:relationship>
+      <processingDuration/>
+      <associatedOrderItems xsi:type="MatchingOrderComponentIdOrderItemAssocation" name="offerAssociations"/>
+    </component>
+    <component>
+      <com:entity>SyncCustomerFunction</com:entity>
+      <com:entityType>orderComponentSpec</com:entityType>
+      <com:relationship>oracle.communications.sce.osm.orchestration.productSpec.orchPlanComponent</com:relationship>
+      <processingDuration/>
+    </component>
+    <component>
+      <com:entity>MarketingFunction</com:entity>
+      <com:entityType>orderComponentSpec</com:entityType>
+      <com:relationship>oracle.communications.sce.osm.orchestration.productSpec.orchPlanComponent</com:relationship>
+      <processingDuration/>
+    </component>
+    <component>
+      <com:entity>CollectionsFunction</com:entity>
+      <com:entityType>orderComponentSpec</com:entityType>
+      <com:relationship>oracle.communications.sce.osm.orchestration.productSpec.orchPlanComponent</com:relationship>
+      <processingDuration/>
+    </component>
+  </orchestrationPlan>
+  <orchestrationPlan>
+    <fulfillmentMode>
+      <com:entity>Cancel</com:entity>
+      <com:entityType>fulfillmentMode</com:entityType>
+      <com:relationship>oracle.communications.sce.osm.orchestration.productSpec.fulfillmentMode</com:relationship>
+    </fulfillmentMode>
+    <processingDuration/>
+  </orchestrationPlan>
+  <pointOfNoReturn name="Provision_PoNR" hard="true">
+    <com:id>---m--+J--+soMsBzS0PqQ</com:id>
+    <com:elementType>oracle.communications.sce.osm.orchestration.productSpec.pointOfNoReturn</com:elementType>
+    <osm:description lang="[default]">Provision PoNR</osm:description>
+  </pointOfNoReturn>
+</com:modelEntity>

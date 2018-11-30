@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:Q1="http://xmlns.oracle.com/InputMessage" xmlns:tns="http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample/fixed" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample/fixed">
+            <xs:import namespace="http://xmlns.oracle.com/InputMessage" schemaLocation="../../OsmCentralOMExample-Orchestration/dataDictionary/InputMessage.xsd"/>
+    <xs:element name="order" type="tns:OrderType"/>
+                                    <xs:complexType name="OrderType">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="0" name="typeOrder">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Activation"/>
+            <xs:enumeration value="Change"/>
+            <xs:enumeration value="Cancelation"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element maxOccurs="1" minOccurs="0" name="typeService">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element maxOccurs="1" minOccurs="0" name="numSalesOrder">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element maxOccurs="1" minOccurs="0" name="numOrder">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element maxOccurs="1" minOccurs="0" name="numFixed">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="12"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element maxOccurs="1" minOccurs="0" name="dateOpen">
+        <xs:simpleType>
+          <xs:restriction base="xs:dateTime"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element maxOccurs="1" minOccurs="0" name="dateClose">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+                        <xs:element maxOccurs="1" minOccurs="1" name="customerAddress">
+        <xs:complexType>
+          <xs:complexContent>
+                                    <xs:extension base="Q1:CustomerAddress"/>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+        </xs:sequence>
+  </xs:complexType>
+</xs:schema>

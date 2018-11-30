@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<com:modelEntity xmlns="http://xmlns.oracle.com/communications/sce/osm/model/order" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:ord="http://xmlns.oracle.com/communications/sce/osm/model/order" xmlns:prov="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="FalloutOrder" xsi:type="ord:orderType">
+  <com:displayName>FalloutOrder</com:displayName>
+  <com:saveVersion>5</com:saveVersion>
+  <ord:orderSource>
+    <ord:creationTask>
+      <com:entity>FalloutCreationTask</com:entity>
+      <com:entityType>manualTask</com:entityType>
+      <com:relationship>com.mslv.studio.provisioning.order.creationTask</com:relationship>
+    </ord:creationTask>
+    <ord:defaultProcess>
+      <com:entity>FalloutProcess</com:entity>
+      <com:entityType>process</com:entityType>
+      <com:relationship>com.mslv.studio.provisioning.order.defaultProcess</com:relationship>
+    </ord:defaultProcess>
+  </ord:orderSource>
+  <ord:orderTemplate>
+    <ord:nodeExtension>
+      <ord:path>/FalloutMessage</ord:path>
+    </ord:nodeExtension>
+  </ord:orderTemplate>
+  <ord:rule name="null_rule"/>
+  <ord:orderStatePolicy>
+    <com:entity>DefaultLifecyclePolicy</com:entity>
+    <com:entityType>orderPolicy</com:entityType>
+    <com:relationship>com.mslv.studio.provisioning.order.orderPolicy</com:relationship>
+  </ord:orderStatePolicy>
+  <ord:orderPermission>
+    <com:entity>DefaultRole</com:entity>
+    <com:entityType>rolePermissions</com:entityType>
+    <com:relationship>com.mslv.studio.provisioning.roleSetting</com:relationship>
+    <ord:queryTask>
+      <com:entity>FalloutCreationTask</com:entity>
+      <com:entityType>manualTask</com:entityType>
+      <com:relationship>com.mslv.studio.provisioning.queryTask</com:relationship>
+    </ord:queryTask>
+    <ord:canCreateOrders>true</ord:canCreateOrders>
+    <ord:summaryTask>
+      <com:entity>FalloutCreationTask</com:entity>
+      <com:entityType>manualTask</com:entityType>
+      <com:relationship>com.mslv.studio.provisioning.queryTask</com:relationship>
+    </ord:summaryTask>
+    <ord:detailTask>
+      <com:entity>FalloutCreationTask</com:entity>
+      <com:entityType>manualTask</com:entityType>
+      <com:relationship>com.mslv.studio.provisioning.queryTask</com:relationship>
+    </ord:detailTask>
+  </ord:orderPermission>
+</com:modelEntity>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>OsmCentralOMExample-Solution</name>
+	<comment></comment>
+	<projects>
+		<project>OracleComms_OSM_CommonDataDictionary</project>
+		<project>OsmCentralOMExample-Orchestration</project>
+		<project>OsmCentralOMExample-ProductClasses</project>
+		<project>OsmCentralOMExample-ProductSpec</project>
+		<project>OsmCentralOMExample-SyncCustomerFunction</project>
+		<project>OsmCentralOMExample-Topology</project>
+		<project>OsmCentralOMExample-CollectionsFunction</project>
+		<project>OsmCentralOMExample-BillingFunction</project>
+		<project>OsmCentralOMExample-MarketingFunction</project>
+		<project>OsmCentralOMExample-ProvisioningFunction</project>
+		<project>OsmCentralOMExample-FulfillmentState</project>
+		<project>OsmCentralOMExample-ShipFunction</project>
+		<project>OsmCentralOMExample-Resources</project>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>com.mslv.studio.core.builder.generator</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>com.mslv.studio.core.builder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>oracle.communications.studio.osm.cartridge.composite.core.nature</nature>
+		<nature>com.mslv.studio.core.nature</nature>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+</projectDescription>

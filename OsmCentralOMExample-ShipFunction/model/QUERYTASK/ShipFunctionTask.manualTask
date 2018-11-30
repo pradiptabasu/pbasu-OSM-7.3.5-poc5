@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aut="http://xmlns.oracle.com/communications/sce/osm/model/process/task/automation" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:prov="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xmlns:task="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xmlns="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xsi:type="task:manualTaskType" name="ShipFunctionTask">
+  <com:displayName>ShipFunctionTask</com:displayName>
+  <com:saveVersion>3</com:saveVersion>
+  <com:id>MTkgtS8X--+nHLZBneQdSQ</com:id>
+  <task:orderType>
+    <com:entity>OsmCentralOMExampleOrder</com:entity>
+    <com:entityType>order</com:entityType>
+    <com:relationship>com.mslv.studio.provisioning.task.manual.orderType</com:relationship>
+  </task:orderType>
+  <task:viewNodeExtension>
+    <task:path>/ControlData</task:path>
+    <task:editable>true</task:editable>
+    <task:defaultValue></task:defaultValue>
+  </task:viewNodeExtension>
+  <task:viewNodeExtension>
+    <task:path>/ControlData/OrderFulfillmentState</task:path>
+    <task:editable>true</task:editable>
+    <task:defaultValue></task:defaultValue>
+  </task:viewNodeExtension>
+  <task:extensionBase>
+    <com:entity>ShippingBaseTask</com:entity>
+    <com:entityType>manualTask</com:entityType>
+    <com:relationship>com.mslv.studio.provisioning.task.manual.extensionBase</com:relationship>
+  </task:extensionBase>
+  <task:state name="accepted">
+    <task:displayName>Accepted</task:displayName>
+  </task:state>
+  <task:state name="completed">
+    <task:displayName>Completed</task:displayName>
+  </task:state>
+  <task:state name="received">
+    <task:displayName>Received</task:displayName>
+  </task:state>
+  <task:state name="assigned">
+    <task:displayName>Assigned</task:displayName>
+  </task:state>
+  <task:status name="next">
+    <task:displayName>Next</task:displayName>
+    <task:allowableConstraintViolationSeverity>WARNING</task:allowableConstraintViolationSeverity>
+  </task:status>
+  <task:status name="back">
+    <task:displayName>Back</task:displayName>
+    <task:allowableConstraintViolationSeverity>WARNING</task:allowableConstraintViolationSeverity>
+  </task:status>
+  <task:status name="finish">
+    <task:displayName>Finish</task:displayName>
+    <task:allowableConstraintViolationSeverity>WARNING</task:allowableConstraintViolationSeverity>
+  </task:status>
+  <task:status name="cancel">
+    <task:displayName>Cancel</task:displayName>
+    <task:allowableConstraintViolationSeverity>WARNING</task:allowableConstraintViolationSeverity>
+  </task:status>
+  <task:abstract>false</task:abstract>
+  <task:final>false</task:final>
+  <task:expectedDuration>P0Y0M0DT0H0M86400S</task:expectedDuration>
+  <task:responsible>System</task:responsible>
+  <task:scheduleType>SYSTEM</task:scheduleType>
+  <task:workgroupPermission>
+    <com:entity>SummaryRole</com:entity>
+    <com:entityType>rolePermissions</com:entityType>
+    <com:relationship>com.mslv.studio.provisioning.task.rolePermission</com:relationship>
+    <task:executionModes>do redo undo</task:executionModes>
+  </task:workgroupPermission>
+</com:modelEntity>

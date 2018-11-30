@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ord:CreateOrder
+	xmlns:ord="http://xmlns.oracle.com/communications/ordermanagement">
+	<im:order xmlns:im="http://xmlns.oracle.com/FalloutMessage"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		
+		<im:numSalesOrder>123456AB</im:numSalesOrder>
+		<im:typeOrder>Add</im:typeOrder>
+		
+	</im:order>
+</ord:CreateOrder>

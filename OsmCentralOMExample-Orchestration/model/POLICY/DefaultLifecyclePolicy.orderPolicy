@@ -1,0 +1,1648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:ord="http://xmlns.oracle.com/communications/sce/osm/model/order" xmlns="http://xmlns.oracle.com/communications/sce/osm/model/order" xmlns:prov="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xsi:type="ord:orderStatePolicyType" name="DefaultLifecyclePolicy">
+  <com:displayName>DefaultLifecyclePolicy</com:displayName>
+  <com:saveVersion>9</com:saveVersion>
+  <com:id>4scbrqk0--+I--+Rq28E6w</com:id>
+  <ord:amendingOrderState>
+    <ord:submitAmendmentOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:submitAmendmentOrderTransaction>
+    <ord:suspendOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:suspendOrderTransaction>
+    <ord:abortOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:abortOrderTransaction>
+  </ord:amendingOrderState>
+  <ord:cancelledOrderState>
+    <ord:deleteOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:deleteOrderTransaction>
+    <ord:resumeOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:resumeOrderTransaction>
+    <ord:updateOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:updateOrderTransaction>
+    <ord:abortOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:abortOrderTransaction>
+  </ord:cancelledOrderState>
+  <ord:cancellingOrderState>
+    <ord:suspendOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:suspendOrderTransaction>
+    <ord:abortOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:abortOrderTransaction>
+  </ord:cancellingOrderState>
+  <ord:completedOrderState>
+    <ord:deleteOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:deleteOrderTransaction>
+    <ord:updateOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:updateOrderTransaction>
+  </ord:completedOrderState>
+  <ord:inProgressState>
+    <ord:cancelOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:cancelOrderTransaction>
+    <ord:processAmendmentOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:processAmendmentOrderTransaction>
+    <ord:raiseExceptionTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:raiseExceptionTransaction>
+    <ord:submitAmendmentOrderTransaction>
+      <ord:condition name="ValidRevisionCondition">
+        <prov:expression>let $dataChanges := fn:root(.)/GetOrder.Response/RevisionPerspective/Changes/*[@significant='true']&#xD;
+return&#xD;
+    if (fn:exists($dataChanges))&#xD;
+    then true()&#xD;
+    else false()&#xD;
+&#xD;
+</prov:expression>
+        <prov:errorMsgSeverity>
+          <prov:severity>ERROR</prov:severity>
+          <prov:message>False Revision detected. There is no change in Significant data</prov:message>
+        </prov:errorMsgSeverity>
+      </ord:condition>
+      <ord:condition name="HardPONRCondition">
+        <prov:expression>declare variable $PONR_NOT_YET := &quot;NOT YET&quot;;&#xD;
+&#xD;
+(:&#xD;
+ : Function for Hard Point Of No Return (PONR), return = true means no PONR has been reached or raise an error is PONR has been reached&#xD;
+ :)&#xD;
+declare function local:allowRevision(&#xD;
+    $taskData as element()) as xs:boolean&#xD;
+{    &#xD;
+    let $rootData := $taskData/_root&#xD;
+    let $changes := $taskData/RevisionPerspective/Changes&#xD;
+    return&#xD;
+        if (fn:exists($rootData) and fn:exists($changes))&#xD;
+        then&#xD;
+        (&#xD;
+            let $changedOrderItems as element()* := local:getChangedOrderItems($rootData, $changes)&#xD;
+            let $revisionOrderItemsPastHardPONR as xs:string* :=&#xD;
+                for $orderItem in $changedOrderItems&#xD;
+                    return local:getOrderItemsPastHardPONR($orderItem)&#xD;
+            &#xD;
+            return fn:not(fn:exists($revisionOrderItemsPastHardPONR))&#xD;
+        )&#xD;
+        else fn:true()&#xD;
+};&#xD;
+&#xD;
+declare function local:getChangedOrderItems(&#xD;
+    $root as element(), &#xD;
+    $changes as element()) as element()*&#xD;
+{&#xD;
+    let $indices := local:getOrderItemIndicesForChecking($changes)&#xD;
+    let $distinctIndicies := fn:distinct-values($indices)&#xD;
+    for $index in $distinctIndicies&#xD;
+        return local:getOrderItem($root, $index)&#xD;
+};&#xD;
+&#xD;
+declare function local:getOrderItemIndicesForChecking(&#xD;
+    $changes as element()) as xs:string*&#xD;
+{&#xD;
+    for $change in $changes/*[@significant = &quot;true&quot;]&#xD;
+        return local:getOrderItemIndex($change)&#xD;
+};&#xD;
+&#xD;
+declare function local:getOrderItemIndex(&#xD;
+    $changeNode as element()) as xs:string*&#xD;
+{&#xD;
+    let $changeType := local-name($changeNode)&#xD;
+    let $tokens := fn:tokenize($changeNode/@path, &quot;/&quot;)&#xD;
+    let $t1 := $tokens[position() = 2]&#xD;
+    let $t2 := $tokens[position() = 3]&#xD;
+    let $t3 := $tokens[position() = 4]&#xD;
+    let $t4 := $tokens[position() = 5]&#xD;
+    return &#xD;
+        if (fn:starts-with($t1, &quot;ControlData&quot;) and fn:starts-with($t2, &quot;Functions&quot;)) then&#xD;
+            (: /ControlData/Functions/*Function/orderItem/... :)&#xD;
+            local:getOrderItemIndexInFunction(&#xD;
+                fn:root($changeNode)/GetOrder.Response/_root,&#xD;
+                fn:substring-before(fn:substring-after($t2,&quot;'&quot;), &quot;'&quot;), (: Functions/@index, if exists :) &#xD;
+                fn:substring-before(fn:substring-after($t3,&quot;'&quot;), &quot;'&quot;), (: e.g. SyncCustomerFunction/@index :)&#xD;
+                fn:substring-before(fn:substring-after($t4,&quot;'&quot;), &quot;'&quot;)) (: e.g. orderItem/@index :)&#xD;
+        else&#xD;
+                &quot;&quot;           &#xD;
+};&#xD;
+&#xD;
+declare function local:getOrderItemIndexInFunction(&#xD;
+    $root as element(),&#xD;
+    $functionsIndex as xs:string,&#xD;
+    $functionIndex as xs:string,&#xD;
+    $orderItemIndex as xs:string) as xs:string*&#xD;
+{&#xD;
+    if (fn:boolean($functionsIndex)) then &#xD;
+        $root/ControlData/Functions[@index = $functionsIndex]/*[@index = $functionIndex]/orderItem[@index = $orderItemIndex]/orderItemRef/@referencedIndex&#xD;
+    else&#xD;
+        $root/ControlData/Functions/*[@index = $functionIndex]/orderItem[@index = $orderItemIndex]/orderItemRef/@referencedIndex    &#xD;
+};&#xD;
+&#xD;
+declare function local:getOrderItem(&#xD;
+    $root as element(), &#xD;
+    $orderItemIndex as xs:string) as element()*&#xD;
+{&#xD;
+    $root/ControlData/OrderItem[@index = $orderItemIndex]    &#xD;
+};&#xD;
+&#xD;
+declare function local:getOrderItemsPastHardPONR(&#xD;
+    $orderItem as element()) as xs:string*&#xD;
+{&#xD;
+    let $lineId as xs:string := local:getLineId($orderItem)&#xD;
+    let $pointOfNoReturn as xs:string := local:getPointOfNoReturn($orderItem)&#xD;
+    let $isHardPONRReached := if ($pointOfNoReturn = &quot;HARD&quot;) &#xD;
+                                                          then true() &#xD;
+                                                          else false()&#xD;
+    return&#xD;
+        if ($isHardPONRReached)&#xD;
+        then $lineId&#xD;
+        else ()&#xD;
+};&#xD;
+&#xD;
+declare function local:getLineId(&#xD;
+    $orderItem as element()) as xs:string&#xD;
+{&#xD;
+    fn:normalize-space($orderItem/LineID/text())&#xD;
+};&#xD;
+&#xD;
+declare function local:getPointOfNoReturn(&#xD;
+    $orderItem as element()) as xs:string&#xD;
+{&#xD;
+    let $ponrData := fn:normalize-space($orderItem/PointOfNoReturn/text())&#xD;
+    let $ponrCode :=&#xD;
+        if (fn:empty($ponrData))  &#xD;
+        then $PONR_NOT_YET&#xD;
+        else&#xD;
+        (&#xD;
+            let $lastPonrValue := fn:normalize-space($orderItem/PointOfNoReturn[last()]/text())&#xD;
+            return&#xD;
+                (: We are looking for strings with either [xxxx]xxxx or xxxx format. Return what is in the [] or the whole string if no brackets. :)&#xD;
+                let $hard1 := fn:tokenize($lastPonrValue, &quot;\[|\]&quot;) return fn:concat( $hard1[1] , $hard1[2] )&#xD;
+        )&#xD;
+    return&#xD;
+        $ponrCode                    &#xD;
+};&#xD;
+&#xD;
+(:&#xD;
+ : Function for detecting false revision order&#xD;
+ : return = true means there are significant data changes in the revision order&#xD;
+ :)&#xD;
+declare function local:doSignificantChangesExist(&#xD;
+    $taskData as element()) as xs:boolean&#xD;
+{    &#xD;
+    let $dataChanges := $taskData/RevisionPerspective/Changes/*[@significant='true']&#xD;
+    return&#xD;
+        if (fn:exists($dataChanges))&#xD;
+        then true()&#xD;
+        else false()&#xD;
+};&#xD;
+&#xD;
+(: Only for valid revision do the complex calculation.:)&#xD;
+let $taskData := fn:root(.)/GetOrder.Response&#xD;
+let $isValidRevision := local:doSignificantChangesExist($taskData)&#xD;
+return if ($isValidRevision) &#xD;
+then&#xD;
+    local:allowRevision($taskData)&#xD;
+else&#xD;
+    fn:true()</prov:expression>
+        <prov:errorMsgSeverity>
+          <prov:severity>ERROR</prov:severity>
+          <prov:message>Order Past Point of No Return. Revision cannot be submitted</prov:message>
+        </prov:errorMsgSeverity>
+      </ord:condition>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:submitAmendmentOrderTransaction>
+    <ord:suspendOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:suspendOrderTransaction>
+    <ord:updateOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:updateOrderTransaction>
+    <ord:failOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:failOrderTransaction>
+    <ord:abortOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:abortOrderTransaction>
+  </ord:inProgressState>
+  <ord:notStartedOrderState>
+    <ord:deleteOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:deleteOrderTransaction>
+    <ord:suspendOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:suspendOrderTransaction>
+    <ord:updateOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:updateOrderTransaction>
+    <ord:failOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:failOrderTransaction>
+    <ord:abortOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:abortOrderTransaction>
+  </ord:notStartedOrderState>
+  <ord:suspendedOrderState>
+    <ord:cancelOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:cancelOrderTransaction>
+    <ord:resumeOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:resumeOrderTransaction>
+    <ord:submitAmendmentOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:submitAmendmentOrderTransaction>
+    <ord:updateOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:updateOrderTransaction>
+    <ord:failOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:failOrderTransaction>
+    <ord:abortOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:abortOrderTransaction>
+  </ord:suspendedOrderState>
+  <ord:abortedOrderState>
+    <ord:deleteOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:deleteOrderTransaction>
+    <ord:updateOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:updateOrderTransaction>
+  </ord:abortedOrderState>
+  <ord:failedOrderState>
+    <ord:updateOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:updateOrderTransaction>
+    <ord:submitAmendmentOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:submitAmendmentOrderTransaction>
+    <ord:cancelOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:cancelOrderTransaction>
+    <ord:abortOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:abortOrderTransaction>
+    <ord:resolveFailureOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:resolveFailureOrderTransaction>
+  </ord:failedOrderState>
+  <ord:waitingForRevisionOrderState>
+    <ord:updateOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:updateOrderTransaction>
+    <ord:resumeOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:resumeOrderTransaction>
+    <ord:submitAmendmentOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:submitAmendmentOrderTransaction>
+    <ord:cancelOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:cancelOrderTransaction>
+    <ord:failOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:failOrderTransaction>
+    <ord:abortOrderTransaction>
+      <ord:permission name="Permission">
+        <ord:workgroup>
+          <com:entity>BillingUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>DefaultRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisionRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>ProvisioningUpdateRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>SummaryRole</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+        <ord:workgroup>
+          <com:entity>automation</com:entity>
+          <com:entityType>rolePermissions</com:entityType>
+          <com:relationship>com.mslv.studio.provisioning.order.orderPolicy.role</com:relationship>
+        </ord:workgroup>
+      </ord:permission>
+    </ord:abortOrderTransaction>
+  </ord:waitingForRevisionOrderState>
+</com:modelEntity>

@@ -4,7 +4,7 @@
   <com:information>The BillingFunction order component specification is a function that represents any request that needs to be sent to billing. A billing request can be used to initiate bill notifications to a customer or apply discounts or pricing promotions.&#xD;
 &#xD;
 This order component specification is used in the determine fulfillment function decomposition stage. Order items are targeted to this order component specification through the product specification. In this sample cartridge, Service.Mobile, Service.Fixed and Service.Broadband specify that the BillingFunction is a required component for any order items that are categorized as part of these product specifications. Also note that a BillingSI process has been assigned to this order component, meaning that the BillingSI process will be executed for every order component that is derived from this order component.</com:information>
-  <com:saveVersion>29</com:saveVersion>
+  <com:saveVersion>37</com:saveVersion>
   <com:id>I6saXgIs--+vIwErGbZD5w</com:id>
   <namespace>http://oracle.communications.ordermanagement.unsupported.centralom</namespace>
   <extends>
@@ -181,6 +181,7 @@ This order component specification is used in the determine fulfillment function
     </ord:nodeExtension>
     <ord:nodeExtension>
       <ord:path>/ControlData/Functions/BillingFunction/duration</ord:path>
+      <ord:significant>true</ord:significant>
     </ord:nodeExtension>
     <ord:nodeExtension>
       <ord:path>/ControlData/Functions/BillingFunction/calculatedStartDate</ord:path>

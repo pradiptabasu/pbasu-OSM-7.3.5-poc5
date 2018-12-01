@@ -4,7 +4,7 @@
   <com:information>The ProvisioningFunction order component specification is a function that represents any request that needs to be sent to any provisioning system. A provisioning request asks a provisioning system to turn up, modify or even turn down one or more services.&#xD;
 &#xD;
 This order component specification is used in the determine fulfillment function decomposition stage. Order items are targeted to this order component specification through the product specification. In this sample cartridge, Service.Mobile, Service.Fixed and Service.Broadband specify that the ProvisioningFunction is a required component for any order items that are categorized as part of these product specifications. Notice in this sample cartridge that a single provisioning function is used generically across multiple provisioning systems. Also note that a ProvisioningSI process has been assigned to this order component, meaning that the ProvisioningSI process will be executed for every order component that is derived from this order component.</com:information>
-  <com:saveVersion>25</com:saveVersion>
+  <com:saveVersion>33</com:saveVersion>
   <com:id>---B--+y--+V---9jwcsyA</com:id>
   <namespace>http://oracle.communications.ordermanagement.unsupported.centralom</namespace>
   <extends>
@@ -262,6 +262,7 @@ This order component specification is used in the determine fulfillment function
     </ord:nodeExtension>
     <ord:nodeExtension>
       <ord:path>/ControlData/Functions/ProvisioningFunction/duration</ord:path>
+      <ord:significant>true</ord:significant>
     </ord:nodeExtension>
     <ord:orderData>
       <com:entity>OracleComms_OSM_CommonDataDictionary</com:entity>

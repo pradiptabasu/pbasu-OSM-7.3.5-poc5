@@ -4,7 +4,7 @@
   <com:information>The MarketingFunction order component specification is a function that represents any request that needs to be sent to the marketing system. A marketing request notifies the marketing system of new services that have been turned up for a customer.&#xD;
 &#xD;
 This order component specification is used in the determine fulfillment function decomposition stage. Order items are targeted to this order component specification through the product specification. In this sample cartridge, Service.Mobile, Service.Fixed and Service.Broadband specify that the MarketingFunction is a required component for any order items that are categorized as part of these product specifications. Also note that a MarketingSI process has been assigned to this order component, meaning that the MarketingSI process will be executed for every order component that is derived from this order component.</com:information>
-  <com:saveVersion>24</com:saveVersion>
+  <com:saveVersion>32</com:saveVersion>
   <com:id>D2psHVFb--+Z---v---i9g</com:id>
   <namespace>http://oracle.communications.ordermanagement.unsupported.centralom</namespace>
   <extends>
@@ -166,6 +166,7 @@ This order component specification is used in the determine fulfillment function
     </ord:nodeExtension>
     <ord:nodeExtension>
       <ord:path>/ControlData/Functions/MarketingFunction/duration</ord:path>
+      <ord:significant>true</ord:significant>
     </ord:nodeExtension>
     <ord:orderData>
       <com:entity>OracleComms_OSM_CommonDataDictionary</com:entity>

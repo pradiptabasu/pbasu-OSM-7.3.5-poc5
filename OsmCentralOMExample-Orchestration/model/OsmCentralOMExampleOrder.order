@@ -1,840 +1,1002 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<com:modelEntity xmlns="http://xmlns.oracle.com/communications/sce/osm/model/order" xmlns:automation="http://xmlns.oracle.com/communications/sce/osm/model/process/task/automation" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:ord="http://xmlns.oracle.com/communications/sce/osm/model/order" xmlns:prov="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xmlns:task="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="OsmCentralOMExampleOrder" xsi:type="ord:orderType">
+<?xml version="1.0" encoding="UTF-8"?>
+<com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.oracle.com/communications/sce/osm/model/order" xmlns:ord="http://xmlns.oracle.com/communications/sce/osm/model/order" xmlns:automation="http://xmlns.oracle.com/communications/sce/osm/model/process/task/automation" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:prov="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xmlns:task="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xsi:type="orderType" name="OsmCentralOMExampleOrder">
   <com:displayName>OsmCentralOMExampleOrder</com:displayName>
-  <com:saveVersion>94</com:saveVersion>
+  <com:saveVersion>101</com:saveVersion>
   <com:id>g8V7--+d--+1---EnCUJpA</com:id>
-  <ord:amendable>true</ord:amendable>
-  <ord:keyDef name="Key">
+  <amendable>true</amendable>
+  <keyDef name="Key">
     <prov:expression>_root/OrderHeader/numSalesOrder</prov:expression>
-  </ord:keyDef>
-  <ord:orderSource>
-    <ord:creationTask>
+  </keyDef>
+  <orderSource>
+    <creationTask>
       <com:entity>OsmCentralOMExampleCreationTask</com:entity>
       <com:entityType>manualTask</com:entityType>
       <com:relationship>com.mslv.studio.provisioning.order.creationTask</com:relationship>
-    </ord:creationTask>
-    <ord:defaultProcess>
+    </creationTask>
+    <defaultProcess>
       <com:entity>OMExampleOrchestrationProcess</com:entity>
       <com:entityType>orchestrationProcess</com:entityType>
       <com:relationship>com.mslv.studio.provisioning.order.defaultProcess</com:relationship>
-    </ord:defaultProcess>
-  </ord:orderSource>
-  <ord:orderTemplate>
-    <ord:nodeExtension>
-      <ord:path>/order</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/OrderItem</ord:path>
-      <ord:keyExpression name="Key">
+    </defaultProcess>
+  </orderSource>
+  <orderTemplate>
+    <nodeExtension>
+      <path>/order</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/OrderItem</path>
+      <keyExpression name="Key">
         <prov:expression>./lineId</prov:expression>
-      </ord:keyExpression>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/OrderItem/productClass</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/OrderItem/productSpec</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/OrderItem/lineId</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/OrderItem/parentLineId</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/OrderItem/lineItemName</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/OrderItem/requestedDeliveryDate</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/BillingFunction</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/BillingFunction/componentKey</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/BillingFunction/orderItem</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/MarketingFunction</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/MarketingFunction/orderItem</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/MarketingFunction/componentKey</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/ProvisioningFunction</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/ProvisioningFunction/componentKey</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/ProvisioningFunction/orderItem</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/SyncCustomerFunction</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/SyncCustomerFunction/componentKey</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/SyncCustomerFunction/orderItem</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/SyncCustomerFunction/orderItem/orderItemRef</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/SyncCustomerFunction/orderItem/orderItemRef/productClass</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/SyncCustomerFunction/orderItem/orderItemRef/productSpec</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/SyncCustomerFunction/orderItem/orderItemRef/lineId</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/SyncCustomerFunction/orderItem/orderItemRef/lineItemName</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/SyncCustomerFunction/orderItem/orderItemRef/requestedDeliveryDate</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/ProvisioningFunction/orderItem/orderItemRef</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/ProvisioningFunction/orderItem/orderItemRef/productClass</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/ProvisioningFunction/orderItem/orderItemRef/productSpec</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/ProvisioningFunction/orderItem/orderItemRef/lineId</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/ProvisioningFunction/orderItem/orderItemRef/lineItemName</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/ProvisioningFunction/orderItem/orderItemRef/requestedDeliveryDate</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/MarketingFunction/orderItem/orderItemRef</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/MarketingFunction/orderItem/orderItemRef/productClass</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/MarketingFunction/orderItem/orderItemRef/productSpec</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/MarketingFunction/orderItem/orderItemRef/lineId</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/MarketingFunction/orderItem/orderItemRef/lineItemName</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/MarketingFunction/orderItem/orderItemRef/requestedDeliveryDate</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/BillingFunction/orderItem/orderItemRef</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/BillingFunction/orderItem/orderItemRef/productClass</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/BillingFunction/orderItem/orderItemRef/productSpec</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/BillingFunction/orderItem/orderItemRef/lineId</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/BillingFunction/orderItem/orderItemRef/lineItemName</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/BillingFunction/orderItem/orderItemRef/requestedDeliveryDate</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/CustomerDetails</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/CustomerDetails/locationType</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/CustomerDetails/nameLocation</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/CustomerDetails/number</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/CustomerDetails/typeCompl</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/CustomerDetails/numCompl</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/CustomerDetails/district</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/CustomerDetails/codeLocation</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/CustomerDetails/city</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/CustomerDetails/state</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/CustomerDetails/referencePoint</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/CustomerDetails/areaCode</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/CustomerDetails/typeAddress</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/OrderItem/region</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/BillingFunction/orderItem/orderItemRef/parentLineId</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/MarketingFunction/orderItem/orderItemRef/parentLineId</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/CollectionsFunction</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/CollectionsFunction/componentKey</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/CollectionsFunction/orderItem</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/CollectionsFunction/orderItem/orderItemRef</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/CollectionsFunction/orderItem/orderItemRef/productClass</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/CollectionsFunction/orderItem/orderItemRef/productSpec</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/CollectionsFunction/orderItem/orderItemRef/lineId</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/CollectionsFunction/orderItem/orderItemRef/lineItemName</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/CollectionsFunction/orderItem/orderItemRef/requestedDeliveryDate</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/CollectionsFunction/orderItem/orderItemRef/parentLineId</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/SyncCustomerFunction/orderItem/orderItemRef/parentLineId</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/ProvisioningFunction/orderItem/orderItemRef/parentLineId</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/BillingFunction/orderItem/orderItemRef/region</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/MarketingFunction/orderItem/orderItemRef/region</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/CollectionsFunction/orderItem/orderItemRef/region</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/SyncCustomerFunction/orderItem/orderItemRef/region</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/ProvisioningFunction/orderItem/orderItemRef/region</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/OrderItem/typeCode</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/BillingFunction/orderItem/orderItemRef/typeCode</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/CollectionsFunction/orderItem/orderItemRef/typeCode</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/MarketingFunction/orderItem/orderItemRef/typeCode</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/SyncCustomerFunction/orderItem/orderItemRef/typeCode</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/ProvisioningFunction/orderItem/orderItemRef/typeCode</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/BillingFunction/Status</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/BillingFunction/Status/Id</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/BillingFunction/Status/Message</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/SyncCustomerFunction/Status</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/SyncCustomerFunction/Status/Id</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/SyncCustomerFunction/Status/Message</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/MarketingFunction/Status</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/MarketingFunction/Status/Id</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/MarketingFunction/Status/Message</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/ProvisioningFunction/Status</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/ProvisioningFunction/Status/Id</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/ProvisioningFunction/Status/Message</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/CollectionsFunction/Status</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/CollectionsFunction/Status/Id</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/CollectionsFunction/Status/Message</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/SyncCustomerFunction/Status/ErrorCode</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/SyncCustomerFunction/Status/ErrorMessage</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/MarketingFunction/Status/ErrorCode</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/MarketingFunction/Status/ErrorMessage</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/CollectionsFunction/Status/ErrorCode</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/CollectionsFunction/Status/ErrorMessage</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/SyncCustomerFunction/Status/ErrorStatus</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/ProvisioningFunction/Status/ErrorCode</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/ProvisioningFunction/Status/ErrorMessage</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/ProvisioningFunction/Status/ErrorStatus</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/MarketingFunction/Status/ErrorStatus</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/CollectionsFunction/Status/ErrorStatus</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/BillingFunction/Status/ErrorCode</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/BillingFunction/Status/ErrorMessage</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/BillingFunction/Status/ErrorStatus</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/OrderHeader</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/OrderHeader/numSalesOrder</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/OrderHeader/typeOrder</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/OrderItem/serviceId</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/CollectionsFunction/orderItem/orderItemRef/serviceId</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/SyncCustomerFunction/orderItem/orderItemRef/serviceId</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/ProvisioningFunction/orderItem/orderItemRef/serviceId</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/MarketingFunction/orderItem/orderItemRef/serviceId</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/BillingFunction/orderItem/orderItemRef/serviceId</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/OrderItem/lineItemPayload</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/AccountDetails</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/AccountDetails/numAccount</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/AccountDetails/status</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/AccountDetails/corporate</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/AccountDetails/cpfClient</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/AccountDetails/cnpjClient</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/AccountDetails/inscrState</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/AccountDetails/clientSince</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/AccountDetails/category</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/ProvisioningFunction/SystemInteraction</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/ProvisioningFunction/SystemInteraction/ConversationId</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/BillingFunction/orderItem/orderItemRef/lineItemPayload</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/CollectionsFunction/orderItem/orderItemRef/lineItemPayload</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/SyncCustomerFunction/orderItem/orderItemRef/lineItemPayload</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/MarketingFunction/orderItem/orderItemRef/lineItemPayload</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/ProvisioningFunction/orderItem/orderItemRef/lineItemPayload</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/OrderItem/ResponseParamGroup</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/OrderItem/ResponseParamGroup/ResponseParam</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/OrderItem/ResponseParamGroup/ResponseParam/paramName</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/OrderItem/ResponseParamGroup/ResponseParam/paramValue</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/BillingFunction/orderItem/orderItemRef/ResponseParamGroup</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/BillingFunction/orderItem/orderItemRef/ResponseParamGroup/ResponseParam</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/BillingFunction/orderItem/orderItemRef/ResponseParamGroup/ResponseParam/paramName</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/BillingFunction/orderItem/orderItemRef/ResponseParamGroup/ResponseParam/paramValue</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/SyncCustomerFunction/orderItem/orderItemRef/ResponseParamGroup</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/SyncCustomerFunction/orderItem/orderItemRef/ResponseParamGroup/ResponseParam</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/SyncCustomerFunction/orderItem/orderItemRef/ResponseParamGroup/ResponseParam/paramName</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/SyncCustomerFunction/orderItem/orderItemRef/ResponseParamGroup/ResponseParam/paramValue</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/ProvisioningFunction/orderItem/orderItemRef/ResponseParamGroup</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/ProvisioningFunction/orderItem/orderItemRef/ResponseParamGroup/ResponseParam</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/ProvisioningFunction/orderItem/orderItemRef/ResponseParamGroup/ResponseParam/paramName</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/ProvisioningFunction/orderItem/orderItemRef/ResponseParamGroup/ResponseParam/paramValue</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/MarketingFunction/orderItem/orderItemRef/ResponseParamGroup</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/MarketingFunction/orderItem/orderItemRef/ResponseParamGroup/ResponseParam</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/MarketingFunction/orderItem/orderItemRef/ResponseParamGroup/ResponseParam/paramName</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/MarketingFunction/orderItem/orderItemRef/ResponseParamGroup/ResponseParam/paramValue</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/CollectionsFunction/orderItem/orderItemRef/ResponseParamGroup</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/CollectionsFunction/orderItem/orderItemRef/ResponseParamGroup/ResponseParam</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/CollectionsFunction/orderItem/orderItemRef/ResponseParamGroup/ResponseParam/paramName</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/CollectionsFunction/orderItem/orderItemRef/ResponseParamGroup/ResponseParam/paramValue</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ResponseParamGroup</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ResponseParamGroup/ResponseParam</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ResponseParamGroup/ResponseParam/paramName</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ResponseParamGroup/ResponseParam/paramValue</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/BillingMobileStatus</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/BillingMobileStatus/ErrorCode</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/BillingMobileStatus/ErrorMessage</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/BillingMobileStatus/ErrorStatus</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/BillingFixedStatus</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/BillingFixedStatus/ErrorCode</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/BillingFixedStatus/ErrorMessage</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/BillingFixedStatus/ErrorStatus</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/BillingAdsl</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/BillingAdsl/ErrorCode</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/BillingAdsl/ErrorMessage</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/BillingAdsl/ErrorStatus</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/ProvisioningFixedStatus</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/ProvisioningFixedStatus/ErrorCode</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/ProvisioningFixedStatus/ErrorMessage</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/ProvisioningFixedStatus/ErrorStatus</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/ProvisioningMobileStatus</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/ProvisioningMobileStatus/ErrorCode</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/ProvisioningMobileStatus/ErrorMessage</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/ProvisioningMobileStatus/ErrorStatus</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/ProvisioningAdslExpiditerStatus</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/ProvisioningAdslExpiditerStatus/ErrorCode</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/ProvisioningAdslExpiditerStatus/ErrorMessage</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/ProvisioningAdslExpiditerStatus/ErrorStatus</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/ProvisioningDSLRegion2Status</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/ProvisioningDSLRegion2Status/ErrorCode</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/ProvisioningDSLRegion2Status/ErrorMessage</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/ProvisioningDSLRegion2Status/ErrorStatus</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/SyncCustomerStatus</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/SyncCustomerStatus/ErrorCode</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/SyncCustomerStatus/ErrorMessage</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/SyncCustomerStatus/ErrorStatus</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/MarketingStatus</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/MarketingStatus/ErrorCode</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/MarketingStatus/ErrorMessage</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/MarketingStatus/ErrorStatus</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/CollectionsStatus</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/CollectionsStatus/ErrorCode</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/CollectionsStatus/ErrorMessage</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/CollectionsStatus/ErrorStatus</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/ProvisioningDSLRegion1Status</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/ProvisioningDSLRegion1Status/ErrorCode</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/ProvisioningDSLRegion1Status/ErrorMessage</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/ProvisioningDSLRegion1Status/ErrorStatus</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/BillingStatus</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/BillingStatus/ErrorCode</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/BillingStatus/ErrorMessage</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/Status/BillingStatus/ErrorStatus</ord:path>
-      <ord:significant>false</ord:significant>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/BillingProfile</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/BillingProfile/mediaType</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/BillingProfile/typeInvoice</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/BillingProfile/billingCycle</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/BillingProfile/exemptionICMS</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/BillingProfile/empresaFaturamento</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/BillingProfile/paymentMethod</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/OrderItem/PointOfNoReturn</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/OrderItem/OrderItemFulfillmentState</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/MarketingFunction/orderItem/orderItemRef/PointOfNoReturn</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/MarketingFunction/orderItem/orderItemRef/OrderItemFulfillmentState</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/CollectionsFunction/orderItem/orderItemRef/PointOfNoReturn</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/CollectionsFunction/orderItem/orderItemRef/OrderItemFulfillmentState</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/BillingFunction/orderItem/orderItemRef/PointOfNoReturn</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/BillingFunction/orderItem/orderItemRef/OrderItemFulfillmentState</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/SyncCustomerFunction/orderItem/orderItemRef/PointOfNoReturn</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/SyncCustomerFunction/orderItem/orderItemRef/OrderItemFulfillmentState</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/ProvisioningFunction/orderItem/ExternalFulfillmentState</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/ProvisioningFunction/orderItem/orderItemRef/PointOfNoReturn</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/ProvisioningFunction/orderItem/orderItemRef/OrderItemFulfillmentState</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/CollectionsFunction/orderItem/ExternalFulfillmentState</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/MarketingFunction/orderItem/ExternalFulfillmentState</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/BillingFunction/orderItem/ExternalFulfillmentState</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/Functions/SyncCustomerFunction/orderItem/ExternalFulfillmentState</ord:path>
-    </ord:nodeExtension>
-    <ord:nodeExtension>
-      <ord:path>/ControlData/OrderFulfillmentState</ord:path>
-    </ord:nodeExtension>
-    <ord:orderData>
+      </keyExpression>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/OrderItem/productClass</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/OrderItem/productSpec</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/OrderItem/lineId</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/OrderItem/parentLineId</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/OrderItem/lineItemName</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/OrderItem/requestedDeliveryDate</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/BillingFunction</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/BillingFunction/componentKey</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/BillingFunction/orderItem</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/MarketingFunction</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/MarketingFunction/orderItem</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/MarketingFunction/componentKey</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ProvisioningFunction</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ProvisioningFunction/componentKey</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ProvisioningFunction/orderItem</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/SyncCustomerFunction</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/SyncCustomerFunction/componentKey</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/SyncCustomerFunction/orderItem</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/SyncCustomerFunction/orderItem/orderItemRef</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/SyncCustomerFunction/orderItem/orderItemRef/productClass</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/SyncCustomerFunction/orderItem/orderItemRef/productSpec</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/SyncCustomerFunction/orderItem/orderItemRef/lineId</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/SyncCustomerFunction/orderItem/orderItemRef/lineItemName</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/SyncCustomerFunction/orderItem/orderItemRef/requestedDeliveryDate</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ProvisioningFunction/orderItem/orderItemRef</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ProvisioningFunction/orderItem/orderItemRef/productClass</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ProvisioningFunction/orderItem/orderItemRef/productSpec</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ProvisioningFunction/orderItem/orderItemRef/lineId</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ProvisioningFunction/orderItem/orderItemRef/lineItemName</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ProvisioningFunction/orderItem/orderItemRef/requestedDeliveryDate</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/MarketingFunction/orderItem/orderItemRef</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/MarketingFunction/orderItem/orderItemRef/productClass</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/MarketingFunction/orderItem/orderItemRef/productSpec</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/MarketingFunction/orderItem/orderItemRef/lineId</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/MarketingFunction/orderItem/orderItemRef/lineItemName</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/MarketingFunction/orderItem/orderItemRef/requestedDeliveryDate</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/BillingFunction/orderItem/orderItemRef</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/BillingFunction/orderItem/orderItemRef/productClass</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/BillingFunction/orderItem/orderItemRef/productSpec</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/BillingFunction/orderItem/orderItemRef/lineId</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/BillingFunction/orderItem/orderItemRef/lineItemName</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/BillingFunction/orderItem/orderItemRef/requestedDeliveryDate</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/CustomerDetails</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/CustomerDetails/locationType</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/CustomerDetails/nameLocation</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/CustomerDetails/number</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/CustomerDetails/typeCompl</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/CustomerDetails/numCompl</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/CustomerDetails/district</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/CustomerDetails/codeLocation</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/CustomerDetails/city</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/CustomerDetails/state</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/CustomerDetails/referencePoint</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/CustomerDetails/areaCode</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/CustomerDetails/typeAddress</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/OrderItem/region</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/BillingFunction/orderItem/orderItemRef/parentLineId</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/MarketingFunction/orderItem/orderItemRef/parentLineId</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/CollectionsFunction</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/CollectionsFunction/componentKey</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/CollectionsFunction/orderItem</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/CollectionsFunction/orderItem/orderItemRef</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/CollectionsFunction/orderItem/orderItemRef/productClass</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/CollectionsFunction/orderItem/orderItemRef/productSpec</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/CollectionsFunction/orderItem/orderItemRef/lineId</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/CollectionsFunction/orderItem/orderItemRef/lineItemName</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/CollectionsFunction/orderItem/orderItemRef/requestedDeliveryDate</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/CollectionsFunction/orderItem/orderItemRef/parentLineId</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/SyncCustomerFunction/orderItem/orderItemRef/parentLineId</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ProvisioningFunction/orderItem/orderItemRef/parentLineId</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/BillingFunction/orderItem/orderItemRef/region</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/MarketingFunction/orderItem/orderItemRef/region</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/CollectionsFunction/orderItem/orderItemRef/region</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/SyncCustomerFunction/orderItem/orderItemRef/region</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ProvisioningFunction/orderItem/orderItemRef/region</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/OrderItem/typeCode</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/BillingFunction/orderItem/orderItemRef/typeCode</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/CollectionsFunction/orderItem/orderItemRef/typeCode</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/MarketingFunction/orderItem/orderItemRef/typeCode</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/SyncCustomerFunction/orderItem/orderItemRef/typeCode</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ProvisioningFunction/orderItem/orderItemRef/typeCode</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/BillingFunction/Status</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/BillingFunction/Status/Id</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/BillingFunction/Status/Message</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/SyncCustomerFunction/Status</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/SyncCustomerFunction/Status/Id</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/SyncCustomerFunction/Status/Message</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/MarketingFunction/Status</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/MarketingFunction/Status/Id</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/MarketingFunction/Status/Message</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ProvisioningFunction/Status</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ProvisioningFunction/Status/Id</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ProvisioningFunction/Status/Message</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/CollectionsFunction/Status</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/CollectionsFunction/Status/Id</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/CollectionsFunction/Status/Message</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/SyncCustomerFunction/Status/ErrorCode</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/SyncCustomerFunction/Status/ErrorMessage</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/MarketingFunction/Status/ErrorCode</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/MarketingFunction/Status/ErrorMessage</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/CollectionsFunction/Status/ErrorCode</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/CollectionsFunction/Status/ErrorMessage</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/SyncCustomerFunction/Status/ErrorStatus</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ProvisioningFunction/Status/ErrorCode</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ProvisioningFunction/Status/ErrorMessage</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ProvisioningFunction/Status/ErrorStatus</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/MarketingFunction/Status/ErrorStatus</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/CollectionsFunction/Status/ErrorStatus</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/BillingFunction/Status/ErrorCode</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/BillingFunction/Status/ErrorMessage</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/BillingFunction/Status/ErrorStatus</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/OrderHeader</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/OrderHeader/numSalesOrder</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/OrderHeader/typeOrder</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/OrderItem/serviceId</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/CollectionsFunction/orderItem/orderItemRef/serviceId</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/SyncCustomerFunction/orderItem/orderItemRef/serviceId</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ProvisioningFunction/orderItem/orderItemRef/serviceId</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/MarketingFunction/orderItem/orderItemRef/serviceId</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/BillingFunction/orderItem/orderItemRef/serviceId</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/OrderItem/lineItemPayload</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/AccountDetails</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/AccountDetails/numAccount</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/AccountDetails/status</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/AccountDetails/corporate</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/AccountDetails/cpfClient</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/AccountDetails/cnpjClient</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/AccountDetails/inscrState</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/AccountDetails/clientSince</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/AccountDetails/category</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ProvisioningFunction/SystemInteraction</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ProvisioningFunction/SystemInteraction/ConversationId</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/BillingFunction/orderItem/orderItemRef/lineItemPayload</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/CollectionsFunction/orderItem/orderItemRef/lineItemPayload</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/SyncCustomerFunction/orderItem/orderItemRef/lineItemPayload</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/MarketingFunction/orderItem/orderItemRef/lineItemPayload</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ProvisioningFunction/orderItem/orderItemRef/lineItemPayload</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/OrderItem/ResponseParamGroup</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/OrderItem/ResponseParamGroup/ResponseParam</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/OrderItem/ResponseParamGroup/ResponseParam/paramName</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/OrderItem/ResponseParamGroup/ResponseParam/paramValue</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/BillingFunction/orderItem/orderItemRef/ResponseParamGroup</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/BillingFunction/orderItem/orderItemRef/ResponseParamGroup/ResponseParam</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/BillingFunction/orderItem/orderItemRef/ResponseParamGroup/ResponseParam/paramName</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/BillingFunction/orderItem/orderItemRef/ResponseParamGroup/ResponseParam/paramValue</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/SyncCustomerFunction/orderItem/orderItemRef/ResponseParamGroup</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/SyncCustomerFunction/orderItem/orderItemRef/ResponseParamGroup/ResponseParam</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/SyncCustomerFunction/orderItem/orderItemRef/ResponseParamGroup/ResponseParam/paramName</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/SyncCustomerFunction/orderItem/orderItemRef/ResponseParamGroup/ResponseParam/paramValue</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ProvisioningFunction/orderItem/orderItemRef/ResponseParamGroup</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ProvisioningFunction/orderItem/orderItemRef/ResponseParamGroup/ResponseParam</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ProvisioningFunction/orderItem/orderItemRef/ResponseParamGroup/ResponseParam/paramName</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ProvisioningFunction/orderItem/orderItemRef/ResponseParamGroup/ResponseParam/paramValue</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/MarketingFunction/orderItem/orderItemRef/ResponseParamGroup</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/MarketingFunction/orderItem/orderItemRef/ResponseParamGroup/ResponseParam</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/MarketingFunction/orderItem/orderItemRef/ResponseParamGroup/ResponseParam/paramName</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/MarketingFunction/orderItem/orderItemRef/ResponseParamGroup/ResponseParam/paramValue</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/CollectionsFunction/orderItem/orderItemRef/ResponseParamGroup</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/CollectionsFunction/orderItem/orderItemRef/ResponseParamGroup/ResponseParam</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/CollectionsFunction/orderItem/orderItemRef/ResponseParamGroup/ResponseParam/paramName</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/CollectionsFunction/orderItem/orderItemRef/ResponseParamGroup/ResponseParam/paramValue</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ResponseParamGroup</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ResponseParamGroup/ResponseParam</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ResponseParamGroup/ResponseParam/paramName</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ResponseParamGroup/ResponseParam/paramValue</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/BillingMobileStatus</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/BillingMobileStatus/ErrorCode</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/BillingMobileStatus/ErrorMessage</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/BillingMobileStatus/ErrorStatus</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/BillingFixedStatus</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/BillingFixedStatus/ErrorCode</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/BillingFixedStatus/ErrorMessage</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/BillingFixedStatus/ErrorStatus</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/BillingAdsl</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/BillingAdsl/ErrorCode</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/BillingAdsl/ErrorMessage</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/BillingAdsl/ErrorStatus</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/ProvisioningFixedStatus</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/ProvisioningFixedStatus/ErrorCode</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/ProvisioningFixedStatus/ErrorMessage</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/ProvisioningFixedStatus/ErrorStatus</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/ProvisioningMobileStatus</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/ProvisioningMobileStatus/ErrorCode</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/ProvisioningMobileStatus/ErrorMessage</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/ProvisioningMobileStatus/ErrorStatus</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/ProvisioningAdslExpiditerStatus</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/ProvisioningAdslExpiditerStatus/ErrorCode</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/ProvisioningAdslExpiditerStatus/ErrorMessage</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/ProvisioningAdslExpiditerStatus/ErrorStatus</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/ProvisioningDSLRegion2Status</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/ProvisioningDSLRegion2Status/ErrorCode</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/ProvisioningDSLRegion2Status/ErrorMessage</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/ProvisioningDSLRegion2Status/ErrorStatus</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/SyncCustomerStatus</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/SyncCustomerStatus/ErrorCode</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/SyncCustomerStatus/ErrorMessage</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/SyncCustomerStatus/ErrorStatus</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/MarketingStatus</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/MarketingStatus/ErrorCode</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/MarketingStatus/ErrorMessage</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/MarketingStatus/ErrorStatus</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/CollectionsStatus</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/CollectionsStatus/ErrorCode</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/CollectionsStatus/ErrorMessage</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/CollectionsStatus/ErrorStatus</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/ProvisioningDSLRegion1Status</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/ProvisioningDSLRegion1Status/ErrorCode</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/ProvisioningDSLRegion1Status/ErrorMessage</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/ProvisioningDSLRegion1Status/ErrorStatus</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/BillingStatus</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/BillingStatus/ErrorCode</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/BillingStatus/ErrorMessage</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/BillingStatus/ErrorStatus</path>
+      <significant>false</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/BillingProfile</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/BillingProfile/mediaType</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/BillingProfile/typeInvoice</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/BillingProfile/billingCycle</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/BillingProfile/exemptionICMS</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/BillingProfile/empresaFaturamento</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/BillingProfile/paymentMethod</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/OrderItem/PointOfNoReturn</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/OrderItem/OrderItemFulfillmentState</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/MarketingFunction/orderItem/orderItemRef/PointOfNoReturn</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/MarketingFunction/orderItem/orderItemRef/OrderItemFulfillmentState</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/CollectionsFunction/orderItem/orderItemRef/PointOfNoReturn</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/CollectionsFunction/orderItem/orderItemRef/OrderItemFulfillmentState</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/BillingFunction/orderItem/orderItemRef/PointOfNoReturn</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/BillingFunction/orderItem/orderItemRef/OrderItemFulfillmentState</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/SyncCustomerFunction/orderItem/orderItemRef/PointOfNoReturn</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/SyncCustomerFunction/orderItem/orderItemRef/OrderItemFulfillmentState</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ProvisioningFunction/orderItem/ExternalFulfillmentState</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ProvisioningFunction/orderItem/orderItemRef/PointOfNoReturn</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ProvisioningFunction/orderItem/orderItemRef/OrderItemFulfillmentState</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/CollectionsFunction/orderItem/ExternalFulfillmentState</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/MarketingFunction/orderItem/ExternalFulfillmentState</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/BillingFunction/orderItem/ExternalFulfillmentState</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/SyncCustomerFunction/orderItem/ExternalFulfillmentState</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/OrderFulfillmentState</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ShipFunction</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ShipFunction/componentKey</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/BillingFunction/duration</path>
+      <significant>true</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/BillingFunction/calculatedStartDate</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/BillingProfile/billingRegion</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/CollectionsFunction/calculatedStartDate</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/CollectionsFunction/duration</path>
+      <significant>true</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/MarketingFunction/calculatedStartDate</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/MarketingFunction/duration</path>
+      <significant>true</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ProvisioningFunction/calculatedStartDate</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ProvisioningFunction/duration</path>
+      <significant>true</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ShipFunction/calculatedStartDate</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ShipFunction/duration</path>
+      <significant>true</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/SyncCustomerFunction/calculatedStartDate</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/SyncCustomerFunction/duration</path>
+      <significant>true</significant>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ShipFunction/orderItem</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ShipFunction/orderItem/ExternalFulfillmentState</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ShipFunction/orderItem/orderItemRef</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ShipFunction/orderItem/orderItemRef/productClass</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ShipFunction/orderItem/orderItemRef/productSpec</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ShipFunction/orderItem/orderItemRef/lineId</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ShipFunction/orderItem/orderItemRef/lineItemName</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ShipFunction/orderItem/orderItemRef/requestedDeliveryDate</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ShipFunction/orderItem/orderItemRef/parentLineId</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ShipFunction/orderItem/orderItemRef/region</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ShipFunction/orderItem/orderItemRef/typeCode</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ShipFunction/orderItem/orderItemRef/serviceId</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ShipFunction/orderItem/orderItemRef/lineItemPayload</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ShipFunction/orderItem/orderItemRef/PointOfNoReturn</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ShipFunction/orderItem/orderItemRef/OrderItemFulfillmentState</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ControlData/Functions/ShipFunction/transformedOrderItem</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/ShippingStatus</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/ShippingStatus/ErrorCode</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/ShippingStatus/ErrorMessage</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/Status/ShippingStatus/ErrorStatus</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ShippingProfile</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ShippingProfile/ShippingAddress</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ShippingProfile/ShippingAddress/locationType</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ShippingProfile/ShippingAddress/nameLocation</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ShippingProfile/ShippingAddress/number</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ShippingProfile/ShippingAddress/typeCompl</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ShippingProfile/ShippingAddress/numCompl</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ShippingProfile/ShippingAddress/district</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ShippingProfile/ShippingAddress/codeLocation</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ShippingProfile/ShippingAddress/city</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ShippingProfile/ShippingAddress/state</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ShippingProfile/ShippingAddress/referencePoint</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ShippingProfile/ShippingAddress/areaCode</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ShippingProfile/ShippingAddress/typeAddress</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ShippingProfile/requestedDeliveryDate</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ShippingProfile/expectedDeliveryDate</path>
+    </nodeExtension>
+    <nodeExtension>
+      <path>/ShippingProfile/actualDeliveryDate</path>
+    </nodeExtension>
+    <orderData>
       <com:entity>OsmCentralOMExample-Orchestration</com:entity>
       <com:entityType>xsd</com:entityType>
       <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
@@ -844,18 +1006,18 @@
       <com:namespace>http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample-Orchestration/OsmCentralOMExample-Orchestration</com:namespace>
       <com:baseElement>CustomerAddress</com:baseElement>
       <com:baseNamespace>http://xmlns.oracle.com/OIInputMessage</com:baseNamespace>
-      <ord:childNode>
+      <childNode>
         <com:entity>OsmCentralOMExample-Orchestration</com:entity>
         <com:entityType>xsd</com:entityType>
         <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
         <com:element>CustomerDetails/locationType</com:element>
         <com:elementType>com.mslv.studio.core.data.dictionary.node</com:elementType>
-        <com:elementName>CustomerDetails/locationType</com:elementName>
+        <com:elementName>locationType</com:elementName>
         <com:namespace>http://xmlns.oracle.com/OIInputMessage</com:namespace>
         <com:baseElement>string</com:baseElement>
         <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
-      </ord:childNode>
-      <ord:childNode>
+      </childNode>
+      <childNode>
         <com:entity>OsmCentralOMExample-Orchestration</com:entity>
         <com:entityType>xsd</com:entityType>
         <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
@@ -865,8 +1027,8 @@
         <com:namespace>http://xmlns.oracle.com/OIInputMessage</com:namespace>
         <com:baseElement>string</com:baseElement>
         <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
-      </ord:childNode>
-      <ord:childNode>
+      </childNode>
+      <childNode>
         <com:entity>OsmCentralOMExample-Orchestration</com:entity>
         <com:entityType>xsd</com:entityType>
         <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
@@ -876,8 +1038,8 @@
         <com:namespace>http://xmlns.oracle.com/OIInputMessage</com:namespace>
         <com:baseElement>string</com:baseElement>
         <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
-      </ord:childNode>
-      <ord:childNode>
+      </childNode>
+      <childNode>
         <com:entity>OsmCentralOMExample-Orchestration</com:entity>
         <com:entityType>xsd</com:entityType>
         <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
@@ -887,8 +1049,8 @@
         <com:namespace>http://xmlns.oracle.com/OIInputMessage</com:namespace>
         <com:baseElement>string</com:baseElement>
         <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
-      </ord:childNode>
-      <ord:childNode>
+      </childNode>
+      <childNode>
         <com:entity>OsmCentralOMExample-Orchestration</com:entity>
         <com:entityType>xsd</com:entityType>
         <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
@@ -898,8 +1060,8 @@
         <com:namespace>http://xmlns.oracle.com/OIInputMessage</com:namespace>
         <com:baseElement>string</com:baseElement>
         <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
-      </ord:childNode>
-      <ord:childNode>
+      </childNode>
+      <childNode>
         <com:entity>OsmCentralOMExample-Orchestration</com:entity>
         <com:entityType>xsd</com:entityType>
         <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
@@ -909,8 +1071,8 @@
         <com:namespace>http://xmlns.oracle.com/OIInputMessage</com:namespace>
         <com:baseElement>string</com:baseElement>
         <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
-      </ord:childNode>
-      <ord:childNode>
+      </childNode>
+      <childNode>
         <com:entity>OsmCentralOMExample-Orchestration</com:entity>
         <com:entityType>xsd</com:entityType>
         <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
@@ -920,8 +1082,8 @@
         <com:namespace>http://xmlns.oracle.com/OIInputMessage</com:namespace>
         <com:baseElement>string</com:baseElement>
         <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
-      </ord:childNode>
-      <ord:childNode>
+      </childNode>
+      <childNode>
         <com:entity>OsmCentralOMExample-Orchestration</com:entity>
         <com:entityType>xsd</com:entityType>
         <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
@@ -931,8 +1093,8 @@
         <com:namespace>http://xmlns.oracle.com/OIInputMessage</com:namespace>
         <com:baseElement>string</com:baseElement>
         <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
-      </ord:childNode>
-      <ord:childNode>
+      </childNode>
+      <childNode>
         <com:entity>OsmCentralOMExample-Orchestration</com:entity>
         <com:entityType>xsd</com:entityType>
         <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
@@ -942,8 +1104,8 @@
         <com:namespace>http://xmlns.oracle.com/OIInputMessage</com:namespace>
         <com:baseElement>string</com:baseElement>
         <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
-      </ord:childNode>
-      <ord:childNode>
+      </childNode>
+      <childNode>
         <com:entity>OsmCentralOMExample-Orchestration</com:entity>
         <com:entityType>xsd</com:entityType>
         <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
@@ -953,8 +1115,8 @@
         <com:namespace>http://xmlns.oracle.com/OIInputMessage</com:namespace>
         <com:baseElement>string</com:baseElement>
         <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
-      </ord:childNode>
-      <ord:childNode>
+      </childNode>
+      <childNode>
         <com:entity>OsmCentralOMExample-Orchestration</com:entity>
         <com:entityType>xsd</com:entityType>
         <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
@@ -964,8 +1126,8 @@
         <com:namespace>http://xmlns.oracle.com/OIInputMessage</com:namespace>
         <com:baseElement>string</com:baseElement>
         <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
-      </ord:childNode>
-      <ord:childNode>
+      </childNode>
+      <childNode>
         <com:entity>OsmCentralOMExample-Orchestration</com:entity>
         <com:entityType>xsd</com:entityType>
         <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
@@ -975,9 +1137,9 @@
         <com:namespace>http://xmlns.oracle.com/OIInputMessage</com:namespace>
         <com:baseElement>string</com:baseElement>
         <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
-      </ord:childNode>
-    </ord:orderData>
-    <ord:orderData>
+      </childNode>
+    </orderData>
+    <orderData>
       <com:entity>OsmCentralOMExample-Orchestration</com:entity>
       <com:entityType>xsd</com:entityType>
       <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
@@ -987,18 +1149,18 @@
       <com:namespace>http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample-Orchestration/OsmCentralOMExample-Orchestration</com:namespace>
       <com:baseElement>(Reusable Structure)</com:baseElement>
       <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
-      <ord:childNode>
+      <childNode>
         <com:entity>OsmCentralOMExample-Orchestration</com:entity>
         <com:entityType>xsd</com:entityType>
         <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
         <com:element>OrderHeader/numSalesOrder</com:element>
         <com:elementType>com.mslv.studio.core.data.dictionary.node</com:elementType>
-        <com:elementName>OrderHeader/numSalesOrder</com:elementName>
+        <com:elementName>numSalesOrder</com:elementName>
         <com:namespace>http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample-Orchestration/OsmCentralOMExample-Orchestration</com:namespace>
         <com:baseElement>string</com:baseElement>
         <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
-      </ord:childNode>
-      <ord:childNode>
+      </childNode>
+      <childNode>
         <com:entity>OsmCentralOMExample-Orchestration</com:entity>
         <com:entityType>xsd</com:entityType>
         <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
@@ -1008,9 +1170,9 @@
         <com:namespace>http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample-Orchestration/OsmCentralOMExample-Orchestration</com:namespace>
         <com:baseElement>string</com:baseElement>
         <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
-      </ord:childNode>
-    </ord:orderData>
-    <ord:orderData>
+      </childNode>
+    </orderData>
+    <orderData>
       <com:entity>OsmCentralOMExample-Orchestration</com:entity>
       <com:entityType>xsd</com:entityType>
       <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
@@ -1020,18 +1182,18 @@
       <com:namespace>http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample-Orchestration/OsmCentralOMExample-Orchestration</com:namespace>
       <com:baseElement>CustomerAccountType</com:baseElement>
       <com:baseNamespace>http://xmlns.oracle.com/OIInputMessage</com:baseNamespace>
-      <ord:childNode>
+      <childNode>
         <com:entity>OsmCentralOMExample-Orchestration</com:entity>
         <com:entityType>xsd</com:entityType>
         <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
         <com:element>AccountDetails/numAccount</com:element>
         <com:elementType>com.mslv.studio.core.data.dictionary.node</com:elementType>
-        <com:elementName>AccountDetails/numAccount</com:elementName>
+        <com:elementName>numAccount</com:elementName>
         <com:namespace>http://xmlns.oracle.com/OIInputMessage</com:namespace>
         <com:baseElement>string</com:baseElement>
         <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
-      </ord:childNode>
-      <ord:childNode>
+      </childNode>
+      <childNode>
         <com:entity>OsmCentralOMExample-Orchestration</com:entity>
         <com:entityType>xsd</com:entityType>
         <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
@@ -1041,8 +1203,8 @@
         <com:namespace>http://xmlns.oracle.com/OIInputMessage</com:namespace>
         <com:baseElement>string</com:baseElement>
         <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
-      </ord:childNode>
-      <ord:childNode>
+      </childNode>
+      <childNode>
         <com:entity>OsmCentralOMExample-Orchestration</com:entity>
         <com:entityType>xsd</com:entityType>
         <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
@@ -1052,8 +1214,8 @@
         <com:namespace>http://xmlns.oracle.com/OIInputMessage</com:namespace>
         <com:baseElement>string</com:baseElement>
         <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
-      </ord:childNode>
-      <ord:childNode>
+      </childNode>
+      <childNode>
         <com:entity>OsmCentralOMExample-Orchestration</com:entity>
         <com:entityType>xsd</com:entityType>
         <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
@@ -1063,8 +1225,8 @@
         <com:namespace>http://xmlns.oracle.com/OIInputMessage</com:namespace>
         <com:baseElement>string</com:baseElement>
         <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
-      </ord:childNode>
-      <ord:childNode>
+      </childNode>
+      <childNode>
         <com:entity>OsmCentralOMExample-Orchestration</com:entity>
         <com:entityType>xsd</com:entityType>
         <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
@@ -1074,8 +1236,8 @@
         <com:namespace>http://xmlns.oracle.com/OIInputMessage</com:namespace>
         <com:baseElement>string</com:baseElement>
         <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
-      </ord:childNode>
-      <ord:childNode>
+      </childNode>
+      <childNode>
         <com:entity>OsmCentralOMExample-Orchestration</com:entity>
         <com:entityType>xsd</com:entityType>
         <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
@@ -1085,8 +1247,8 @@
         <com:namespace>http://xmlns.oracle.com/OIInputMessage</com:namespace>
         <com:baseElement>string</com:baseElement>
         <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
-      </ord:childNode>
-      <ord:childNode>
+      </childNode>
+      <childNode>
         <com:entity>OsmCentralOMExample-Orchestration</com:entity>
         <com:entityType>xsd</com:entityType>
         <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
@@ -1096,8 +1258,8 @@
         <com:namespace>http://xmlns.oracle.com/OIInputMessage</com:namespace>
         <com:baseElement>date</com:baseElement>
         <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
-      </ord:childNode>
-      <ord:childNode>
+      </childNode>
+      <childNode>
         <com:entity>OsmCentralOMExample-Orchestration</com:entity>
         <com:entityType>xsd</com:entityType>
         <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
@@ -1107,9 +1269,9 @@
         <com:namespace>http://xmlns.oracle.com/OIInputMessage</com:namespace>
         <com:baseElement>string</com:baseElement>
         <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
-      </ord:childNode>
-    </ord:orderData>
-    <ord:orderData>
+      </childNode>
+    </orderData>
+    <orderData>
       <com:entity>OracleComms_OSM_CommonDataDictionary</com:entity>
       <com:entityType>xsd</com:entityType>
       <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
@@ -1118,7 +1280,7 @@
       <com:namespace>http://xmlns.oracle.com/communications/sce/dictionary/OracleComms_OSM_CommonDataDictionary/OracleComms_OSM_CommonDataDictionary</com:namespace>
       <com:baseElement>(Reusable Structure)</com:baseElement>
       <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
-      <ord:childNode>
+      <childNode>
         <com:entity>OracleComms_OSM_CommonDataDictionary</com:entity>
         <com:entityType>xsd</com:entityType>
         <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
@@ -1128,9 +1290,9 @@
         <com:namespace>http://xmlns.oracle.com/communications/sce/dictionary/OracleComms_OSM_CommonDataDictionary/OracleComms_OSM_CommonDataDictionary</com:namespace>
         <com:baseElement>string</com:baseElement>
         <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
-      </ord:childNode>
-    </ord:orderData>
-    <ord:orderData>
+      </childNode>
+    </orderData>
+    <orderData>
       <com:entity>OsmCentralOMExample-Orchestration</com:entity>
       <com:entityType>xsd</com:entityType>
       <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
@@ -1140,17 +1302,17 @@
       <com:namespace>http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample-Orchestration/OsmCentralOMExample-Orchestration</com:namespace>
       <com:baseElement>(Reusable Structure)</com:baseElement>
       <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
-      <ord:childNode>
+      <childNode>
         <com:entity>OsmCentralOMExample-Orchestration</com:entity>
         <com:entityType>xsd</com:entityType>
         <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
         <com:element>ResponseParamGroup/ResponseParam</com:element>
         <com:elementType>com.mslv.studio.core.data.dictionary.node</com:elementType>
-        <com:elementName>ResponseParamGroup/ResponseParam</com:elementName>
+        <com:elementName>ResponseParam</com:elementName>
         <com:namespace>http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample-Orchestration/OsmCentralOMExample-Orchestration</com:namespace>
         <com:baseElement>(Local Structure)</com:baseElement>
         <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
-        <ord:childNode>
+        <childNode>
           <com:entity>OsmCentralOMExample-Orchestration</com:entity>
           <com:entityType>xsd</com:entityType>
           <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
@@ -1160,8 +1322,8 @@
           <com:namespace>http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample-Orchestration/OsmCentralOMExample-Orchestration</com:namespace>
           <com:baseElement>string</com:baseElement>
           <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
-        </ord:childNode>
-        <ord:childNode>
+        </childNode>
+        <childNode>
           <com:entity>OsmCentralOMExample-Orchestration</com:entity>
           <com:entityType>xsd</com:entityType>
           <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
@@ -1171,10 +1333,10 @@
           <com:namespace>http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample-Orchestration/OsmCentralOMExample-Orchestration</com:namespace>
           <com:baseElement>string</com:baseElement>
           <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
-        </ord:childNode>
-      </ord:childNode>
-    </ord:orderData>
-    <ord:orderData>
+        </childNode>
+      </childNode>
+    </orderData>
+    <orderData>
       <com:entity>OsmCentralOMExample-BillingFunction</com:entity>
       <com:entityType>xsd</com:entityType>
       <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
@@ -1183,7 +1345,7 @@
       <com:namespace>http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample-BillingFunction/OsmCentralOMExample-BillingFunction</com:namespace>
       <com:baseElement>InvoiceProfileType</com:baseElement>
       <com:baseNamespace>http://xmlns.oracle.com/InputMessage</com:baseNamespace>
-      <ord:childNode>
+      <childNode>
         <com:entity>OsmCentralOMExample-BillingFunction</com:entity>
         <com:entityType>xsd</com:entityType>
         <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
@@ -1192,8 +1354,8 @@
         <com:namespace>http://xmlns.oracle.com/InputMessage</com:namespace>
         <com:baseElement>string</com:baseElement>
         <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
-      </ord:childNode>
-      <ord:childNode>
+      </childNode>
+      <childNode>
         <com:entity>OsmCentralOMExample-BillingFunction</com:entity>
         <com:entityType>xsd</com:entityType>
         <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
@@ -1202,8 +1364,8 @@
         <com:namespace>http://xmlns.oracle.com/InputMessage</com:namespace>
         <com:baseElement>string</com:baseElement>
         <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
-      </ord:childNode>
-      <ord:childNode>
+      </childNode>
+      <childNode>
         <com:entity>OsmCentralOMExample-BillingFunction</com:entity>
         <com:entityType>xsd</com:entityType>
         <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
@@ -1212,8 +1374,8 @@
         <com:namespace>http://xmlns.oracle.com/InputMessage</com:namespace>
         <com:baseElement>string</com:baseElement>
         <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
-      </ord:childNode>
-      <ord:childNode>
+      </childNode>
+      <childNode>
         <com:entity>OsmCentralOMExample-BillingFunction</com:entity>
         <com:entityType>xsd</com:entityType>
         <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
@@ -1222,8 +1384,8 @@
         <com:namespace>http://xmlns.oracle.com/InputMessage</com:namespace>
         <com:baseElement>boolean</com:baseElement>
         <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
-      </ord:childNode>
-      <ord:childNode>
+      </childNode>
+      <childNode>
         <com:entity>OsmCentralOMExample-BillingFunction</com:entity>
         <com:entityType>xsd</com:entityType>
         <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
@@ -1232,8 +1394,8 @@
         <com:namespace>http://xmlns.oracle.com/InputMessage</com:namespace>
         <com:baseElement>string</com:baseElement>
         <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
-      </ord:childNode>
-      <ord:childNode>
+      </childNode>
+      <childNode>
         <com:entity>OsmCentralOMExample-BillingFunction</com:entity>
         <com:entityType>xsd</com:entityType>
         <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
@@ -1242,133 +1404,132 @@
         <com:namespace>http://xmlns.oracle.com/InputMessage</com:namespace>
         <com:baseElement>string</com:baseElement>
         <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
-      </ord:childNode>
-    </ord:orderData>
-  </ord:orderTemplate>
-  <ord:rule name="null_rule"/>
-  <ord:rule name="dslRegion1Rule">
+      </childNode>
+    </orderData>
+  </orderTemplate>
+  <rule name="null_rule"/>
+  <rule name="dslRegion1Rule">
     <prov:expression>
-      <prov:logicalOperator/>
+      <prov:logicalOperator></prov:logicalOperator>
       <prov:data>/CustomerDetails/city</prov:data>
       <prov:operator>=</prov:operator>
       <prov:dataValue>Rio de Janeiro</prov:dataValue>
     </prov:expression>
-  </ord:rule>
-  <ord:rule name="dslRegion2Rule">
+  </rule>
+  <rule name="dslRegion2Rule">
     <prov:expression>
-      <prov:logicalOperator/>
+      <prov:logicalOperator></prov:logicalOperator>
       <prov:data>/CustomerDetails/city</prov:data>
       <prov:operator>=</prov:operator>
       <prov:dataValue>Sao Paulo</prov:dataValue>
     </prov:expression>
-  </ord:rule>
-  <ord:orderStatePolicy>
+  </rule>
+  <orderStatePolicy>
     <com:entity>DefaultLifecyclePolicy</com:entity>
     <com:entityType>orderPolicy</com:entityType>
     <com:relationship>com.mslv.studio.provisioning.order.orderPolicy</com:relationship>
-  </ord:orderStatePolicy>
-  <ord:orderPermission>
+  </orderStatePolicy>
+  <orderPermission>
     <com:entity>DefaultRole</com:entity>
     <com:entityType>rolePermissions</com:entityType>
     <com:relationship>com.mslv.studio.provisioning.roleSetting</com:relationship>
-    <ord:queryTask>
+    <queryTask>
       <com:entity>OsmCentralOMExampleQueryTask</com:entity>
       <com:entityType>manualTask</com:entityType>
       <com:relationship>com.mslv.studio.provisioning.queryTask</com:relationship>
-    </ord:queryTask>
-    <ord:column name="Type Order">
-      
-    <ord:node>
+    </queryTask>
+    <column name="Type Order">
+      <node>
         <com:entity>OsmCentralOMExampleOrder</com:entity>
         <com:entityType>order</com:entityType>
         <com:relationship>com.mslv.studio.provisioning.order.column</com:relationship>
         <com:element>/OrderHeader/typeOrder</com:element>
         <com:elementType>com.mslv.studio.provisioning.order.node</com:elementType>
         <com:elementName>typeOrder</com:elementName>
-      </ord:node>
-    </ord:column>
-    <ord:canCreateOrders>true</ord:canCreateOrders>
-    <ord:summaryTask>
+      </node>
+    </column>
+    <canCreateOrders>true</canCreateOrders>
+    <summaryTask>
       <com:entity>OsmCentralOMExampleQueryTask</com:entity>
       <com:entityType>manualTask</com:entityType>
       <com:relationship>com.mslv.studio.provisioning.queryTask</com:relationship>
-    </ord:summaryTask>
-    <ord:detailTask>
+    </summaryTask>
+    <detailTask>
       <com:entity>OsmCentralOMExampleQueryTask</com:entity>
       <com:entityType>manualTask</com:entityType>
       <com:relationship>com.mslv.studio.provisioning.queryTask</com:relationship>
-    </ord:detailTask>
-  </ord:orderPermission>
-  <ord:orderPermission>
+    </detailTask>
+  </orderPermission>
+  <orderPermission>
     <com:entity>ProvisionRole</com:entity>
     <com:entityType>rolePermissions</com:entityType>
     <com:relationship>com.mslv.studio.provisioning.roleSetting</com:relationship>
-    <ord:queryTask>
+    <queryTask>
       <com:entity>ProvisioningFunctionTask</com:entity>
       <com:entityType>manualTask</com:entityType>
       <com:relationship>com.mslv.studio.provisioning.queryTask</com:relationship>
-    </ord:queryTask>
-    <ord:canCreateOrders>true</ord:canCreateOrders>
-    <ord:detailTask>
+    </queryTask>
+    <canCreateOrders>true</canCreateOrders>
+    <detailTask>
       <com:entity>ProvisioningFunctionTask</com:entity>
       <com:entityType>manualTask</com:entityType>
       <com:relationship>com.mslv.studio.provisioning.queryTask</com:relationship>
-    </ord:detailTask>
-  </ord:orderPermission>
-  <ord:orderPermission>
+    </detailTask>
+  </orderPermission>
+  <orderPermission>
     <com:entity>ProvisioningUpdateRole</com:entity>
     <com:entityType>rolePermissions</com:entityType>
     <com:relationship>com.mslv.studio.provisioning.roleSetting</com:relationship>
-    <ord:queryTask>
+    <queryTask>
       <com:entity>ProvisioningUpdateTask</com:entity>
       <com:entityType>manualTask</com:entityType>
       <com:relationship>com.mslv.studio.provisioning.queryTask</com:relationship>
-    </ord:queryTask>
-    <ord:canCreateOrders>true</ord:canCreateOrders>
-    <ord:summaryTask>
+    </queryTask>
+    <canCreateOrders>true</canCreateOrders>
+    <summaryTask>
       <com:entity>ProvisioningUpdateTask</com:entity>
       <com:entityType>manualTask</com:entityType>
       <com:relationship>com.mslv.studio.provisioning.queryTask</com:relationship>
-    </ord:summaryTask>
-    <ord:detailTask>
+    </summaryTask>
+    <detailTask>
       <com:entity>ProvisioningUpdateTask</com:entity>
       <com:entityType>manualTask</com:entityType>
       <com:relationship>com.mslv.studio.provisioning.queryTask</com:relationship>
-    </ord:detailTask>
-  </ord:orderPermission>
-  <ord:orderPermission>
+    </detailTask>
+  </orderPermission>
+  <orderPermission>
     <com:entity>SummaryRole</com:entity>
     <com:entityType>rolePermissions</com:entityType>
     <com:relationship>com.mslv.studio.provisioning.roleSetting</com:relationship>
-    <ord:canCreateOrders>true</ord:canCreateOrders>
-    <ord:summaryTask>
+    <canCreateOrders>true</canCreateOrders>
+    <summaryTask>
       <com:entity>OrderSummaryTask</com:entity>
       <com:entityType>manualTask</com:entityType>
       <com:relationship>com.mslv.studio.provisioning.queryTask</com:relationship>
-    </ord:summaryTask>
-    <ord:detailTask>
+    </summaryTask>
+    <detailTask>
       <com:entity>BillingFunctionTask</com:entity>
       <com:entityType>manualTask</com:entityType>
       <com:relationship>com.mslv.studio.provisioning.queryTask</com:relationship>
-    </ord:detailTask>
-  </ord:orderPermission>
-  <ord:orderPermission>
+    </detailTask>
+  </orderPermission>
+  <orderPermission>
     <com:entity>BillingUpdateRole</com:entity>
     <com:entityType>rolePermissions</com:entityType>
     <com:relationship>com.mslv.studio.provisioning.roleSetting</com:relationship>
-    <ord:queryTask>
+    <queryTask>
       <com:entity>BillingFunctionTask</com:entity>
       <com:entityType>manualTask</com:entityType>
       <com:relationship>com.mslv.studio.provisioning.queryTask</com:relationship>
-    </ord:queryTask>
-    <ord:canCreateOrders>true</ord:canCreateOrders>
-    <ord:detailTask>
+    </queryTask>
+    <canCreateOrders>true</canCreateOrders>
+    <detailTask>
       <com:entity>BillingFunctionTask</com:entity>
       <com:entityType>manualTask</com:entityType>
       <com:relationship>com.mslv.studio.provisioning.queryTask</com:relationship>
-    </ord:detailTask>
-  </ord:orderPermission>
-  <ord:dataChangeNotifications name="ProvisioningFixedUpdate">
+    </detailTask>
+  </orderPermission>
+  <dataChangeNotifications name="ProvisioningFixedUpdate">
     <prov:defaultDisplayName>ProvisioningFixedUpdate</prov:defaultDisplayName>
     <prov:priority>1</prov:priority>
     <prov:enabled>true</prov:enabled>
@@ -1396,8 +1557,8 @@
         </automation:to>
         <automation:script>
           <automation:url>http://oracle.communications.ordermanagement.unsupported.centralom/base/xquery/updateProvisioningFixed.xqy</automation:url>
-          <automation:file/>
-          <automation:resource/>
+          <automation:file></automation:file>
+          <automation:resource></automation:resource>
           <automation:cache>
             <automation:maxSize>50</automation:maxSize>
             <automation:timeout>15000</automation:timeout>
@@ -1410,15 +1571,15 @@
       <com:entityType>manualTask</com:entityType>
       <com:relationship>com.mslv.studio.provisioning.order.notificationView</com:relationship>
     </prov:notificationView>
-    <ord:dataNodes>
+    <dataNodes>
       <com:entity>OsmCentralOMExampleOrder</com:entity>
       <com:entityType>order</com:entityType>
       <com:relationship>com.mslv.studio.provisioning.order.dataChangeNotification</com:relationship>
       <com:element>/Status/ProvisioningFixedStatus</com:element>
       <com:elementType>com.mslv.studio.provisioning.order.node</com:elementType>
-    </ord:dataNodes>
-  </ord:dataChangeNotifications>
-  <ord:dataChangeNotifications name="ProvisioningMobileUpdate">
+    </dataNodes>
+  </dataChangeNotifications>
+  <dataChangeNotifications name="ProvisioningMobileUpdate">
     <prov:defaultDisplayName>ProvisioningMobileUpdate</prov:defaultDisplayName>
     <prov:priority>1</prov:priority>
     <prov:enabled>true</prov:enabled>
@@ -1446,8 +1607,8 @@
         </automation:to>
         <automation:script>
           <automation:url>http://oracle.communications.ordermanagement.unsupported.centralom/base/xquery/updateProvisioningMobile.xqy</automation:url>
-          <automation:file/>
-          <automation:resource/>
+          <automation:file></automation:file>
+          <automation:resource></automation:resource>
           <automation:cache>
             <automation:maxSize>50</automation:maxSize>
             <automation:timeout>15000</automation:timeout>
@@ -1460,15 +1621,15 @@
       <com:entityType>manualTask</com:entityType>
       <com:relationship>com.mslv.studio.provisioning.order.notificationView</com:relationship>
     </prov:notificationView>
-    <ord:dataNodes>
+    <dataNodes>
       <com:entity>OsmCentralOMExampleOrder</com:entity>
       <com:entityType>order</com:entityType>
       <com:relationship>com.mslv.studio.provisioning.order.dataChangeNotification</com:relationship>
       <com:element>/Status/ProvisioningMobileStatus</com:element>
       <com:elementType>com.mslv.studio.provisioning.order.node</com:elementType>
-    </ord:dataNodes>
-  </ord:dataChangeNotifications>
-  <ord:dataChangeNotifications name="ProvisioningExpediterUpdate">
+    </dataNodes>
+  </dataChangeNotifications>
+  <dataChangeNotifications name="ProvisioningExpediterUpdate">
     <prov:defaultDisplayName>ProvisioningExpediterUpdate</prov:defaultDisplayName>
     <prov:priority>1</prov:priority>
     <prov:enabled>true</prov:enabled>
@@ -1496,8 +1657,8 @@
         </automation:to>
         <automation:script>
           <automation:url>http://oracle.communications.ordermanagement.unsupported.centralom/base/xquery/updateProvisioningDslProvisioningRegion1.xqy</automation:url>
-          <automation:file/>
-          <automation:resource/>
+          <automation:file></automation:file>
+          <automation:resource></automation:resource>
           <automation:cache>
             <automation:maxSize>50</automation:maxSize>
             <automation:timeout>15000</automation:timeout>
@@ -1510,15 +1671,15 @@
       <com:entityType>manualTask</com:entityType>
       <com:relationship>com.mslv.studio.provisioning.order.notificationView</com:relationship>
     </prov:notificationView>
-    <ord:dataNodes>
+    <dataNodes>
       <com:entity>OsmCentralOMExampleOrder</com:entity>
       <com:entityType>order</com:entityType>
       <com:relationship>com.mslv.studio.provisioning.order.dataChangeNotification</com:relationship>
       <com:element>/Status/ProvisioningDSLRegion1Status</com:element>
       <com:elementType>com.mslv.studio.provisioning.order.node</com:elementType>
-    </ord:dataNodes>
-  </ord:dataChangeNotifications>
-  <ord:dataChangeNotifications name="ProvisioningOsmUpdate">
+    </dataNodes>
+  </dataChangeNotifications>
+  <dataChangeNotifications name="ProvisioningOsmUpdate">
     <prov:defaultDisplayName>ProvisioningOsmUpdate</prov:defaultDisplayName>
     <prov:priority>1</prov:priority>
     <prov:enabled>true</prov:enabled>
@@ -1546,8 +1707,8 @@
         </automation:to>
         <automation:script>
           <automation:url>http://oracle.communications.ordermanagement.unsupported.centralom/base/xquery/updateProvisioningDslProvisioningRegion2.xqy</automation:url>
-          <automation:file/>
-          <automation:resource/>
+          <automation:file></automation:file>
+          <automation:resource></automation:resource>
           <automation:cache>
             <automation:maxSize>50</automation:maxSize>
             <automation:timeout>15000</automation:timeout>
@@ -1560,15 +1721,15 @@
       <com:entityType>manualTask</com:entityType>
       <com:relationship>com.mslv.studio.provisioning.order.notificationView</com:relationship>
     </prov:notificationView>
-    <ord:dataNodes>
+    <dataNodes>
       <com:entity>OsmCentralOMExampleOrder</com:entity>
       <com:entityType>order</com:entityType>
       <com:relationship>com.mslv.studio.provisioning.order.dataChangeNotification</com:relationship>
       <com:element>/Status/ProvisioningDSLRegion2Status</com:element>
       <com:elementType>com.mslv.studio.provisioning.order.node</com:elementType>
-    </ord:dataNodes>
-  </ord:dataChangeNotifications>
-  <ord:dataChangeNotifications name="OrderFulfillmentState">
+    </dataNodes>
+  </dataChangeNotifications>
+  <dataChangeNotifications name="OrderFulfillmentState">
     <prov:defaultDisplayName>OrderFulfillmentStateUpdate</prov:defaultDisplayName>
     <prov:priority>1</prov:priority>
     <prov:enabled>true</prov:enabled>
@@ -1595,12 +1756,12 @@
           <automation:jndiName>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_Customer_Status_Queue</automation:jndiName>
         </automation:to>
         <automation:replyTo>
-          <automation:jndiName/>
+          <automation:jndiName></automation:jndiName>
         </automation:replyTo>
         <automation:script>
           <automation:url>http://oracle.communications.ordermanagement.unsupported.centralom/base/xquery/updateOrderFulfillmentState.xqy</automation:url>
-          <automation:file/>
-          <automation:resource/>
+          <automation:file></automation:file>
+          <automation:resource></automation:resource>
           <automation:cache>
             <automation:maxSize>50</automation:maxSize>
             <automation:timeout>15000</automation:timeout>
@@ -1613,24 +1774,24 @@
       <com:entityType>manualTask</com:entityType>
       <com:relationship>com.mslv.studio.provisioning.order.notificationView</com:relationship>
     </prov:notificationView>
-    <ord:dataNodes>
+    <dataNodes>
       <com:entity>OsmCentralOMExampleOrder</com:entity>
       <com:entityType>order</com:entityType>
       <com:relationship>com.mslv.studio.provisioning.order.dataChangeNotification</com:relationship>
       <com:element>/ControlData/OrderFulfillmentState</com:element>
       <com:elementType>com.mslv.studio.provisioning.order.node</com:elementType>
-    </ord:dataNodes>
-    <ord:dataNodes>
+    </dataNodes>
+    <dataNodes>
       <com:entity>OsmCentralOMExampleOrder</com:entity>
       <com:entityType>order</com:entityType>
       <com:relationship>com.mslv.studio.provisioning.order.dataChangeNotification</com:relationship>
       <com:element>/ControlData/OrderItem/OrderItemFulfillmentState</com:element>
       <com:elementType>com.mslv.studio.provisioning.order.node</com:elementType>
-    </ord:dataNodes>
-  </ord:dataChangeNotifications>
-  <ord:milestoneEvents name="OsmCentralOMExampleOrder_completion">
-    <ord:milestone>completion</ord:milestone>
-    <ord:automationComponent xsi:type="task:internalAutomationPlugin">
+    </dataNodes>
+  </dataChangeNotifications>
+  <milestoneEvents name="OsmCentralOMExampleOrder_completion">
+    <milestone>completion</milestone>
+    <automationComponent xsi:type="task:internalAutomationPlugin">
       <prov:name>OrderCompletionAutomator</prov:name>
       <prov:type>xQuerySender</prov:type>
       <prov:ejbName>OsmCentralOMExampleOrder.OrderCompletionAutomator</prov:ejbName>
@@ -1641,19 +1802,19 @@
         </automation:to>
         <automation:script>
           <automation:url>http://oracle.communications.ordermanagement.unsupported.centralom/base/xquery/orderComplete.xqy</automation:url>
-          <automation:file/>
-          <automation:resource/>
+          <automation:file></automation:file>
+          <automation:resource></automation:resource>
           <automation:cache>
             <automation:maxSize>50</automation:maxSize>
             <automation:timeout>15000</automation:timeout>
           </automation:cache>
         </automation:script>
       </prov:implementation>
-    </ord:automationComponent>
-    <ord:notificationView>
+    </automationComponent>
+    <notificationView>
       <com:entity>OsmCentralOMExampleQueryTask</com:entity>
       <com:entityType>manualTask</com:entityType>
       <com:relationship>com.mslv.studio.provisioning.order.notificationView</com:relationship>
-    </ord:notificationView>
-  </ord:milestoneEvents>
+    </notificationView>
+  </milestoneEvents>
 </com:modelEntity>

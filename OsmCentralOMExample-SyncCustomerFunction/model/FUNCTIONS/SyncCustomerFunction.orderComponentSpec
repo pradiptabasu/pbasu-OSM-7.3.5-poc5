@@ -4,7 +4,7 @@
   <com:information>The SyncCustomerFunction order component specification is a function that represents an update that needs to be sent to the customer system. A SyncCustomer request notifies the customer system of the status of the order items.&#xD;
 &#xD;
 This order component specification is used in the determine fulfillment function decomposition stage. Order items are targeted to this order component specification through the product specification. In this sample cartridge, Service.Mobile, Service.Fixed and Service.Broadband specify that the SyncCustomerFunction is a required component for any order items that are categorized as part of these product specifications. Also note that a CustomerSystemSI process has been assigned to this order component, meaning that the CustomerSystemSI process will be executed for every order component that is derived from this order component.</com:information>
-  <com:saveVersion>23</com:saveVersion>
+  <com:saveVersion>30</com:saveVersion>
   <com:id>--+fDZIA--+uHaQXlsZO-g</com:id>
   <namespace>http://oracle.communications.ordermanagement.unsupported.centralom</namespace>
   <extends>

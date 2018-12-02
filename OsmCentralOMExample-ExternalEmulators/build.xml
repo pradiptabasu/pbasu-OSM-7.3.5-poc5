@@ -4,7 +4,7 @@
 	<condition property="HOSTNAME" value="${env.COMPUTERNAME}" else="${env.HOSTNAME}">
 		<os family="windows"/>
 	</condition>
-	<property name="build-properties" value="${basedir}/${HOSTNAME}.properties"/>
+	<!-- <property name="build-properties" value="${basedir}/${HOSTNAME}.properties"/> -->
 	<property file="${build-properties}"/>
 	<property name="build-properties" value="build.properties"/>
 	<property classpath="." resource="${build-properties}"/>
@@ -40,8 +40,8 @@
 			<pathelement path="${basedir}/lib/weblogic.jar"/>
 			<pathelement path="${basedir}/lib/wlclient.jar"/>
 			<pathelement path="${basedir}/lib/javax.jms_1.1.1.jar"/>
-			<fileset dir="${basedir}/lib" includes="*.jar"/>
-			<fileset dir="${basedir}/lib" includes="*.jar"/>
+			<fileset dir="${wls.dir}/modules" includes="*.jar"/>
+			<fileset dir="${wls.dir}/server/lib" includes="*.jar"/>
 			<fileset dir="${basedir}/lib" includes="*.jar"/>
 	</path>
 	
@@ -95,10 +95,26 @@
 				<include name="weblogic-application.xml"/>
 			</fileset>	
 		</copy>
+		
+		<echo>----------------------------</echo>
+		<echo>${external_emulator.ear.dir}</echo>
+		<echo>${aia.osm.lib.dir}</echo>
+		<echo>${aia}</echo>
+		<echo>${osm.lib.dir}</echo>
+		<echo>----------------------------</echo>
 		  		
+		<!--
 		<copy todir="${external_emulator.ear.dir}">
 			<fileset dir="${aia.jdev.lib.dir}">
 				<include name="javax.jms_1.1.1.jar"/>
+			</fileset>
+			<fileset dir="${aia.osm.lib.dir}" includes="*.jar"/>
+		</copy>
+		-->
+		
+		<copy todir="${external_emulator.ear.dir}">
+			<fileset dir="${basedir}/lib">
+				<include name="javax.jms-api-2.0.1.jar"/>
 			</fileset>
 			<fileset dir="${aia.osm.lib.dir}" includes="*.jar"/>
 		</copy>

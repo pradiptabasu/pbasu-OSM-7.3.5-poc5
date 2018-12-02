@@ -563,10 +563,10 @@
     <prov:runAs>omsadmin</prov:runAs>
     <prov:implementation xsi:type="aut:XquerySender">
       <aut:to>
-        <aut:jndiName>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_Marketing_Request_Queue</aut:jndiName>
+        <aut:jndiName>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_Marketing_Request_Queue</aut:jndiName>
       </aut:to>
       <aut:replyTo>
-        <aut:jndiName>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_Marketing_Response_Queue</aut:jndiName>
+        <aut:jndiName>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_Marketing_Response_Queue</aut:jndiName>
       </aut:replyTo>
       <aut:script>
         <aut:url>http://oracle.communications.ordermanagement.unsupported.centralom/marketing/xquery/marketing_request.xqy</aut:url>
@@ -598,7 +598,7 @@
     </prov:implementation>
     <task:jmsSource>
       <aut:from>
-        <aut:jndiName>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_Marketing_Response_Queue</aut:jndiName>
+        <aut:jndiName>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_Marketing_Response_Queue</aut:jndiName>
       </aut:from>
       <aut:messagePropertySelector></aut:messagePropertySelector>
     </task:jmsSource>

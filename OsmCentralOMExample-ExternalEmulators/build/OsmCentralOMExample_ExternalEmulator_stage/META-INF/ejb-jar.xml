@@ -24,7 +24,7 @@
 				<description>Target JNDI Name</description>
 				<env-entry-name>DESTINATION_JNDI</env-entry-name>
 				<env-entry-type>java.lang.String</env-entry-type>
-				<env-entry-value>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_DslProvisioningRegion1_Response_Queue</env-entry-value>
+				<env-entry-value>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_DslProvisioningRegion1_Response_Queue</env-entry-value>
 			</env-entry>
 			<security-identity>
 				<run-as>
@@ -54,7 +54,7 @@
 				<description>Target JNDI Name</description>
 				<env-entry-name>DESTINATION_JNDI</env-entry-name>
 				<env-entry-type>java.lang.String</env-entry-type>
-				<env-entry-value>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_DslProvisioningRegion2_Response_Queue</env-entry-value>
+				<env-entry-value>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_DslProvisioningRegion2_Response_Queue</env-entry-value>
 			</env-entry>
 			<security-identity>
 				<run-as>
@@ -84,7 +84,7 @@
 				<description>Target JNDI Name</description>
 				<env-entry-name>DESTINATION_JNDI</env-entry-name>
 				<env-entry-type>java.lang.String</env-entry-type>
-				<env-entry-value>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_MobileProvisioning_Response_Queue</env-entry-value>
+				<env-entry-value>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_MobileProvisioning_Response_Queue</env-entry-value>
 			</env-entry>
 			<security-identity>
 				<run-as>
@@ -114,7 +114,7 @@
 				<description>Target JNDI Name</description>
 				<env-entry-name>DESTINATION_JNDI</env-entry-name>
 				<env-entry-type>java.lang.String</env-entry-type>
-				<env-entry-value>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_FixedProvisioning_Response_Queue</env-entry-value>
+				<env-entry-value>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_FixedProvisioning_Response_Queue</env-entry-value>
 			</env-entry>
 			<security-identity>
 				<run-as>
@@ -144,7 +144,7 @@
 				<description>Target JNDI Name</description>
 				<env-entry-name>DESTINATION_JNDI</env-entry-name>
 				<env-entry-type>java.lang.String</env-entry-type>
-				<env-entry-value>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_Billing_Response_Queue</env-entry-value>
+				<env-entry-value>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_Billing_Response_Queue</env-entry-value>
 			</env-entry>
 			<security-identity>
 				<run-as>
@@ -174,7 +174,7 @@
 				<description>Target JNDI Name</description>
 				<env-entry-name>DESTINATION_JNDI</env-entry-name>
 				<env-entry-type>java.lang.String</env-entry-type>
-				<env-entry-value>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_Marketing_Response_Queue</env-entry-value>
+				<env-entry-value>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_Marketing_Response_Queue</env-entry-value>
 			</env-entry>
 			<security-identity>
 				<run-as>
@@ -204,7 +204,7 @@
 				<description>Target JNDI Name</description>
 				<env-entry-name>DESTINATION_JNDI</env-entry-name>
 				<env-entry-type>java.lang.String</env-entry-type>
-				<env-entry-value>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_Customer_Response_Queue</env-entry-value>
+				<env-entry-value>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_Customer_Response_Queue</env-entry-value>
 			</env-entry>
 			<security-identity>
 				<run-as>
@@ -234,7 +234,7 @@
 				<description>Target JNDI Name</description>
 				<env-entry-name>DESTINATION_JNDI</env-entry-name>
 				<env-entry-type>java.lang.String</env-entry-type>
-				<env-entry-value>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_Collections_Response_Queue</env-entry-value>
+				<env-entry-value>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_Collections_Response_Queue</env-entry-value>
 			</env-entry>
 			<security-identity>
 				<run-as>

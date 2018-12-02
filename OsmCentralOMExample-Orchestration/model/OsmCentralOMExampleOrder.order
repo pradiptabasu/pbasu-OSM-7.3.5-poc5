@@ -1553,7 +1553,7 @@
       <prov:runAs>omsadmin</prov:runAs>
       <prov:implementation xsi:type="automation:XquerySender">
         <automation:to>
-          <automation:jndiName>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_Customer_Status_Queue</automation:jndiName>
+          <automation:jndiName>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_Customer_Status_Queue</automation:jndiName>
         </automation:to>
         <automation:script>
           <automation:url>http://oracle.communications.ordermanagement.unsupported.centralom/base/xquery/updateProvisioningFixed.xqy</automation:url>
@@ -1603,7 +1603,7 @@
       <prov:runAs>omsadmin</prov:runAs>
       <prov:implementation xsi:type="automation:XquerySender">
         <automation:to>
-          <automation:jndiName>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_Customer_Status_Queue</automation:jndiName>
+          <automation:jndiName>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_Customer_Status_Queue</automation:jndiName>
         </automation:to>
         <automation:script>
           <automation:url>http://oracle.communications.ordermanagement.unsupported.centralom/base/xquery/updateProvisioningMobile.xqy</automation:url>
@@ -1653,7 +1653,7 @@
       <prov:runAs>omsadmin</prov:runAs>
       <prov:implementation xsi:type="automation:XquerySender">
         <automation:to>
-          <automation:jndiName>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_Customer_Status_Queue</automation:jndiName>
+          <automation:jndiName>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_Customer_Status_Queue</automation:jndiName>
         </automation:to>
         <automation:script>
           <automation:url>http://oracle.communications.ordermanagement.unsupported.centralom/base/xquery/updateProvisioningDslProvisioningRegion1.xqy</automation:url>
@@ -1703,7 +1703,7 @@
       <prov:runAs>omsadmin</prov:runAs>
       <prov:implementation xsi:type="automation:XquerySender">
         <automation:to>
-          <automation:jndiName>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_Customer_Status_Queue</automation:jndiName>
+          <automation:jndiName>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_Customer_Status_Queue</automation:jndiName>
         </automation:to>
         <automation:script>
           <automation:url>http://oracle.communications.ordermanagement.unsupported.centralom/base/xquery/updateProvisioningDslProvisioningRegion2.xqy</automation:url>
@@ -1753,7 +1753,7 @@
       <prov:runAs>omsadmin</prov:runAs>
       <prov:implementation xsi:type="automation:XquerySender">
         <automation:to>
-          <automation:jndiName>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_Customer_Status_Queue</automation:jndiName>
+          <automation:jndiName>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_Customer_Status_Queue</automation:jndiName>
         </automation:to>
         <automation:replyTo>
           <automation:jndiName></automation:jndiName>
@@ -1798,7 +1798,7 @@
       <prov:runAs>omsadmin</prov:runAs>
       <prov:implementation xsi:type="automation:XquerySender">
         <automation:to>
-          <automation:jndiName>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_Customer_Status_Queue</automation:jndiName>
+          <automation:jndiName>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_Customer_Status_Queue</automation:jndiName>
         </automation:to>
         <automation:script>
           <automation:url>http://oracle.communications.ordermanagement.unsupported.centralom/base/xquery/orderComplete.xqy</automation:url>

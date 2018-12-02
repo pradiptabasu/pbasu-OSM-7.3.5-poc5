@@ -14,11 +14,11 @@
     
 	<implement xsi:type="am:XquerySender">
 		<to>
-			<jndiName>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_Billing_Request_Queue</jndiName>
+			<jndiName>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_Billing_Request_Queue</jndiName>
 			<destinationType>javax.jms.Queue</destinationType>
 		</to>
 		<replyTo>
-			<jndiName>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_Billing_Response_Queue</jndiName>
+			<jndiName>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_Billing_Response_Queue</jndiName>
 			<destinationType>javax.jms.Queue</destinationType>
 		</replyTo>
 		<am:sendNullMessage>true</am:sendNullMessage>
@@ -42,7 +42,7 @@
 	<receive xsi:type="am:ExternalReceiver">
 		<jmsSource>
 			<from>
-				<jndiName>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_Billing_Response_Queue</jndiName>
+				<jndiName>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_Billing_Response_Queue</jndiName>
 				<destinationType>javax.jms.Queue</destinationType>				
 			</from>			
 		</jmsSource>	
@@ -77,11 +77,11 @@
     
 	<implement xsi:type="am:XquerySender">
 		<to>
-			<jndiName>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_Billing_Request_Queue</jndiName>
+			<jndiName>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_Billing_Request_Queue</jndiName>
 			<destinationType>javax.jms.Queue</destinationType>
 		</to>
 		<replyTo>
-			<jndiName>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_Billing_Response_Queue</jndiName>
+			<jndiName>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_Billing_Response_Queue</jndiName>
 			<destinationType>javax.jms.Queue</destinationType>
 		</replyTo>
 		<am:sendNullMessage>true</am:sendNullMessage>

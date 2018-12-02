@@ -12,7 +12,7 @@ in your wls domain directory and copy/paste the following entries at the end of 
             <redelivery-limit>2</redelivery-limit>
             <expiration-policy>Discard</expiration-policy>
         </delivery-failure-params>
-        <jndi-name>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_DslProvisioningRegion1_Request_Queue</jndi-name>
+        <jndi-name>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_DslProvisioningRegion1_Request_Queue</jndi-name>
     </queue>
     <queue name="ExternalSystemEmulator_DslProvisioningRegion1_Response_Queue">
         <sub-deployment-name>oms_jms_server</sub-deployment-name>
@@ -23,7 +23,7 @@ in your wls domain directory and copy/paste the following entries at the end of 
             <redelivery-limit>2</redelivery-limit>
             <expiration-policy>Discard</expiration-policy>
         </delivery-failure-params>
-        <jndi-name>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_DslProvisioningRegion1_Response_Queue</jndi-name>
+        <jndi-name>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_DslProvisioningRegion1_Response_Queue</jndi-name>
     </queue>
     <queue name="ExternalSystemEmulator_Billing_Response_Queue">
         <sub-deployment-name>oms_jms_server</sub-deployment-name>
@@ -34,7 +34,7 @@ in your wls domain directory and copy/paste the following entries at the end of 
             <redelivery-limit>2</redelivery-limit>
             <expiration-policy>Discard</expiration-policy>
         </delivery-failure-params>
-        <jndi-name>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_Billing_Response_Queue</jndi-name>
+        <jndi-name>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_Billing_Response_Queue</jndi-name>
     </queue>
     <queue name="ExternalSystemEmulator_Billing_Request_Queue">
         <sub-deployment-name>oms_jms_server</sub-deployment-name>
@@ -45,7 +45,7 @@ in your wls domain directory and copy/paste the following entries at the end of 
             <redelivery-limit>2</redelivery-limit>
             <expiration-policy>Discard</expiration-policy>
         </delivery-failure-params>
-        <jndi-name>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_Billing_Request_Queue</jndi-name>
+        <jndi-name>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_Billing_Request_Queue</jndi-name>
     </queue>
     
     <queue name="ExternalSystemEmulator_DslProvisioningRegion2_Response_Queue">
@@ -57,7 +57,7 @@ in your wls domain directory and copy/paste the following entries at the end of 
             <redelivery-limit>2</redelivery-limit>
             <expiration-policy>Discard</expiration-policy>
         </delivery-failure-params>
-        <jndi-name>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_DslProvisioningRegion2_Response_Queue</jndi-name>
+        <jndi-name>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_DslProvisioningRegion2_Response_Queue</jndi-name>
     </queue>
     <queue name="ExternalSystemEmulator_DslProvisioningRegion2_Request_Queue">
         <sub-deployment-name>oms_jms_server</sub-deployment-name>
@@ -68,7 +68,7 @@ in your wls domain directory and copy/paste the following entries at the end of 
             <redelivery-limit>2</redelivery-limit>
             <expiration-policy>Discard</expiration-policy>
         </delivery-failure-params>
-        <jndi-name>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_DslProvisioningRegion2_Request_Queue</jndi-name>
+        <jndi-name>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_DslProvisioningRegion2_Request_Queue</jndi-name>
     </queue>
     
     
@@ -81,7 +81,7 @@ in your wls domain directory and copy/paste the following entries at the end of 
             <redelivery-limit>2</redelivery-limit>
             <expiration-policy>Discard</expiration-policy>
         </delivery-failure-params>
-        <jndi-name>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_MobileProvisioning_Response_Queue</jndi-name>
+        <jndi-name>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_MobileProvisioning_Response_Queue</jndi-name>
     </queue>
     <queue name="ExternalSystemEmulator_MobileProvisioning_Request_Queue">
         <sub-deployment-name>oms_jms_server</sub-deployment-name>
@@ -92,7 +92,7 @@ in your wls domain directory and copy/paste the following entries at the end of 
             <redelivery-limit>2</redelivery-limit>
             <expiration-policy>Discard</expiration-policy>
         </delivery-failure-params>
-        <jndi-name>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_MobileProvisioning_Request_Queue</jndi-name>
+        <jndi-name>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_MobileProvisioning_Request_Queue</jndi-name>
     </queue>
     
     <queue name="ExternalSystemEmulator_FixedProvisioning_Response_Queue">
@@ -104,7 +104,7 @@ in your wls domain directory and copy/paste the following entries at the end of 
             <redelivery-limit>2</redelivery-limit>
             <expiration-policy>Discard</expiration-policy>
         </delivery-failure-params>
-        <jndi-name>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_FixedProvisioning_Response_Queue</jndi-name>
+        <jndi-name>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_FixedProvisioning_Response_Queue</jndi-name>
     </queue>
     <queue name="ExternalSystemEmulator_FixedProvisioning_Request_Queue">
         <sub-deployment-name>oms_jms_server</sub-deployment-name>
@@ -115,7 +115,7 @@ in your wls domain directory and copy/paste the following entries at the end of 
             <redelivery-limit>2</redelivery-limit>
             <expiration-policy>Discard</expiration-policy>
         </delivery-failure-params>
-        <jndi-name>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_FixedProvisioning_Request_Queue</jndi-name>
+        <jndi-name>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_FixedProvisioning_Request_Queue</jndi-name>
     </queue>
     
     <queue name="ExternalSystemEmulator_Marketing_Response_Queue">
@@ -127,7 +127,7 @@ in your wls domain directory and copy/paste the following entries at the end of 
             <redelivery-limit>2</redelivery-limit>
             <expiration-policy>Discard</expiration-policy>
         </delivery-failure-params>
-        <jndi-name>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_Marketing_Response_Queue</jndi-name>
+        <jndi-name>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_Marketing_Response_Queue</jndi-name>
     </queue>
     <queue name="ExternalSystemEmulator_Marketing_Request_Queue">
         <sub-deployment-name>oms_jms_server</sub-deployment-name>
@@ -138,7 +138,7 @@ in your wls domain directory and copy/paste the following entries at the end of 
             <redelivery-limit>2</redelivery-limit>
             <expiration-policy>Discard</expiration-policy>
         </delivery-failure-params>
-        <jndi-name>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_Marketing_Request_Queue</jndi-name>
+        <jndi-name>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_Marketing_Request_Queue</jndi-name>
     </queue>
     
     <queue name="ExternalSystemEmulator_Collections_Response_Queue">
@@ -150,7 +150,7 @@ in your wls domain directory and copy/paste the following entries at the end of 
             <redelivery-limit>2</redelivery-limit>
             <expiration-policy>Discard</expiration-policy>
         </delivery-failure-params>
-        <jndi-name>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_Collections_Response_Queue</jndi-name>
+        <jndi-name>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_Collections_Response_Queue</jndi-name>
     </queue>
     <queue name="ExternalSystemEmulator_Collections_Request_Queue">
         <sub-deployment-name>oms_jms_server</sub-deployment-name>
@@ -161,7 +161,7 @@ in your wls domain directory and copy/paste the following entries at the end of 
             <redelivery-limit>2</redelivery-limit>
             <expiration-policy>Discard</expiration-policy>
         </delivery-failure-params>
-        <jndi-name>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_Collections_Request_Queue</jndi-name>
+        <jndi-name>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_Collections_Request_Queue</jndi-name>
     </queue>
     
     <queue name="ExternalSystemEmulator_Customer_Response_Queue">
@@ -173,7 +173,7 @@ in your wls domain directory and copy/paste the following entries at the end of 
             <redelivery-limit>2</redelivery-limit>
             <expiration-policy>Discard</expiration-policy>
         </delivery-failure-params>
-        <jndi-name>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_Customer_Response_Queue</jndi-name>
+        <jndi-name>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_Customer_Response_Queue</jndi-name>
     </queue>
     <queue name="ExternalSystemEmulator_Customer_Request_Queue">
         <sub-deployment-name>oms_jms_server</sub-deployment-name>
@@ -184,7 +184,7 @@ in your wls domain directory and copy/paste the following entries at the end of 
             <redelivery-limit>2</redelivery-limit>
             <expiration-policy>Discard</expiration-policy>
         </delivery-failure-params>
-        <jndi-name>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_Customer_Request_Queue</jndi-name>
+        <jndi-name>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_Customer_Request_Queue</jndi-name>
     </queue>
     
     
@@ -197,7 +197,7 @@ in your wls domain directory and copy/paste the following entries at the end of 
             <redelivery-limit>2</redelivery-limit>
             <expiration-policy>Discard</expiration-policy>
         </delivery-failure-params>
-        <jndi-name>oracle/communications/ordermanagement/unsupported/emulator/ExternalSystemEmulator_Customer_Status_Queue</jndi-name>
+        <jndi-name>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_Customer_Status_Queue</jndi-name>
     </queue>
     
 </foo>

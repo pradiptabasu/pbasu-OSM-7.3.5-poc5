@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmn="http://xmlns.oracle.com/communications/studio/model/common" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
   <metadata version="1.0.0" release="7.3.0"/>
-  <entity xsi:type="cmn:DataStructureDefinition" id="dsd=updateDetails" type="dsd" typeName="Data Structure Definition" name="updateDetails" resource="/OracleComms_OSM_CommonDataDictionary/model/updateDetails.dataStructDef">
+  <entity xsi:type="cmn:DataStructureDefinition" id="dsd=updateDetails" type="dsd" typeName="Data Structure Definition" name="updateDetails" resource="\OracleComms_OSM_CommonDataDictionary\model\updateDetails.dataStructDef">
     <displayName lang="default">updateDetails</displayName>
     <note lang="default"/>
     <project>

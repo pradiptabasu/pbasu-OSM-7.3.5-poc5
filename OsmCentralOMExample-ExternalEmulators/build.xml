@@ -27,11 +27,22 @@
 	
 	<property name="external_emulator.ear.dir" value="${build}/${external_emulator}_ear"/>
 	
+	<!--
 	<path id="project.class.path">
 		<pathelement path="${aia.wls.lib.dir}/weblogic.jar"/>
 		<pathelement path="${aia.wls.lib.dir}/wlclient.jar"/>
 		<pathelement path="${aia.jdev.lib.dir}/javax.jms_1.1.1.jar"/>
 		<fileset dir="${aia.osm.lib.dir}" includes="*.jar"/>
+	</path>
+	-->
+	
+	<path id="project.class.path">
+			<pathelement path="${basedir}/lib/weblogic.jar"/>
+			<pathelement path="${basedir}/lib/wlclient.jar"/>
+			<pathelement path="${basedir}/lib/javax.jms_1.1.1.jar"/>
+			<fileset dir="${basedir}/lib" includes="*.jar"/>
+			<fileset dir="${basedir}/lib" includes="*.jar"/>
+			<fileset dir="${basedir}/lib" includes="*.jar"/>
 	</path>
 	
 	<taskdef name="wlappc" classname="weblogic.ant.taskdefs.j2ee.Appc" classpathref="project.class.path"/> 
@@ -92,8 +103,6 @@
 			<fileset dir="${aia.osm.lib.dir}" includes="*.jar"/>
 		</copy>
 		
-		
-  		
 		<jar destfile="${build}/${external_emulator}.ear" basedir="${external_emulator.ear.dir}"/>    	
 
 		<!--
@@ -103,6 +112,7 @@
 		-->
 	</target>
   
+<!--	
 	<target name="deploy_emulators" depends="build">
 		
 		<wldeploy 
@@ -119,8 +129,6 @@
 		
 	</target>
 	
-	
-	
 	<target name="undeploy">
 
 		
@@ -134,5 +142,7 @@
 			adminurl="${wls.url}" 
 			targets="${wls.server}"/>
 	</target>
+
+-->
 	
 </project>

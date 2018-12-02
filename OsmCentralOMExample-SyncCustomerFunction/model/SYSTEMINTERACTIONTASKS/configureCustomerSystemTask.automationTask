@@ -524,12 +524,6 @@
   <task:state name="received">
     <task:displayName>Received</task:displayName>
   </task:state>
-  <task:status name="next">
-    <task:displayName>next</task:displayName>
-  </task:status>
-  <task:status name="back">
-    <task:displayName>back</task:displayName>
-  </task:status>
   <task:status name="failure">
     <task:displayName>failure</task:displayName>
   </task:status>

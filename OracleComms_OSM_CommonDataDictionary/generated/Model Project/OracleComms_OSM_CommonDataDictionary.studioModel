@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
   <metadata version="1.0.0" release="7.3.0"/>
-  <entity xsi:type="model:Project" id="mprj=OracleComms_OSM_CommonDataDictionary" type="mprj" typeName="Model Project" name="OracleComms_OSM_CommonDataDictionary" resource="/OracleComms_OSM_CommonDataDictionary/OracleComms_OSM_CommonDataDictionary.ddCartridge">
+  <entity xsi:type="model:Project" id="mprj=OracleComms_OSM_CommonDataDictionary" type="mprj" typeName="Model Project" name="OracleComms_OSM_CommonDataDictionary" resource="\OracleComms_OSM_CommonDataDictionary\OracleComms_OSM_CommonDataDictionary.ddCartridge">
     <displayName lang="default">OracleComms_OSM_CommonDataDictionary</displayName>
     <note lang="default"/>
     <version>
@@ -10,12 +10,16 @@
       <maintenance>0</maintenance>
       <servicePack>0</servicePack>
       <efix>0</efix>
-      <build>3</build>
+      <build>8</build>
     </version>
     <dependencies/>
+    <tagDetails>
+      <name>Base Project</name>
+      <description></description>
+    </tagDetails>
     <identifier>OracleComms_OSM_CommonDataDictionary</identifier>
     <provider>Studio Data Dictionary Provider</provider>
-    <sealed>true</sealed>
+    <sealed>false</sealed>
     <copyright>Copyright © 2005-2015 Oracle. All rights reserved.&#xD;
 &#xD;
 The Programs (which include both the software and documentation)&#xD;

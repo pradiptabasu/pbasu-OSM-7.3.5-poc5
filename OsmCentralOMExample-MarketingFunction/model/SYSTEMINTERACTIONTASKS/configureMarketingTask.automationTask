@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aut="http://xmlns.oracle.com/communications/sce/osm/model/process/task/automation" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:prov="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xmlns:task="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xmlns="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xsi:type="task:automatedTaskType" name="configureMarketingTask">
   <com:displayName>bdmTask</com:displayName>
-  <com:saveVersion>25</com:saveVersion>
+  <com:saveVersion>26</com:saveVersion>
   <com:id>--+6--+y--+D---rpD9csg</com:id>
   <task:orderType>
     <com:entity>OsmCentralOMExampleOrder</com:entity>
@@ -532,11 +532,13 @@
     <task:displayName>failure</task:displayName>
     <task:allowableConstraintViolationSeverity>WARNING</task:allowableConstraintViolationSeverity>
   </task:status>
-  <task:status name="next">
-    <task:displayName>next</task:displayName>
-  </task:status>
   <task:status name="back">
     <task:displayName>back</task:displayName>
+    <task:allowableConstraintViolationSeverity>WARNING</task:allowableConstraintViolationSeverity>
+  </task:status>
+  <task:status name="next">
+    <task:displayName>next</task:displayName>
+    <task:allowableConstraintViolationSeverity>WARNING</task:allowableConstraintViolationSeverity>
   </task:status>
   <task:abstract>false</task:abstract>
   <task:final>false</task:final>

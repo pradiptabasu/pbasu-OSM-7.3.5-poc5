@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:data="http://xmlns.oracle.com/communications/studio/model/data" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
   <metadata version="1.0.0" release="7.3.0"/>
-  <entity xsi:type="data:DataSchema" id="ds=OracleComms_OSM_CommonDataDictionary" type="ds" typeName="Data Schema" name="OracleComms_OSM_CommonDataDictionary" resource="/OracleComms_OSM_CommonDataDictionary/dataDictionary/OracleComms_OSM_CommonDataDictionary.xsd">
+  <entity xsi:type="data:DataSchema" id="ds=OracleComms_OSM_CommonDataDictionary" type="ds" typeName="Data Schema" name="OracleComms_OSM_CommonDataDictionary" resource="\OracleComms_OSM_CommonDataDictionary\dataDictionary\OracleComms_OSM_CommonDataDictionary.xsd">
     <displayName lang="default">OracleComms_OSM_CommonDataDictionary</displayName>
     <note lang="default">Change Log v3.0.0.0.0:&#xD;
 Added Order Transformation Manager Control Data &#xD;
@@ -108,6 +108,7 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
             <primitiveType>string</primitiveType>
           </element>
           <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=FulfillmentFunctionType/calculatedStartDate" type="dataElement" typeName="Schema Element" kind="Element" name="calculatedStartDate" path="/FulfillmentFunctionType/calculatedStartDate">
+            <displayName lang="default">Calculated Start Date</displayName>
             <minOccurs inherited="false">0</minOccurs>
             <maxOccurs inherited="false">1</maxOccurs>
             <defaultValue inherited="true"></defaultValue>
@@ -128,6 +129,7 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
             <primitiveType>dateTime</primitiveType>
           </element>
           <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=FulfillmentFunctionType/duration" type="dataElement" typeName="Schema Element" kind="Element" name="duration" path="/FulfillmentFunctionType/duration">
+            <displayName lang="default">Duration</displayName>
             <minOccurs inherited="false">0</minOccurs>
             <maxOccurs inherited="false">1</maxOccurs>
             <defaultValue inherited="true"></defaultValue>
@@ -1508,7 +1510,7 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=RequestedDeliveryDate" type="dataElement" typeName="Schema Element" kind="Element" name="RequestedDeliveryDate" path="/RequestedDeliveryDate">
-        <displayName lang="default">Requested Delivery Date</displayName>
+        <displayName lang="default">requestedDeliveryDate</displayName>
         <minOccurs inherited="false">0</minOccurs>
         <maxOccurs inherited="false">1</maxOccurs>
         <defaultValue inherited="false"></defaultValue>
@@ -1663,14 +1665,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">256</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=entityState" type="dataElement" typeName="Schema Element" kind="Element" name="entityState" path="/entityState">
@@ -1686,14 +1680,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">20</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=entityVersion" type="dataElement" typeName="Schema Element" kind="Element" name="entityVersion" path="/entityVersion">
@@ -1708,14 +1694,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">40</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>integer</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=Id" type="dataElement" typeName="Schema Element" kind="Element" name="Id" path="/Id">
@@ -1730,14 +1708,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">40</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>long</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=IdNodeType" type="dataElement" typeName="Schema Element" kind="Element" name="IdNodeType" path="/IdNodeType">
@@ -1768,17 +1738,9 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
               </relation>
             </base>
             <dataElements/>
-            <tag>
-              <name>Asset</name>
-              <description>Asset</description>
-            </tag>
             <primitiveType>long</primitiveType>
           </element>
         </dataElements>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>structure</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=accountSystem" type="dataElement" typeName="Schema Element" kind="Element" name="accountSystem" path="/accountSystem">
@@ -1794,10 +1756,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">256</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=accountSystemId" type="dataElement" typeName="Schema Element" kind="Element" name="accountSystemId" path="/accountSystemId">
@@ -1813,10 +1771,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">256</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=actualResumptionDate" type="dataElement" typeName="Schema Element" kind="Element" name="actualResumptionDate" path="/actualResumptionDate">
@@ -1832,10 +1786,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">40</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>dateTime</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=actualSuspensionDate" type="dataElement" typeName="Schema Element" kind="Element" name="actualSuspensionDate" path="/actualSuspensionDate">
@@ -1851,10 +1801,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">40</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>dateTime</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=agreementId" type="dataElement" typeName="Schema Element" kind="Element" name="agreementId" path="/agreementId">
@@ -1870,10 +1816,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">256</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=agreementNumber" type="dataElement" typeName="Schema Element" kind="Element" name="agreementNumber" path="/agreementNumber">
@@ -1895,10 +1837,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
           </relation>
         </base>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=billingAccount" type="dataElement" typeName="Schema Element" kind="Element" name="billingAccount" path="/billingAccount">
@@ -1934,10 +1872,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
             <primitiveType>string</primitiveType>
           </element>
         </dataElements>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>structure</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=billingProfile" type="dataElement" typeName="Schema Element" kind="Element" name="billingProfile" path="/billingProfile">
@@ -1978,10 +1912,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
             <primitiveType>long</primitiveType>
           </element>
         </dataElements>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>structure</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=chargeEndDate" type="dataElement" typeName="Schema Element" kind="Element" name="chargeEndDate" path="/chargeEndDate">
@@ -1997,10 +1927,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">40</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>dateTime</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=chargeStartDate" type="dataElement" typeName="Schema Element" kind="Element" name="chargeStartDate" path="/chargeStartDate">
@@ -2016,10 +1942,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">40</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>dateTime</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=currencyCode" type="dataElement" typeName="Schema Element" kind="Element" name="currencyCode" path="/currencyCode">
@@ -2035,10 +1957,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">5</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=customerAccount" type="dataElement" typeName="Schema Element" kind="Element" name="customerAccount" path="/customerAccount">
@@ -2074,10 +1992,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
             <primitiveType>string</primitiveType>
           </element>
         </dataElements>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>structure</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=description" type="dataElement" typeName="Schema Element" kind="Element" name="description" path="/description">
@@ -2099,10 +2013,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
           </relation>
         </base>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=discountEndDate" type="dataElement" typeName="Schema Element" kind="Element" name="discountEndDate" path="/discountEndDate">
@@ -2118,10 +2028,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">40</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>dateTime</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=discountPercentage" type="dataElement" typeName="Schema Element" kind="Element" name="discountPercentage" path="/discountPercentage">
@@ -2143,10 +2049,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
           </relation>
         </base>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>float</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=discountPeriod" type="dataElement" typeName="Schema Element" kind="Element" name="discountPeriod" path="/discountPeriod">
@@ -2180,10 +2082,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
           </relation>
         </base>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=discountStartDate" type="dataElement" typeName="Schema Element" kind="Element" name="discountStartDate" path="/discountStartDate">
@@ -2199,10 +2097,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">40</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>dateTime</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=discountType" type="dataElement" typeName="Schema Element" kind="Element" name="discountType" path="/discountType">
@@ -2230,10 +2124,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
           </relation>
         </base>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=endDateOfAssetVersion" type="dataElement" typeName="Schema Element" kind="Element" name="endDateOfAssetVersion" path="/endDateOfAssetVersion">
@@ -2248,10 +2138,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">40</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>dateTime</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=id" type="dataElement" typeName="Schema Element" kind="Element" name="id" path="/id">
@@ -2273,14 +2159,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
           </relation>
         </base>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>long</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=installedDate" type="dataElement" typeName="Schema Element" kind="Element" name="installedDate" path="/installedDate">
@@ -2296,10 +2174,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">40</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>dateTime</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=lastUpdateDateOfAsset" type="dataElement" typeName="Schema Element" kind="Element" name="lastUpdateDateOfAsset" path="/lastUpdateDateOfAsset">
@@ -2314,10 +2188,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">40</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>dateTime</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=networkReferenceId" type="dataElement" typeName="Schema Element" kind="Element" name="networkReferenceId" path="/networkReferenceId">
@@ -2333,10 +2203,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">80</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=offerQuantity" type="dataElement" typeName="Schema Element" kind="Element" name="offerQuantity" path="/offerQuantity">
@@ -2352,10 +2218,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">40</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>integer</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=offerVersion" type="dataElement" typeName="Schema Element" kind="Element" name="offerVersion" path="/offerVersion">
@@ -2377,10 +2239,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
           </relation>
         </base>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=orderId" type="dataElement" typeName="Schema Element" kind="Element" name="orderId" path="/orderId">
@@ -2396,10 +2254,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">256</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=orderNumber" type="dataElement" typeName="Schema Element" kind="Element" name="orderNumber" path="/orderNumber">
@@ -2421,10 +2275,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
           </relation>
         </base>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=originalPrice" type="dataElement" typeName="Schema Element" kind="Element" name="originalPrice" path="/originalPrice">
@@ -2446,10 +2296,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
           </relation>
         </base>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=overridePrice" type="dataElement" typeName="Schema Element" kind="Element" name="overridePrice" path="/overridePrice">
@@ -2471,10 +2317,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
           </relation>
         </base>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=partner" type="dataElement" typeName="Schema Element" kind="Element" name="partner" path="/partner">
@@ -2490,10 +2332,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">256</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=productCatalogName" type="dataElement" typeName="Schema Element" kind="Element" name="productCatalogName" path="/productCatalogName">
@@ -2509,10 +2347,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">200</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=productCatalogVersion" type="dataElement" typeName="Schema Element" kind="Element" name="productCatalogVersion" path="/productCatalogVersion">
@@ -2534,10 +2368,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
           </relation>
         </base>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=productSpecName" type="dataElement" typeName="Schema Element" kind="Element" name="productSpecName" path="/productSpecName">
@@ -2553,10 +2383,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">200</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=productSpecVersion" type="dataElement" typeName="Schema Element" kind="Element" name="productSpecVersion" path="/productSpecVersion">
@@ -2578,10 +2404,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
           </relation>
         </base>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=quoteId" type="dataElement" typeName="Schema Element" kind="Element" name="quoteId" path="/quoteId">
@@ -2597,10 +2419,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">256</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=quoteNumber" type="dataElement" typeName="Schema Element" kind="Element" name="quoteNumber" path="/quoteNumber">
@@ -2622,10 +2440,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
           </relation>
         </base>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=reasonCode" type="dataElement" typeName="Schema Element" kind="Element" name="reasonCode" path="/reasonCode">
@@ -2641,10 +2455,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">255</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=recurringType" type="dataElement" typeName="Schema Element" kind="Element" name="recurringType" path="/recurringType">
@@ -2672,10 +2482,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
           </relation>
         </base>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=requestedDeliveryDate" type="dataElement" typeName="Schema Element" kind="Element" name="requestedDeliveryDate" path="/requestedDeliveryDate">
@@ -2691,10 +2497,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">40</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>dateTime</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=returnDate" type="dataElement" typeName="Schema Element" kind="Element" name="returnDate" path="/returnDate">
@@ -2710,10 +2512,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">40</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>dateTime</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=serviceAccount" type="dataElement" typeName="Schema Element" kind="Element" name="serviceAccount" path="/serviceAccount">
@@ -2749,10 +2547,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
             <primitiveType>string</primitiveType>
           </element>
         </dataElements>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>structure</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=serviceId" type="dataElement" typeName="Schema Element" kind="Element" name="serviceId" path="/serviceId">
@@ -2768,10 +2562,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">256</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=shippingDate" type="dataElement" typeName="Schema Element" kind="Element" name="shippingDate" path="/shippingDate">
@@ -2787,10 +2577,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">40</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>dateTime</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=site" type="dataElement" typeName="Schema Element" kind="Element" name="site" path="/site">
@@ -2826,10 +2612,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
             <primitiveType>string</primitiveType>
           </element>
         </dataElements>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>structure</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=startDateOfAssetVersion" type="dataElement" typeName="Schema Element" kind="Element" name="startDateOfAssetVersion" path="/startDateOfAssetVersion">
@@ -2844,10 +2626,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">40</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>dateTime</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=updatedBy" type="dataElement" typeName="Schema Element" kind="Element" name="updatedBy" path="/updatedBy">
@@ -2863,10 +2641,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">256</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=updatedBySystem" type="dataElement" typeName="Schema Element" kind="Element" name="updatedBySystem" path="/updatedBySystem">
@@ -2882,10 +2656,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">256</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=updateMode" type="dataElement" typeName="Schema Element" kind="Element" name="updateMode" path="/updateMode">
@@ -2913,10 +2683,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
           <name lang="default">Agreement</name>
         </enum>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=warrantyEndDate" type="dataElement" typeName="Schema Element" kind="Element" name="warrantyEndDate" path="/warrantyEndDate">
@@ -2932,10 +2698,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">40</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>dateTime</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=warrantyStartDate" type="dataElement" typeName="Schema Element" kind="Element" name="warrantyStartDate" path="/warrantyStartDate">
@@ -2951,10 +2713,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">40</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>dateTime</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=DescriptionType" type="dataElement" typeName="Schema Element" kind="Element" name="DescriptionType" path="/DescriptionType">
@@ -2970,10 +2728,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">200</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=DiscountType" type="dataElement" typeName="Schema Element" kind="Element" name="DiscountType" path="/DiscountType">
@@ -2995,10 +2749,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
           <name lang="default">Percent</name>
         </enum>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=OrderNumberType" type="dataElement" typeName="Schema Element" kind="Element" name="OrderNumberType" path="/OrderNumberType">
@@ -3014,10 +2764,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">1000</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=PercentageType" type="dataElement" typeName="Schema Element" kind="Element" name="PercentageType" path="/PercentageType">
@@ -3033,10 +2779,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">40</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>float</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=PeriodType" type="dataElement" typeName="Schema Element" kind="Element" name="PeriodType" path="/PeriodType">
@@ -3063,10 +2805,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
           <name lang="default">Years</name>
         </enum>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=PriceType" type="dataElement" typeName="Schema Element" kind="Element" name="PriceType" path="/PriceType">
@@ -3082,10 +2820,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">40</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=RecurringType" type="dataElement" typeName="Schema Element" kind="Element" name="RecurringType" path="/RecurringType">
@@ -3106,10 +2840,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
           <name lang="default">One Time</name>
         </enum>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=VersionType" type="dataElement" typeName="Schema Element" kind="Element" name="VersionType" path="/VersionType">
@@ -3125,10 +2855,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">20</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=accountClass" type="dataElement" typeName="Schema Element" kind="Element" name="accountClass" path="/accountClass">
@@ -3152,10 +2878,6 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
           <name lang="default">Service</name>
         </enum>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=accountHierarchy" type="dataElement" typeName="Schema Element" kind="Element" name="accountHierarchy" path="/accountHierarchy">
@@ -3175,10 +2897,6 @@ Account with ID 234 is child of 123 etc.</note>
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">-1</maxLength>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=accountNumber" type="dataElement" typeName="Schema Element" kind="Element" name="accountNumber" path="/accountNumber">
@@ -3193,10 +2911,6 @@ Account with ID 234 is child of 123 etc.</note>
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">40</maxLength>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=accountType" type="dataElement" typeName="Schema Element" kind="Element" name="accountType" path="/accountType">
@@ -3223,10 +2937,6 @@ Account with ID 234 is child of 123 etc.</note>
           <name lang="default">Partner</name>
         </enum>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=altitude" type="dataElement" typeName="Schema Element" kind="Element" name="altitude" path="/altitude">
@@ -3241,10 +2951,6 @@ Account with ID 234 is child of 123 etc.</note>
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">40</maxLength>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=billDayOfMonth" type="dataElement" typeName="Schema Element" kind="Element" name="billDayOfMonth" path="/billDayOfMonth">
@@ -3259,10 +2965,6 @@ Account with ID 234 is child of 123 etc.</note>
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">40</maxLength>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>integer</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=billFrequency" type="dataElement" typeName="Schema Element" kind="Element" name="billFrequency" path="/billFrequency">
@@ -3286,10 +2988,6 @@ Account with ID 234 is child of 123 etc.</note>
           <name lang="default">Annually</name>
         </enum>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=billingProfileType" type="dataElement" typeName="Schema Element" kind="Element" name="billingProfileType" path="/billingProfileType">
@@ -3313,10 +3011,6 @@ Account with ID 234 is child of 123 etc.</note>
           <name lang="default">Convergent</name>
         </enum>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=billMedia" type="dataElement" typeName="Schema Element" kind="Element" name="billMedia" path="/billMedia">
@@ -3343,10 +3037,6 @@ Account with ID 234 is child of 123 etc.</note>
           <name lang="default">Invoice</name>
         </enum>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=billType" type="dataElement" typeName="Schema Element" kind="Element" name="billType" path="/billType">
@@ -3367,10 +3057,6 @@ Account with ID 234 is child of 123 etc.</note>
           <name lang="default">Summary</name>
         </enum>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=cellPhone" type="dataElement" typeName="Schema Element" kind="Element" name="cellPhone" path="/cellPhone">
@@ -3385,10 +3071,6 @@ Account with ID 234 is child of 123 etc.</note>
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">50</maxLength>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=city" type="dataElement" typeName="Schema Element" kind="Element" name="city" path="/city">
@@ -3403,10 +3085,6 @@ Account with ID 234 is child of 123 etc.</note>
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">150</maxLength>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=collections" type="dataElement" typeName="Schema Element" kind="Element" name="collections" path="/collections">
@@ -3421,10 +3099,6 @@ Account with ID 234 is child of 123 etc.</note>
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">1</maxLength>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=collectionsExempt" type="dataElement" typeName="Schema Element" kind="Element" name="collectionsExempt" path="/collectionsExempt">
@@ -3439,10 +3113,6 @@ Account with ID 234 is child of 123 etc.</note>
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">1</maxLength>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=companyName" type="dataElement" typeName="Schema Element" kind="Element" name="companyName" path="/companyName">
@@ -3458,10 +3128,6 @@ Account with ID 234 is child of 123 etc.</note>
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">40</maxLength>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=country" type="dataElement" typeName="Schema Element" kind="Element" name="country" path="/country">
@@ -4217,10 +3883,6 @@ Account with ID 234 is child of 123 etc.</note>
           <name lang="default">Zimbabwe</name>
         </enum>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=county" type="dataElement" typeName="Schema Element" kind="Element" name="county" path="/county">
@@ -4235,10 +3897,6 @@ Account with ID 234 is child of 123 etc.</note>
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">100</maxLength>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=currency" type="dataElement" typeName="Schema Element" kind="Element" name="currency" path="/currency">
@@ -4724,10 +4382,6 @@ Account with ID 234 is child of 123 etc.</note>
           <name lang="default">Zimbabwe Dollar</name>
         </enum>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=customerStanding" type="dataElement" typeName="Schema Element" kind="Element" name="customerStanding" path="/customerStanding">
@@ -4742,10 +4396,6 @@ Account with ID 234 is child of 123 etc.</note>
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">40</maxLength>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=customerValue" type="dataElement" typeName="Schema Element" kind="Element" name="customerValue" path="/customerValue">
@@ -4769,10 +4419,6 @@ Account with ID 234 is child of 123 etc.</note>
           <name lang="default">LOW</name>
         </enum>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=email" type="dataElement" typeName="Schema Element" kind="Element" name="email" path="/email">
@@ -4787,10 +4433,6 @@ Account with ID 234 is child of 123 etc.</note>
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">50</maxLength>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=firstName" type="dataElement" typeName="Schema Element" kind="Element" name="firstName" path="/firstName">
@@ -4805,10 +4447,6 @@ Account with ID 234 is child of 123 etc.</note>
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">250</maxLength>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=homePhone" type="dataElement" typeName="Schema Element" kind="Element" name="homePhone" path="/homePhone">
@@ -4823,10 +4461,6 @@ Account with ID 234 is child of 123 etc.</note>
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">50</maxLength>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=isPremise" type="dataElement" typeName="Schema Element" kind="Element" name="isPremise" path="/isPremise">
@@ -4841,10 +4475,6 @@ Account with ID 234 is child of 123 etc.</note>
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">1</maxLength>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=jobTitle" type="dataElement" typeName="Schema Element" kind="Element" name="jobTitle" path="/jobTitle">
@@ -4859,10 +4489,6 @@ Account with ID 234 is child of 123 etc.</note>
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">50</maxLength>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=language" type="dataElement" typeName="Schema Element" kind="Element" name="language" path="/language">
@@ -4877,10 +4503,6 @@ Account with ID 234 is child of 123 etc.</note>
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">50</maxLength>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=lastName" type="dataElement" typeName="Schema Element" kind="Element" name="lastName" path="/lastName">
@@ -4895,10 +4517,6 @@ Account with ID 234 is child of 123 etc.</note>
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">250</maxLength>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=latitude" type="dataElement" typeName="Schema Element" kind="Element" name="latitude" path="/latitude">
@@ -4913,10 +4531,6 @@ Account with ID 234 is child of 123 etc.</note>
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">40</maxLength>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=lineFour" type="dataElement" typeName="Schema Element" kind="Element" name="lineFour" path="/lineFour">
@@ -4931,10 +4545,6 @@ Account with ID 234 is child of 123 etc.</note>
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">150</maxLength>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=lineOne" type="dataElement" typeName="Schema Element" kind="Element" name="lineOne" path="/lineOne">
@@ -4949,10 +4559,6 @@ Account with ID 234 is child of 123 etc.</note>
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">150</maxLength>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=lineThree" type="dataElement" typeName="Schema Element" kind="Element" name="lineThree" path="/lineThree">
@@ -4967,10 +4573,6 @@ Account with ID 234 is child of 123 etc.</note>
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">150</maxLength>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=lineTwo" type="dataElement" typeName="Schema Element" kind="Element" name="lineTwo" path="/lineTwo">
@@ -4985,10 +4587,6 @@ Account with ID 234 is child of 123 etc.</note>
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">150</maxLength>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=longitude" type="dataElement" typeName="Schema Element" kind="Element" name="longitude" path="/longitude">
@@ -5003,10 +4601,6 @@ Account with ID 234 is child of 123 etc.</note>
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">40</maxLength>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=middleName" type="dataElement" typeName="Schema Element" kind="Element" name="middleName" path="/middleName">
@@ -5021,10 +4615,6 @@ Account with ID 234 is child of 123 etc.</note>
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">250</maxLength>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=organization" type="dataElement" typeName="Schema Element" kind="Element" name="organization" path="/organization">
@@ -5039,10 +4629,6 @@ Account with ID 234 is child of 123 etc.</note>
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">50</maxLength>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=paymentMethod" type="dataElement" typeName="Schema Element" kind="Element" name="paymentMethod" path="/paymentMethod">
@@ -5072,10 +4658,6 @@ Account with ID 234 is child of 123 etc.</note>
           <name lang="default">SEPA</name>
         </enum>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=postalCode" type="dataElement" typeName="Schema Element" kind="Element" name="postalCode" path="/postalCode">
@@ -5090,10 +4672,6 @@ Account with ID 234 is child of 123 etc.</note>
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">150</maxLength>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=priceList" type="dataElement" typeName="Schema Element" kind="Element" name="priceList" path="/priceList">
@@ -5108,10 +4686,6 @@ Account with ID 234 is child of 123 etc.</note>
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">50</maxLength>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=province" type="dataElement" typeName="Schema Element" kind="Element" name="province" path="/province">
@@ -5126,10 +4700,6 @@ Account with ID 234 is child of 123 etc.</note>
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">40</maxLength>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=salutation" type="dataElement" typeName="Schema Element" kind="Element" name="salutation" path="/salutation">
@@ -5156,10 +4726,6 @@ Account with ID 234 is child of 123 etc.</note>
           <name lang="default">Ms</name>
         </enum>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=secondaryCurrency" type="dataElement" typeName="Schema Element" kind="Element" name="secondaryCurrency" path="/secondaryCurrency">
@@ -5645,10 +5211,6 @@ Account with ID 234 is child of 123 etc.</note>
           <name lang="default">Zimbabwe Dollar</name>
         </enum>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=state" type="dataElement" typeName="Schema Element" kind="Element" name="state" path="/state">
@@ -5663,10 +5225,6 @@ Account with ID 234 is child of 123 etc.</note>
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">150</maxLength>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=utmEasting" type="dataElement" typeName="Schema Element" kind="Element" name="utmEasting" path="/utmEasting">
@@ -5681,10 +5239,6 @@ Account with ID 234 is child of 123 etc.</note>
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">40</maxLength>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=utmNorthing" type="dataElement" typeName="Schema Element" kind="Element" name="utmNorthing" path="/utmNorthing">
@@ -5699,10 +5253,6 @@ Account with ID 234 is child of 123 etc.</note>
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">40</maxLength>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=workPhone" type="dataElement" typeName="Schema Element" kind="Element" name="workPhone" path="/workPhone">
@@ -5717,10 +5267,6 @@ Account with ID 234 is child of 123 etc.</note>
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">50</maxLength>
         <dataElements/>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=account" type="dataElement" typeName="Schema Element" kind="Element" name="account" path="/account">
@@ -5761,10 +5307,6 @@ Account with ID 234 is child of 123 etc.</note>
             <primitiveType>long</primitiveType>
           </element>
         </dataElements>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>structure</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=address" type="dataElement" typeName="Schema Element" kind="Element" name="address" path="/address">
@@ -5804,10 +5346,6 @@ Account with ID 234 is child of 123 etc.</note>
             <primitiveType>long</primitiveType>
           </element>
         </dataElements>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>structure</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=billingAddress" type="dataElement" typeName="Schema Element" kind="Element" name="billingAddress" path="/billingAddress">
@@ -5848,10 +5386,6 @@ Account with ID 234 is child of 123 etc.</note>
             <primitiveType>long</primitiveType>
           </element>
         </dataElements>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>structure</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=contact" type="dataElement" typeName="Schema Element" kind="Element" name="contact" path="/contact">
@@ -5891,10 +5425,6 @@ Account with ID 234 is child of 123 etc.</note>
             <primitiveType>long</primitiveType>
           </element>
         </dataElements>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>structure</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=parentAccount" type="dataElement" typeName="Schema Element" kind="Element" name="parentAccount" path="/parentAccount">
@@ -5934,10 +5464,6 @@ Account with ID 234 is child of 123 etc.</note>
             <primitiveType>long</primitiveType>
           </element>
         </dataElements>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>structure</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=paymentMethods" type="dataElement" typeName="Schema Element" kind="Element" name="paymentMethods" path="/paymentMethods">
@@ -5977,10 +5503,6 @@ Account with ID 234 is child of 123 etc.</note>
             <primitiveType>long</primitiveType>
           </element>
         </dataElements>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>structure</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=primaryAddress" type="dataElement" typeName="Schema Element" kind="Element" name="primaryAddress" path="/primaryAddress">
@@ -6020,10 +5542,6 @@ Account with ID 234 is child of 123 etc.</note>
             <primitiveType>long</primitiveType>
           </element>
         </dataElements>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>structure</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=primaryBillingProfile" type="dataElement" typeName="Schema Element" kind="Element" name="primaryBillingProfile" path="/primaryBillingProfile">
@@ -6063,10 +5581,6 @@ Account with ID 234 is child of 123 etc.</note>
             <primitiveType>long</primitiveType>
           </element>
         </dataElements>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>structure</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=primaryContact" type="dataElement" typeName="Schema Element" kind="Element" name="primaryContact" path="/primaryContact">
@@ -6106,10 +5620,6 @@ Account with ID 234 is child of 123 etc.</note>
             <primitiveType>long</primitiveType>
           </element>
         </dataElements>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>structure</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=primaryPaymentMethod" type="dataElement" typeName="Schema Element" kind="Element" name="primaryPaymentMethod" path="/primaryPaymentMethod">
@@ -6149,10 +5659,6 @@ Account with ID 234 is child of 123 etc.</note>
             <primitiveType>long</primitiveType>
           </element>
         </dataElements>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>structure</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=rootAccount" type="dataElement" typeName="Schema Element" kind="Element" name="rootAccount" path="/rootAccount">
@@ -6193,10 +5699,6 @@ Account with ID 234 is child of 123 etc.</note>
             <primitiveType>long</primitiveType>
           </element>
         </dataElements>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>structure</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=serviceAddress" type="dataElement" typeName="Schema Element" kind="Element" name="serviceAddress" path="/serviceAddress">
@@ -6237,10 +5739,6 @@ Account with ID 234 is child of 123 etc.</note>
             <primitiveType>long</primitiveType>
           </element>
         </dataElements>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>structure</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=shippingAddress" type="dataElement" typeName="Schema Element" kind="Element" name="shippingAddress" path="/shippingAddress">
@@ -6281,10 +5779,6 @@ Account with ID 234 is child of 123 etc.</note>
             <primitiveType>long</primitiveType>
           </element>
         </dataElements>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>structure</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=AccountIDNodeType" type="dataElement" typeName="Schema Element" kind="Element" name="AccountIDNodeType" path="/AccountIDNodeType">
@@ -6311,17 +5805,9 @@ Account with ID 234 is child of 123 etc.</note>
             <minLength inherited="false">0</minLength>
             <maxLength inherited="false">256</maxLength>
             <dataElements/>
-            <tag>
-              <name>Asset</name>
-              <description>Asset</description>
-            </tag>
             <primitiveType>string</primitiveType>
           </element>
         </dataElements>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>structure</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=accountBillingProfile" type="dataElement" typeName="Schema Element" kind="Element" name="accountBillingProfile" path="/accountBillingProfile">
@@ -6357,10 +5843,6 @@ Account with ID 234 is child of 123 etc.</note>
             <primitiveType>string</primitiveType>
           </element>
         </dataElements>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>structure</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=PriceValueType" type="dataElement" typeName="Schema Element" kind="Element" name="PriceValueType" path="/PriceValueType">
@@ -6537,10 +6019,6 @@ Account with ID 234 is child of 123 etc.</note>
         <minLength inherited="false">0</minLength>
         <maxLength inherited="false">40</maxLength>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>dateTime</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=usageEndDate" type="dataElement" typeName="Schema Element" kind="Element" name="usageEndDate" path="/usageEndDate">
@@ -6596,10 +6074,6 @@ Account with ID 234 is child of 123 etc.</note>
             <primitiveType>long</primitiveType>
           </element>
         </dataElements>
-        <tag>
-          <name>Account</name>
-          <description>Account</description>
-        </tag>
         <primitiveType>structure</primitiveType>
       </element>
       <element id="ds=OracleComms_OSM_CommonDataDictionary+dataElement=updateReasonCode" type="dataElement" typeName="Schema Element" kind="Element" name="updateReasonCode" path="/updateReasonCode">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmn="http://xmlns.oracle.com/communications/studio/model/common" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
   <metadata version="1.0.0" release="7.3.0"/>
-  <entity xsi:type="cmn:DataStructureDefinition" id="dsd=accountAndBillingDetails" type="dsd" typeName="Data Structure Definition" name="accountAndBillingDetails" resource="/OracleComms_OSM_CommonDataDictionary/model/accountAndBillingDetails.dataStructDef">
+  <entity xsi:type="cmn:DataStructureDefinition" id="dsd=accountAndBillingDetails" type="dsd" typeName="Data Structure Definition" name="accountAndBillingDetails" resource="\OracleComms_OSM_CommonDataDictionary\model\accountAndBillingDetails.dataStructDef">
     <displayName lang="default">accountAndBillingDetails</displayName>
     <note lang="default"/>
     <project>
@@ -29,10 +29,6 @@
           </relation>
         </base>
         <dataElements/>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>string</primitiveType>
       </element>
       <element id="dsd=accountAndBillingDetails+dataElement=zoC7+o99RG2BJDFDSsH-gA" type="dataElement" typeName="Data Element" kind="Element" name="customerAccount" path="/accountAndBillingDetails/customerAccount">
@@ -74,10 +70,6 @@
             <primitiveType>string</primitiveType>
           </element>
         </dataElements>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>structure</primitiveType>
       </element>
       <element id="dsd=accountAndBillingDetails+dataElement=wu+6ElP6QImC7n8TwwG+RA" type="dataElement" typeName="Data Element" kind="Element" name="billingAccount" path="/accountAndBillingDetails/billingAccount">
@@ -119,10 +111,6 @@
             <primitiveType>string</primitiveType>
           </element>
         </dataElements>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>structure</primitiveType>
       </element>
       <element id="dsd=accountAndBillingDetails+dataElement=WmYEt57mSoS6xJJ0oW5xkA" type="dataElement" typeName="Data Element" kind="Element" name="serviceAccount" path="/accountAndBillingDetails/serviceAccount">
@@ -164,10 +152,6 @@
             <primitiveType>string</primitiveType>
           </element>
         </dataElements>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>structure</primitiveType>
       </element>
       <element id="dsd=accountAndBillingDetails+dataElement=HnBef7mkRqu0f9jB6-gy+g" type="dataElement" typeName="Data Element" kind="Element" name="site" path="/accountAndBillingDetails/site">
@@ -209,10 +193,6 @@
             <primitiveType>string</primitiveType>
           </element>
         </dataElements>
-        <tag>
-          <name>Asset</name>
-          <description>Asset</description>
-        </tag>
         <primitiveType>structure</primitiveType>
       </element>
       <element id="dsd=accountAndBillingDetails+dataElement=1C4KEa3ITdSDAPsmHrlSeA" type="dataElement" typeName="Data Element" kind="Element" name="accountBillingProfile" path="/accountAndBillingDetails/accountBillingProfile">

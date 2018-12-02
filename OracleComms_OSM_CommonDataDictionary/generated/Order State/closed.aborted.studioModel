@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmn="http://xmlns.oracle.com/communications/studio/model/common" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
   <metadata version="1.0.0" release="7.3.0"/>
-  <entity xsi:type="cmn:OrderState" id="os=closed.aborted" type="os" typeName="Order State" name="closed.aborted" resource="/OracleComms_OSM_CommonDataDictionary/model/closed.aborted.orderState">
+  <entity xsi:type="cmn:OrderState" id="os=closed.aborted" type="os" typeName="Order State" name="closed.aborted" resource="\OracleComms_OSM_CommonDataDictionary\model\closed.aborted.orderState">
     <displayName lang="default">Closed Aborted</displayName>
     <note lang="default"/>
     <project>

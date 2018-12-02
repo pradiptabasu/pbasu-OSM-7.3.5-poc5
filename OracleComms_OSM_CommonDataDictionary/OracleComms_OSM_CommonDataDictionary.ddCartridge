@@ -14,7 +14,7 @@
     <com:minor>0</com:minor>
     <com:maintenance>0</com:maintenance>
   </com:targetApplicationVersion>
-  <com:sealed>true</com:sealed>
+  <com:sealed>false</com:sealed>
   <com:copyright>Copyright © 2005-2015 Oracle. All rights reserved.&#xD;
 &#xD;
 The Programs (which include both the software and documentation)&#xD;

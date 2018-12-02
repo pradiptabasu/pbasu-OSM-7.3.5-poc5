@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns="http://www.mslv.com/studio/core/model/common" xmlns:data="http://www.oracle.com/communications/studio/core/model/common/data" xmlns:layout="http://xmlns.oracle.com/communications/sce/poms/model/layout" xmlns:poms="http://xmlns.oracle.com/communications/sce/poms/model/poms" xmlns:provisioning="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xmlns:specification="http://www.mslv.com/studio/inventory/model/specification" xsi:type="com:dataDictionaryCompanionType" name="OsmCentralOMExample-ShipFunction_companion">
-  <com:displayName>DDCM</com:displayName>
-  <com:saveVersion>4</com:saveVersion>
+  <com:displayName>OsmCentralOMExample-ShipFunction</com:displayName>
+  <com:saveVersion>5</com:saveVersion>
   <com:id>---f--+R--+UHyVkwWxvGQ</com:id>
   <com:dataDictionaryNode>
     <com:entity>OsmCentralOMExample-ShipFunction</com:entity>
@@ -18,6 +18,7 @@
         <com:id>--+RAK1M--+L--+x--+tLg</com:id>
         <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
         <data:dataElementId>ShipFunction</data:dataElementId>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
         <data:abstract>false</data:abstract>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -34,13 +35,16 @@
     <com:baseElement>string</com:baseElement>
     <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
     <com:dataElementId>ShipFunction/componentKey</com:dataElementId>
+    <com:extension xsi:type="provisioning:ElementExtensionType"/>
     <com:dataDictionaryDetails>
       <com:detail xsi:type="data:dataElementCommonDetail">
         <com:id>ZJZT3mc4--+pQyoH---3wA</com:id>
         <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
         <data:dataElementId>ShipFunction/componentKey</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>1000</data:maxLength>
         <data:minMultiplicity>1</data:minMultiplicity>
@@ -63,7 +67,9 @@
         <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
         <data:dataElementId>ShipFunction/orderItem</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>-1</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -80,11 +86,13 @@
     <com:baseElement>ExternalFulfillmentState</com:baseElement>
     <com:baseNamespace>http://xmlns.oracle.com/communications/sce/dictionary/OracleComms_OSM_CommonDataDictionary/OracleComms_OSM_CommonDataDictionary</com:baseNamespace>
     <com:dataElementId>ShipFunction/orderItem/ExternalFulfillmentState</com:dataElementId>
+    <com:extension xsi:type="provisioning:ElementExtensionType"/>
     <com:dataDictionaryDetails>
       <com:detail xsi:type="data:dataElementCommonDetail">
         <com:id>---J---Y--+S--+cJ6ZnuQ</com:id>
         <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
         <data:dataElementId>ShipFunction/orderItem/ExternalFulfillmentState</data:dataElementId>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
         <data:minMultiplicity>0</data:minMultiplicity>
         <data:maxMultiplicity>1</data:maxMultiplicity>
@@ -110,6 +118,7 @@
         <com:id>xGAEcDIt--++---0b1UDmQ</com:id>
         <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
         <data:dataElementId>ShippingStatus</data:dataElementId>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
         <data:abstract>false</data:abstract>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -149,13 +158,16 @@
     <com:baseElement>string</com:baseElement>
     <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
     <com:dataElementId>ShippingStatus/ErrorCode</com:dataElementId>
+    <com:extension xsi:type="provisioning:ElementExtensionType"/>
     <com:dataDictionaryDetails>
       <com:detail xsi:type="data:dataElementCommonDetail">
         <com:id>---Lg64R--+TU6cEpWYMOA</com:id>
         <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
         <data:dataElementId>ShippingStatus/ErrorCode</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>-1</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -172,13 +184,16 @@
     <com:baseElement>string</com:baseElement>
     <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
     <com:dataElementId>ShippingStatus/ErrorMessage</com:dataElementId>
+    <com:extension xsi:type="provisioning:ElementExtensionType"/>
     <com:dataDictionaryDetails>
       <com:detail xsi:type="data:dataElementCommonDetail">
         <com:id>--+A--+T--+o--+O---Y-w</com:id>
         <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
         <data:dataElementId>ShippingStatus/ErrorMessage</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>200</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -195,13 +210,16 @@
     <com:baseElement>string</com:baseElement>
     <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
     <com:dataElementId>ShippingStatus/ErrorStatus</com:dataElementId>
+    <com:extension xsi:type="provisioning:ElementExtensionType"/>
     <com:dataDictionaryDetails>
       <com:detail xsi:type="data:dataElementCommonDetail">
         <com:id>--+f---8--+v--+GTxEctw</com:id>
         <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
         <data:dataElementId>ShippingStatus/ErrorStatus</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>-1</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -228,6 +246,7 @@
         <com:id>CAlA--+l--+TJrAc--+3Kw</com:id>
         <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
         <data:dataElementId>ShippingAddress</data:dataElementId>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
         <data:abstract>false</data:abstract>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -278,8 +297,10 @@
         <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
         <data:dataElementId>ShippingProfile</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
         <data:abstract>false</data:abstract>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>40</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -327,6 +348,7 @@
         <com:id>y4ldexxQ--+q---x---P4w</com:id>
         <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
         <data:dataElementId>ShippingProfile/ShippingAddress</data:dataElementId>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
         <data:minMultiplicity>1</data:minMultiplicity>
         <data:maxMultiplicity>1</data:maxMultiplicity>
@@ -367,11 +389,13 @@
     <com:dataElementId>ShippingAddress/locationType</com:dataElementId>
     <com:dataDictionaryDetails>
       <com:detail xsi:type="data:dataElementCommonDetail">
-        <com:id>---W--+r--+D---3--+AYQ</com:id>
+        <com:id>QQXBHXW-Ria9WjSoXcl78g</com:id>
         <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
         <data:dataElementId>ShippingAddress/locationType</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>1</data:minMultiplicity>
@@ -390,11 +414,13 @@
     <com:dataElementId>ShippingAddress/nameLocation</com:dataElementId>
     <com:dataDictionaryDetails>
       <com:detail xsi:type="data:dataElementCommonDetail">
-        <com:id>dvBS--+h--+0--+u--+-Rw</com:id>
+        <com:id>yzhHQijZT8OemsB9GFIgWw</com:id>
         <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
         <data:dataElementId>ShippingAddress/nameLocation</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>200</data:maxLength>
         <data:minMultiplicity>1</data:minMultiplicity>
@@ -413,11 +439,13 @@
     <com:dataElementId>ShippingAddress/number</com:dataElementId>
     <com:dataDictionaryDetails>
       <com:detail xsi:type="data:dataElementCommonDetail">
-        <com:id>Rste8Dkv--+YcjY+Hyds+g</com:id>
+        <com:id>7r04LSikRpmZvF8SJJwcdw</com:id>
         <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
         <data:dataElementId>ShippingAddress/number</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -436,11 +464,13 @@
     <com:dataElementId>ShippingAddress/typeCompl</com:dataElementId>
     <com:dataDictionaryDetails>
       <com:detail xsi:type="data:dataElementCommonDetail">
-        <com:id>9DEtLDA4--+D--+s--+QHw</com:id>
+        <com:id>JQpDTPLBQmyNso5ONJYH8g</com:id>
         <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
         <data:dataElementId>ShippingAddress/typeCompl</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -459,11 +489,13 @@
     <com:dataElementId>ShippingAddress/numCompl</com:dataElementId>
     <com:dataDictionaryDetails>
       <com:detail xsi:type="data:dataElementCommonDetail">
-        <com:id>hlUc--+---+H--+o---XRw</com:id>
+        <com:id>PnSrQrjpRXm4lkqkdGYuFA</com:id>
         <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
         <data:dataElementId>ShippingAddress/numCompl</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -482,11 +514,13 @@
     <com:dataElementId>ShippingAddress/district</com:dataElementId>
     <com:dataDictionaryDetails>
       <com:detail xsi:type="data:dataElementCommonDetail">
-        <com:id>Voh+5Fk6--+3---1jKxU7Q</com:id>
+        <com:id>mwiZf17aTkGMxAU3tuKJ2g</com:id>
         <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
         <data:dataElementId>ShippingAddress/district</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -505,11 +539,13 @@
     <com:dataElementId>ShippingAddress/codeLocation</com:dataElementId>
     <com:dataDictionaryDetails>
       <com:detail xsi:type="data:dataElementCommonDetail">
-        <com:id>Kn07---Q--+jX5gZ---mWA</com:id>
+        <com:id>WHk0eqKcQKu1uU8a18GLLw</com:id>
         <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
         <data:dataElementId>ShippingAddress/codeLocation</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -528,11 +564,13 @@
     <com:dataElementId>ShippingAddress/city</com:dataElementId>
     <com:dataDictionaryDetails>
       <com:detail xsi:type="data:dataElementCommonDetail">
-        <com:id>---9BPIc--+nhbhaWnANpw</com:id>
+        <com:id>b4A6qIIKSlqQnn-FMoZYBw</com:id>
         <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
         <data:dataElementId>ShippingAddress/city</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -551,11 +589,13 @@
     <com:dataElementId>ShippingAddress/state</com:dataElementId>
     <com:dataDictionaryDetails>
       <com:detail xsi:type="data:dataElementCommonDetail">
-        <com:id>oK4044gB--+bMDYb---Vhw</com:id>
+        <com:id>eWFFl3I8TpGty-VocEHD3Q</com:id>
         <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
         <data:dataElementId>ShippingAddress/state</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -574,11 +614,13 @@
     <com:dataElementId>ShippingAddress/referencePoint</com:dataElementId>
     <com:dataDictionaryDetails>
       <com:detail xsi:type="data:dataElementCommonDetail">
-        <com:id>5it+CyFN--+eNixJ--+Jgw</com:id>
+        <com:id>qgOx5ia+RFemNcMPV7VU6w</com:id>
         <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
         <data:dataElementId>ShippingAddress/referencePoint</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -597,11 +639,13 @@
     <com:dataElementId>ShippingAddress/areaCode</com:dataElementId>
     <com:dataDictionaryDetails>
       <com:detail xsi:type="data:dataElementCommonDetail">
-        <com:id>--+YKesq--+r---d--+1Ng</com:id>
+        <com:id>2VLEyrt8Q3+vxzcZhNcFYA</com:id>
         <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
         <data:dataElementId>ShippingAddress/areaCode</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -620,11 +664,13 @@
     <com:dataElementId>ShippingAddress/typeAddress</com:dataElementId>
     <com:dataDictionaryDetails>
       <com:detail xsi:type="data:dataElementCommonDetail">
-        <com:id>--+X---a--+3---j---2GQ</com:id>
+        <com:id>1NRdSREgSrCn7lhTEJq2iA</com:id>
         <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
         <data:dataElementId>ShippingAddress/typeAddress</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -641,13 +687,16 @@
     <com:baseElement>string</com:baseElement>
     <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
     <com:dataElementId>ShippingProfile/ShippingAddress/locationType</com:dataElementId>
+    <com:extension xsi:type="provisioning:ElementExtensionType"/>
     <com:dataDictionaryDetails>
       <com:detail xsi:type="data:dataElementCommonDetail">
-        <com:id>---W--+r--+D---3--+AYQ</com:id>
+        <com:id>QQXBHXW-Ria9WjSoXcl78g</com:id>
         <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
         <data:dataElementId>ShippingProfile/ShippingAddress/locationType</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>1</data:minMultiplicity>
@@ -664,13 +713,16 @@
     <com:baseElement>string</com:baseElement>
     <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
     <com:dataElementId>ShippingProfile/ShippingAddress/nameLocation</com:dataElementId>
+    <com:extension xsi:type="provisioning:ElementExtensionType"/>
     <com:dataDictionaryDetails>
       <com:detail xsi:type="data:dataElementCommonDetail">
-        <com:id>dvBS--+h--+0--+u--+-Rw</com:id>
+        <com:id>yzhHQijZT8OemsB9GFIgWw</com:id>
         <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
         <data:dataElementId>ShippingProfile/ShippingAddress/nameLocation</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>200</data:maxLength>
         <data:minMultiplicity>1</data:minMultiplicity>
@@ -687,13 +739,16 @@
     <com:baseElement>string</com:baseElement>
     <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
     <com:dataElementId>ShippingProfile/ShippingAddress/number</com:dataElementId>
+    <com:extension xsi:type="provisioning:ElementExtensionType"/>
     <com:dataDictionaryDetails>
       <com:detail xsi:type="data:dataElementCommonDetail">
-        <com:id>Rste8Dkv--+YcjY+Hyds+g</com:id>
+        <com:id>7r04LSikRpmZvF8SJJwcdw</com:id>
         <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
         <data:dataElementId>ShippingProfile/ShippingAddress/number</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -710,13 +765,16 @@
     <com:baseElement>string</com:baseElement>
     <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
     <com:dataElementId>ShippingProfile/ShippingAddress/typeCompl</com:dataElementId>
+    <com:extension xsi:type="provisioning:ElementExtensionType"/>
     <com:dataDictionaryDetails>
       <com:detail xsi:type="data:dataElementCommonDetail">
-        <com:id>9DEtLDA4--+D--+s--+QHw</com:id>
+        <com:id>JQpDTPLBQmyNso5ONJYH8g</com:id>
         <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
         <data:dataElementId>ShippingProfile/ShippingAddress/typeCompl</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -733,13 +791,16 @@
     <com:baseElement>string</com:baseElement>
     <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
     <com:dataElementId>ShippingProfile/ShippingAddress/numCompl</com:dataElementId>
+    <com:extension xsi:type="provisioning:ElementExtensionType"/>
     <com:dataDictionaryDetails>
       <com:detail xsi:type="data:dataElementCommonDetail">
-        <com:id>hlUc--+---+H--+o---XRw</com:id>
+        <com:id>PnSrQrjpRXm4lkqkdGYuFA</com:id>
         <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
         <data:dataElementId>ShippingProfile/ShippingAddress/numCompl</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -756,13 +817,16 @@
     <com:baseElement>string</com:baseElement>
     <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
     <com:dataElementId>ShippingProfile/ShippingAddress/district</com:dataElementId>
+    <com:extension xsi:type="provisioning:ElementExtensionType"/>
     <com:dataDictionaryDetails>
       <com:detail xsi:type="data:dataElementCommonDetail">
-        <com:id>Voh+5Fk6--+3---1jKxU7Q</com:id>
+        <com:id>mwiZf17aTkGMxAU3tuKJ2g</com:id>
         <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
         <data:dataElementId>ShippingProfile/ShippingAddress/district</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -779,13 +843,16 @@
     <com:baseElement>string</com:baseElement>
     <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
     <com:dataElementId>ShippingProfile/ShippingAddress/codeLocation</com:dataElementId>
+    <com:extension xsi:type="provisioning:ElementExtensionType"/>
     <com:dataDictionaryDetails>
       <com:detail xsi:type="data:dataElementCommonDetail">
-        <com:id>Kn07---Q--+jX5gZ---mWA</com:id>
+        <com:id>WHk0eqKcQKu1uU8a18GLLw</com:id>
         <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
         <data:dataElementId>ShippingProfile/ShippingAddress/codeLocation</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -802,13 +869,16 @@
     <com:baseElement>string</com:baseElement>
     <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
     <com:dataElementId>ShippingProfile/ShippingAddress/city</com:dataElementId>
+    <com:extension xsi:type="provisioning:ElementExtensionType"/>
     <com:dataDictionaryDetails>
       <com:detail xsi:type="data:dataElementCommonDetail">
-        <com:id>---9BPIc--+nhbhaWnANpw</com:id>
+        <com:id>b4A6qIIKSlqQnn-FMoZYBw</com:id>
         <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
         <data:dataElementId>ShippingProfile/ShippingAddress/city</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -825,13 +895,16 @@
     <com:baseElement>string</com:baseElement>
     <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
     <com:dataElementId>ShippingProfile/ShippingAddress/state</com:dataElementId>
+    <com:extension xsi:type="provisioning:ElementExtensionType"/>
     <com:dataDictionaryDetails>
       <com:detail xsi:type="data:dataElementCommonDetail">
-        <com:id>oK4044gB--+bMDYb---Vhw</com:id>
+        <com:id>eWFFl3I8TpGty-VocEHD3Q</com:id>
         <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
         <data:dataElementId>ShippingProfile/ShippingAddress/state</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -848,13 +921,16 @@
     <com:baseElement>string</com:baseElement>
     <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
     <com:dataElementId>ShippingProfile/ShippingAddress/referencePoint</com:dataElementId>
+    <com:extension xsi:type="provisioning:ElementExtensionType"/>
     <com:dataDictionaryDetails>
       <com:detail xsi:type="data:dataElementCommonDetail">
-        <com:id>5it+CyFN--+eNixJ--+Jgw</com:id>
+        <com:id>qgOx5ia+RFemNcMPV7VU6w</com:id>
         <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
         <data:dataElementId>ShippingProfile/ShippingAddress/referencePoint</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -871,13 +947,16 @@
     <com:baseElement>string</com:baseElement>
     <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
     <com:dataElementId>ShippingProfile/ShippingAddress/areaCode</com:dataElementId>
+    <com:extension xsi:type="provisioning:ElementExtensionType"/>
     <com:dataDictionaryDetails>
       <com:detail xsi:type="data:dataElementCommonDetail">
-        <com:id>--+YKesq--+r---d--+1Ng</com:id>
+        <com:id>2VLEyrt8Q3+vxzcZhNcFYA</com:id>
         <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
         <data:dataElementId>ShippingProfile/ShippingAddress/areaCode</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -894,13 +973,16 @@
     <com:baseElement>string</com:baseElement>
     <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
     <com:dataElementId>ShippingProfile/ShippingAddress/typeAddress</com:dataElementId>
+    <com:extension xsi:type="provisioning:ElementExtensionType"/>
     <com:dataDictionaryDetails>
       <com:detail xsi:type="data:dataElementCommonDetail">
-        <com:id>--+X---a--+3---j---2GQ</com:id>
+        <com:id>1NRdSREgSrCn7lhTEJq2iA</com:id>
         <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
         <data:dataElementId>ShippingProfile/ShippingAddress/typeAddress</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -917,16 +999,20 @@
     <com:baseElement>dateTime</com:baseElement>
     <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
     <com:dataElementId>ShippingProfile/requestedDeliveryDate</com:dataElementId>
-    <com:displayName>Requested Delivery Date</com:displayName>
+    <com:displayName>requestedDeliveryDate</com:displayName>
     <com:displayName lang="en"></com:displayName>
-    <com:extension xsi:type="provisioning:ElementExtensionType"/>
+    <com:extension xsi:type="provisioning:ElementExtensionType">
+      <provisioning:significant>true</provisioning:significant>
+    </com:extension>
     <com:dataDictionaryDetails>
       <com:detail xsi:type="data:dataElementCommonDetail">
         <com:id>hFs+BegW--+dWwhR9it5Ug</com:id>
         <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
         <data:dataElementId>ShippingProfile/requestedDeliveryDate</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>40</data:maxLength>
         <data:minMultiplicity>1</data:minMultiplicity>
@@ -975,7 +1061,9 @@
         <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
         <data:dataElementId>ShippingProfile/expectedDeliveryDate</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>40</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -1024,7 +1112,9 @@
         <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
         <data:dataElementId>ShippingProfile/actualDeliveryDate</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>40</data:maxLength>
         <data:minMultiplicity>1</data:minMultiplicity>
@@ -1052,6 +1142,133 @@
         <data:dataElementId>ShippingProfile/actualDeliveryDate</data:dataElementId>
         <specification:startTimestamp>0</specification:startTimestamp>
         <specification:endTimestamp>0</specification:endTimestamp>
+      </com:detail>
+    </com:dataDictionaryDetails>
+  </com:dataDictionaryNode>
+  <com:dataDictionaryNode>
+    <com:entity>OsmCentralOMExample-ShipFunction</com:entity>
+    <com:entityType>xsd</com:entityType>
+    <com:relationship>com.mslv.studio.core.data.dictionary.extension</com:relationship>
+    <com:element>ShipFunction/calculatedStartDate</com:element>
+    <com:elementType>(Local Structure)</com:elementType>
+    <com:baseElement>calculatedStartDate</com:baseElement>
+    <com:baseNamespace>http://xmlns.oracle.com/communications/sce/dictionary/OracleComms_OSM_CommonDataDictionary/OracleComms_OSM_CommonDataDictionary</com:baseNamespace>
+    <com:dataElementId>ShipFunction/calculatedStartDate</com:dataElementId>
+    <com:extension xsi:type="provisioning:ElementExtensionType"/>
+    <com:dataDictionaryDetails>
+      <com:detail xsi:type="data:dataElementCommonDetail">
+        <com:id>KbRkCjE2--+M---z--+yXA</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+        <data:dataElementId>ShipFunction/calculatedStartDate</data:dataElementId>
+        <data:key></data:key>
+        <data:deprecated>false</data:deprecated>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </com:detail>
+    </com:dataDictionaryDetails>
+  </com:dataDictionaryNode>
+  <com:dataDictionaryNode>
+    <com:entity>OsmCentralOMExample-ShipFunction</com:entity>
+    <com:entityType>xsd</com:entityType>
+    <com:relationship>com.mslv.studio.core.data.dictionary.extension</com:relationship>
+    <com:element>ShipFunction/duration</com:element>
+    <com:elementType>(Local Structure)</com:elementType>
+    <com:baseElement>duration</com:baseElement>
+    <com:baseNamespace>http://xmlns.oracle.com/communications/sce/dictionary/OracleComms_OSM_CommonDataDictionary/OracleComms_OSM_CommonDataDictionary</com:baseNamespace>
+    <com:dataElementId>ShipFunction/duration</com:dataElementId>
+    <com:extension xsi:type="provisioning:ElementExtensionType"/>
+    <com:dataDictionaryDetails>
+      <com:detail xsi:type="data:dataElementCommonDetail">
+        <com:id>--+FrK0y--+5--+WRDkWxg</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+        <data:dataElementId>ShipFunction/duration</data:dataElementId>
+        <data:key></data:key>
+        <data:deprecated>false</data:deprecated>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </com:detail>
+    </com:dataDictionaryDetails>
+  </com:dataDictionaryNode>
+  <com:dataDictionaryNode>
+    <com:entity>OsmCentralOMExample-ShipFunction</com:entity>
+    <com:entityType>xsd</com:entityType>
+    <com:relationship>com.mslv.studio.core.data.dictionary.extension</com:relationship>
+    <com:element>ShipFunction/transformedOrderItem</com:element>
+    <com:elementType>(Local Structure)</com:elementType>
+    <com:baseElement>transformedOrderItem</com:baseElement>
+    <com:baseNamespace>http://xmlns.oracle.com/communications/sce/dictionary/OracleComms_OSM_CommonDataDictionary/OracleComms_OSM_CommonDataDictionary</com:baseNamespace>
+    <com:dataElementId>ShipFunction/transformedOrderItem</com:dataElementId>
+    <com:dataDictionaryDetails>
+      <com:detail xsi:type="data:dataElementCommonDetail">
+        <com:id>tOV8tul8--+ZXNBK---1Dg</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+        <data:dataElementId>ShipFunction/transformedOrderItem</data:dataElementId>
+        <data:key></data:key>
+        <data:deprecated>false</data:deprecated>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>-1</data:maxMultiplicity>
+      </com:detail>
+    </com:dataDictionaryDetails>
+  </com:dataDictionaryNode>
+  <com:dataDictionaryNode>
+    <com:entity>OsmCentralOMExample-ShipFunction</com:entity>
+    <com:entityType>xsd</com:entityType>
+    <com:relationship>com.mslv.studio.core.data.dictionary.extension</com:relationship>
+    <com:element>ShipFunction/transformedOrderItem/FunctionProcessingState</com:element>
+    <com:elementType>(Local Structure)</com:elementType>
+    <com:baseElement>OrderComponentOrderItemProcessingState</com:baseElement>
+    <com:baseNamespace>http://xmlns.oracle.com/communications/sce/dictionary/OracleComms_OSM_CommonDataDictionary/OracleComms_OSM_CommonDataDictionary</com:baseNamespace>
+    <com:dataElementId>ShipFunction/transformedOrderItem/FunctionProcessingState</com:dataElementId>
+    <com:dataDictionaryDetails>
+      <com:detail xsi:type="data:dataElementCommonDetail">
+        <com:id>dRrPSe7FQV2OY9HfupKrgg</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+        <data:dataElementId>ShipFunction/transformedOrderItem/FunctionProcessingState</data:dataElementId>
+        <data:key></data:key>
+        <data:deprecated>false</data:deprecated>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </com:detail>
+    </com:dataDictionaryDetails>
+  </com:dataDictionaryNode>
+  <com:dataDictionaryNode>
+    <com:entity>OsmCentralOMExample-ShipFunction</com:entity>
+    <com:entityType>xsd</com:entityType>
+    <com:relationship>com.mslv.studio.core.data.dictionary.extension</com:relationship>
+    <com:element>ShipFunction/transformedOrderItem/ExternalFulfillmentState</com:element>
+    <com:elementType>(Local Structure)</com:elementType>
+    <com:baseElement>ExternalFulfillmentState</com:baseElement>
+    <com:baseNamespace>http://xmlns.oracle.com/communications/sce/dictionary/OracleComms_OSM_CommonDataDictionary/OracleComms_OSM_CommonDataDictionary</com:baseNamespace>
+    <com:dataElementId>ShipFunction/transformedOrderItem/ExternalFulfillmentState</com:dataElementId>
+    <com:dataDictionaryDetails>
+      <com:detail xsi:type="data:dataElementCommonDetail">
+        <com:id>5EU-OutO--+O---2--+F7Q</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+        <data:dataElementId>ShipFunction/transformedOrderItem/ExternalFulfillmentState</data:dataElementId>
+        <data:key></data:key>
+        <data:deprecated>false</data:deprecated>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </com:detail>
+    </com:dataDictionaryDetails>
+  </com:dataDictionaryNode>
+  <com:dataDictionaryNode>
+    <com:entity>OsmCentralOMExample-ShipFunction</com:entity>
+    <com:entityType>xsd</com:entityType>
+    <com:relationship>com.mslv.studio.core.data.dictionary.extension</com:relationship>
+    <com:element>ShipFunction/orderItem/FunctionProcessingState</com:element>
+    <com:elementType>(Local Structure)</com:elementType>
+    <com:baseElement>OrderComponentOrderItemProcessingState</com:baseElement>
+    <com:baseNamespace>http://xmlns.oracle.com/communications/sce/dictionary/OracleComms_OSM_CommonDataDictionary/OracleComms_OSM_CommonDataDictionary</com:baseNamespace>
+    <com:dataElementId>ShipFunction/orderItem/FunctionProcessingState</com:dataElementId>
+    <com:dataDictionaryDetails>
+      <com:detail xsi:type="data:dataElementCommonDetail">
+        <com:id>qxBQcuxo--+E---2fk8FEA</com:id>
+        <com:elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</com:elementType>
+        <data:dataElementId>ShipFunction/orderItem/FunctionProcessingState</data:dataElementId>
+        <data:key></data:key>
+        <data:deprecated>false</data:deprecated>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
       </com:detail>
     </com:dataDictionaryDetails>
   </com:dataDictionaryNode>

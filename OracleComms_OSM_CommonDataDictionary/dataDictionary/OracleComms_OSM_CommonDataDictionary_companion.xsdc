@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.mslv.com/studio/core/model/common" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:data="http://www.oracle.com/communications/studio/core/model/common/data" xmlns:layout="http://xmlns.oracle.com/communications/sce/poms/model/layout" xmlns:provisioning="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xmlns:specification="http://www.mslv.com/studio/inventory/model/specification" xsi:type="dataDictionaryCompanionType" name="OracleComms_OSM_CommonDataDictionary_companion">
+<modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.mslv.com/studio/core/model/common" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:data="http://www.oracle.com/communications/studio/core/model/common/data" xmlns:layout="http://xmlns.oracle.com/communications/sce/poms/model/layout" xmlns:poms="http://xmlns.oracle.com/communications/sce/poms/model/poms" xmlns:provisioning="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xmlns:specification="http://www.mslv.com/studio/inventory/model/specification" xsi:type="dataDictionaryCompanionType" name="OracleComms_OSM_CommonDataDictionary_companion">
   <displayName>OracleComms_OSM_CommonDataDictionary</displayName>
   <information>Change Log v3.0.0.0.0:&#xD;
 Added Order Transformation Manager Control Data &#xD;
 Add Default Order Item Property Defintions for LineID, LineName, Requested Delivery Date, Action and dynamicParams</information>
-  <saveVersion>237</saveVersion>
+  <saveVersion>240</saveVersion>
   <id>MK9l---J--+mUR9aGwEC1Q</id>
   <dataDictionaryNode>
     <entity>OracleComms_OSM_CommonDataDictionary</entity>
@@ -828,6 +828,11 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <specification:startTimestamp>0</specification:startTimestamp>
         <specification:endTimestamp>0</specification:endTimestamp>
       </detail>
+      <detail xsi:type="poms:valueComplexType" linkEnabled="false" overrideDictionaryValues="false" queryEnabled="false" valueEnabled="false">
+        <id>GyicxnRiSGG9yDnDxNUuDw</id>
+        <elementType>oracle.communications.sce.poms.model.data.ValueElementDetail</elementType>
+        <data:dataElementId>calculatedStartDate</data:dataElementId>
+      </detail>
     </dataDictionaryDetails>
   </dataDictionaryNode>
   <dataDictionaryNode>
@@ -884,6 +889,11 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <specification:startTimestamp>0</specification:startTimestamp>
         <specification:endTimestamp>0</specification:endTimestamp>
       </detail>
+      <detail xsi:type="poms:valueComplexType" linkEnabled="false" overrideDictionaryValues="false" queryEnabled="false" valueEnabled="false">
+        <id>o-trCAeSRean9TAzOeEgcg</id>
+        <elementType>oracle.communications.sce.poms.model.data.ValueElementDetail</elementType>
+        <data:dataElementId>duration</data:dataElementId>
+      </detail>
     </dataDictionaryDetails>
   </dataDictionaryNode>
   <dataDictionaryNode>
@@ -895,7 +905,10 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
     <baseElement>calculatedStartDate</baseElement>
     <baseNamespace>http://xmlns.oracle.com/communications/sce/dictionary/OracleComms_OSM_CommonDataDictionary/OracleComms_OSM_CommonDataDictionary</baseNamespace>
     <dataElementId>FulfillmentFunctionType/calculatedStartDate</dataElementId>
-    <extension xsi:type="provisioning:ElementExtensionType"/>
+    <displayName lang="[default]">Calculated Start Date</displayName>
+    <extension xsi:type="provisioning:ElementExtensionType">
+      <provisioning:significant>true</provisioning:significant>
+    </extension>
     <dataDictionaryDetails>
       <detail xsi:type="data:dataElementInformationDetails">
         <id>---T---t--+CBbts---phA</id>
@@ -911,6 +924,24 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <data:minMultiplicity>0</data:minMultiplicity>
         <data:maxMultiplicity>1</data:maxMultiplicity>
       </detail>
+      <detail xsi:type="layout:hintDetail">
+        <id>A6ryfmMbQ+2e-PfFpRg7iA</id>
+        <elementType>oracle.communications.sce.poms.model.data.UIHintsDetail</elementType>
+        <data:dataElementId>FulfillmentFunctionType/calculatedStartDate</data:dataElementId>
+        <layout:hints/>
+      </detail>
+      <detail xsi:type="poms:valueComplexType" linkEnabled="false" overrideDictionaryValues="false" query="" queryEnabled="false" valueEnabled="false">
+        <id>s8gAz9H4Q3yTHGzlqFAndw</id>
+        <elementType>oracle.communications.sce.poms.model.data.ValueElementDetail</elementType>
+        <data:dataElementId>FulfillmentFunctionType/calculatedStartDate</data:dataElementId>
+      </detail>
+      <detail xsi:type="specification:CharElementDetailType">
+        <id>9BieQTs2Tzie47VLPpQAxA</id>
+        <elementType>oracle.communications.studio.inventory.model.data.StudioModelDataElementCharDetailType</elementType>
+        <data:dataElementId>FulfillmentFunctionType/calculatedStartDate</data:dataElementId>
+        <specification:startTimestamp>0</specification:startTimestamp>
+        <specification:endTimestamp>0</specification:endTimestamp>
+      </detail>
     </dataDictionaryDetails>
   </dataDictionaryNode>
   <dataDictionaryNode>
@@ -922,7 +953,10 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
     <baseElement>duration</baseElement>
     <baseNamespace>http://xmlns.oracle.com/communications/sce/dictionary/OracleComms_OSM_CommonDataDictionary/OracleComms_OSM_CommonDataDictionary</baseNamespace>
     <dataElementId>FulfillmentFunctionType/duration</dataElementId>
-    <extension xsi:type="provisioning:ElementExtensionType"/>
+    <displayName lang="[default]">Duration</displayName>
+    <extension xsi:type="provisioning:ElementExtensionType">
+      <provisioning:significant>true</provisioning:significant>
+    </extension>
     <dataDictionaryDetails>
       <detail xsi:type="data:dataElementEnumerationDetail">
         <id>7jB4---6--+yiBFBDxUEHA</id>
@@ -942,6 +976,24 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <data:deprecated>false</data:deprecated>
         <data:minMultiplicity>0</data:minMultiplicity>
         <data:maxMultiplicity>1</data:maxMultiplicity>
+      </detail>
+      <detail xsi:type="layout:hintDetail">
+        <id>+CLcpPm4Tk2hXmMrofwZCA</id>
+        <elementType>oracle.communications.sce.poms.model.data.UIHintsDetail</elementType>
+        <data:dataElementId>FulfillmentFunctionType/duration</data:dataElementId>
+        <layout:hints/>
+      </detail>
+      <detail xsi:type="poms:valueComplexType" linkEnabled="false" overrideDictionaryValues="false" query="" queryEnabled="false" valueEnabled="false">
+        <id>GhzthLdlRdesiRpo2FEJag</id>
+        <elementType>oracle.communications.sce.poms.model.data.ValueElementDetail</elementType>
+        <data:dataElementId>FulfillmentFunctionType/duration</data:dataElementId>
+      </detail>
+      <detail xsi:type="specification:CharElementDetailType">
+        <id>liMDwSe6Tpe8cRb6h46p4Q</id>
+        <elementType>oracle.communications.studio.inventory.model.data.StudioModelDataElementCharDetailType</elementType>
+        <data:dataElementId>FulfillmentFunctionType/duration</data:dataElementId>
+        <specification:startTimestamp>0</specification:startTimestamp>
+        <specification:endTimestamp>0</specification:endTimestamp>
       </detail>
     </dataDictionaryDetails>
   </dataDictionaryNode>
@@ -3053,7 +3105,7 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
     <baseElement>string</baseElement>
     <baseNamespace>http://www.w3.org/2001/XMLSchema</baseNamespace>
     <dataElementId>RequestedDeliveryDate</dataElementId>
-    <displayName>Requested Delivery Date</displayName>
+    <displayName>requestedDeliveryDate</displayName>
     <displayName lang="en"></displayName>
     <extension xsi:type="provisioning:ElementExtensionType">
       <provisioning:significant>true</provisioning:significant>
@@ -3102,6 +3154,11 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
         <data:dataElementId>RequestedDeliveryDate</data:dataElementId>
         <specification:startTimestamp>0</specification:startTimestamp>
         <specification:endTimestamp>0</specification:endTimestamp>
+      </detail>
+      <detail xsi:type="poms:valueComplexType" linkEnabled="false" overrideDictionaryValues="false" query="" queryEnabled="false" valueEnabled="false">
+        <id>MNExlwqOSdKHHkAayUIF2w</id>
+        <elementType>oracle.communications.sce.poms.model.data.ValueElementDetail</elementType>
+        <data:dataElementId>RequestedDeliveryDate</data:dataElementId>
       </detail>
     </dataDictionaryDetails>
   </dataDictionaryNode>
@@ -6235,6 +6292,11 @@ Add Default Order Item Property Defintions for LineID, LineName, Requested Deliv
       <detail xsi:type="data:dataElementTagDetails">
         <id>tuJAm98ATSSZ6ZUWAUmvhg</id>
         <elementType>oracle.communications.studio.model.tag.StudioModelTagDetails</elementType>
+        <data:dataElementId>requestedDeliveryDate</data:dataElementId>
+      </detail>
+      <detail xsi:type="poms:valueComplexType" linkEnabled="false" overrideDictionaryValues="false" query="" queryEnabled="false" valueEnabled="false">
+        <id>HuKK+joDRjKu99bj4LOyhQ</id>
+        <elementType>oracle.communications.sce.poms.model.data.ValueElementDetail</elementType>
         <data:dataElementId>requestedDeliveryDate</data:dataElementId>
       </detail>
     </dataDictionaryDetails>
@@ -15228,6 +15290,12 @@ Account with ID 234 is child of 123 etc.</data:information>
         <id>tPnRN0HiT9SclfOYAfoqtg</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
         <data:dataElementId>updateReasonCode</data:dataElementId>
+      </detail>
+      <detail xsi:type="layout:hintDetail">
+        <id>FTw+tlySQL6AsyIzWFcs7Q</id>
+        <elementType>oracle.communications.sce.poms.model.data.UIHintsDetail</elementType>
+        <data:dataElementId>updateReasonCode</data:dataElementId>
+        <layout:hints/>
       </detail>
     </dataDictionaryDetails>
   </dataDictionaryNode>

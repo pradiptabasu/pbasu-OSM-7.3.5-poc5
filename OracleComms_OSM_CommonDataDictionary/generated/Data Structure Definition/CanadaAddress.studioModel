@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model:Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmn="http://xmlns.oracle.com/communications/studio/model/common" xmlns:model="http://xmlns.oracle.com/communications/studio/model">
   <metadata version="1.0.0" release="7.3.0"/>
-  <entity xsi:type="cmn:DataStructureDefinition" id="dsd=CanadaAddress" type="dsd" typeName="Data Structure Definition" name="CanadaAddress" resource="/OracleComms_OSM_CommonDataDictionary/model/CanadaAddress.dataStructDef">
+  <entity xsi:type="cmn:DataStructureDefinition" id="dsd=CanadaAddress" type="dsd" typeName="Data Structure Definition" name="CanadaAddress" resource="\OracleComms_OSM_CommonDataDictionary\model\CanadaAddress.dataStructDef">
     <displayName lang="default">CanadaAddress</displayName>
     <note lang="default"/>
     <extends>

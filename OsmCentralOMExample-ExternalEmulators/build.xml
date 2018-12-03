@@ -128,7 +128,6 @@
 		-->
 	</target>
   
-<!--	
 	<target name="deploy_emulators" depends="build">
 		
 		<wldeploy 
@@ -159,6 +158,4 @@
 			targets="${wls.server}"/>
 	</target>
 
--->
-	
 </project>

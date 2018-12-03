@@ -946,6 +946,48 @@
         <dataElements/>
         <primitiveType>string</primitiveType>
       </element>
+      <element id="dsd=CanadaAddress+dataElement=2oDQltBBSX6kTc6D-52q3A" type="dataElement" typeName="Data Element" kind="Element" name="city" path="/CanadaAddress/city">
+        <displayName lang="default">city</displayName>
+        <minOccurs inherited="false">0</minOccurs>
+        <maxOccurs inherited="false">-1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="false">0</minLength>
+        <maxLength inherited="false">40</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=city" type="Schema Element" name="Type" kind="Element">
+            <target name="city" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
+      <element id="dsd=CanadaAddress+dataElement=M6VCLSnNQMC7y14KYzg9LA" type="dataElement" typeName="Data Element" kind="Element" name="postalCode" path="/CanadaAddress/postalCode">
+        <displayName lang="default">postalCode</displayName>
+        <minOccurs inherited="false">0</minOccurs>
+        <maxOccurs inherited="false">-1</maxOccurs>
+        <defaultValue inherited="true"></defaultValue>
+        <key inherited="false"></key>
+        <abstract inherited="false">false</abstract>
+        <deprecated inherited="false">false</deprecated>
+        <internal inherited="false">false</internal>
+        <sensitive inherited="true">false</sensitive>
+        <minLength inherited="false">0</minLength>
+        <maxLength inherited="false">40</maxLength>
+        <base>
+          <relation ref="ds=OracleComms_OSM_CommonDataDictionary+dataElement=postalCode" type="Schema Element" name="Type" kind="Element">
+            <target name="postalCode" typeName="Schema Element"/>
+            <inEntity name="OracleComms_OSM_CommonDataDictionary" typeName="Data Schema"/>
+          </relation>
+        </base>
+        <dataElements/>
+        <primitiveType>string</primitiveType>
+      </element>
     </dataElements>
     <details>
       <element id="dsd=CanadaAddress+dsd.dsdd=sx8pA8twQnqR96WYgikSrg" type="dsd.dsdd" typeName="Data Structure Definition Details" kind="Element" name="CanadaAddress Data Structure Definition Details" path="CanadaAddress Data Structure Definition Details"/>

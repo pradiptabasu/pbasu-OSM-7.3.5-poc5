@@ -2,7 +2,7 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment>Cartridge build</comment>
-<entry key="systemBuildNumber">1543774530220</entry>
-<entry key="buildNumber">225</entry>
-<entry key="packageNumber">224</entry>
+<entry key="systemBuildNumber">1543825588430</entry>
+<entry key="buildNumber">247</entry>
+<entry key="packageNumber">245</entry>
 </properties>

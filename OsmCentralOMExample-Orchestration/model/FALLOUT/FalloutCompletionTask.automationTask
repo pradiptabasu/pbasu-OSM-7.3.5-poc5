@@ -48,6 +48,11 @@
     <com:relationship>com.mslv.studio.provisioning.task.rolePermission</com:relationship>
     <task:executionModes>do redo undo</task:executionModes>
   </task:workgroupPermission>
+  <task:compensationStrategy/>
+  <task:inProgressCompensation>
+    <task:waitForStrategy/>
+    <task:considerCompensation/>
+  </task:inProgressCompensation>
   <task:automationComponent xsi:type="task:internalAutomationPlugin">
     <prov:name>fallout</prov:name>
     <prov:type>xQuerySender</prov:type>
@@ -55,7 +60,7 @@
     <prov:runAs>omsadmin</prov:runAs>
     <prov:implementation xsi:type="aut:XquerySender">
       <aut:to>
-        <aut:jndiName>oracle/communications/ordermanagement/pip/ORPFalloutQueue</aut:jndiName>
+        <aut:jndiName>oracle/communications/ordermanagement/unsupported/OsmCentralOMExample/emulator/ExternalSystemEmulator_ORPFallout_Queue</aut:jndiName>
       </aut:to>
       <aut:script>
         <aut:url>http://oracle.communications.ordermanagement.unsupported.centralom/base/xquery/fallout.xqy</aut:url>

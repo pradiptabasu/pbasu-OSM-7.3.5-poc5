@@ -37,13 +37,20 @@
 	-->
 	
 	<path id="project.class.path">
-			<pathelement path="${basedir}/lib/weblogic.jar"/>
-			<pathelement path="${basedir}/lib/wlclient.jar"/>
-			<pathelement path="${basedir}/lib/javax.jms_1.1.1.jar"/>
-			<fileset dir="${wls.dir}/modules" includes="*.jar"/>
-			<fileset dir="${wls.dir}/server/lib" includes="*.jar"/>
-			<fileset dir="${basedir}/lib" includes="*.jar"/>
+			
+		<pathelement path="${basedir}/lib/weblogic.jar"/>
+		<pathelement path="${basedir}/lib/wlclient.jar"/>
+		<pathelement path="${basedir}/lib/javax.jms_1.1.1.jar"/>
+		
+		<fileset dir="${wls.dir}/modules" includes="*.jar"/>
+		<fileset dir="${wls.dir}/server/lib" includes="*.jar"/>
+		<fileset dir="${basedir}/lib" includes="*.jar"/>
 	</path>
+
+<!--	<pathconvert property="classpathProp" pathsep=" " refid="project.class.path">
+		<flattenmapper />
+	</pathconvert>
+-->
 	
 	<taskdef name="wlappc" classname="weblogic.ant.taskdefs.j2ee.Appc" classpathref="project.class.path"/> 
 	<taskdef name="wldeploy" classname="weblogic.ant.taskdefs.management.WLDeploy" classpathref="project.class.path"/>
@@ -83,6 +90,14 @@
 		</copy>
 		
 		<mkdir dir="${external_emulator.ear.dir}"/>
+
+		<!--
+		<jar destfile="${external_emulator.ear.dir}\${external_emulator.archive}" basedir="${external_emulator.stage}" manifest="${basedir}/etc/Manifest.mf">
+			<manifest>
+				<attribute name="Class-Path" value="${classpath.name}" />
+			</manifest>
+		</jar>			
+		-->
 		
 		<jar destfile="${external_emulator.ear.dir}\${external_emulator.archive}" basedir="${external_emulator.stage}" manifest="${basedir}/etc/Manifest.mf"/>
 		
@@ -98,6 +113,8 @@
 		
 		<echo>----------------------------</echo>
 		<echo>${external_emulator.ear.dir}</echo>
+		<echo>${classpath.name}</echo>
+		<echo>Classpath is ${classpathProp}</echo>
 		<echo>${aia.osm.lib.dir}</echo>
 		<echo>${aia}</echo>
 		<echo>${osm.lib.dir}</echo>
@@ -111,15 +128,17 @@
 			<fileset dir="${aia.osm.lib.dir}" includes="*.jar"/>
 		</copy>
 		-->
-		
-		<copy todir="${external_emulator.ear.dir}">
+		<mkdir dir="${external_emulator.ear.dir}/lib"/>
+		<copy todir="${external_emulator.ear.dir}/lib">
 			<fileset dir="${basedir}/lib">
 				<include name="javax.jms-api-2.0.1.jar"/>
 			</fileset>
 			<fileset dir="${aia.osm.lib.dir}" includes="*.jar"/>
 		</copy>
 		
-		<jar destfile="${build}/${external_emulator}.ear" basedir="${external_emulator.ear.dir}"/>    	
+		<!--<jar destfile="${build}/${external_emulator}.ear" basedir="${external_emulator.ear.dir}"/>-->
+		
+		<jar destfile="${build}/${external_emulator}.ear" basedir="${external_emulator.ear.dir}"/>
 
 		<!--
 		<delete dir="${external_emulator.stage}"/>

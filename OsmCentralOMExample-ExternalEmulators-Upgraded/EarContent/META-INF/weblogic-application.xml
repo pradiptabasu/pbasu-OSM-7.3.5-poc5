@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wls:weblogic-application xmlns:wls="http://xmlns.oracle.com/weblogic/weblogic-application" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/javaee_6.xsd http://xmlns.oracle.com/weblogic/weblogic-application http://xmlns.oracle.com/weblogic/weblogic-application/1.7/weblogic-application.xsd">
+    <!--weblogic-version:12.2.1-->
+    <wls:application-param>
+        <wls:param-name>webapp.encoding.default</wls:param-name>
+        <wls:param-value>UTF-8</wls:param-value>
+    </wls:application-param>
+    <wls:listener>
+        <wls:listener-class>oracle.communications.ordermanagement.unsupported.emulator.EmulatorLifecycleListener</wls:listener-class>
+        <wls:run-as-principal-name>oms-internal</wls:run-as-principal-name>
+    </wls:listener>
+    <wls:prefer-application-packages>
+        <wls:package-name>org.apache.xerces.*</wls:package-name>
+        <wls:package-name>org.apache.xml.*</wls:package-name>
+        <wls:package-name>org.apache.html.dom.*</wls:package-name>
+    </wls:prefer-application-packages>
+</wls:weblogic-application>

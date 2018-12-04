@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="OsmCentralOMExample-ExternalEmulators-Upgraded">
+        <wb-resource deploy-path="/" source-path="/EarContent" tag="defaultRootSource"/>
+        <dependent-module archiveName="resolver.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/resolver.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-io.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/commons-io.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-vfs-2.0-21092010.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/commons-vfs-2.0-21092010.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-io-2.6.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/commons-io-2.6.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-vfs2-2.0.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/commons-vfs2-2.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-collections4-4.2.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/commons-collections4-4.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="automation_plugins.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/automation_plugins.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-io-2.4.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/commons-io-2.4.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="xml-resolver.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/xml-resolver.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-logging-1.2.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/commons-logging-1.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-vfs-1.0.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/commons-vfs-1.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-lang-2.6.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/commons-lang-2.6.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="saxon-9.1.0.8.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/saxon-9.1.0.8.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-vfs2.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/commons-vfs2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-lang3-3.8.1.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/commons-lang3-3.8.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-vfs2-2.2.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/commons-vfs2-2.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-vfs-20050307052300.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/commons-vfs-20050307052300.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-collections-3.2.2.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/commons-collections-3.2.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-lang3-3.3.2.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/commons-lang3-3.3.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wlclient.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/wlclient.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="automationDeployer.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/automationDeployer.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-lang3.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/commons-lang3.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-vfs2-2.1.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/commons-vfs2-2.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-collections4.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/commons-collections4.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wljmxclient.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/wljmxclient.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wlthint3client.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/wlthint3client.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="org.apache.xml.resolver-1.2.0.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/org.apache.xml.resolver-1.2.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jarscan.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/jarscan.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="xercesImpl.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/xercesImpl.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-logging.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/commons-logging.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wls-api.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/wls-api.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="xml-resolver-1.2.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/xml-resolver-1.2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-collections-3.2.1.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/commons-collections-3.2.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="javax.jms-api-2.0.1.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/javax.jms-api-2.0.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="weblogic.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/weblogic.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="org-apache-xml-resolver.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/org-apache-xml-resolver.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="commons-collections4-4.1.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/commons-collections4-4.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="OsmCentralOMExample-ExternalEmulators-Upgraded-MDB.jar" deploy-path="/" handle="module:/resource/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="saxon-ee-java.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/saxon-ee-java.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="saxon-ee-java-osm-license.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/saxon-ee-java-osm-license.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>

@@ -37,9 +37,6 @@
         <dependent-module archiveName="commons-lang-2.6.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/commons-lang-2.6.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="saxon-9.1.0.8.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/saxon-9.1.0.8.jar">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
         <dependent-module archiveName="commons-vfs2.jar" deploy-path="/lib" handle="module:/classpath/lib/OsmCentralOMExample-ExternalEmulators-Upgraded-MDB/lib/commons-vfs2.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>

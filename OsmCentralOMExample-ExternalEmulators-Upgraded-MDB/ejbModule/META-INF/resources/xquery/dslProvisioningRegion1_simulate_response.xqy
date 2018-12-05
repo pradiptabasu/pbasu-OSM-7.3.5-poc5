@@ -1,5 +1,7 @@
 (: only require to be declared when editing with Oxygen :)
 declare namespace log = "java:org.apache.commons.logging.Log";
+declare namespace logFactory = "java:org.apache.commons.logging.LogFactory";
+declare namespace java="http://xml.apache.org/xslt/java";
 
 declare namespace req = "http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample/dsl_region1";
 declare namespace oi = "http://xmlns.oracle.com/InputMessage";
@@ -18,7 +20,6 @@ return
 (
 
 if (exists($cancel)) then (
-log:info($log,'creating DSL Region 1 cancel response'),
 <cancelResponse xmlns="http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample/interactionResponse"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <numSalesOrder>{$cancel/req:numSalesOrder/text()}</numSalesOrder>
@@ -29,7 +30,6 @@ log:info($log,'creating DSL Region 1 cancel response'),
     <status>C</status>
 </cancelResponse>
 ) else (
-log:info($log,'creating DSL Region 1 response'),
 <orderResponse xmlns="http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample/interactionResponse"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <numSalesOrder>{$order/req:numSalesOrder/text()}</numSalesOrder>

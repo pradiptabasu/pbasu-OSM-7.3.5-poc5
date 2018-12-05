@@ -221,13 +221,18 @@ public class ExternalSystemEmulatorMdb implements MessageDrivenBean, MessageList
             resourceStream = resource.openStream();
             reader = new BufferedReader(new InputStreamReader(resourceStream));
             
-            LOG.info("--------------------- XQUERY CONTENT  : ");
+            /* Below code bock was for dummy test only. If this executed, then you are likely to get NullPointer exception somewhere
+             * else where reader is being used 
             int value = 0;
-            while((value = reader.read()) != -1) {
+            StringBuilder sb = new StringBuilder();
+    		while((value = reader.read()) != -1) {
             	char c = (char)value;
-            	LOG.info(c);
+            	sb.append(c);
             }
-            templates = new XQueryTemplates(reader, LOG);
+            String string = sb.toString();
+            LOG.info("--------------------- XQUERY CONTENT  : " + string);
+            */
+    		templates = new XQueryTemplates(reader, LOG);
         } finally {
             IOUtils.closeQuietly(reader);
             IOUtils.closeQuietly(resourceStream);

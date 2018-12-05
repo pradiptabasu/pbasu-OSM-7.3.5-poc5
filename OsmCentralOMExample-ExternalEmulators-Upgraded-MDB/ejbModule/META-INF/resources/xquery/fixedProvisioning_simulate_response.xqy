@@ -1,5 +1,8 @@
 (: only require to be declared when editing with Oxygen :)
+(:replace line 14 with below:)
 declare namespace log = "java:org.apache.commons.logging.Log";
+declare namespace logFactory = "java:org.apache.commons.logging.LogFactory";
+declare namespace java="http://xml.apache.org/xslt/java";
 
 declare namespace req = "http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample/fixed";
 (: declare references to external objects we will use to process this transformation :) 
@@ -11,7 +14,6 @@ let $cancel := fn:root()/req:cancelOrderFixed/req:order
 
 return
 (
-log:info($log,'creating fixed voice response'),
 if (exists($order)) then (
 <orderResponse xmlns="http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample/interactionResponse"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">

@@ -9,7 +9,7 @@ import javax.xml.transform.Templates;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerConfigurationException;
 
-import net.sf.saxon.query.ModuleURIResolver;
+import net.sf.saxon.lib.ModuleURIResolver;
 import net.sf.saxon.query.StaticQueryContext;
 import net.sf.saxon.query.XQueryExpression;
 import net.sf.saxon.trans.XPathException;
@@ -44,9 +44,13 @@ public class XQueryTemplates implements Templates {
         try {
             staticContext.declareNamespace(XQUERY_JAVA_BINDING_OUTBOUND_MESSAGE_NAMESPACE_PREFIX,
                 XQUERY_JAVA_BINDING_OUTBOUND_MESSAGE_NAMESPACE);
+            log.info("--------------------- XQUERY_JAVA_BINDING_OUTBOUND_MESSAGE_NAMESPACE_PREFIX ");
             staticContext.declareNamespace(XQUERY_JAVA_BINDING_LOG_NAMESPACE_PREFIX, "java:" + log.getClass().getName());
+            log.info("--------------------- XQUERY_JAVA_BINDING_LOG_NAMESPACE_PREFIX ");
             staticContext.setModuleURIResolver((ModuleURIResolver)CatalogModuleUriResolver.getSystemCatalogUriResolver());
+            log.info("--------------------- setModuleURIResolver ");
             xqueryExpression = staticContext.compileQuery(reader);
+            log.info("--------------------- compileQuery ");
         } catch (final IOException e) {
             throw new TransformerConfigurationException(e);
         } catch (final XPathException e) {

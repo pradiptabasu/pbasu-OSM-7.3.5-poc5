@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.mslv.com/studio/core/model/common" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:data="http://www.oracle.com/communications/studio/core/model/common/data" xmlns:layout="http://xmlns.oracle.com/communications/sce/poms/model/layout" xmlns:poms="http://xmlns.oracle.com/communications/sce/poms/model/poms" xmlns:provisioning="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xmlns:specification="http://www.mslv.com/studio/inventory/model/specification" xsi:type="dataDictionaryCompanionType" name="OsmCentralOMExample-Orchestration_companion">
-  <displayName>DDCM</displayName>
+  <displayName>OsmCentralOMExample-Orchestration</displayName>
   <saveVersion>16</saveVersion>
   <id>-DUp--+o--+g---jpgZErw</id>
   <dataDictionaryNode>
@@ -43,6 +43,7 @@
         <id>21kZ83tR--+HR-tgwcEr7Q</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>FunctionType</data:dataElementId>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
         <data:abstract>false</data:abstract>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -64,11 +65,6 @@
       <detail xsi:type="data:dataElementInformationDetails">
         <id>--+gY5QP--+u---ntjVwgA</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</elementType>
-        <data:dataElementId>FunctionType/componentKey</data:dataElementId>
-      </detail>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>QRNmLewN--+ddrMI--+8iw</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
         <data:dataElementId>FunctionType/componentKey</data:dataElementId>
       </detail>
       <detail xsi:type="layout:hintDetail">
@@ -94,7 +90,9 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>FunctionType/componentKey</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>1000</data:maxLength>
         <data:minMultiplicity>1</data:minMultiplicity>
@@ -141,7 +139,9 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>FunctionType/orderItem</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>-1</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -167,8 +167,10 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>Status</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
         <data:abstract>false</data:abstract>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>-1</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -199,8 +201,10 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>StatusType</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
         <data:abstract>false</data:abstract>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>-1</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -229,7 +233,9 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>StatusType/ErrorCode</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>-1</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -263,7 +269,9 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>StatusType/ErrorMessage</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>200</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -297,7 +305,9 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>StatusType/ErrorStatus</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>-1</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -330,8 +340,10 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>FalloutMessage</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
         <data:abstract>false</data:abstract>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>-1</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -361,6 +373,7 @@
         <id>X9wF--+c--+100NF---C9A</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>CustomerDetails</data:dataElementId>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
         <data:abstract>false</data:abstract>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -382,14 +395,19 @@
     <baseElement>(Reusable Structure)</baseElement>
     <baseNamespace>http://www.w3.org/2001/XMLSchema</baseNamespace>
     <dataElementId>OrderHeader</dataElementId>
+    <extension xsi:type="provisioning:ElementExtensionType">
+      <provisioning:significant>true</provisioning:significant>
+    </extension>
     <dataDictionaryDetails>
       <detail xsi:type="data:dataElementCommonDetail">
         <id>TsIPXd9+--+thG4P--+TEw</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>OrderHeader</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
         <data:abstract>false</data:abstract>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>-1</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -399,6 +417,24 @@
         <id>---L---E--+0pfge4OtYeg</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</elementType>
         <data:dataElementId>OrderHeader</data:dataElementId>
+      </detail>
+      <detail xsi:type="layout:hintDetail">
+        <id>RsnEAdzRRJC2M9PmgzWR7A</id>
+        <elementType>oracle.communications.sce.poms.model.data.UIHintsDetail</elementType>
+        <data:dataElementId>OrderHeader</data:dataElementId>
+        <layout:hints/>
+      </detail>
+      <detail xsi:type="poms:valueComplexType" linkEnabled="false" overrideDictionaryValues="false" queryEnabled="false" valueEnabled="false">
+        <id>FF5EJz+HT4KyhQ9j813foQ</id>
+        <elementType>oracle.communications.sce.poms.model.data.ValueElementDetail</elementType>
+        <data:dataElementId>OrderHeader</data:dataElementId>
+      </detail>
+      <detail xsi:type="specification:CharElementDetailType">
+        <id>Pnb57p+qT2eHAwEomXu9HA</id>
+        <elementType>oracle.communications.studio.inventory.model.data.StudioModelDataElementCharDetailType</elementType>
+        <data:dataElementId>OrderHeader</data:dataElementId>
+        <specification:startTimestamp>0</specification:startTimestamp>
+        <specification:endTimestamp>0</specification:endTimestamp>
       </detail>
     </dataDictionaryDetails>
   </dataDictionaryNode>
@@ -416,6 +452,7 @@
         <id>---KDF9M--+e---j+4l+oA</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>AccountDetails</data:dataElementId>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
         <data:abstract>false</data:abstract>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -443,8 +480,10 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>ResponseParamGroup</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
         <data:abstract>false</data:abstract>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>-1</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -472,7 +511,9 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>ResponseParamGroup/ResponseParam</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>-1</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -501,17 +542,14 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</elementType>
         <data:dataElementId>CustomerDetails/locationType</data:dataElementId>
       </detail>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>8xVQXBkN--+jEbk24l9oHQ</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
-        <data:dataElementId>CustomerDetails/locationType</data:dataElementId>
-      </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>gJkYHNsP--+HVMF0---Arg</id>
+        <id>9Myy9txdQC+qhlCjfuqTbQ</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>CustomerDetails/locationType</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>1</data:minMultiplicity>
@@ -535,17 +573,14 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</elementType>
         <data:dataElementId>CustomerDetails/nameLocation</data:dataElementId>
       </detail>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>---okWIU--+H---nI1BK4A</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
-        <data:dataElementId>CustomerDetails/nameLocation</data:dataElementId>
-      </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>---Y4zIs--+C---tH-Vzlg</id>
+        <id>KQg0CyUdSfSWsh2ZLNFFwQ</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>CustomerDetails/nameLocation</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>200</data:maxLength>
         <data:minMultiplicity>1</data:minMultiplicity>
@@ -569,17 +604,14 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</elementType>
         <data:dataElementId>CustomerDetails/number</data:dataElementId>
       </detail>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>--++--+k--+UlAR4LjhnXw</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
-        <data:dataElementId>CustomerDetails/number</data:dataElementId>
-      </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>---xi8Y9--+R--+KGplAUA</id>
+        <id>d+IyxMgpSqKx8b0W5z5Ohg</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>CustomerDetails/number</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -603,17 +635,14 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</elementType>
         <data:dataElementId>CustomerDetails/typeCompl</data:dataElementId>
       </detail>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>--+e99gy--+PGEw2---kUA</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
-        <data:dataElementId>CustomerDetails/typeCompl</data:dataElementId>
-      </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>---xqmZk--+k--+m+9pLeQ</id>
+        <id>9XHhr9K6TTmv7HveqDRShQ</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>CustomerDetails/typeCompl</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -637,17 +666,14 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</elementType>
         <data:dataElementId>CustomerDetails/numCompl</data:dataElementId>
       </detail>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>6O08T9kJ--+8---u--+PUg</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
-        <data:dataElementId>CustomerDetails/numCompl</data:dataElementId>
-      </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>Gp88f6U6--+esWN5--+YHw</id>
+        <id>9CG5IBkxQZGHpgDZ2jEioA</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>CustomerDetails/numCompl</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -671,17 +697,14 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</elementType>
         <data:dataElementId>CustomerDetails/district</data:dataElementId>
       </detail>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>iUAm---d--+5---R---Y+Q</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
-        <data:dataElementId>CustomerDetails/district</data:dataElementId>
-      </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>--+yjUMr--+v---wTj8Ysw</id>
+        <id>wYkIu7fiSKWoaiEx4kbR5w</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>CustomerDetails/district</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -705,17 +728,14 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</elementType>
         <data:dataElementId>CustomerDetails/codeLocation</data:dataElementId>
       </detail>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>0d1vrmY5--+MUbFsL+R7FQ</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
-        <data:dataElementId>CustomerDetails/codeLocation</data:dataElementId>
-      </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>--+mvycP--+0YlBd--+EOQ</id>
+        <id>8to2HPzqSEOvlMVbgNjqmQ</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>CustomerDetails/codeLocation</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -739,17 +759,14 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</elementType>
         <data:dataElementId>CustomerDetails/city</data:dataElementId>
       </detail>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>i-9U---j--+rI0M+UDRQzQ</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
-        <data:dataElementId>CustomerDetails/city</data:dataElementId>
-      </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>cNcCijoX--+BQdgz---f9Q</id>
+        <id>L9W5KhHSQoSII7JuObqrNQ</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>CustomerDetails/city</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -773,17 +790,14 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</elementType>
         <data:dataElementId>CustomerDetails/state</data:dataElementId>
       </detail>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>--+e0b1l--+DjlN4--+6xQ</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
-        <data:dataElementId>CustomerDetails/state</data:dataElementId>
-      </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>---fPSN6--+g--+B---qjw</id>
+        <id>EZQFz03MTMmUtXTZxP4knQ</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>CustomerDetails/state</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -807,17 +821,14 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</elementType>
         <data:dataElementId>CustomerDetails/referencePoint</data:dataElementId>
       </detail>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>um85---o--+2OmdS---b4A</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
-        <data:dataElementId>CustomerDetails/referencePoint</data:dataElementId>
-      </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>--+y--+U--+rz4Ea6XZ7MQ</id>
+        <id>IHO+u0dOSVSiRoAjZWHKNw</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>CustomerDetails/referencePoint</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -841,17 +852,14 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</elementType>
         <data:dataElementId>CustomerDetails/areaCode</data:dataElementId>
       </detail>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>nYtS---E--+Y--+SSPRH+A</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
-        <data:dataElementId>CustomerDetails/areaCode</data:dataElementId>
-      </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>---3---L--+t--+e6RwpTA</id>
+        <id>bL-4qtuiT8agSQWpWUJ5JA</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>CustomerDetails/areaCode</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -875,17 +883,14 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</elementType>
         <data:dataElementId>CustomerDetails/typeAddress</data:dataElementId>
       </detail>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>--+2sjAf--+3zAoy---tyg</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
-        <data:dataElementId>CustomerDetails/typeAddress</data:dataElementId>
-      </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>---ougQc--+c---H9pxCiA</id>
+        <id>KkdCUtURSt+eSSoVW+kLgA</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>CustomerDetails/typeAddress</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -902,14 +907,18 @@
     <baseElement>string</baseElement>
     <baseNamespace>http://www.w3.org/2001/XMLSchema</baseNamespace>
     <dataElementId>OrderHeader/numSalesOrder</dataElementId>
-    <extension xsi:type="provisioning:ElementExtensionType"/>
+    <extension xsi:type="provisioning:ElementExtensionType">
+      <provisioning:significant>true</provisioning:significant>
+    </extension>
     <dataDictionaryDetails>
       <detail xsi:type="data:dataElementCommonDetail">
         <id>9KkK--+T--+-5As1wo8ojA</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>OrderHeader/numSalesOrder</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>-1</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -925,6 +934,24 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
         <data:dataElementId>OrderHeader/numSalesOrder</data:dataElementId>
       </detail>
+      <detail xsi:type="layout:hintDetail">
+        <id>9GIg7R+jQfmgeTewuKlaUA</id>
+        <elementType>oracle.communications.sce.poms.model.data.UIHintsDetail</elementType>
+        <data:dataElementId>OrderHeader/numSalesOrder</data:dataElementId>
+        <layout:hints/>
+      </detail>
+      <detail xsi:type="poms:valueComplexType" linkEnabled="false" overrideDictionaryValues="false" queryEnabled="false" valueEnabled="false">
+        <id>PSm+By38Q4a5ZWObD5GmWA</id>
+        <elementType>oracle.communications.sce.poms.model.data.ValueElementDetail</elementType>
+        <data:dataElementId>OrderHeader/numSalesOrder</data:dataElementId>
+      </detail>
+      <detail xsi:type="specification:CharElementDetailType">
+        <id>Q2LopKWnRuqmscOz+eqXzA</id>
+        <elementType>oracle.communications.studio.inventory.model.data.StudioModelDataElementCharDetailType</elementType>
+        <data:dataElementId>OrderHeader/numSalesOrder</data:dataElementId>
+        <specification:startTimestamp>0</specification:startTimestamp>
+        <specification:endTimestamp>0</specification:endTimestamp>
+      </detail>
     </dataDictionaryDetails>
   </dataDictionaryNode>
   <dataDictionaryNode>
@@ -936,14 +963,18 @@
     <baseElement>string</baseElement>
     <baseNamespace>http://www.w3.org/2001/XMLSchema</baseNamespace>
     <dataElementId>OrderHeader/typeOrder</dataElementId>
-    <extension xsi:type="provisioning:ElementExtensionType"/>
+    <extension xsi:type="provisioning:ElementExtensionType">
+      <provisioning:significant>true</provisioning:significant>
+    </extension>
     <dataDictionaryDetails>
       <detail xsi:type="data:dataElementCommonDetail">
         <id>olp939wJ--+zTQNHzEBFQw</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>OrderHeader/typeOrder</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>-1</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -958,6 +989,24 @@
         <id>JCxN---A--+8MJ14---72w</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
         <data:dataElementId>OrderHeader/typeOrder</data:dataElementId>
+      </detail>
+      <detail xsi:type="layout:hintDetail">
+        <id>mc7ltiS9QWmVFUNju3hGJQ</id>
+        <elementType>oracle.communications.sce.poms.model.data.UIHintsDetail</elementType>
+        <data:dataElementId>OrderHeader/typeOrder</data:dataElementId>
+        <layout:hints/>
+      </detail>
+      <detail xsi:type="poms:valueComplexType" linkEnabled="false" overrideDictionaryValues="false" queryEnabled="false" valueEnabled="false">
+        <id>FKwQaMmAQaam0AnfZP-vYQ</id>
+        <elementType>oracle.communications.sce.poms.model.data.ValueElementDetail</elementType>
+        <data:dataElementId>OrderHeader/typeOrder</data:dataElementId>
+      </detail>
+      <detail xsi:type="specification:CharElementDetailType">
+        <id>e-EwjjHtTuCv1jj+aqmqVg</id>
+        <elementType>oracle.communications.studio.inventory.model.data.StudioModelDataElementCharDetailType</elementType>
+        <data:dataElementId>OrderHeader/typeOrder</data:dataElementId>
+        <specification:startTimestamp>0</specification:startTimestamp>
+        <specification:endTimestamp>0</specification:endTimestamp>
       </detail>
     </dataDictionaryDetails>
   </dataDictionaryNode>
@@ -977,17 +1026,14 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</elementType>
         <data:dataElementId>AccountDetails/numAccount</data:dataElementId>
       </detail>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>--+l--+3--+0Pn0i---uPw</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
-        <data:dataElementId>AccountDetails/numAccount</data:dataElementId>
-      </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>---J--+E--+x16tf--+88g</id>
+        <id>oW379RNoQQGASNXVPdRhZg</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>AccountDetails/numAccount</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>40</data:maxLength>
         <data:minMultiplicity>1</data:minMultiplicity>
@@ -1011,17 +1057,14 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</elementType>
         <data:dataElementId>AccountDetails/status</data:dataElementId>
       </detail>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>---dcmRm--+Z--+QQo8kNA</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
-        <data:dataElementId>AccountDetails/status</data:dataElementId>
-      </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>--+9LmMZ--+--GITlORSmQ</id>
+        <id>JUpp9tUYSp+48DXGvgAKIg</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>AccountDetails/status</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>40</data:maxLength>
         <data:minMultiplicity>1</data:minMultiplicity>
@@ -1045,17 +1088,14 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</elementType>
         <data:dataElementId>AccountDetails/corporate</data:dataElementId>
       </detail>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>Mik3JXIn--+pqNAs---Hxg</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
-        <data:dataElementId>AccountDetails/corporate</data:dataElementId>
-      </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>Y+QC---5--+o4jRjLK9w0w</id>
+        <id>ocsRrZhOTVSWrkk-EA2bsA</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>AccountDetails/corporate</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>40</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -1079,17 +1119,14 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</elementType>
         <data:dataElementId>AccountDetails/cpfClient</data:dataElementId>
       </detail>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>fy0wPDoh--+WOp8662sirw</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
-        <data:dataElementId>AccountDetails/cpfClient</data:dataElementId>
-      </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>--+f---V--+k--+Z---C3A</id>
+        <id>IUb9wg4GSoyc0AWEFbfrGg</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>AccountDetails/cpfClient</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>40</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -1113,17 +1150,14 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</elementType>
         <data:dataElementId>AccountDetails/cnpjClient</data:dataElementId>
       </detail>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>---w--+X--+y--+35r9UVQ</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
-        <data:dataElementId>AccountDetails/cnpjClient</data:dataElementId>
-      </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>---McQN3--++--+v---KYg</id>
+        <id>niMtld-bSB2Y7zfifaNHoQ</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>AccountDetails/cnpjClient</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>40</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -1147,17 +1181,14 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</elementType>
         <data:dataElementId>AccountDetails/inscrState</data:dataElementId>
       </detail>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>-Lok---f--+u---F---qlw</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
-        <data:dataElementId>AccountDetails/inscrState</data:dataElementId>
-      </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>UURm0q17--+5---WL+J-XA</id>
+        <id>2nJhWW6VQlu4OUCnBjlfwA</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>AccountDetails/inscrState</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>40</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -1182,11 +1213,13 @@
         <data:dataElementId>AccountDetails/clientSince</data:dataElementId>
       </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>---S--+u--+BD9ZXsURCxw</id>
+        <id>RbJIqp8LRaCedplCU-ykHA</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>AccountDetails/clientSince</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>40</data:maxLength>
         <data:minMultiplicity>1</data:minMultiplicity>
@@ -1210,17 +1243,14 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</elementType>
         <data:dataElementId>AccountDetails/category</data:dataElementId>
       </detail>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>---ploI3--+u---wY1p7EQ</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
-        <data:dataElementId>AccountDetails/category</data:dataElementId>
-      </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>---sPpdF--+D+2FG4k8TwQ</id>
+        <id>J1MvU9deSmCKklo0zaHVAw</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>AccountDetails/category</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>40</data:maxLength>
         <data:minMultiplicity>1</data:minMultiplicity>
@@ -1244,7 +1274,9 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>ResponseParamGroup/ResponseParam/paramName</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>-1</data:maxLength>
         <data:minMultiplicity>1</data:minMultiplicity>
@@ -1278,7 +1310,9 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>ResponseParamGroup/ResponseParam/paramValue</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>-1</data:maxLength>
         <data:minMultiplicity>1</data:minMultiplicity>
@@ -1312,11 +1346,13 @@
         <data:dataElementId>AccountDetails/segmentMarkets</data:dataElementId>
       </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>7xBW--+C--+a--+K---p1g</id>
+        <id>vjhqOlTdQmmd2jVIMhhURQ</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>AccountDetails/segmentMarkets</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>40</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -1340,17 +1376,14 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</elementType>
         <data:dataElementId>AccountDetails/segmentMarkets/segmentMarket</data:dataElementId>
       </detail>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>--+d---I--+P--+p--+hlA</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
-        <data:dataElementId>AccountDetails/segmentMarkets/segmentMarket</data:dataElementId>
-      </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>---dEaFC--+QKmNE---v3Q</id>
+        <id>o2pTxxpPRM6QpUW8cfhrhA</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>AccountDetails/segmentMarkets/segmentMarket</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>40</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -1374,7 +1407,9 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>ResponseParamGroup/ResponseParam/componentKey</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>-1</data:maxLength>
         <data:minMultiplicity>1</data:minMultiplicity>
@@ -1408,9 +1443,10 @@
         <data:dataElementId>AccountDetails/invoiceProfile</data:dataElementId>
       </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>m088--+d--+vvK19AJY2og</id>
+        <id>FCI3YnhvSD+Olomnq8rOTw</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>AccountDetails/invoiceProfile</data:dataElementId>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
         <data:minMultiplicity>1</data:minMultiplicity>
         <data:maxMultiplicity>1</data:maxMultiplicity>
@@ -1433,9 +1469,10 @@
         <data:dataElementId>AccountDetails/customerAddress</data:dataElementId>
       </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>--+T--+P--+D---R--+TuA</id>
+        <id>8kbYWD2-QiqhYKwF1K3JSg</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>AccountDetails/customerAddress</data:dataElementId>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
         <data:minMultiplicity>1</data:minMultiplicity>
         <data:maxMultiplicity>1</data:maxMultiplicity>
@@ -1458,7 +1495,9 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>FunctionType/Status</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>-1</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -1505,7 +1544,9 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>FunctionType/Status/ErrorCode</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>-1</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -1539,7 +1580,9 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>FunctionType/Status/ErrorMessage</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>200</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -1573,7 +1616,9 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>FunctionType/Status/ErrorStatus</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>-1</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -1601,17 +1646,14 @@
     <baseNamespace>http://www.w3.org/2001/XMLSchema</baseNamespace>
     <dataElementId>AccountDetails/invoiceProfile/mediaType</dataElementId>
     <dataDictionaryDetails>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>JZVB---O--+wIsob---cVw</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
-        <data:dataElementId>AccountDetails/invoiceProfile/mediaType</data:dataElementId>
-      </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>---i---S--+lwfx+--+psQ</id>
+        <id>HaspX8Y7SDGZghT08AxL-w</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>AccountDetails/invoiceProfile/mediaType</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>1</data:minMultiplicity>
@@ -1629,17 +1671,14 @@
     <baseNamespace>http://www.w3.org/2001/XMLSchema</baseNamespace>
     <dataElementId>AccountDetails/invoiceProfile/typeInvoice</dataElementId>
     <dataDictionaryDetails>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>21YJ--+j--+A---S+SByFw</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
-        <data:dataElementId>AccountDetails/invoiceProfile/typeInvoice</data:dataElementId>
-      </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>ruoR--+N--+4---nDvxK2Q</id>
+        <id>ovrZ5Q7QTwycrttwD-H1DQ</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>AccountDetails/invoiceProfile/typeInvoice</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>1</data:minMultiplicity>
@@ -1657,17 +1696,14 @@
     <baseNamespace>http://www.w3.org/2001/XMLSchema</baseNamespace>
     <dataElementId>AccountDetails/invoiceProfile/billingCycle</dataElementId>
     <dataDictionaryDetails>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>eJtR---s--+Mdus6h1pqCA</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
-        <data:dataElementId>AccountDetails/invoiceProfile/billingCycle</data:dataElementId>
-      </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>HFoSiWJo--+n---9hMsWNw</id>
+        <id>DVvQjnIJS5utjMTEeipqMw</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>AccountDetails/invoiceProfile/billingCycle</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>1</data:minMultiplicity>
@@ -1687,11 +1723,13 @@
     <extension xsi:type="provisioning:ElementExtensionType"/>
     <dataDictionaryDetails>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>--+djCgR--+OvfEA--+-Cg</id>
+        <id>PoFfKAwRSAOvcSGSZ-OdQw</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>AccountDetails/invoiceProfile/exemptionICMS</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>40</data:maxLength>
         <data:minMultiplicity>1</data:minMultiplicity>
@@ -1709,17 +1747,14 @@
     <baseNamespace>http://www.w3.org/2001/XMLSchema</baseNamespace>
     <dataElementId>AccountDetails/invoiceProfile/empresaFaturamento</dataElementId>
     <dataDictionaryDetails>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>IIMm---O--+DO4kWxBc+6A</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
-        <data:dataElementId>AccountDetails/invoiceProfile/empresaFaturamento</data:dataElementId>
-      </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>--+iroch--+u--+fngQCCQ</id>
+        <id>8fk2fygnRLWc0OWnqIzzfg</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>AccountDetails/invoiceProfile/empresaFaturamento</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>1</data:minMultiplicity>
@@ -1737,17 +1772,14 @@
     <baseNamespace>http://www.w3.org/2001/XMLSchema</baseNamespace>
     <dataElementId>AccountDetails/invoiceProfile/paymentMethod</dataElementId>
     <dataDictionaryDetails>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>Yq89--+V--+w---TX5p9dw</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
-        <data:dataElementId>AccountDetails/invoiceProfile/paymentMethod</data:dataElementId>
-      </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>Jtc1h4Nh--+Cr1IwhytRjg</id>
+        <id>DDgINeXZStmiFjMKLhrnzw</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>AccountDetails/invoiceProfile/paymentMethod</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>1</data:minMultiplicity>
@@ -1765,17 +1797,14 @@
     <baseNamespace>http://www.w3.org/2001/XMLSchema</baseNamespace>
     <dataElementId>AccountDetails/customerAddress/locationType</dataElementId>
     <dataDictionaryDetails>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>-Xwk--+W--+DbTxLS48oBA</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
-        <data:dataElementId>AccountDetails/customerAddress/locationType</data:dataElementId>
-      </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>gJkYHNsP--+HVMF0---Arg</id>
+        <id>9Myy9txdQC+qhlCjfuqTbQ</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>AccountDetails/customerAddress/locationType</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>1</data:minMultiplicity>
@@ -1793,17 +1822,14 @@
     <baseNamespace>http://www.w3.org/2001/XMLSchema</baseNamespace>
     <dataElementId>AccountDetails/customerAddress/nameLocation</dataElementId>
     <dataDictionaryDetails>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>--+z---O--+wrq9K--+eOA</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
-        <data:dataElementId>AccountDetails/customerAddress/nameLocation</data:dataElementId>
-      </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>---Y4zIs--+C---tH-Vzlg</id>
+        <id>KQg0CyUdSfSWsh2ZLNFFwQ</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>AccountDetails/customerAddress/nameLocation</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>200</data:maxLength>
         <data:minMultiplicity>1</data:minMultiplicity>
@@ -1821,17 +1847,14 @@
     <baseNamespace>http://www.w3.org/2001/XMLSchema</baseNamespace>
     <dataElementId>AccountDetails/customerAddress/number</dataElementId>
     <dataDictionaryDetails>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>---V---u--+----S---0tQ</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
-        <data:dataElementId>AccountDetails/customerAddress/number</data:dataElementId>
-      </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>---xi8Y9--+R--+KGplAUA</id>
+        <id>d+IyxMgpSqKx8b0W5z5Ohg</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>AccountDetails/customerAddress/number</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -1849,17 +1872,14 @@
     <baseNamespace>http://www.w3.org/2001/XMLSchema</baseNamespace>
     <dataElementId>AccountDetails/customerAddress/typeCompl</dataElementId>
     <dataDictionaryDetails>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>---W+Hgr--+w45wQ8tdMzg</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
-        <data:dataElementId>AccountDetails/customerAddress/typeCompl</data:dataElementId>
-      </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>---xqmZk--+k--+m+9pLeQ</id>
+        <id>9XHhr9K6TTmv7HveqDRShQ</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>AccountDetails/customerAddress/typeCompl</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -1877,17 +1897,14 @@
     <baseNamespace>http://www.w3.org/2001/XMLSchema</baseNamespace>
     <dataElementId>AccountDetails/customerAddress/numCompl</dataElementId>
     <dataDictionaryDetails>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>--+ZYRRL--+dq3MMRetsaQ</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
-        <data:dataElementId>AccountDetails/customerAddress/numCompl</data:dataElementId>
-      </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>Gp88f6U6--+esWN5--+YHw</id>
+        <id>9CG5IBkxQZGHpgDZ2jEioA</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>AccountDetails/customerAddress/numCompl</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -1905,17 +1922,14 @@
     <baseNamespace>http://www.w3.org/2001/XMLSchema</baseNamespace>
     <dataElementId>AccountDetails/customerAddress/district</dataElementId>
     <dataDictionaryDetails>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>--+uRZtL--+mwFVSg48DVQ</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
-        <data:dataElementId>AccountDetails/customerAddress/district</data:dataElementId>
-      </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>--+yjUMr--+v---wTj8Ysw</id>
+        <id>wYkIu7fiSKWoaiEx4kbR5w</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>AccountDetails/customerAddress/district</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -1933,17 +1947,14 @@
     <baseNamespace>http://www.w3.org/2001/XMLSchema</baseNamespace>
     <dataElementId>AccountDetails/customerAddress/codeLocation</dataElementId>
     <dataDictionaryDetails>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>---K--+b--+iiPAl---8-A</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
-        <data:dataElementId>AccountDetails/customerAddress/codeLocation</data:dataElementId>
-      </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>--+mvycP--+0YlBd--+EOQ</id>
+        <id>8to2HPzqSEOvlMVbgNjqmQ</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>AccountDetails/customerAddress/codeLocation</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -1961,17 +1972,14 @@
     <baseNamespace>http://www.w3.org/2001/XMLSchema</baseNamespace>
     <dataElementId>AccountDetails/customerAddress/city</dataElementId>
     <dataDictionaryDetails>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>sT5k--+n--+22OoWMkJf9g</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
-        <data:dataElementId>AccountDetails/customerAddress/city</data:dataElementId>
-      </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>cNcCijoX--+BQdgz---f9Q</id>
+        <id>L9W5KhHSQoSII7JuObqrNQ</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>AccountDetails/customerAddress/city</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -1989,17 +1997,14 @@
     <baseNamespace>http://www.w3.org/2001/XMLSchema</baseNamespace>
     <dataElementId>AccountDetails/customerAddress/state</dataElementId>
     <dataDictionaryDetails>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>y2p1--+u--+Z---d--+sPA</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
-        <data:dataElementId>AccountDetails/customerAddress/state</data:dataElementId>
-      </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>---fPSN6--+g--+B---qjw</id>
+        <id>EZQFz03MTMmUtXTZxP4knQ</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>AccountDetails/customerAddress/state</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -2017,17 +2022,14 @@
     <baseNamespace>http://www.w3.org/2001/XMLSchema</baseNamespace>
     <dataElementId>AccountDetails/customerAddress/referencePoint</dataElementId>
     <dataDictionaryDetails>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>pzgoLGYh--+k--+EO7sgVg</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
-        <data:dataElementId>AccountDetails/customerAddress/referencePoint</data:dataElementId>
-      </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>--+y--+U--+rz4Ea6XZ7MQ</id>
+        <id>IHO+u0dOSVSiRoAjZWHKNw</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>AccountDetails/customerAddress/referencePoint</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -2045,17 +2047,14 @@
     <baseNamespace>http://www.w3.org/2001/XMLSchema</baseNamespace>
     <dataElementId>AccountDetails/customerAddress/areaCode</dataElementId>
     <dataDictionaryDetails>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>jg4C---7--+3---C---CCA</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
-        <data:dataElementId>AccountDetails/customerAddress/areaCode</data:dataElementId>
-      </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>---3---L--+t--+e6RwpTA</id>
+        <id>bL-4qtuiT8agSQWpWUJ5JA</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>AccountDetails/customerAddress/areaCode</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -2073,17 +2072,14 @@
     <baseNamespace>http://www.w3.org/2001/XMLSchema</baseNamespace>
     <dataElementId>AccountDetails/customerAddress/typeAddress</dataElementId>
     <dataDictionaryDetails>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>zbMiP2I4--+r---dqw8KmQ</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
-        <data:dataElementId>AccountDetails/customerAddress/typeAddress</data:dataElementId>
-      </detail>
       <detail xsi:type="data:dataElementCommonDetail">
-        <id>---ougQc--+c---H9pxCiA</id>
+        <id>KkdCUtURSt+eSSoVW+kLgA</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>AccountDetails/customerAddress/typeAddress</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>50</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -2131,6 +2127,7 @@
         <id>ibci--+P--+o--+ABi0ctQ</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>OrderItem</data:dataElementId>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
         <data:abstract>false</data:abstract>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -2154,7 +2151,9 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>OrderItem/productClass</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>100</data:maxLength>
         <data:minMultiplicity>1</data:minMultiplicity>
@@ -2206,7 +2205,9 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>OrderItem/productSpec</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>100</data:maxLength>
         <data:minMultiplicity>1</data:minMultiplicity>
@@ -2258,7 +2259,9 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>OrderItem/lineId</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>100</data:maxLength>
         <data:minMultiplicity>1</data:minMultiplicity>
@@ -2292,7 +2295,9 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>OrderItem/parentLineId</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>100</data:maxLength>
         <data:minMultiplicity>1</data:minMultiplicity>
@@ -2344,7 +2349,9 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>OrderItem/lineItemName</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>100</data:maxLength>
         <data:minMultiplicity>1</data:minMultiplicity>
@@ -2396,7 +2403,9 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>OrderItem/requestedDeliveryDate</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>-1</data:maxLength>
         <data:minMultiplicity>1</data:minMultiplicity>
@@ -2443,7 +2452,9 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>OrderItem/region</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>-1</data:maxLength>
         <data:minMultiplicity>1</data:minMultiplicity>
@@ -2477,7 +2488,9 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>OrderItem/typeCode</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>-1</data:maxLength>
         <data:minMultiplicity>1</data:minMultiplicity>
@@ -2511,7 +2524,9 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>OrderItem/serviceId</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>-1</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -2545,7 +2560,9 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>OrderItem/lineItemPayload</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>-1</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -2592,7 +2609,9 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>OrderItem/relatedBundleId</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>-1</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -2644,7 +2663,9 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>OrderItem/ResponseParamGroup</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>-1</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -2690,7 +2711,9 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>OrderItem/ResponseParamGroup/ResponseParam</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>-1</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -2719,7 +2742,9 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>OrderItem/ResponseParamGroup/ResponseParam/paramName</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>-1</data:maxLength>
         <data:minMultiplicity>1</data:minMultiplicity>
@@ -2752,7 +2777,9 @@
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>OrderItem/ResponseParamGroup/ResponseParam/paramValue</data:dataElementId>
         <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
         <data:minLength>0</data:minLength>
         <data:maxLength>-1</data:maxLength>
         <data:minMultiplicity>0</data:minMultiplicity>
@@ -2783,11 +2810,6 @@
       <provisioning:significant>true</provisioning:significant>
     </extension>
     <dataDictionaryDetails>
-      <detail xsi:type="data:dataElementEnumerationDetail">
-        <id>--+K--+B--+f--+r62ctMw</id>
-        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
-        <data:dataElementId>FunctionType/orderItem/ExternalFulfillmentState</data:dataElementId>
-      </detail>
       <detail xsi:type="data:dataElementInformationDetails">
         <id>--+75XU0--+s--+w9eRU7Q</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</elementType>
@@ -2815,9 +2837,194 @@
         <id>---J---Y--+S--+cJ6ZnuQ</id>
         <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
         <data:dataElementId>FunctionType/orderItem/ExternalFulfillmentState</data:dataElementId>
+        <data:key></data:key>
         <data:deprecated>false</data:deprecated>
         <data:minMultiplicity>0</data:minMultiplicity>
         <data:maxMultiplicity>1</data:maxMultiplicity>
+      </detail>
+    </dataDictionaryDetails>
+  </dataDictionaryNode>
+  <dataDictionaryNode>
+    <entity>OsmCentralOMExample-Orchestration</entity>
+    <entityType>xsd</entityType>
+    <relationship>com.mslv.studio.core.data.dictionary.extension</relationship>
+    <element>FunctionType/duration</element>
+    <elementType>(Local Structure)</elementType>
+    <baseElement>duration</baseElement>
+    <baseNamespace>http://xmlns.oracle.com/communications/sce/dictionary/OracleComms_OSM_CommonDataDictionary/OracleComms_OSM_CommonDataDictionary</baseNamespace>
+    <dataElementId>FunctionType/duration</dataElementId>
+    <dataDictionaryDetails>
+      <detail xsi:type="data:dataElementCommonDetail">
+        <id>--+FrK0y--+5--+WRDkWxg</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
+        <data:dataElementId>FunctionType/duration</data:dataElementId>
+        <data:key></data:key>
+        <data:deprecated>false</data:deprecated>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </detail>
+    </dataDictionaryDetails>
+  </dataDictionaryNode>
+  <dataDictionaryNode>
+    <entity>OsmCentralOMExample-Orchestration</entity>
+    <entityType>xsd</entityType>
+    <relationship>com.mslv.studio.core.data.dictionary.extension</relationship>
+    <element>FunctionType/transformedOrderItem/ExternalFulfillmentState</element>
+    <elementType>(Local Structure)</elementType>
+    <baseElement>ExternalFulfillmentState</baseElement>
+    <baseNamespace>http://xmlns.oracle.com/communications/sce/dictionary/OracleComms_OSM_CommonDataDictionary/OracleComms_OSM_CommonDataDictionary</baseNamespace>
+    <dataElementId>FunctionType/transformedOrderItem/ExternalFulfillmentState</dataElementId>
+    <dataDictionaryDetails>
+      <detail xsi:type="data:dataElementCommonDetail">
+        <id>5EU-OutO--+O---2--+F7Q</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
+        <data:dataElementId>FunctionType/transformedOrderItem/ExternalFulfillmentState</data:dataElementId>
+        <data:key></data:key>
+        <data:deprecated>false</data:deprecated>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </detail>
+    </dataDictionaryDetails>
+  </dataDictionaryNode>
+  <dataDictionaryNode>
+    <entity>OsmCentralOMExample-Orchestration</entity>
+    <entityType>xsd</entityType>
+    <relationship>com.mslv.studio.core.data.dictionary.extension</relationship>
+    <element>FunctionType/calculatedStartDate</element>
+    <elementType>(Local Structure)</elementType>
+    <baseElement>calculatedStartDate</baseElement>
+    <baseNamespace>http://xmlns.oracle.com/communications/sce/dictionary/OracleComms_OSM_CommonDataDictionary/OracleComms_OSM_CommonDataDictionary</baseNamespace>
+    <dataElementId>FunctionType/calculatedStartDate</dataElementId>
+    <extension xsi:type="provisioning:ElementExtensionType"/>
+    <dataDictionaryDetails>
+      <detail xsi:type="data:dataElementCommonDetail">
+        <id>KbRkCjE2--+M---z--+yXA</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
+        <data:dataElementId>FunctionType/calculatedStartDate</data:dataElementId>
+        <data:key></data:key>
+        <data:deprecated>false</data:deprecated>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </detail>
+    </dataDictionaryDetails>
+  </dataDictionaryNode>
+  <dataDictionaryNode>
+    <entity>OsmCentralOMExample-Orchestration</entity>
+    <entityType>xsd</entityType>
+    <relationship>com.mslv.studio.core.data.dictionary.extension</relationship>
+    <element>FunctionType/transformedOrderItem/FunctionProcessingState</element>
+    <elementType>(Local Structure)</elementType>
+    <baseElement>OrderComponentOrderItemProcessingState</baseElement>
+    <baseNamespace>http://xmlns.oracle.com/communications/sce/dictionary/OracleComms_OSM_CommonDataDictionary/OracleComms_OSM_CommonDataDictionary</baseNamespace>
+    <dataElementId>FunctionType/transformedOrderItem/FunctionProcessingState</dataElementId>
+    <dataDictionaryDetails>
+      <detail xsi:type="data:dataElementCommonDetail">
+        <id>dRrPSe7FQV2OY9HfupKrgg</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
+        <data:dataElementId>FunctionType/transformedOrderItem/FunctionProcessingState</data:dataElementId>
+        <data:key></data:key>
+        <data:deprecated>false</data:deprecated>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </detail>
+    </dataDictionaryDetails>
+  </dataDictionaryNode>
+  <dataDictionaryNode>
+    <entity>OsmCentralOMExample-Orchestration</entity>
+    <entityType>xsd</entityType>
+    <relationship>com.mslv.studio.core.data.dictionary.extension</relationship>
+    <element>FunctionType/transformedOrderItem</element>
+    <elementType>(Local Structure)</elementType>
+    <baseElement>transformedOrderItem</baseElement>
+    <baseNamespace>http://xmlns.oracle.com/communications/sce/dictionary/OracleComms_OSM_CommonDataDictionary/OracleComms_OSM_CommonDataDictionary</baseNamespace>
+    <dataElementId>FunctionType/transformedOrderItem</dataElementId>
+    <dataDictionaryDetails>
+      <detail xsi:type="data:dataElementCommonDetail">
+        <id>tOV8tul8--+ZXNBK---1Dg</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
+        <data:dataElementId>FunctionType/transformedOrderItem</data:dataElementId>
+        <data:key></data:key>
+        <data:deprecated>false</data:deprecated>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>-1</data:maxMultiplicity>
+      </detail>
+    </dataDictionaryDetails>
+  </dataDictionaryNode>
+  <dataDictionaryNode>
+    <entity>OsmCentralOMExample-Orchestration</entity>
+    <entityType>xsd</entityType>
+    <relationship>com.mslv.studio.core.data.dictionary.extension</relationship>
+    <element>FunctionType/orderItem/FunctionProcessingState</element>
+    <elementType>(Local Structure)</elementType>
+    <baseElement>OrderComponentOrderItemProcessingState</baseElement>
+    <baseNamespace>http://xmlns.oracle.com/communications/sce/dictionary/OracleComms_OSM_CommonDataDictionary/OracleComms_OSM_CommonDataDictionary</baseNamespace>
+    <dataElementId>FunctionType/orderItem/FunctionProcessingState</dataElementId>
+    <dataDictionaryDetails>
+      <detail xsi:type="data:dataElementCommonDetail">
+        <id>qxBQcuxo--+E---2fk8FEA</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
+        <data:dataElementId>FunctionType/orderItem/FunctionProcessingState</data:dataElementId>
+        <data:key></data:key>
+        <data:deprecated>false</data:deprecated>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </detail>
+    </dataDictionaryDetails>
+  </dataDictionaryNode>
+  <dataDictionaryNode>
+    <entity>OsmCentralOMExample-Orchestration</entity>
+    <entityType>xsd</entityType>
+    <relationship>com.mslv.studio.core.data.dictionary.extension</relationship>
+    <element>OrderHeader/salesOrderRevision</element>
+    <elementType>xs:string</elementType>
+    <baseElement>string</baseElement>
+    <baseNamespace>http://www.w3.org/2001/XMLSchema</baseNamespace>
+    <dataElementId>OrderHeader/salesOrderRevision</dataElementId>
+    <displayName lang="en"></displayName>
+    <displayName>SalesOrderRevision</displayName>
+    <extension xsi:type="provisioning:ElementExtensionType">
+      <provisioning:significant>false</provisioning:significant>
+    </extension>
+    <dataDictionaryDetails>
+      <detail xsi:type="data:dataElementCommonDetail">
+        <id>A9PASaqNSZqlcusf6ffJ+g</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementCommonDetails</elementType>
+        <data:dataElementId>OrderHeader/salesOrderRevision</data:dataElementId>
+        <data:defaultValue></data:defaultValue>
+        <data:key></data:key>
+        <data:deprecated>false</data:deprecated>
+        <data:sensitive>false</data:sensitive>
+        <data:minLength>0</data:minLength>
+        <data:maxLength>40</data:maxLength>
+        <data:minMultiplicity>0</data:minMultiplicity>
+        <data:maxMultiplicity>1</data:maxMultiplicity>
+      </detail>
+      <detail xsi:type="data:dataElementEnumerationDetail">
+        <id>HOEVdnBFQrm9QavI5TqY1A</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementEnumeration</elementType>
+        <data:dataElementId>OrderHeader/salesOrderRevision</data:dataElementId>
+      </detail>
+      <detail xsi:type="data:dataElementInformationDetails">
+        <id>5P3NTUgrSkagaStd2Est2w</id>
+        <elementType>oracle.communications.studio.model.data.StudioModelDataElementInformation</elementType>
+        <data:dataElementId>OrderHeader/salesOrderRevision</data:dataElementId>
+      </detail>
+      <detail xsi:type="layout:hintDetail">
+        <id>7KuD4hf5Q-mie32Ty79QoA</id>
+        <elementType>oracle.communications.sce.poms.model.data.UIHintsDetail</elementType>
+        <data:dataElementId>OrderHeader/salesOrderRevision</data:dataElementId>
+        <layout:hints/>
+      </detail>
+      <detail xsi:type="poms:valueComplexType" linkEnabled="false" overrideDictionaryValues="false" query="" queryEnabled="false" valueEnabled="false">
+        <id>WpyWIMM9SAizZlqt-sFuYA</id>
+        <elementType>oracle.communications.sce.poms.model.data.ValueElementDetail</elementType>
+        <data:dataElementId>OrderHeader/salesOrderRevision</data:dataElementId>
+      </detail>
+      <detail xsi:type="specification:CharElementDetailType">
+        <id>gPkzbaRsSoSZ3oZ9NmAKPg</id>
+        <elementType>oracle.communications.studio.inventory.model.data.StudioModelDataElementCharDetailType</elementType>
+        <data:dataElementId>OrderHeader/salesOrderRevision</data:dataElementId>
+        <specification:startTimestamp>0</specification:startTimestamp>
+        <specification:endTimestamp>0</specification:endTimestamp>
       </detail>
     </dataDictionaryDetails>
   </dataDictionaryNode>

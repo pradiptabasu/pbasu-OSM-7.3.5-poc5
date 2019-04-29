@@ -6,6 +6,6 @@
 		
 		<im:numSalesOrder>123456AB</im:numSalesOrder>
 		<im:typeOrder>Add</im:typeOrder>
-		
+		<im:salesOrderRevision>1</im:salesOrderRevision>
 	</im:order>
 </ord:CreateOrder>

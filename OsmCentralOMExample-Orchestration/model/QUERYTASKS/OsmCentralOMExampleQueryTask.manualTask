@@ -28,6 +28,13 @@
       <com:element>/OrderHeader/typeOrder</com:element>
       <com:elementType>ora.task.orderTemplateRef</com:elementType>
     </task:childNode>
+    <task:childNode>
+      <com:entity>OsmCentralOMExampleOrder</com:entity>
+      <com:entityType>order</com:entityType>
+      <com:relationship>ora.task.orderTemplateRef</com:relationship>
+      <com:element>/OrderHeader/salesOrderRevision</com:element>
+      <com:elementType>com.mslv.studio.provisioning.order.node</com:elementType>
+    </task:childNode>
   </task:orderTemplateRef>
   <task:orderTemplateRef>
     <com:entity>OsmCentralOMExampleOrder</com:entity>
@@ -612,6 +619,16 @@
     <task:editable>true</task:editable>
     <task:defaultValue></task:defaultValue>
   </task:viewNodeExtension>
+  <task:viewNodeExtension>
+    <task:path>/ControlData/OrderFulfillmentState</task:path>
+    <task:editable>true</task:editable>
+    <task:defaultValue></task:defaultValue>
+  </task:viewNodeExtension>
+  <task:viewNodeExtension>
+    <task:path>/OrderHeader/salesOrderRevision</task:path>
+    <task:editable>true</task:editable>
+    <task:defaultValue></task:defaultValue>
+  </task:viewNodeExtension>
   <task:state name="accepted">
     <task:displayName>Accepted</task:displayName>
   </task:state>
@@ -648,4 +665,15 @@
     <com:relationship>com.mslv.studio.provisioning.task.rolePermission</com:relationship>
     <task:executionModes>do redo undo</task:executionModes>
   </task:workgroupPermission>
+  <task:workgroupPermission>
+    <com:entity>automation</com:entity>
+    <com:entityType>rolePermissions</com:entityType>
+    <com:relationship>com.mslv.studio.provisioning.task.rolePermission</com:relationship>
+    <task:executionModes>do redo undo</task:executionModes>
+  </task:workgroupPermission>
+  <task:compensationStrategy/>
+  <task:inProgressCompensation>
+    <task:waitForStrategy/>
+    <task:considerCompensation/>
+  </task:inProgressCompensation>
 </com:modelEntity>

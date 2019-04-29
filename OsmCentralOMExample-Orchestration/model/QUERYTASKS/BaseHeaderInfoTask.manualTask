@@ -2,6 +2,7 @@
 <com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aut="http://xmlns.oracle.com/communications/sce/osm/model/process/task/automation" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:prov="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xmlns:task="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xmlns="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xsi:type="task:manualTaskType" name="BaseHeaderInfoTask">
   <com:displayName>BaseHeaderInfoTask</com:displayName>
   <com:saveVersion>4</com:saveVersion>
+  <com:id>9zBj9ZgwQfGf1nXYa82mBA</com:id>
   <task:orderType>
     <com:entity>OsmCentralOMExampleOrder</com:entity>
     <com:entityType>order</com:entityType>
@@ -117,6 +118,13 @@
       <com:relationship>ora.task.orderTemplateRef</com:relationship>
       <com:element>/OrderHeader/typeOrder</com:element>
       <com:elementType>ora.task.orderTemplateRef</com:elementType>
+    </task:childNode>
+    <task:childNode>
+      <com:entity>OsmCentralOMExampleOrder</com:entity>
+      <com:entityType>order</com:entityType>
+      <com:relationship>ora.task.orderTemplateRef</com:relationship>
+      <com:element>/OrderHeader/salesOrderRevision</com:element>
+      <com:elementType>com.mslv.studio.provisioning.order.node</com:elementType>
     </task:childNode>
   </task:orderTemplateRef>
   <task:orderTemplateRef>
@@ -307,6 +315,11 @@
     <task:editable>true</task:editable>
     <task:defaultValue></task:defaultValue>
   </task:viewNodeExtension>
+  <task:viewNodeExtension>
+    <task:path>/OrderHeader/salesOrderRevision</task:path>
+    <task:editable>true</task:editable>
+    <task:defaultValue></task:defaultValue>
+  </task:viewNodeExtension>
   <task:state name="accepted">
     <task:displayName>Accepted</task:displayName>
   </task:state>
@@ -343,4 +356,9 @@
     <com:relationship>com.mslv.studio.provisioning.task.rolePermission</com:relationship>
     <task:executionModes>do redo undo</task:executionModes>
   </task:workgroupPermission>
+  <task:compensationStrategy/>
+  <task:inProgressCompensation>
+    <task:waitForStrategy/>
+    <task:considerCompensation/>
+  </task:inProgressCompensation>
 </com:modelEntity>

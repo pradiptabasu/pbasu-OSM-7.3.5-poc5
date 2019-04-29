@@ -7,6 +7,7 @@ return
 <_root>
 	<OrderHeader>
 		<numSalesOrder>{$order/im:numSalesOrder/text()}</numSalesOrder>
+    <salesOrderRevision>{$order/im:salesOrderRevision/text()}</salesOrderRevision>
 		<typeOrder>{$order/im:typeOrder/text()}</typeOrder>
 	</OrderHeader>
     <BillingProfile>

@@ -996,6 +996,9 @@
     <nodeExtension>
       <path>/ShippingProfile/actualDeliveryDate</path>
     </nodeExtension>
+    <nodeExtension>
+      <path>/OrderHeader/salesOrderRevision</path>
+    </nodeExtension>
     <orderData>
       <com:entity>OsmCentralOMExample-Orchestration</com:entity>
       <com:entityType>xsd</com:entityType>
@@ -1167,6 +1170,17 @@
         <com:element>OrderHeader/typeOrder</com:element>
         <com:elementType>com.mslv.studio.core.data.dictionary.node</com:elementType>
         <com:elementName>typeOrder</com:elementName>
+        <com:namespace>http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample-Orchestration/OsmCentralOMExample-Orchestration</com:namespace>
+        <com:baseElement>string</com:baseElement>
+        <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
+      </childNode>
+      <childNode>
+        <com:entity>OsmCentralOMExample-Orchestration</com:entity>
+        <com:entityType>xsd</com:entityType>
+        <com:relationship>com.mslv.studio.provisioning.order.orderTemplateNode</com:relationship>
+        <com:element>OrderHeader/salesOrderRevision</com:element>
+        <com:elementType>com.mslv.studio.core.data.dictionary.node</com:elementType>
+        <com:elementName>salesOrderRevision</com:elementName>
         <com:namespace>http://xmlns.oracle.com/communications/sce/dictionary/OsmCentralOMExample-Orchestration/OsmCentralOMExample-Orchestration</com:namespace>
         <com:baseElement>string</com:baseElement>
         <com:baseNamespace>http://www.w3.org/2001/XMLSchema</com:baseNamespace>
@@ -1525,6 +1539,27 @@
     <canCreateOrders>true</canCreateOrders>
     <detailTask>
       <com:entity>BillingFunctionTask</com:entity>
+      <com:entityType>manualTask</com:entityType>
+      <com:relationship>com.mslv.studio.provisioning.queryTask</com:relationship>
+    </detailTask>
+  </orderPermission>
+  <orderPermission>
+    <com:entity>automation</com:entity>
+    <com:entityType>rolePermissions</com:entityType>
+    <com:relationship>com.mslv.studio.provisioning.roleSetting</com:relationship>
+    <queryTask>
+      <com:entity>OsmCentralOMExampleQueryTask</com:entity>
+      <com:entityType>manualTask</com:entityType>
+      <com:relationship>com.mslv.studio.provisioning.queryTask</com:relationship>
+    </queryTask>
+    <canCreateOrders>true</canCreateOrders>
+    <summaryTask>
+      <com:entity>OsmCentralOMExampleQueryTask</com:entity>
+      <com:entityType>manualTask</com:entityType>
+      <com:relationship>com.mslv.studio.provisioning.queryTask</com:relationship>
+    </summaryTask>
+    <detailTask>
+      <com:entity>OsmCentralOMExampleQueryTask</com:entity>
       <com:entityType>manualTask</com:entityType>
       <com:relationship>com.mslv.studio.provisioning.queryTask</com:relationship>
     </detailTask>

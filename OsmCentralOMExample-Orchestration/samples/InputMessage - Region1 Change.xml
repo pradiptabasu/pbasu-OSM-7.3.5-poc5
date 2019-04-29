@@ -6,6 +6,7 @@
 		xsi:schemaLocation="http://xmlns.oracle.com/InputMessage ../dataDictionary/InputMessage.xsd">
 		<im:numSalesOrder>scenario2-2926</im:numSalesOrder>
 		<im:typeOrder>Add</im:typeOrder>
+		<im:salesOrderRevision>1</im:salesOrderRevision>
 		<im:customerAccount>
 			<im:numAccount>TEL1234</im:numAccount>
 			<im:status>Existing</im:status>

@@ -3,5 +3,5 @@
   <com:displayName>Environment</com:displayName>
   <com:saveVersion>6</com:saveVersion>
   <com:id>uPIL9T5KQ-aRKOO1S9Stmw</com:id>
-  <com:endpoint>http://ec2-3-93-177-109.compute-1.amazonaws.com:7001/cartridge/wsapi</com:endpoint>
+  <com:endpoint>http://ec2-34-201-44-85.compute-1.amazonaws.com:7001/cartridge/wsapi</com:endpoint>
 </com:modelEntity>

@@ -28,6 +28,13 @@
       <com:element>/OrderHeader/typeOrder</com:element>
       <com:elementType>ora.task.orderTemplateRef</com:elementType>
     </task:childNode>
+    <task:childNode>
+      <com:entity>OsmCentralOMExampleOrder</com:entity>
+      <com:entityType>order</com:entityType>
+      <com:relationship>ora.task.orderTemplateRef</com:relationship>
+      <com:element>/OrderHeader/salesOrderRevision</com:element>
+      <com:elementType>com.mslv.studio.provisioning.order.node</com:elementType>
+    </task:childNode>
   </task:orderTemplateRef>
   <task:orderTemplateRef>
     <com:entity>OsmCentralOMExampleOrder</com:entity>
@@ -818,6 +825,11 @@
   </task:viewNodeExtension>
   <task:viewNodeExtension>
     <task:path>/ControlData/Functions/SyncCustomerFunction/duration</task:path>
+    <task:editable>true</task:editable>
+    <task:defaultValue></task:defaultValue>
+  </task:viewNodeExtension>
+  <task:viewNodeExtension>
+    <task:path>/OrderHeader/salesOrderRevision</task:path>
     <task:editable>true</task:editable>
     <task:defaultValue></task:defaultValue>
   </task:viewNodeExtension>

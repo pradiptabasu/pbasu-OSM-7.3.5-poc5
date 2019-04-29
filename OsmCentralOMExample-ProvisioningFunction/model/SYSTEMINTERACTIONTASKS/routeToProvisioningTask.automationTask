@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <com:modelEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aut="http://xmlns.oracle.com/communications/sce/osm/model/process/task/automation" xmlns:com="http://www.mslv.com/studio/core/model/common" xmlns:prov="http://xmlns.oracle.com/communications/sce/osm/model/provisioning" xmlns:task="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xmlns="http://xmlns.oracle.com/communications/sce/osm/model/process/task" xsi:type="task:automatedTaskType" name="routeToProvisioningTask">
   <com:displayName>routeToProvisioningTask</com:displayName>
-  <com:saveVersion>7</com:saveVersion>
+  <com:saveVersion>8</com:saveVersion>
   <com:id>---TJroz--+cLBYgsz9ibA</com:id>
   <task:orderType>
     <com:entity>OsmCentralOMExampleOrder</com:entity>
@@ -252,15 +252,19 @@
   <task:responsible>System</task:responsible>
   <task:scheduleType>SYSTEM</task:scheduleType>
   <task:workgroupPermission>
-    <com:entity>ProvisionRole</com:entity>
+    <com:entity>automation</com:entity>
     <com:entityType>rolePermissions</com:entityType>
     <com:relationship>com.mslv.studio.provisioning.task.rolePermission</com:relationship>
-    <task:executionModes>do redo</task:executionModes>
+    <task:executionModes>do redo undo</task:executionModes>
   </task:workgroupPermission>
   <task:compensationStrategy>
     <task:onTaskReevaluate>redo</task:onTaskReevaluate>
     <task:onTaskRollback>ignore</task:onTaskRollback>
   </task:compensationStrategy>
+  <task:inProgressCompensation>
+    <task:waitForStrategy/>
+    <task:considerCompensation/>
+  </task:inProgressCompensation>
   <task:automationComponent xsi:type="task:internalAutomationPlugin">
     <prov:name>calc_prov_system</prov:name>
     <prov:type>xQueryAutomator</prov:type>

@@ -763,11 +763,16 @@
   <task:responsible>System</task:responsible>
   <task:scheduleType>SYSTEM</task:scheduleType>
   <task:workgroupPermission>
-    <com:entity>DefaultRole</com:entity>
+    <com:entity>automation</com:entity>
     <com:entityType>rolePermissions</com:entityType>
     <com:relationship>com.mslv.studio.provisioning.task.rolePermission</com:relationship>
     <task:executionModes>do redo undo</task:executionModes>
   </task:workgroupPermission>
+  <task:compensationStrategy/>
+  <task:inProgressCompensation>
+    <task:waitForStrategy/>
+    <task:considerCompensation/>
+  </task:inProgressCompensation>
   <task:automationComponent xsi:type="task:internalAutomationPlugin">
     <prov:name>sender</prov:name>
     <prov:type>xQuerySender</prov:type>

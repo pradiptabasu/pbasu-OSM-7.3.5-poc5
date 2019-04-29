@@ -4,7 +4,8 @@
 	<im:order xmlns:im="http://xmlns.oracle.com/InputMessage"
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xsi:schemaLocation="http://xmlns.oracle.com/InputMessage ../dataDictionary/InputMessage.xsd">
-		<im:numSalesOrder>123456CD-13</im:numSalesOrder>
+		<im:numSalesOrder>123456CD-32</im:numSalesOrder>
+		<im:salesOrderRevision>1</im:salesOrderRevision>
 		<im:typeOrder>Add</im:typeOrder>
 		<im:customerAccount>
 			<im:numAccount>TEL1234</im:numAccount>

@@ -10,6 +10,11 @@
 					</documentation>
 				</annotation>
 			</element>
+			<element maxOccurs="1" minOccurs="1" name="salesOrderRevision" type="string">
+				<annotation>
+					<documentation>Revision for the order.</documentation>
+				</annotation>
+			</element>
 			<element maxOccurs="1" minOccurs="1" name="typeOrder">
 				<annotation>
 					<documentation>Indicates the type of order action.

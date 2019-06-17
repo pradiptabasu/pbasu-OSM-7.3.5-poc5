@@ -1,5 +1,6 @@
 declare namespace osm="urn:com:metasolv:oms:xmlapi:1";
 declare namespace log = "java:org.apache.commons.logging.Log";
+declare namespace im="http://xmlns.oracle.com/MilestoneMessage";
 
 declare variable $log external;
 
@@ -26,21 +27,21 @@ let $mappedUpstreamFulfillmentState := if(exists($orderFulfillmentState)) then l
 return
 (
 log:info($log,'Sending Upstream Fulfillment State'),
-<requestResponse>
-	<numSalesOrder>{$order/osm:Reference/text()}</numSalesOrder>
-	<numOrder>{$order/osm:OrderID/text()}</numOrder>
-	<typeOrder>{$order//osm:OrderHeader/osm:typeOrder/text()}</typeOrder>
-	<errorCode>0</errorCode>
-	<status>{$mappedUpstreamFulfillmentState}</status>
-	<message>Order {$order/osm:Reference/text()} Complete</message>
+<im:requestResponse xmlns:im="http://xmlns.oracle.com/MilestoneMessage">
+	<im:numSalesOrder>{$order/osm:Reference/text()}</im:numSalesOrder>
+	<im:numOrder>{$order/osm:OrderID/text()}</im:numOrder>
+	<im:typeOrder>{$order//osm:OrderHeader/osm:typeOrder/text()}</im:typeOrder>
+	<im:errorCode>0</im:errorCode>
+	<im:status>{$mappedUpstreamFulfillmentState}</im:status>
+	<im:message>Order {$order/osm:Reference/text()} Complete</im:message>
 	{
 	    for $orderItem in $order/osm:_root/osm:ControlData/osm:OrderItem
 	    where exists($orderItem/osm:OrderItemFulfillmentState)
 	    return 
-	        <OrderItem>
-	            <Name>{$orderItem/osm:lineItemName/text()}</Name>
-	            <Status>{local:getUpstreamOrderItemFulfillmentState($orderItem/osm:OrderItemFulfillmentState/text())}</Status>
-	        </OrderItem>
+	        <im:OrderItem>
+	            <im:Name>{$orderItem/osm:lineItemName/text()}</im:Name>
+	            <im:Status>{local:getUpstreamOrderItemFulfillmentState($orderItem/osm:OrderItemFulfillmentState/text())}</im:Status>
+	        </im:OrderItem>
     }
-</requestResponse>
+</im:requestResponse>
 )

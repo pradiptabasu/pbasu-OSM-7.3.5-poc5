@@ -1,0 +1,888 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ord:CreateOrder
+	xmlns:ord="http://xmlns.oracle.com/communications/ordermanagement">
+	<im:order xmlns:im="http://xmlns.oracle.com/InputMessage"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://xmlns.oracle.com/InputMessage ../dataDictionary/InputMessage.xsd">
+		<im:numSalesOrder>1-979036A3</im:numSalesOrder>
+		<im:salesOrderRevision>1</im:salesOrderRevision>
+		<im:typeOrder>ADD</im:typeOrder>
+		<im:customerAccount>
+			<im:numAccount>1-DH79</im:numAccount>
+			<im:status>Existing</im:status>
+			<im:corporate>PoC</im:corporate>
+			<im:cpfClient>888.444.222-00</im:cpfClient>
+			<im:cnpjClient>01.947.770/0001-09</im:cnpjClient>
+			<im:inscrState>232,232,232,232</im:inscrState>
+			<im:clientSince>1987-01-01</im:clientSince>
+			<im:segmentMarkets>
+				<im:segmentMarket>Systems</im:segmentMarket>
+			</im:segmentMarkets>
+			<im:category>Residential</im:category>
+			<im:invoiceProfile>
+				<im:mediaType>1</im:mediaType>
+				<im:typeInvoice>Summary</im:typeInvoice>
+				<im:billingCycle>Q11</im:billingCycle>
+				<im:exemptionICMS>true</im:exemptionICMS>
+				<im:empresaFaturamento>Oi Fixed</im:empresaFaturamento>
+				<im:paymentMethod>0</im:paymentMethod>
+			</im:invoiceProfile>
+			<im:customerAddress>
+				<im:locationType>floor</im:locationType>
+				<im:nameLocation />
+				<im:number>44</im:number>
+				<im:typeCompl>floor</im:typeCompl>
+				<im:numCompl>6</im:numCompl>
+				<im:district>NA</im:district>
+				<im:codeLocation>NA</im:codeLocation>
+				<im:city>NA</im:city>
+				<im:state>Maharashtra</im:state>
+				<im:referencePoint />
+				<im:areaCode>22420-010</im:areaCode>
+				<im:typeAddress>Building</im:typeAddress>
+			</im:customerAddress>
+		</im:customerAccount>
+		<im:salesOrderLineGroup>
+			<im:salesOrderLine>
+				<im:lineId>1-KZFJ</im:lineId>
+				<im:parentLineReference>
+					<im:parentLineId />
+					<im:hierarchyName>default</im:hierarchyName>
+				</im:parentLineReference>
+				<im:rootParentLineId>1-KZFJ</im:rootParentLineId>
+				<im:serviceId>2343</im:serviceId>
+				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
+				<im:serviceActionCode>Add</im:serviceActionCode>
+				<im:serviceAddress>
+					<im:locationType>Street</im:locationType>
+					<im:nameLocation />
+					<im:number>48</im:number>
+					<im:typeCompl>floor</im:typeCompl>
+					<im:numCompl>6</im:numCompl>
+					<im:district>NA</im:district>
+					<im:codeLocation>NA</im:codeLocation>
+					<im:city>NA</im:city>
+					<im:state>Maharashtra</im:state>
+					<im:referencePoint>Cybercity, Tower IV, Magarpatta City</im:referencePoint>
+					<im:areaCode>NA</im:areaCode>
+					<im:typeAddress>Building</im:typeAddress>
+				</im:serviceAddress>
+				<im:itemReference>
+					<im:name>CME Advantage Double-Play</im:name>
+					<im:typeCode>Promotion</im:typeCode>
+					<im:primaryClassificationCode />
+				</im:itemReference>
+			</im:salesOrderLine>
+			<im:salesOrderLine>
+				<im:lineId>1-KZFK</im:lineId>
+				<im:parentLineReference>
+					<im:parentLineId />
+					<im:hierarchyName>default</im:hierarchyName>
+				</im:parentLineReference>
+				<im:rootParentLineId>1-KZFK</im:rootParentLineId>
+				<im:serviceId>2343</im:serviceId>
+				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
+				<im:serviceActionCode>Add</im:serviceActionCode>
+				<im:serviceAddress>
+					<im:locationType>Street</im:locationType>
+					<im:nameLocation />
+					<im:number>48</im:number>
+					<im:typeCompl>floor</im:typeCompl>
+					<im:numCompl>6</im:numCompl>
+					<im:district>NA</im:district>
+					<im:codeLocation>NA</im:codeLocation>
+					<im:city>NA</im:city>
+					<im:state>Maharashtra</im:state>
+					<im:referencePoint>Cybercity, Tower IV, Magarpatta City</im:referencePoint>
+					<im:areaCode>NA</im:areaCode>
+					<im:typeAddress>Building</im:typeAddress>
+				</im:serviceAddress>
+				<im:itemReference>
+					<im:name>CME Circuit Breaker</im:name>
+					<im:typeCode>Product</im:typeCode>
+					<im:primaryClassificationCode>CME Offer Charge Class</im:primaryClassificationCode>
+				</im:itemReference>
+			</im:salesOrderLine>
+			<im:salesOrderLine>
+				<im:lineId>1-KZFL</im:lineId>
+				<im:parentLineReference>
+					<im:parentLineId>1-KZFK</im:parentLineId>
+					<im:hierarchyName>default</im:hierarchyName>
+				</im:parentLineReference>
+				<im:rootParentLineId>1-KZFK</im:rootParentLineId>
+				<im:serviceId>2343</im:serviceId>
+				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
+				<im:serviceActionCode>Add</im:serviceActionCode>
+				<im:serviceAddress>
+					<im:locationType>Street</im:locationType>
+					<im:nameLocation />
+					<im:number>48</im:number>
+					<im:typeCompl>floor</im:typeCompl>
+					<im:numCompl>6</im:numCompl>
+					<im:district>NA</im:district>
+					<im:codeLocation>NA</im:codeLocation>
+					<im:city>NA</im:city>
+					<im:state>Maharashtra</im:state>
+					<im:referencePoint>Cybercity, Tower IV, Magarpatta City</im:referencePoint>
+					<im:areaCode>NA</im:areaCode>
+					<im:typeAddress>Building</im:typeAddress>
+				</im:serviceAddress>
+				<im:itemReference>
+					<im:name>CME Circuit Breaker-PURCHASE</im:name>
+					<im:typeCode>Product</im:typeCode>
+					<im:primaryClassificationCode />
+				</im:itemReference>
+			</im:salesOrderLine>
+			<im:salesOrderLine>
+				<im:lineId>1-KZFM</im:lineId>
+				<im:parentLineReference>
+					<im:parentLineId />
+					<im:hierarchyName>default</im:hierarchyName>
+				</im:parentLineReference>
+				<im:rootParentLineId>1-KZFM</im:rootParentLineId>
+				<im:serviceId>2343</im:serviceId>
+				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
+				<im:serviceActionCode>Add</im:serviceActionCode>
+				<im:serviceAddress>
+					<im:locationType>Street</im:locationType>
+					<im:nameLocation />
+					<im:number>48</im:number>
+					<im:typeCompl>floor</im:typeCompl>
+					<im:numCompl>6</im:numCompl>
+					<im:district>NA</im:district>
+					<im:codeLocation>NA</im:codeLocation>
+					<im:city>NA</im:city>
+					<im:state>Maharashtra</im:state>
+					<im:referencePoint>Cybercity, Tower IV, Magarpatta City</im:referencePoint>
+					<im:areaCode>NA</im:areaCode>
+					<im:typeAddress>Building</im:typeAddress>
+				</im:serviceAddress>
+				<im:itemReference>
+					<im:name>CME Broadband Bundle</im:name>
+					<im:typeCode>Commercial Bundle</im:typeCode>
+					<im:primaryClassificationCode />
+				</im:itemReference>
+			</im:salesOrderLine>
+			<im:salesOrderLine>
+				<im:lineId>1-KZFN</im:lineId>
+				<im:parentLineReference>
+					<im:parentLineId>1-KZFM</im:parentLineId>
+					<im:hierarchyName>default</im:hierarchyName>
+				</im:parentLineReference>
+				<im:rootParentLineId>1-KZFM</im:rootParentLineId>
+				<im:serviceId>2343</im:serviceId>
+				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
+				<im:serviceActionCode>Add</im:serviceActionCode>
+				<im:serviceAddress>
+					<im:locationType>Street</im:locationType>
+					<im:nameLocation />
+					<im:number>48</im:number>
+					<im:typeCompl>floor</im:typeCompl>
+					<im:numCompl>6</im:numCompl>
+					<im:district>NA</im:district>
+					<im:codeLocation>NA</im:codeLocation>
+					<im:city>NA</im:city>
+					<im:state>Maharashtra</im:state>
+					<im:referencePoint>Cybercity, Tower IV, Magarpatta City</im:referencePoint>
+					<im:areaCode>NA</im:areaCode>
+					<im:typeAddress>Building</im:typeAddress>
+				</im:serviceAddress>
+				<im:itemReference>
+					<im:name>CME Broadband Service</im:name>
+					<im:typeCode>Product</im:typeCode>
+					<im:primaryClassificationCode />
+				</im:itemReference>
+			</im:salesOrderLine>
+			<im:salesOrderLine>
+				<im:lineId>1-KZFO</im:lineId>
+				<im:parentLineReference>
+					<im:parentLineId>1-KZFN</im:parentLineId>
+					<im:hierarchyName>default</im:hierarchyName>
+				</im:parentLineReference>
+				<im:rootParentLineId>1-KZFM</im:rootParentLineId>
+				<im:serviceId>2343</im:serviceId>
+				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
+				<im:serviceActionCode>Add</im:serviceActionCode>
+				<im:serviceAddress>
+					<im:locationType>Street</im:locationType>
+					<im:nameLocation />
+					<im:number>48</im:number>
+					<im:typeCompl>floor</im:typeCompl>
+					<im:numCompl>6</im:numCompl>
+					<im:district>NA</im:district>
+					<im:codeLocation>NA</im:codeLocation>
+					<im:city>NA</im:city>
+					<im:state>Maharashtra</im:state>
+					<im:referencePoint>Cybercity, Tower IV, Magarpatta City</im:referencePoint>
+					<im:areaCode>NA</im:areaCode>
+					<im:typeAddress>Building</im:typeAddress>
+				</im:serviceAddress>
+				<im:itemReference>
+					<im:name>CME Broadband Access</im:name>
+					<im:typeCode>Product</im:typeCode>
+					<im:primaryClassificationCode>CME Broadband PS</im:primaryClassificationCode>
+				</im:itemReference>
+			</im:salesOrderLine>
+			<im:salesOrderLine>
+				<im:lineId>1-KZFQ</im:lineId>
+				<im:parentLineReference>
+					<im:parentLineId>1-KZFN</im:parentLineId>
+					<im:hierarchyName>default</im:hierarchyName>
+				</im:parentLineReference>
+				<im:rootParentLineId>1-KZFM</im:rootParentLineId>
+				<im:serviceId>2343</im:serviceId>
+				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
+				<im:serviceActionCode>Add</im:serviceActionCode>
+				<im:serviceAddress>
+					<im:locationType>Street</im:locationType>
+					<im:nameLocation />
+					<im:number>48</im:number>
+					<im:typeCompl>floor</im:typeCompl>
+					<im:numCompl>6</im:numCompl>
+					<im:district>NA</im:district>
+					<im:codeLocation>NA</im:codeLocation>
+					<im:city>NA</im:city>
+					<im:state>Maharashtra</im:state>
+					<im:referencePoint>Cybercity, Tower IV, Magarpatta City</im:referencePoint>
+					<im:areaCode>NA</im:areaCode>
+					<im:typeAddress>Building</im:typeAddress>
+				</im:serviceAddress>
+				<im:itemReference>
+					<im:name>CME Elite Internet</im:name>
+					<im:typeCode>Product</im:typeCode>
+					<im:primaryClassificationCode>CME Broadband Bandwidth PS</im:primaryClassificationCode>
+				</im:itemReference>
+			</im:salesOrderLine>
+			<im:salesOrderLine>
+				<im:lineId>1-KZFW</im:lineId>
+				<im:parentLineReference>
+					<im:parentLineId>1-KZFN</im:parentLineId>
+					<im:hierarchyName>default</im:hierarchyName>
+				</im:parentLineReference>
+				<im:rootParentLineId>1-KZFM</im:rootParentLineId>
+				<im:serviceId>2343</im:serviceId>
+				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
+				<im:serviceActionCode>Add</im:serviceActionCode>
+				<im:serviceAddress>
+					<im:locationType>Street</im:locationType>
+					<im:nameLocation />
+					<im:number>48</im:number>
+					<im:typeCompl>floor</im:typeCompl>
+					<im:numCompl>6</im:numCompl>
+					<im:district>NA</im:district>
+					<im:codeLocation>NA</im:codeLocation>
+					<im:city>NA</im:city>
+					<im:state>Maharashtra</im:state>
+					<im:referencePoint>Cybercity, Tower IV, Magarpatta City</im:referencePoint>
+					<im:areaCode>NA</im:areaCode>
+					<im:typeAddress>Building</im:typeAddress>
+				</im:serviceAddress>
+				<im:itemReference>
+					<im:name>CME Secure Firewall</im:name>
+					<im:typeCode>Product</im:typeCode>
+					<im:primaryClassificationCode>CME Firewall PS</im:primaryClassificationCode>
+				</im:itemReference>
+			</im:salesOrderLine>
+			<im:salesOrderLine>
+				<im:lineId>1-KZFY</im:lineId>
+				<im:parentLineReference>
+					<im:parentLineId>1-KZFW</im:parentLineId>
+					<im:hierarchyName>default</im:hierarchyName>
+				</im:parentLineReference>
+				<im:rootParentLineId>1-KZFM</im:rootParentLineId>
+				<im:serviceId>2343</im:serviceId>
+				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
+				<im:serviceActionCode>Add</im:serviceActionCode>
+				<im:serviceAddress>
+					<im:locationType>Street</im:locationType>
+					<im:nameLocation />
+					<im:number>48</im:number>
+					<im:typeCompl>floor</im:typeCompl>
+					<im:numCompl>6</im:numCompl>
+					<im:district>NA</im:district>
+					<im:codeLocation>NA</im:codeLocation>
+					<im:city>NA</im:city>
+					<im:state>Maharashtra</im:state>
+					<im:referencePoint>Cybercity, Tower IV, Magarpatta City</im:referencePoint>
+					<im:areaCode>NA</im:areaCode>
+					<im:typeAddress>Building</im:typeAddress>
+				</im:serviceAddress>
+				<im:itemReference>
+					<im:name>CME Secure Firewall-PURCHASE</im:name>
+					<im:typeCode>Product</im:typeCode>
+					<im:primaryClassificationCode />
+				</im:itemReference>
+			</im:salesOrderLine>
+			<im:salesOrderLine>
+				<im:lineId>1-KZFZ</im:lineId>
+				<im:parentLineReference>
+					<im:parentLineId>1-KZFN</im:parentLineId>
+					<im:hierarchyName>default</im:hierarchyName>
+				</im:parentLineReference>
+				<im:rootParentLineId>1-KZFM</im:rootParentLineId>
+				<im:serviceId>2343</im:serviceId>
+				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
+				<im:serviceActionCode>Add</im:serviceActionCode>
+				<im:serviceAddress>
+					<im:locationType>Street</im:locationType>
+					<im:nameLocation />
+					<im:number>48</im:number>
+					<im:typeCompl>floor</im:typeCompl>
+					<im:numCompl>6</im:numCompl>
+					<im:district>NA</im:district>
+					<im:codeLocation>NA</im:codeLocation>
+					<im:city>NA</im:city>
+					<im:state>Maharashtra</im:state>
+					<im:referencePoint>Cybercity, Tower IV, Magarpatta City</im:referencePoint>
+					<im:areaCode>NA</im:areaCode>
+					<im:typeAddress>Building</im:typeAddress>
+				</im:serviceAddress>
+				<im:itemReference>
+					<im:name>CME Email Service</im:name>
+					<im:typeCode>Product</im:typeCode>
+					<im:primaryClassificationCode>CME Email Service PS</im:primaryClassificationCode>
+				</im:itemReference>
+			</im:salesOrderLine>
+			<im:salesOrderLine>
+				<im:lineId>1-KZG2</im:lineId>
+				<im:parentLineReference>
+					<im:parentLineId>1-KZFN</im:parentLineId>
+					<im:hierarchyName>default</im:hierarchyName>
+				</im:parentLineReference>
+				<im:rootParentLineId>1-KZFM</im:rootParentLineId>
+				<im:serviceId>2343</im:serviceId>
+				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
+				<im:serviceActionCode>Add</im:serviceActionCode>
+				<im:serviceAddress>
+					<im:locationType>Street</im:locationType>
+					<im:nameLocation />
+					<im:number>48</im:number>
+					<im:typeCompl>floor</im:typeCompl>
+					<im:numCompl>6</im:numCompl>
+					<im:district>NA</im:district>
+					<im:codeLocation>NA</im:codeLocation>
+					<im:city>NA</im:city>
+					<im:state>Maharashtra</im:state>
+					<im:referencePoint>Cybercity, Tower IV, Magarpatta City</im:referencePoint>
+					<im:areaCode>NA</im:areaCode>
+					<im:typeAddress>Building</im:typeAddress>
+				</im:serviceAddress>
+				<im:itemReference>
+					<im:name>CME Internet Media Service</im:name>
+					<im:typeCode>Product</im:typeCode>
+					<im:primaryClassificationCode>CME Internet Media PS</im:primaryClassificationCode>
+				</im:itemReference>
+			</im:salesOrderLine>
+			<im:salesOrderLine>
+				<im:lineId>1-KZG5</im:lineId>
+				<im:parentLineReference>
+					<im:parentLineId>1-KZG2</im:parentLineId>
+					<im:hierarchyName>default</im:hierarchyName>
+				</im:parentLineReference>
+				<im:rootParentLineId>1-KZFM</im:rootParentLineId>
+				<im:serviceId>2343</im:serviceId>
+				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
+				<im:serviceActionCode>Add</im:serviceActionCode>
+				<im:serviceAddress>
+					<im:locationType>Street</im:locationType>
+					<im:nameLocation />
+					<im:number>48</im:number>
+					<im:typeCompl>floor</im:typeCompl>
+					<im:numCompl>6</im:numCompl>
+					<im:district>NA</im:district>
+					<im:codeLocation>NA</im:codeLocation>
+					<im:city>NA</im:city>
+					<im:state>Maharashtra</im:state>
+					<im:referencePoint>Cybercity, Tower IV, Magarpatta City</im:referencePoint>
+					<im:areaCode>NA</im:areaCode>
+					<im:typeAddress>Building</im:typeAddress>
+				</im:serviceAddress>
+				<im:itemReference>
+					<im:name>CME Content on Demand</im:name>
+					<im:typeCode>Product</im:typeCode>
+					<im:primaryClassificationCode>CME Internet Media PS</im:primaryClassificationCode>
+				</im:itemReference>
+			</im:salesOrderLine>
+			<im:salesOrderLine>
+				<im:lineId>1-KZG8</im:lineId>
+				<im:parentLineReference>
+					<im:parentLineId>1-KZG2</im:parentLineId>
+					<im:hierarchyName>default</im:hierarchyName>
+				</im:parentLineReference>
+				<im:rootParentLineId>1-KZFM</im:rootParentLineId>
+				<im:serviceId>2343</im:serviceId>
+				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
+				<im:serviceActionCode>Add</im:serviceActionCode>
+				<im:serviceAddress>
+					<im:locationType>Street</im:locationType>
+					<im:nameLocation />
+					<im:number>48</im:number>
+					<im:typeCompl>floor</im:typeCompl>
+					<im:numCompl>6</im:numCompl>
+					<im:district>NA</im:district>
+					<im:codeLocation>NA</im:codeLocation>
+					<im:city>NA</im:city>
+					<im:state>Maharashtra</im:state>
+					<im:referencePoint>Cybercity, Tower IV, Magarpatta City</im:referencePoint>
+					<im:areaCode>NA</im:areaCode>
+					<im:typeAddress>Building</im:typeAddress>
+				</im:serviceAddress>
+				<im:itemReference>
+					<im:name>CME Video on Demand</im:name>
+					<im:typeCode>Product</im:typeCode>
+					<im:primaryClassificationCode>CME Internet Media PS</im:primaryClassificationCode>
+				</im:itemReference>
+			</im:salesOrderLine>
+			<im:salesOrderLine>
+				<im:lineId>1-KZGB</im:lineId>
+				<im:parentLineReference>
+					<im:parentLineId>1-KZFN</im:parentLineId>
+					<im:hierarchyName>default</im:hierarchyName>
+				</im:parentLineReference>
+				<im:rootParentLineId>1-KZFM</im:rootParentLineId>
+				<im:serviceId>2343</im:serviceId>
+				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
+				<im:serviceActionCode>Add</im:serviceActionCode>
+				<im:serviceAddress>
+					<im:locationType>Street</im:locationType>
+					<im:nameLocation />
+					<im:number>48</im:number>
+					<im:typeCompl>floor</im:typeCompl>
+					<im:numCompl>6</im:numCompl>
+					<im:district>NA</im:district>
+					<im:codeLocation>NA</im:codeLocation>
+					<im:city>NA</im:city>
+					<im:state>Maharashtra</im:state>
+					<im:referencePoint>Cybercity, Tower IV, Magarpatta City</im:referencePoint>
+					<im:areaCode></im:areaCode>
+					<im:typeAddress>Building</im:typeAddress>
+				</im:serviceAddress>
+				<im:itemReference>
+					<im:name>CME Internet 100% TBO Discount</im:name>
+					<im:typeCode>Product</im:typeCode>
+					<im:primaryClassificationCode>CME TBO Discount Class</im:primaryClassificationCode>
+				</im:itemReference>
+			</im:salesOrderLine>
+			<im:salesOrderLine>
+				<im:lineId>1-KZGG</im:lineId>
+				<im:parentLineReference>
+					<im:parentLineId>1-KZFM</im:parentLineId>
+					<im:hierarchyName>default</im:hierarchyName>
+				</im:parentLineReference>
+				<im:rootParentLineId>1-KZFM</im:rootParentLineId>
+				<im:serviceId>2343</im:serviceId>
+				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
+				<im:serviceActionCode>Add</im:serviceActionCode>
+				<im:serviceAddress>
+					<im:locationType>Street</im:locationType>
+					<im:nameLocation />
+					<im:number>48</im:number>
+					<im:typeCompl>floor</im:typeCompl>
+					<im:numCompl>6</im:numCompl>
+					<im:district>NA</im:district>
+					<im:codeLocation>NA</im:codeLocation>
+					<im:city>NA</im:city>
+					<im:state>Maharashtra</im:state>
+					<im:referencePoint>Cybercity, Tower IV, Magarpatta City</im:referencePoint>
+					<im:areaCode>NA</im:areaCode>
+					<im:typeAddress>Building</im:typeAddress>
+				</im:serviceAddress>
+				<im:itemReference>
+					<im:name>CME Customer Broadband Modem</im:name>
+					<im:typeCode>Product</im:typeCode>
+					<im:primaryClassificationCode>CME Broadband Modem PS</im:primaryClassificationCode>
+				</im:itemReference>
+			</im:salesOrderLine>
+			<im:salesOrderLine>
+				<im:lineId>1-KZGL</im:lineId>
+				<im:parentLineReference>
+					<im:parentLineId>1-KZFM</im:parentLineId>
+					<im:hierarchyName>default</im:hierarchyName>
+				</im:parentLineReference>
+				<im:rootParentLineId>1-KZFM</im:rootParentLineId>
+				<im:serviceId>2343</im:serviceId>
+				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
+				<im:serviceActionCode>Add</im:serviceActionCode>
+				<im:serviceAddress>
+					<im:locationType>Street</im:locationType>
+					<im:nameLocation />
+					<im:number>48</im:number>
+					<im:typeCompl>floor</im:typeCompl>
+					<im:numCompl>6</im:numCompl>
+					<im:district>NA</im:district>
+					<im:codeLocation>NA</im:codeLocation>
+					<im:city>NA</im:city>
+					<im:state>Maharashtra</im:state>
+					<im:referencePoint>Cybercity, Tower IV, Magarpatta City</im:referencePoint>
+					<im:areaCode>NA</im:areaCode>
+					<im:typeAddress>Building</im:typeAddress>
+				</im:serviceAddress>
+				<im:itemReference>
+					<im:name>CME Wireless Router</im:name>
+					<im:typeCode>Product</im:typeCode>
+					<im:primaryClassificationCode>CME Broadband Router PS</im:primaryClassificationCode>
+				</im:itemReference>
+			</im:salesOrderLine>
+			<im:salesOrderLine>
+				<im:lineId>1-KZGP</im:lineId>
+				<im:parentLineReference>
+					<im:parentLineId>1-KZFM</im:parentLineId>
+					<im:hierarchyName>default</im:hierarchyName>
+				</im:parentLineReference>
+				<im:rootParentLineId>1-KZFM</im:rootParentLineId>
+				<im:serviceId>2343</im:serviceId>
+				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
+				<im:serviceActionCode>Add</im:serviceActionCode>
+				<im:serviceAddress>
+					<im:locationType>Street</im:locationType>
+					<im:nameLocation />
+					<im:number>48</im:number>
+					<im:typeCompl>floor</im:typeCompl>
+					<im:numCompl>6</im:numCompl>
+					<im:district>NA</im:district>
+					<im:codeLocation>NA</im:codeLocation>
+					<im:city>NA</im:city>
+					<im:state>Maharashtra</im:state>
+					<im:referencePoint>Cybercity, Tower IV, Magarpatta City</im:referencePoint>
+					<im:areaCode>NA</im:areaCode>
+					<im:typeAddress>Building</im:typeAddress>
+				</im:serviceAddress>
+				<im:itemReference>
+					<im:name>CME Broadband Installation Fee</im:name>
+					<im:typeCode>Product</im:typeCode>
+					<im:primaryClassificationCode>CME Offer Charge Class</im:primaryClassificationCode>
+				</im:itemReference>
+			</im:salesOrderLine>
+			<im:salesOrderLine>
+				<im:lineId>1-KZGQ</im:lineId>
+				<im:parentLineReference>
+					<im:parentLineId>1-KZFM</im:parentLineId>
+					<im:hierarchyName>default</im:hierarchyName>
+				</im:parentLineReference>
+				<im:rootParentLineId>1-KZFM</im:rootParentLineId>
+				<im:serviceId>2343</im:serviceId>
+				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
+				<im:serviceActionCode>Add</im:serviceActionCode>
+				<im:serviceAddress>
+					<im:locationType>Street</im:locationType>
+					<im:nameLocation />
+					<im:number>48</im:number>
+					<im:typeCompl>floor</im:typeCompl>
+					<im:numCompl>6</im:numCompl>
+					<im:district>NA</im:district>
+					<im:codeLocation>NA</im:codeLocation>
+					<im:city>NA</im:city>
+					<im:state>Maharashtra</im:state>
+					<im:referencePoint>Cybercity, Tower IV, Magarpatta City</im:referencePoint>
+					<im:areaCode>NA</im:areaCode>
+					<im:typeAddress>Building</im:typeAddress>
+				</im:serviceAddress>
+				<im:itemReference>
+					<im:name>CME Broadband Activation Fee</im:name>
+					<im:typeCode>Product</im:typeCode>
+					<im:primaryClassificationCode>CME Offer Charge Class</im:primaryClassificationCode>
+				</im:itemReference>
+			</im:salesOrderLine>
+			<im:salesOrderLine>
+				<im:lineId>1-KZGR</im:lineId>
+				<im:parentLineReference>
+					<im:parentLineId />
+					<im:hierarchyName>default</im:hierarchyName>
+				</im:parentLineReference>
+				<im:rootParentLineId>1-KZGR</im:rootParentLineId>
+				<im:serviceId>2343</im:serviceId>
+				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
+				<im:serviceActionCode>Add</im:serviceActionCode>
+				<im:serviceAddress>
+					<im:locationType>Street</im:locationType>
+					<im:nameLocation />
+					<im:number>48</im:number>
+					<im:typeCompl>floor</im:typeCompl>
+					<im:numCompl>6</im:numCompl>
+					<im:district>NA</im:district>
+					<im:codeLocation>NA</im:codeLocation>
+					<im:city>NA</im:city>
+					<im:state>Maharashtra</im:state>
+					<im:referencePoint>Cybercity, Tower IV, Magarpatta City</im:referencePoint>
+					<im:areaCode>NA</im:areaCode>
+					<im:typeAddress>Building</im:typeAddress>
+				</im:serviceAddress>
+				<im:itemReference>
+					<im:name>CME VoIP Bundle</im:name>
+					<im:typeCode>Commercial Bundle</im:typeCode>
+					<im:primaryClassificationCode />
+				</im:itemReference>
+			</im:salesOrderLine>
+			<im:salesOrderLine>
+				<im:lineId>1-KZGS</im:lineId>
+				<im:parentLineReference>
+					<im:parentLineId>1-KZGR</im:parentLineId>
+					<im:hierarchyName>default</im:hierarchyName>
+				</im:parentLineReference>
+				<im:rootParentLineId>1-KZGR</im:rootParentLineId>
+				<im:serviceId>2343</im:serviceId>
+				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
+				<im:serviceActionCode>Add</im:serviceActionCode>
+				<im:serviceAddress>
+					<im:locationType>Street</im:locationType>
+					<im:nameLocation />
+					<im:number>48</im:number>
+					<im:typeCompl>floor</im:typeCompl>
+					<im:numCompl>6</im:numCompl>
+					<im:district>NA</im:district>
+					<im:codeLocation>NA</im:codeLocation>
+					<im:city>NA</im:city>
+					<im:state>Maharashtra</im:state>
+					<im:referencePoint>Cybercity, Tower IV, Magarpatta City</im:referencePoint>
+					<im:areaCode>NA</im:areaCode>
+					<im:typeAddress>Building</im:typeAddress>
+				</im:serviceAddress>
+				<im:itemReference>
+					<im:name>CME VoIP Service</im:name>
+					<im:typeCode>Product</im:typeCode>
+					<im:primaryClassificationCode>CME VoIP PS</im:primaryClassificationCode>
+				</im:itemReference>
+			</im:salesOrderLine>
+			<im:salesOrderLine>
+				<im:lineId>1-KZH0</im:lineId>
+				<im:parentLineReference>
+					<im:parentLineId>1-KZGS</im:parentLineId>
+					<im:hierarchyName>default</im:hierarchyName>
+				</im:parentLineReference>
+				<im:rootParentLineId>1-KZGR</im:rootParentLineId>
+				<im:serviceId>2343</im:serviceId>
+				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
+				<im:serviceActionCode>Add</im:serviceActionCode>
+				<im:serviceAddress>
+					<im:locationType>Street</im:locationType>
+					<im:nameLocation />
+					<im:number>48</im:number>
+					<im:typeCompl>floor</im:typeCompl>
+					<im:numCompl>6</im:numCompl>
+					<im:district>NA</im:district>
+					<im:codeLocation>NA</im:codeLocation>
+					<im:city>NA</im:city>
+					<im:state>Maharashtra</im:state>
+					<im:referencePoint>Cybercity, Tower IV, Magarpatta City</im:referencePoint>
+					<im:areaCode>NA</im:areaCode>
+					<im:typeAddress>Building</im:typeAddress>
+				</im:serviceAddress>
+				<im:itemReference>
+					<im:name>CME Basic VoIP Access</im:name>
+					<im:typeCode>Product</im:typeCode>
+					<im:primaryClassificationCode>CME VoIP PS</im:primaryClassificationCode>
+				</im:itemReference>
+			</im:salesOrderLine>
+			<im:salesOrderLine>
+				<im:lineId>1-KZH8</im:lineId>
+				<im:parentLineReference>
+					<im:parentLineId>1-KZGS</im:parentLineId>
+					<im:hierarchyName>default</im:hierarchyName>
+				</im:parentLineReference>
+				<im:rootParentLineId>1-KZGR</im:rootParentLineId>
+				<im:serviceId>2343</im:serviceId>
+				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
+				<im:serviceActionCode>Add</im:serviceActionCode>
+				<im:serviceAddress>
+					<im:locationType>Street</im:locationType>
+					<im:nameLocation />
+					<im:number>48</im:number>
+					<im:typeCompl>floor</im:typeCompl>
+					<im:numCompl>6</im:numCompl>
+					<im:district>NA</im:district>
+					<im:codeLocation>NA</im:codeLocation>
+					<im:city>NA</im:city>
+					<im:state>Maharashtra</im:state>
+					<im:referencePoint>Cybercity, Tower IV, Magarpatta City</im:referencePoint>
+					<im:areaCode>NA</im:areaCode>
+					<im:typeAddress>Building</im:typeAddress>
+				</im:serviceAddress>
+				<im:itemReference>
+					<im:name>CME Web Conferencing Service</im:name>
+					<im:typeCode>Product</im:typeCode>
+					<im:primaryClassificationCode>CME Web Conferencing PS</im:primaryClassificationCode>
+				</im:itemReference>
+			</im:salesOrderLine>
+			<im:salesOrderLine>
+				<im:lineId>1-KZHA</im:lineId>
+				<im:parentLineReference>
+					<im:parentLineId>1-KZGS</im:parentLineId>
+					<im:hierarchyName>default</im:hierarchyName>
+				</im:parentLineReference>
+				<im:rootParentLineId>1-KZGR</im:rootParentLineId>
+				<im:serviceId>2343</im:serviceId>
+				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
+				<im:serviceActionCode>Add</im:serviceActionCode>
+				<im:serviceAddress>
+					<im:locationType>Street</im:locationType>
+					<im:nameLocation />
+					<im:number>48</im:number>
+					<im:typeCompl>floor</im:typeCompl>
+					<im:numCompl>6</im:numCompl>
+					<im:district>NA</im:district>
+					<im:codeLocation>NA</im:codeLocation>
+					<im:city>NA</im:city>
+					<im:state>Maharashtra</im:state>
+					<im:referencePoint>Cybercity, Tower IV, Magarpatta City</im:referencePoint>
+					<im:areaCode>NA</im:areaCode>
+					<im:typeAddress>Building</im:typeAddress>
+				</im:serviceAddress>
+				<im:itemReference>
+					<im:name>CME Friends and Family</im:name>
+					<im:typeCode>Product</im:typeCode>
+					<im:primaryClassificationCode>CME Special Rating Class</im:primaryClassificationCode>
+				</im:itemReference>
+			</im:salesOrderLine>
+			<im:salesOrderLine>
+				<im:lineId>1-KZHB</im:lineId>
+				<im:parentLineReference>
+					<im:parentLineId>1-KZGS</im:parentLineId>
+					<im:hierarchyName>default</im:hierarchyName>
+				</im:parentLineReference>
+				<im:rootParentLineId>1-KZGR</im:rootParentLineId>
+				<im:serviceId>2343</im:serviceId>
+				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
+				<im:serviceActionCode>Add</im:serviceActionCode>
+				<im:serviceAddress>
+					<im:locationType>Street</im:locationType>
+					<im:nameLocation />
+					<im:number>48</im:number>
+					<im:typeCompl>floor</im:typeCompl>
+					<im:numCompl>6</im:numCompl>
+					<im:district>NA</im:district>
+					<im:codeLocation>NA</im:codeLocation>
+					<im:city>NA</im:city>
+					<im:state>Maharashtra</im:state>
+					<im:referencePoint>Cybercity, Tower IV, Magarpatta City</im:referencePoint>
+					<im:areaCode>NA</im:areaCode>
+					<im:typeAddress>Building</im:typeAddress>
+				</im:serviceAddress>
+				<im:itemReference>
+					<im:name>CME VoIP 50% Monthly Discount</im:name>
+					<im:typeCode>Product</im:typeCode>
+					<im:primaryClassificationCode>CME Offer Discount Class</im:primaryClassificationCode>
+				</im:itemReference>
+			</im:salesOrderLine>
+			<im:salesOrderLine>
+				<im:lineId>1-KZHD</im:lineId>
+				<im:parentLineReference>
+					<im:parentLineId>1-KZGR</im:parentLineId>
+					<im:hierarchyName>default</im:hierarchyName>
+				</im:parentLineReference>
+				<im:rootParentLineId>1-KZGR</im:rootParentLineId>
+				<im:serviceId>2343</im:serviceId>
+				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
+				<im:serviceActionCode>Add</im:serviceActionCode>
+				<im:serviceAddress>
+					<im:locationType>Street</im:locationType>
+					<im:nameLocation />
+					<im:number>48</im:number>
+					<im:typeCompl>floor</im:typeCompl>
+					<im:numCompl>6</im:numCompl>
+					<im:district>NA</im:district>
+					<im:codeLocation>NA</im:codeLocation>
+					<im:city>NA</im:city>
+					<im:state>Maharashtra</im:state>
+					<im:referencePoint>Cybercity, Tower IV, Magarpatta City</im:referencePoint>
+					<im:areaCode>NA</im:areaCode>
+					<im:typeAddress>Building</im:typeAddress>
+				</im:serviceAddress>
+				<im:itemReference>
+					<im:name>CME VoIP Adaptor</im:name>
+					<im:typeCode>Product</im:typeCode>
+					<im:primaryClassificationCode>CME VoIP Adapter PS</im:primaryClassificationCode>
+				</im:itemReference>
+			</im:salesOrderLine>
+			<im:salesOrderLine>
+				<im:lineId>1-KZHH</im:lineId>
+				<im:parentLineReference>
+					<im:parentLineId>1-KZGR</im:parentLineId>
+					<im:hierarchyName>default</im:hierarchyName>
+				</im:parentLineReference>
+				<im:rootParentLineId>1-KZGR</im:rootParentLineId>
+				<im:serviceId>2343</im:serviceId>
+				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
+				<im:serviceActionCode>Add</im:serviceActionCode>
+				<im:serviceAddress>
+					<im:locationType>Street</im:locationType>
+					<im:nameLocation />
+					<im:number>48</im:number>
+					<im:typeCompl>floor</im:typeCompl>
+					<im:numCompl>6</im:numCompl>
+					<im:district>NA</im:district>
+					<im:codeLocation>NA</im:codeLocation>
+					<im:city>NA</im:city>
+					<im:state>Maharashtra</im:state>
+					<im:referencePoint>Cybercity, Tower IV, Magarpatta City</im:referencePoint>
+					<im:areaCode>NA</im:areaCode>
+					<im:typeAddress>Building</im:typeAddress>
+				</im:serviceAddress>
+				<im:itemReference>
+					<im:name>CME VoIP Phone</im:name>
+					<im:typeCode>Product</im:typeCode>
+					<im:primaryClassificationCode>CME VoIP Phone PS</im:primaryClassificationCode>
+				</im:itemReference>
+			</im:salesOrderLine>
+			<im:salesOrderLine>
+				<im:lineId>1-KZHL</im:lineId>
+				<im:parentLineReference>
+					<im:parentLineId>1-KZGR</im:parentLineId>
+					<im:hierarchyName>default</im:hierarchyName>
+				</im:parentLineReference>
+				<im:rootParentLineId>1-KZGR</im:rootParentLineId>
+				<im:serviceId>2343</im:serviceId>
+				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
+				<im:serviceActionCode>Add</im:serviceActionCode>
+				<im:serviceAddress>
+					<im:locationType>Street</im:locationType>
+					<im:nameLocation />
+					<im:number>48</im:number>
+					<im:typeCompl>floor</im:typeCompl>
+					<im:numCompl>6</im:numCompl>
+					<im:district>NA</im:district>
+					<im:codeLocation>NA</im:codeLocation>
+					<im:city>NA</im:city>
+					<im:state>Maharashtra</im:state>
+					<im:referencePoint>Cybercity, Tower IV, Magarpatta City</im:referencePoint>
+					<im:areaCode>NA</im:areaCode>
+					<im:typeAddress>Building</im:typeAddress>
+				</im:serviceAddress>
+				<im:itemReference>
+					<im:name>CME VoIP Laptop Phone</im:name>
+					<im:typeCode>Product</im:typeCode>
+					<im:primaryClassificationCode>CME VoIP Soft Phone PS</im:primaryClassificationCode>
+				</im:itemReference>
+			</im:salesOrderLine>
+			<im:salesOrderLine>
+				<im:lineId>1-KZLV</im:lineId>
+				<im:parentLineReference>
+					<im:parentLineId />
+					<im:hierarchyName>default</im:hierarchyName>
+				</im:parentLineReference>
+				<im:rootParentLineId>1-KZLV</im:rootParentLineId>
+				<im:serviceId>2343</im:serviceId>
+				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
+				<im:serviceActionCode>Add</im:serviceActionCode>
+				<im:serviceAddress>
+					<im:locationType>Street</im:locationType>
+					<im:nameLocation />
+					<im:number>48</im:number>
+					<im:typeCompl>floor</im:typeCompl>
+					<im:numCompl>6</im:numCompl>
+					<im:district>NA</im:district>
+					<im:codeLocation>NA</im:codeLocation>
+					<im:city>NA</im:city>
+					<im:state>Maharashtra</im:state>
+					<im:referencePoint>Cybercity, Tower IV, Magarpatta City</im:referencePoint>
+					<im:areaCode>NA</im:areaCode>
+					<im:typeAddress>Building</im:typeAddress>
+				</im:serviceAddress>
+				<im:itemReference>
+					<im:name>Any20GB</im:name>
+					<im:typeCode>Product Offer</im:typeCode>
+					<im:primaryClassificationCode />
+				</im:itemReference>
+			</im:salesOrderLine>
+		</im:salesOrderLineGroup>
+	</im:order>
+</ord:CreateOrder>

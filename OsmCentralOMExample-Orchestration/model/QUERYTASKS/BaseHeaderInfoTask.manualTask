@@ -204,6 +204,7 @@
     <task:path>/CustomerDetails/nameLocation</task:path>
     <task:editable>true</task:editable>
     <task:defaultValue></task:defaultValue>
+    <task:overrideMultiplicity>false</task:overrideMultiplicity>
   </task:viewNodeExtension>
   <task:viewNodeExtension>
     <task:path>/CustomerDetails/number</task:path>

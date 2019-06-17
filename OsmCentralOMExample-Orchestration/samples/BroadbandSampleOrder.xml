@@ -4,7 +4,7 @@
 	<im:order xmlns:im="http://xmlns.oracle.com/InputMessage"
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xsi:schemaLocation="http://xmlns.oracle.com/InputMessage ../dataDictionary/InputMessage.xsd">
-		<im:numSalesOrder>123456CD-32</im:numSalesOrder>
+		<im:numSalesOrder>123456CD-35</im:numSalesOrder>
 		<im:salesOrderRevision>1</im:salesOrderRevision>
 		<im:typeOrder>Add</im:typeOrder>
 		<im:customerAccount>
@@ -43,27 +43,19 @@
 			</im:customerAddress>
 		</im:customerAccount>
 		<im:salesOrderLineGroup>
-
-			
-
-			
-
 			<!-- BROADBAND BUNDLE - BUNDLE -->
 			<im:salesOrderLine>
 				<im:lineId>13</im:lineId>
-				<im:promotionalSalesOrderLineReference>1
-			</im:promotionalSalesOrderLineReference>
+				<im:promotionalSalesOrderLineReference>1</im:promotionalSalesOrderLineReference>
 				<im:serviceId></im:serviceId>
 				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
 				<im:serviceActionCode>Add</im:serviceActionCode>
-
 				<im:itemReference>
 					<im:name>Broadband Bundle</im:name>
 					<im:typeCode>BUNDLE</im:typeCode>
 					<im:specificationGroup></im:specificationGroup>
 				</im:itemReference>
 			</im:salesOrderLine>
-
 			<!-- BROADBAND SERVICE – SERVICE BUNDLE -->
 			<im:salesOrderLine>
 				<im:lineId>14</im:lineId>
@@ -77,15 +69,12 @@
 				<im:serviceId></im:serviceId>
 				<im:requestedDeliveryDate>2001-12-31T12:00:00</im:requestedDeliveryDate>
 				<im:serviceActionCode>Add</im:serviceActionCode>
-
 				<im:itemReference>
 					<im:name>Broadband Service</im:name>
 					<im:typeCode>SERVICE BUNDLE</im:typeCode>
 					<im:specificationGroup></im:specificationGroup>
 				</im:itemReference>
 			</im:salesOrderLine>
-
-
 			<!-- Velox Premium High Speed Internet – 8Mbps -->
 			<im:salesOrderLine>
 				<im:lineId>15</im:lineId>
@@ -154,7 +143,7 @@
 							<im:dataTypeCode>Text</im:dataTypeCode>
 							<im:value>1GB</im:value>
 						</im:specification>
-							<im:specification>
+						<im:specification>
 							<im:serviceActioncode>ADD</im:serviceActioncode>
 							<im:name>flgCard</im:name>
 							<im:dataTypeCode>Number</im:dataTypeCode>
@@ -169,8 +158,7 @@
 					</im:specificationGroup>
 				</im:itemReference>
 			</im:salesOrderLine>
-			<!-- END Velox Premium High Speed Internet – 8Mbps - PRODUCT-->
-
+			<!-- END Velox Premium High Speed Internet – 8Mbps - PRODUCT -->
 			<!-- Speed By Demand - PRODUCT -->
 			<im:salesOrderLine>
 				<im:lineId>16</im:lineId>
@@ -208,7 +196,6 @@
 			<!-- END Speed By Demand - PRODUCT -->
 			<!-- BROADBAND SERVICE – SERVICE BUNDLE -->
 			<!-- BROADBAND BUNDLE - BUNDLE -->
-	
 		</im:salesOrderLineGroup>
 	</im:order>
 </ord:CreateOrder>

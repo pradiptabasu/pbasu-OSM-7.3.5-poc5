@@ -1,5 +1,6 @@
 declare namespace osm="urn:com:metasolv:oms:xmlapi:1";
 declare namespace log = "java:org.apache.commons.logging.Log"; 
+declare namespace im="http://xmlns.oracle.com/MilestoneMessage";
 
 (:below lines on xsl and saxon are required for printing XMLs:)
 declare namespace xsl="http://www.w3.org/1999/XSL/Transform";
@@ -29,13 +30,13 @@ return (
   log:info($log,concat('Input Doc: ',$inputDocStr)), 
   :)
   
-  <requestResponse>
-	  <numSalesOrder>{$order/osm:Reference/text()}</numSalesOrder>
-    <salesOrderRevision>{$salesOrderRevision}</salesOrderRevision>
-	  <numOrder>{$order/osm:OrderID/text()}</numOrder>
-	  <typeOrder>{$order//osm:OrderHeader/osm:typeOrder/text()}</typeOrder>
-	  <errorCode>00</errorCode>
-	  <status>OK</status>
-	  <message>Order {$order/osm:Reference/text()} Complete</message>
-  </requestResponse>
+  <im:requestResponse xmlns:im="http://xmlns.oracle.com/MilestoneMessage">
+	  <im:numSalesOrder>{$order/osm:Reference/text()}</im:numSalesOrder>
+	  <im:salesOrderRevision>{$salesOrderRevision}</im:salesOrderRevision>
+	  <im:numOrder>{$order/osm:OrderID/text()}</im:numOrder>
+	  <im:typeOrder>{$order//osm:OrderHeader/osm:typeOrder/text()}</im:typeOrder>
+	  <im:errorCode>00</im:errorCode>
+	  <im:status>Fulfillment Complete</im:status>
+	  <im:message>Order {$order/osm:Reference/text()} Complete</im:message>
+  </im:requestResponse>
 )
